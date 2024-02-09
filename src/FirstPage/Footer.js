@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa'; // react-icons kütüphanesini kullanarak sosyal medya ikonları ekleyebilirsiniz
+import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa'; 
 
 const Footer = () => {
   return (

@@ -73,21 +73,21 @@ import { Link } from 'react-router-dom';
 function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState(''); // Hata mesajları için yeni state
+  const [error, setError] = useState(''); 
   const navigate = useNavigate();
 
-  // Statik doğrulama için kullanılacak olan e-posta ve şifre
+ 
   const correctEmail = 'user@example.com';
   const correctPassword = '12345';
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // E-posta ve şifre doğru mu diye kontrol ediyoruz
+
     if (email === correctEmail && password === correctPassword) {
       console.log('Login successful');
-      navigate('/lessonss'); // Başarılı giriş sonrası yönlendirme
+      navigate('/lessonss'); 
     } else {
-      setError('E-posta veya şifre hatalı.'); // Hatalı giriş durumunda hata mesajını güncelle
+      setError('E-posta veya şifre hatalı.');
     }
   };
 
@@ -98,7 +98,7 @@ function LoginForm() {
       </Link>
       <form onSubmit={handleSubmit} className="login-form">
         <h2>Giriş</h2>
-        {error && <p style={{ color: 'red' }}>{error}</p>} {/* Hata mesajını göster */}
+        {error && <p style={{ color: 'red' }}>{error}</p>}
         <div className="input-group">
           <label htmlFor="email">E-poçt *</label>
           <input

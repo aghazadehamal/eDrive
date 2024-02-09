@@ -4,10 +4,10 @@ import PricingCard from './PricingCard';
 
 
 function PricingSection() {
-  // Define your card details here
+
   const cards = [
     {
-    //   title: '1 fenn',
+  
       price: '250',
       features: [
         'Yol hərəkəti qaydaları',
@@ -19,7 +19,7 @@ function PricingSection() {
     },
 
     {
-        // title: '1 fenn',
+      
         price: '1000',
         features: [
           'Yol hərəkəti qaydaları',
@@ -31,7 +31,7 @@ function PricingSection() {
       },
 
       {
-        // title: '1 fenn',
+      
         price: '650',
         features: [
           'Yol hereketi qaydalari',

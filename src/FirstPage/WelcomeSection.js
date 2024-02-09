@@ -1,8 +1,8 @@
 import React from 'react';
-import FeaturesSection from './FeaturesSection'; // Özellikler bölümünü import edin
+import FeaturesSection from './FeaturesSection'; 
 
 
-// Bu verileri gerçek verilerle değiştirin
+
 const featureData = [
     {
         id: 1,
@@ -31,7 +31,7 @@ const WelcomeSection = () => {
     <div className="welcome-section">
       <h1 style={{marginLeft: "200px", marginTop: "40px"}} className="main-title">Niyə novademy?</h1>
       <FeaturesSection features={featureData} />
-      {/* Diğer içerik veya bileşenler */}
+     
     </div>
   );
 };

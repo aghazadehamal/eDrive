@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player'; 
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import Quiz from './FirstPage/Quiz';
+import UserProfile from './UserProfile';
+
 
 const Lessonss = () => {
   const [activeModule, setActiveModule] = useState(null);
   const [activeLesson, setActiveLesson] = useState(null);
+  const [activeQuiz, setActiveQuiz] = useState(false); 
 
   const modules = {
     
@@ -55,7 +60,7 @@ const Lessonss = () => {
       'M65-Məcburi hərəkət istiqaməti nişanları (2-ci hissə)',
       'M72-NV-lərin tanınma nişanları',
       'M75-Yolayrıclarının keçilməsi',
-      // Daha fazla ders ekleyin...
+     
     ],
     '6': [
       'DƏRS 5 – Ötmə Qaydaları və Xüsusi Hərəkət İstiqamətləri',
@@ -67,7 +72,7 @@ const Lessonss = () => {
       'M73-Səs və xarici işıq siqnallarından istifadə edilmə qaydaları (1-ci hissə)',
       'M73-Səs və xarici işıq siqnallarından istifadə edilmə qaydaları (2-ci hissə)',
       'M73-Səs və xarici işıq siqnallarından istifadə edilmə qaydaları (3-cü hissə)',
-      // Daha fazla ders ekleyin...
+     
     ],
     '7': [
       'DƏRS 6 – Yaşayış Zonalarında və Nizamlanmayan Yolayrıcılarında Hərəkət',
@@ -79,7 +84,7 @@ const Lessonss = () => {
       'M77-Nizamlanmayan yolayrıcı (3-cü hissə)',
       'M77-Nizamlanmayan yolayrıcı (4-cü hissə)',
       'M78-Sürmə təlimi',
-      // Daha fazla ders ekleyin...
+     
     ],
     '8': [
       'DƏRS 7 – Nasaz NV-lərin Yedəyə Alınması və Xüsusi Siqnalların Tətbiqi',
@@ -90,7 +95,7 @@ const Lessonss = () => {
       'M66-Məlumatverici-göstərici nişanları (3-cü hissə)',
       'M66-Məlumatverici-göstərici nişanları (4-cü hissə)',
       'M74-Xüsusi siqnalların tətbiqi və texniki baxış',
-      // Daha fazla ders ekleyin...
+     
     ],
     '9': [
       'DƏRS 8 – Nizamlayıcı və Svetofor Siqnalları',
@@ -100,7 +105,7 @@ const Lessonss = () => {
       'M59-Svetoforun siqnalları (2-ci hissə)',
       'M60-Svetoforun və nizamlayıcının siqnallarının yerinə yetirilməsi',
       'M76-Nizamlanan yolayrıcı',
-      // Daha fazla ders ekleyin...
+     
     ],
     '10': [
       'DƏRS 9 – Yüklərin Daşınması və Müvəqqəti Nişanlar',
@@ -111,7 +116,7 @@ const Lessonss = () => {
       'M69-Yolun nişanlanması (2-ci hissə)',
       'M69-Yolun nişanlanması (3-cü hissə)',
       'Müvəqqəti nişanlar',
-      // Daha fazla ders ekleyin...
+     
     ],
     '11': [
       'DƏRS 10 – İstismar Qaydaları',
@@ -122,7 +127,7 @@ const Lessonss = () => {
       'İstismar qaydaları (5-ci hissə)',
       '(1)-Əlavələr',
       '(2)-Əlavələr',
-      // Daha fazla ders ekleyin...
+     
     ],
     '12': [
       'DƏRS 11 – Hərəkət Təhlükəsizliyinin Əsasları',
@@ -133,7 +138,7 @@ const Lessonss = () => {
       'Hərəkət təhlükəsizliyinin əsasları (4-cü hissə)',
       'Hərəkət təhlükəsizliyinin əsasları (5-ci hissə)',
       'Hərəkət təhlükəsizliyinin əsasları (6-cı hissə)',
-      // Daha fazla ders ekleyin...
+     
     ],
     '13': [
       'DƏRS 12 – Tibbi Davranış Qaydaları',
@@ -141,7 +146,7 @@ const Lessonss = () => {
       'Tibbi davranış qaydaları (2-ci hissə)',
       'Tibbi davranış qaydaları (3-cü hissə)',
       'Tibbi davranış qaydaları (4-cü hissə)',
-      // Daha fazla ders ekleyin...
+     
     ],
   
   };
@@ -149,62 +154,97 @@ const Lessonss = () => {
   const lessonContents = {
     'M1-Əsas anlayışlar (1-ci hissə)': {
       text: 'Bu dersin metin içeriği 1. hisse için...',
-      videoUrl: 'video1.mp4', // Video URL'si
+      videoUrl: 'video1.mp4', 
     },
     'M1-Əsas anlayışlar (2-ci hissə)': {
       text: 'Bu dersin metin içeriği 2. hisse için...',
-      videoUrl: 'video2.mp4', // Video URL'si
+      videoUrl: 'video2.mp4', 
     },
     'M1-Əsas anlayışlar (3-cü hissə)': {
       text: 'Bu dersin metin içeriği 1. hisse için...',
-      videoUrl: 'video3.mp4', // Video URL'si
+      videoUrl: 'video3.mp4', 
     },
     'M1-Əsas anlayışlar (4-cü hissə)': {
       text: 'Bu dersin metin içeriği 2. hisse için...',
-      videoUrl: 'video1.mp4', // Video URL'si
+      videoUrl: 'video1.mp4', 
     },
     'M1-Əsas anlayışlar (5-ci hissə)': {
       text: 'Bu dersin metin içeriği 1. hisse için...',
-      videoUrl: 'video2.mp4', // Video URL'si
+      videoUrl: 'video2.mp4', 
     },
     'M37-Mexaniki NV-lərin sürücülərinin vəzifələri': {
       text: 'Bu dersin metin içeriği 2. hisse için...',
-      videoUrl: 'video3.mp4', // Video URL'si
+      videoUrl: 'video3.mp4', 
     },
     'M34-Sürücülük vəsiqəsi (1-ci hissə)': {
       text: 'Bu dersin metin içeriği 2. hisse için...',
-      videoUrl: 'Riyaziyyat intro.mp4', // Video URL'si
+      videoUrl: 'Riyaziyyat intro.mp4', 
+    },
+    'M34-Sürücülük vəsiqəsi (2-ci hissə)': {
+      text: 'Bu dersin metin içeriği 1. hisse için...',
+      videoUrl: 'video1.mp4', 
+    },
+    'M34-Sürücülük vəsiqəsi (3-cü hissə)': {
+      text: 'Bu dersin metin içeriği 2. hisse için...',
+      videoUrl: 'video2.mp4', 
+    },
+    'M36-Yol hərəkəti iştirakçılarının vəzifələri və hüquqları': {
+      text: 'Bu dersin metin içeriği 1. hisse için...',
+      videoUrl: 'video3.mp4', 
+    },
+    'M62-Xəbərdarlıq nişanları(1-ci hissə)': {
+      text: 'Bu dersin metin içeriği 2. hisse için...',
+      videoUrl: 'video1.mp4', 
+    },
+    'M1-Əsas anlayışlar (5-ci hissə)': {
+      text: 'Bu dersin metin içeriği 1. hisse için...',
+      videoUrl: 'video2.mp4', 
+    },
+    'M62-Xəbərdarlıq nişanları (2-ci hissə)': {
+      text: 'Bu dersin metin içeriği 2. hisse için...',
+      videoUrl: 'video3.mp4', 
     },
     
-    // Diğer ders içerikleri buraya eklenebilir.
+  
   };
+
+  useEffect(() => {
+    const firstModuleKey = Object.keys(modules)[0];
+    setActiveModule(firstModuleKey);
+    setActiveLesson(modules[firstModuleKey][0]);
+  }, []);
   
 
   const handleModuleClick = (module) => {
     setActiveModule(module === activeModule ? null : module);
     setActiveLesson(null);
+    setActiveQuiz(false); 
   };
 
   const handleLessonClick = (lesson) => {
     setActiveLesson(lesson === activeLesson ? null : lesson);
+    setActiveQuiz(false); 
+  };
+
+  const handleQuizClick = () => {
+    
+    setActiveQuiz(true);
+    setActiveLesson(null); 
   };
   
 
   return (
-
-    <div>
-      
-
-<div className="container">
-      
-<div className="moduleList">
-  <Link to="/">
-    <img src="/LOGO WHITE.png" alt="Novademy Logo" style={{ maxWidth: '150px', marginTop: "10px", marginLeft: "30px", marginBottom: "20px"}} />
-  </Link>
-  {Object.keys(modules).map((module, index) => (
-    <React.Fragment key={index}>
-      <div onClick={() => handleModuleClick(module)} className="moduleItem">
-      {module === '1' && 'DƏRS 1a – Əsas Sürücülük Anlayışları'}
+    <div className="container">
+      <div className="moduleList">
+        {/* <Link to="/">
+          <img src="/LOGO WHITE.png" alt="Novademy Logo" style={{ maxWidth: '150px', marginTop: "10px", marginLeft: "30px", marginBottom: "20px"}} />
+        </Link> */}
+<UserProfile/>
+        
+        {Object.keys(modules).map((module, index) => (
+          <React.Fragment key={index}>
+            <div onClick={() => handleModuleClick(module)} className="moduleItem">
+            {module === '1' && 'DƏRS 1a – Əsas Sürücülük Anlayışları'}
             {module === '2' && 'DƏRS 1b – Sürücülük Vəsiqəsi və Xəbərdarlıq Nişanları'}
             {module === '3' && 'DƏRS 2 – Piyada və Sürücülərin Hərəkət Məsuliyyətləri'}
             {module === '4' && 'Dayanma, Durma və Parklanma Qaydaları '}
@@ -217,40 +257,37 @@ const Lessonss = () => {
             {module === '11' && ' İstismar Qaydaları'}
             {module === '12' && 'Hərəkət Təhlükəsizliyinin Əsasları '}
             {module === '13' && 'Tibbi Davranış Qaydaları '}
-        
-      </div>
-      {activeModule === module && (
-        <div>
-          {modules[module].map((lesson, lessonIndex) => (
-            <div key={lessonIndex} onClick={() => handleLessonClick(lesson)} className="lessonList">
-              {lesson}
+          
             </div>
-          ))}
-        </div>
-      )}
-    </React.Fragment>
-  ))}
-</div>
-
+            {activeModule === module && (
+              <div>
+                {modules[module].map((lesson, lessonIndex) => (
+                  <div key={lessonIndex} onClick={() => handleLessonClick(lesson)} className="lessonList">
+                    {lesson}
+                  </div>
+                ))}
+                <div onClick={handleQuizClick} className="lessonList">Quiz</div>
+              </div>
+            )}
+          </React.Fragment>
+        ))}
+      </div>
       <div className="content">
-  {activeLesson && (
-    <div>
-      <div>{lessonContents[activeLesson].text}</div>
+        {activeLesson && (
+          <div>
+        
+            <div>{lessonContents[activeLesson].text}</div>
       <ReactPlayer
         url={lessonContents[activeLesson].videoUrl}
-        controls={true} // Kontrolleri görüntülemek için
-        width="100%" // Videonun genişliği
-        height="auto" // Videonun yüksekliği
+        controls={true} 
+        width="100%" 
+        height="auto" 
       />
+          </div>
+        )}
+        {activeQuiz && <Quiz />} 
+      </div>
     </div>
-  )}
-</div>
-
-
-    </div>
-
-    </div>
-    
   );
 };
 

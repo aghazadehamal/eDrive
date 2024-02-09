@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-// Kullanıcı bilgilerini almak için kullanılacak API URL
+
 const KULLANICILAR_API_URL = 'API_KULLANICILAR_LISTESI_URL';
 const ERISIM_IZNI_API_URL = 'API_ERISIM_IZNI_VERME_URL';
 
@@ -8,7 +8,7 @@ function KullaniciYonetimPaneli() {
   const [kullanicilar, setKullanicilar] = useState([]);
 
   useEffect(() => {
-    // Kullanıcı listesini API'den çekme
+  
     const kullaniciListesiniGetir = async () => {
       const response = await fetch(KULLANICILAR_API_URL);
       const data = await response.json();
@@ -29,10 +29,9 @@ function KullaniciYonetimPaneli() {
       });
 
       if (response.ok) {
-        // Erişim izni verildikten sonra kullanıcı listesini güncelle veya bir bildirim göster
+       
         alert('Erişim izni başarıyla verildi.');
-        // Kullanıcı listesini yenilemek için:
-        // kullaniciListesiniGetir();
+      
       } else {
         throw new Error('Erişim izni verilirken bir hata oluştu.');
       }

@@ -1,7 +1,7 @@
 const cardData = [
     {
       id: 1,
-      image: 'https://suruculukkurslari.az/uploads/posts/2023-05/1683691431_screenshot_9-1.png', // Bu görselin yolu, proje dosyalarınıza göre olmalıdır.
+      image: 'https://suruculukkurslari.az/uploads/posts/2023-05/1683691431_screenshot_9-1.png', 
       title: 'Sürücülük Nəzəriyyəsi',
       videosCount: 120,
       author: 'Rüfət Quliyev'

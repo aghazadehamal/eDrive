@@ -2,7 +2,7 @@ import ReactPlayer from 'react-player';
 
 const lessons = [
   {
-    id: "1A", // Her ders için benzersiz bir ID
+    id: "1A", 
     name: "DƏRS 1a – Əsas Sürücülük Anlayışları",
     content: [
       "M1-Əsas anlayışlar (1-ci hissə)",

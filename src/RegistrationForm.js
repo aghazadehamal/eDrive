@@ -7,7 +7,7 @@ function RegistrationForm() {
     email: '',
     password: '',
     confirmPassword: '',
-    phone: '', // Telefon numarası için state
+    phone: '', 
   });
   const navigate = useNavigate();
 
@@ -26,9 +26,9 @@ function RegistrationForm() {
       return;
     }
 
-    // API'ye POST isteği gönderme
+   
     try {
-      const response = await fetch('API_ENDPOINT', { // API_ENDPOINT, backend'inizin endpoint'i ile değiştirilmelidir
+      const response = await fetch('API_ENDPOINT', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ function RegistrationForm() {
         body: JSON.stringify({
           fullName: formData.fullName,
           email: formData.email,
-          password: formData.password, // Güvenlik açısından, gerçek uygulamalarda şifreleri açık olarak göndermemeye dikkat edin
+          password: formData.password, 
           phone: formData.phone,
         }),
       });
@@ -45,9 +45,9 @@ function RegistrationForm() {
         throw new Error('Kayıt sırasında bir hata oluştu');
       }
 
-      // Başarılı kayıt sonrası işlemler
+     
       console.log('Kayıt başarılı');
-      navigate('/home'); // Başarılı kayıttan sonra kullanıcıyı ana sayfaya yönlendir
+      navigate('/home');
     } catch (error) {
       console.error('Kayıt işlemi başarısız', error);
     }

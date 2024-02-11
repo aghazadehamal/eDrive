@@ -5,9 +5,9 @@ function UserList({ users, onToggleAccess }) {
     <ul className="user-list">
     {users.map(user => (
       <li key={user.id}>
-        {user.name} - Erişim: {user.hasAccess ? 'Var' : 'Yok'}
+        {user.name} - İcazə: {user.hasAccess ? 'Var' : 'Yox'}
         <button onClick={() => onToggleAccess(user.id)}>
-          {user.hasAccess ? 'Erişimi Al' : 'Erişim Ver'}
+          {user.hasAccess ? 'İcazəni Al' : 'İcazə Ver'}
         </button>
       </li>
     ))}

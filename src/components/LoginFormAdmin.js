@@ -20,7 +20,7 @@ const LoginFormAdmin = () => {
   return (
     <form onSubmit={handleSubmit} className="login-form">
     <div>
-      <label>Kullanıcı Adı:</label>
+      <label>İstifadəçi Adı:</label>
       <input
         type="text"
         value={username}
@@ -29,7 +29,7 @@ const LoginFormAdmin = () => {
       />
     </div>
     <div>
-      <label>Şifre:</label>
+      <label>Şifrə:</label>
       <input
         type="password"
         value={password}
@@ -37,7 +37,7 @@ const LoginFormAdmin = () => {
         className="password-input"
       />
     </div>
-    <button type="submit" className="submit-button">Giriş Yap</button>
+    <button type="submit" className="submit-button">Giriş et </button>
   </form>
 );
 };

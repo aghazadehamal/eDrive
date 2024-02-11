@@ -6,7 +6,7 @@ import FirstPage from './FirstPage/FirstPage';
 
 import RegistrationForm from './RegistrationForm';
 import LoginForm from './LoginForm';
-import Home from './Lessonss';
+
 import Quiz from './FirstPage/Quiz';
 import PaymentPage from './FirstPage/PaymentPage';
 

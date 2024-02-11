@@ -196,10 +196,10 @@ const Lessonss = () => {
       text: 'Bu dersin metin içeriği 2. hisse için...',
       videoUrl: 'video1.mp4', 
     },
-    'M1-Əsas anlayışlar (5-ci hissə)': {
-      text: 'Bu dersin metin içeriği 1. hisse için...',
-      videoUrl: 'video2.mp4', 
-    },
+    // 'M1-Əsas anlayışlar (5-ci hissə)': {
+    //   text: 'Bu dersin metin içeriği 1. hisse için...',
+    //   videoUrl: 'video2.mp4', 
+    // },
     'M62-Xəbərdarlıq nişanları (2-ci hissə)': {
       text: 'Bu dersin metin içeriği 2. hisse için...',
       videoUrl: 'video3.mp4', 

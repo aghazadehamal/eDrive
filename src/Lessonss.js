@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player'; 
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import Quiz from './FirstPage/Quiz';
 import UserProfile from './UserProfile';
@@ -213,23 +213,21 @@ const Lessonss = () => {
     setActiveModule(firstModuleKey);
     setActiveLesson(modules[firstModuleKey][0]);
   }, []);
-  
 
   const handleModuleClick = (module) => {
     setActiveModule(module === activeModule ? null : module);
     setActiveLesson(null);
-    setActiveQuiz(false); 
+    setActiveQuiz(false);
   };
 
   const handleLessonClick = (lesson) => {
     setActiveLesson(lesson === activeLesson ? null : lesson);
-    setActiveQuiz(false); 
+    setActiveQuiz(false);
   };
 
   const handleQuizClick = () => {
-    
     setActiveQuiz(true);
-    setActiveLesson(null); 
+    setActiveLesson(null);
   };
   
 
@@ -241,7 +239,7 @@ const Lessonss = () => {
         </Link> */}
 <UserProfile/>
         
-        {Object.keys(modules).map((module, index) => (
+{Object.keys(modules).map((module, index) => (
           <React.Fragment key={index}>
             <div onClick={() => handleModuleClick(module)} className="moduleItem">
             {module === '1' && 'DƏRS 1a – Əsas Sürücülük Anlayışları'}
@@ -275,17 +273,16 @@ const Lessonss = () => {
       <div className="content">
         {activeLesson && (
           <div>
-        
-            <div>{lessonContents[activeLesson].text}</div>
-      <ReactPlayer
-        url={lessonContents[activeLesson].videoUrl}
-        controls={true} 
-        width="100%" 
-        height="auto" 
-      />
+            <div>{lessonContents[activeLesson]?.text}</div>
+            <ReactPlayer
+              url={lessonContents[activeLesson]?.videoUrl}
+              controls={true}
+              width="100%"
+              height="auto"
+            />
           </div>
         )}
-        {activeQuiz && <Quiz />} 
+        {activeQuiz && <Quiz />}
       </div>
     </div>
   );

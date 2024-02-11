@@ -8,11 +8,11 @@ import RegistrationForm from './RegistrationForm';
 import LoginForm from './LoginForm';
 
 import Quiz from './FirstPage/Quiz';
-import PaymentPage from './FirstPage/PaymentPage';
+// import PaymentPage from './FirstPage/PaymentPage';
 
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import KullaniciYonetimPaneli from './FirstPage/KullaniciYonetimPaneli';
+// import KullaniciYonetimPaneli from './FirstPage/KullaniciYonetimPaneli';
 import Lessonss from './Lessonss';
 import RegisterForm from './RegisterForm';
 import EditUserProfile from './EditUserProfile';
@@ -37,8 +37,8 @@ function App() {
           <Route path="/lessonss" element={<Lessonss />} /> 
          
           <Route path="/Quiz" element={<Quiz />} /> 
-          <Route path="/PaymentPage" element={<PaymentPage />} /> 
-          <Route path="/kullaniciYönetim" element={<KullaniciYonetimPaneli />} />
+          {/* <Route path="/PaymentPage" element={<PaymentPage />} />  */}
+          {/* <Route path="/kullaniciYönetim" element={<KullaniciYonetimPaneli />} /> */}
           <Route path="/RegisterForm" element={<RegisterForm />} />
           <Route path="/edit-user-profile" element={<EditUserProfile />} />
           <Route path="/user-profile" element={<UserProfile />} />

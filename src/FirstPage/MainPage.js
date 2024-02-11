@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AdminPanel from '../components/AdminPanel';
-import LoginPage from '../components/LoginPage';
+// import AdminPanel from '../components/AdminPanel';
+// import LoginPage from '../components/LoginPage';
 
 const Header = () => {
   return (

@@ -154,59 +154,59 @@ const Lessonss = () => {
   const lessonContents = {
     'M1-Əsas anlayışlar (1-ci hissə)': {
       text: 'Bu dersin metin içeriği 1. hisse için...',
-      videoUrl: 'video1.mp4', 
+      videoUrl: 'v1.MOV', 
     },
     'M1-Əsas anlayışlar (2-ci hissə)': {
       text: 'Bu dersin metin içeriği 2. hisse için...',
-      videoUrl: 'video2.mp4', 
+      videoUrl: 'v2.MOV', 
     },
     'M1-Əsas anlayışlar (3-cü hissə)': {
       text: 'Bu dersin metin içeriği 1. hisse için...',
-      videoUrl: 'video3.mp4', 
+      videoUrl: 'v3.MOV', 
     },
     'M1-Əsas anlayışlar (4-cü hissə)': {
       text: 'Bu dersin metin içeriği 2. hisse için...',
-      videoUrl: 'video1.mp4', 
+      videoUrl: 'v4.MOV', 
     },
     'M1-Əsas anlayışlar (5-ci hissə)': {
       text: 'Bu dersin metin içeriği 1. hisse için...',
-      videoUrl: 'video2.mp4', 
+      videoUrl: 'v5.MOV', 
     },
     'M37-Mexaniki NV-lərin sürücülərinin vəzifələri': {
       text: 'Bu dersin metin içeriği 2. hisse için...',
-      videoUrl: 'video3.mp4', 
+      videoUrl: 'v6.MOV', 
     },
     'M34-Sürücülük vəsiqəsi (1-ci hissə)': {
       text: 'Bu dersin metin içeriği 2. hisse için...',
-      videoUrl: 'Riyaziyyat intro.mp4', 
+      videoUrl: 'v1.MOV', 
     },
     'M34-Sürücülük vəsiqəsi (2-ci hissə)': {
       text: 'Bu dersin metin içeriği 1. hisse için...',
-      videoUrl: 'video1.mp4', 
+      videoUrl: 'v2.MOV', 
     },
     'M34-Sürücülük vəsiqəsi (3-cü hissə)': {
       text: 'Bu dersin metin içeriği 2. hisse için...',
-      videoUrl: 'video2.mp4', 
+      videoUrl: 'v3.MOV', 
     },
     'M36-Yol hərəkəti iştirakçılarının vəzifələri və hüquqları': {
       text: 'Bu dersin metin içeriği 1. hisse için...',
-      videoUrl: 'video3.mp4', 
+      videoUrl: 'v4.MOV', 
     },
     'M62-Xəbərdarlıq nişanları(1-ci hissə)': {
       text: 'Bu dersin metin içeriği 2. hisse için...',
-      videoUrl: 'video1.mp4', 
+      videoUrl: 'v5.MOV', 
     },
     // 'M1-Əsas anlayışlar (5-ci hissə)': {
     //   text: 'Bu dersin metin içeriği 1. hisse için...',
-    //   videoUrl: 'video2.mp4', 
+    //   videoUrl: 'video2.MOV', 
     // },
     'M62-Xəbərdarlıq nişanları (2-ci hissə)': {
       text: 'Bu dersin metin içeriği 2. hisse için...',
-      videoUrl: 'video3.mp4', 
+      videoUrl: 'v6.MOV', 
     },
     'M40-Piyadaların vəzifələri': {
       text: 'Bu dersin metin içeriği 2. hisse için...',
-      videoUrl: 'video3.mp4', 
+      videoUrl: 'v1.MOV', 
     },
     
   

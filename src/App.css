@@ -1,4 +1,4 @@
-/* Genel Stiller */
+/* UMUMI CSS */
 * {
   margin: 0;
   padding: 0;
@@ -12,17 +12,17 @@ body {
   font-size: 16px;
 }
 
-/* Header Stilleri */
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: #7C4DFF; /* Arka planı header'a da uygula */
+  background-color: #7C4DFF; 
 }
 
 .logo {
-  font-size: 2em; /* Logoyu biraz daha büyüt */
+  font-size: 2em; 
   font-weight: bold;
   color: white;
 }
@@ -41,28 +41,36 @@ nav button:hover {
   background-color: #FFD54F;
 }
 
-/* Ana İçerik Stilleri */
+
 .main-content {
   display: flex;
   align-items: center;
-  justify-content: space-evenly; /* İçerikleri eşit olarak dağıt */
-  padding: 50px; /* İçeriği üstten ve alttan boşlukla ayır */
-  background-color: #7C4DFF; /* Arka planı ana içeriğe de uygula */
+  justify-content: space-evenly; 
+  padding: 50px;
+  background-color: #7C4DFF;
 }
 
+
+
+
+
+
+
+
+/* CSS MAIN PAGE */
 .main-content h1 {
-  font-size: 4em; /* Başlığı büyüt */
-  font-weight: bold; /* Başlık kalınlığını artır */
+  font-size: 4em; 
+  font-weight: bold; 
 }
 
 .car-image {
-  max-width: 600px; /* Resmi büyüt ve max genişlik ayarla */
-  max-height: 400px; /* Max yüksekliği ayarla */
+  max-width: 600px; 
+  max-height: 400px; 
   width: auto;
   height: auto;
 }
 
-/* Çağrı-Eylem Buton Stilleri */
+
 .call-to-action {
   text-align: center;
   margin: 30px 0;
@@ -76,7 +84,7 @@ nav button:hover {
   font-size: 1.2em;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  color: white; /* Buton yazı rengini belirginleştir */
+  color: white; 
 }
 
 .call-to-action button:hover {
@@ -87,6 +95,10 @@ nav button:hover {
 
 
 
+
+
+
+/* COURSE CARD CSS */
 .card-list {
   display: flex;
   justify-content: center;
@@ -125,9 +137,16 @@ nav button:hover {
 
 
 
-/* Stilleri genişletin ve özelleştirin */
 
-/* Özellik kartı ana stil ayarları */
+
+
+
+
+
+
+
+
+
 .feature-card {
   background: white; /* Beyaz arka plan */
   border-radius: 20px; /* Yuvarlak köşeler */
@@ -145,6 +164,15 @@ nav button:hover {
  
 }
 
+
+
+
+
+
+
+
+
+/* FEATURE CARD CSS */
 /* Kart üzerine gelindiğinde uygulanan efekt */
 .feature-card:hover {
   transform: translateY(-5px); /* Hafif yukarı taşı */
@@ -182,6 +210,11 @@ nav button:hover {
     margin-bottom: 10px; /* İkon altına boşluk ekle */
   }
 }
+
+
+
+
+
 
 
 
@@ -262,6 +295,9 @@ nav button:hover {
 }
 
 
+
+
+
 /* PricingSection.css */
 .pricing-section {
   display: flex;
@@ -271,6 +307,18 @@ nav button:hover {
   gap: 20px;
   padding: 20px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Question.css */
@@ -343,6 +391,11 @@ nav button:hover {
 
 
 
+
+
+
+/* QEYDIYYAT CSS */
+
 /* CSS stilinizi buraya yapıştırın */
 .registration-form {
   background: #f3e5f5; /* Açık mor arka plan */
@@ -407,6 +460,19 @@ nav button:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* 
+LOGIN GIRISH CSS */
 .login-wrapper {
 
   align-items: center;
@@ -506,7 +572,7 @@ button:hover {
 
 
 
-
+/* QUIZ CSS */
 button.next {
   background-color: #4CAF50; 
   color: white;
@@ -682,9 +748,7 @@ button.next:hover {
 } */
 
 
-/* HOME */
-
-
+/* HOME  CSS*/
 .container {
   display: flex;
   height: 100vh; /* Ekranın tamamını kaplasın */
@@ -757,7 +821,8 @@ button.next:hover {
 
 
 
-/* .course-card {
+/* .COURSE CARD CSS {
+
   max-width: 800px;
   margin: 40px auto;
   border: 1px solid #e0e0e0;
@@ -809,6 +874,11 @@ button.next:hover {
   top: 0;
   left: 0;
 }
+
+
+
+
+
 
 
 
@@ -968,7 +1038,16 @@ h2 {
 }
 
 
-/* CourseCard.css */
+
+
+
+
+
+
+
+
+
+/* COURSE CARD CSS */
 .continue-button {
   background-color: #007bff; /* Parlak mavi arka plan rengi */
   color: white; /* Beyaz yazı rengi */
@@ -999,11 +1078,11 @@ h2 {
 
 
 
-/* Diğer stil tanımları... */
 
 
 
 
+/* LESSONSS CSS */
 .container {
   display: flex;
   flex-direction: row;
@@ -1067,7 +1146,17 @@ h2 {
   
 }
 
-/* RegisterForm.css */
+
+
+
+
+
+
+
+
+
+
+/* REGISTER FORM CSS */
 form {
   display: flex;
   flex-direction: column;
@@ -1103,7 +1192,7 @@ button:hover {
 
 
 
-
+/* LOGIN FORM CSS */
 .login-form {
   max-width: 400px;
   margin: 2rem auto;
@@ -1151,7 +1240,7 @@ button:hover {
 
 
 
-
+/* USER LIST CSS */
 .user-list {
   list-style-type: none;
   padding: 0;
@@ -1191,7 +1280,7 @@ button:hover {
 
 
 
-
+/* ADMIN PANEL CSS */
 .admin-panel {
   margin: 1rem;
 }

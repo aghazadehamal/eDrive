@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import ReactPlayer from 'react-player'; 
 // import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
-import Quiz from './FirstPage/Quiz';
-import UserProfile from './UserProfile';
+import Quiz from '../FirstPage/Quiz';
+import UserProfile from '../UserProfile/UserProfile';
 
 
 const Lessonss = () => {

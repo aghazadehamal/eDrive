@@ -1,5 +1,5 @@
 import AdminPanel from "../components/AdminPanel";
-import CourseCard from "../CourseCard";
+import CourseCard from "./CourseCard";
 // import CardList from "./CardList";
 import FAQSection from "./FAQSection";
 import Footer from "./Footer";

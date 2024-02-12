@@ -11,10 +11,10 @@ function CourseCard() {
   const [currentVideo, setCurrentVideo] = useState(0); 
 
   const videos = [
-    'Riyaziyyat intro.mp4',
-    'video3.mp4',
+    'v1.MOV',
+    'v2.MOV',
     
-    'video2.mp4' 
+    'v3.MOV' 
   ];
 
   function handleContinue() {

@@ -204,6 +204,10 @@ const Lessonss = () => {
       text: 'Bu dersin metin içeriği 2. hisse için...',
       videoUrl: 'video3.mp4', 
     },
+    'M40-Piyadaların vəzifələri': {
+      text: 'Bu dersin metin içeriği 2. hisse için...',
+      videoUrl: 'video3.mp4', 
+    },
     
   
   };

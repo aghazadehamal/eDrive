@@ -18,7 +18,7 @@ function RegistrationForm() {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Formun varsayılan gönderimini engelleyin
     try {
-      const response = await axios.post('http://edurive.onrender.com/auth/registration', formData);
+      const response = await axios.post('https://edurive.onrender.com/auth/registration', formData);
       console.log(response.data); // Başarılı kayıt sonrası yanıtı konsola yazdır
       // Burada başarılı kayıt sonrası işlemleri yapabilirsiniz, örneğin kullanıcıyı giriş sayfasına yönlendirme
     } catch (error) {

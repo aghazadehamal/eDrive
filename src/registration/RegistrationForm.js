@@ -1,115 +1,50 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 function RegistrationForm() {
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
+    name: '',
+    surname: '',
+    gmail: '',
     password: '',
-    confirmPassword: '',
-    phone: '', 
+    roleType: 'Admin', // Bu örnekte sabit bir değer kullanıldı, ihtiyaca göre değiştirilebilir
+    phoneNumber: ''
   });
-  const navigate = useNavigate();
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    if (formData.password !== formData.confirmPassword) {
-      alert('Şifreler uyuşmuyor.');
-      return;
-    }
-
-   
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Formun varsayılan gönderimini engelleyin
     try {
-      const response = await fetch('API_ENDPOINT', { 
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          fullName: formData.fullName,
-          email: formData.email,
-          password: formData.password, 
-          phone: formData.phone,
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Kayıt sırasında bir hata oluştu');
-      }
-
-     
-      console.log('Kayıt başarılı');
-      navigate('/home');
+      const response = await axios.post('http://edurive.onrender.com/auth/registration', formData);
+      console.log(response.data); // Başarılı kayıt sonrası yanıtı konsola yazdır
+      // Burada başarılı kayıt sonrası işlemleri yapabilirsiniz, örneğin kullanıcıyı giriş sayfasına yönlendirme
     } catch (error) {
-      console.error('Kayıt işlemi başarısız', error);
+      if (error.response) {
+        // Sunucu tarafından bir hata yanıtı alındı
+        console.error('Kayıt sırasında bir hata oluştu:', error.response.data);
+      } else if (error.request) {
+        // İstek yapıldı ancak hiçbir yanıt alınamadı
+        console.error('Yanıt alınamadı:', error.request);
+      } else {
+        // İstek yapılırken bir hata oluştu
+        console.error('İstek sırasında bir hata oluştu:', error.message);
+      }
     }
+    
   };
 
   return (
-    <div className="registration-form">
-      <h2>Qeydiyyat</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Ad ve Soyad *
-          <input
-            type="text"
-            name="fullName"
-            value={formData.fullName}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          E-posta *
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Şifre *
-          <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Şifre Doğrulama *
-          <input
-            type="password"
-            name="confirmPassword"
-            value={formData.confirmPassword}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Telefon Numarası *
-          <input
-            type="text"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <button type="submit">Davam et</button>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Adınız" required />
+      <input type="text" name="surname" value={formData.surname} onChange={handleChange} placeholder="Soyadınız" required />
+      <input type="email" name="gmail" value={formData.gmail} onChange={handleChange} placeholder="E-posta" required />
+      <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="Şifre" required />
+      <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="Telefon Numarası" required />
+      <button type="submit">Kayıt Ol</button>
+    </form>
   );
 }
 

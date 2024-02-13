@@ -383,22 +383,10 @@ nav button:hover {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* QEYDIYYAT CSS */
 
-/* CSS stilinizi buraya yapıştırın */
 .registration-form {
-  background: #f3e5f5; /* Açık mor arka plan */
+  background: #f3e5f5; 
   padding: 2rem;
   border-radius: 20px;
   width: 100%;

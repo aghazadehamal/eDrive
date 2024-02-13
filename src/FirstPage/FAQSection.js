@@ -20,7 +20,7 @@ function FAQSection() {
 
   return (
     <div className="faq-section">
-      <h1 style={{marginLeft:"35%", fontSize: "40px"}}>Suallar və Cavablar</h1>
+      <h1 style={{ fontSize: "40px"}}>Suallar və Cavablar</h1>
       {faqData.map((faq, index) => (
         <Question key={index} question={faq.question} answer={faq.answer} />
       ))}

@@ -12,15 +12,24 @@ function LoginForm() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Formun varsayılan gönderimini engelleyin
+    e.preventDefault(); 
     try {
-      const response = await axios.post('http://edurive.onrender.com/auth/login', formData);
-      console.log(response.data); // Başarılı giriş sonrası yanıtı konsola yazdır
-      // Burada başarılı giriş sonrası işlemleri yapabilirsiniz, örneğin kullanıcıyı anasayfaya yönlendirme
-    } catch (error) {
-      console.error('Giriş yapılırken bir hata oluştu:', error.response.data);
-      // Burada hata yönetimi yapabilirsiniz
+      const response = await axios.post('https://edurive.onrender.com/auth/login', formData);
+      console.log(response.data); 
+    
+    }catch (error) {
+      // Eğer hata yanıtı varsa ve içerisinde data bilgisi varsa bu kısmı çalıştır
+      if (error.response && error.response.data) {
+        console.error('Giriş edərkən bir hata oluştu:', error.response.data);
+      } else if (error.request) {
+        // İstek yapıldı ancak hiçbir yanıt alınamadıysa bu kısmı çalıştır
+        console.error('Yanıt alınamadı:', error.request);
+      } else {
+        // İstek sırasında başka bir hata oluştuysa bu kısmı çalıştır
+        console.error('İstek sırasında bir hata oluştu:', error.message);
+      }
     }
+    
   };
 
   return (
@@ -38,10 +47,10 @@ function LoginForm() {
         name="password"
         value={formData.password}
         onChange={handleChange}
-        placeholder="Şifre"
+        placeholder="Şifrə"
         required
       />
-      <button type="submit">Giriş Yap</button>
+      <button type="submit">Giriş et</button>
     </form>
   );
 }

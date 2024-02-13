@@ -472,8 +472,8 @@ nav button:hover {
 
 
 /* 
-LOGIN GIRISH CSS */
-.login-wrapper {
+/* LOGIN GIRISH CSS */
+/* .login-wrapper {
 
   align-items: center;
   height: 100vh;
@@ -565,7 +565,7 @@ button {
 
 button:hover {
   background-color: lightgray;
-}
+} */ */
 
 
 
@@ -1157,7 +1157,7 @@ h2 {
 
 
 /* REGISTER FORM CSS */
-form {
+/* form {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1187,13 +1187,13 @@ button:hover {
 .error {
   color: red;
   font-size: 0.8rem;
-}
+} */
 
 
 
 
 /* LOGIN FORM CSS */
-.login-form {
+/* .login-form {
   max-width: 400px;
   margin: 2rem auto;
   padding: 2rem;
@@ -1229,7 +1229,7 @@ button:hover {
 
 .login-form button:hover {
   background: #00397b;
-}
+} */
 
 
 

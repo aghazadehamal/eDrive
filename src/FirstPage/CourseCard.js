@@ -18,7 +18,7 @@ function CourseCard() {
   ];
 
   function handleContinue() {
-    navigate("/RegisterForm");
+    navigate("/RegistrationForm");
   }
 
  

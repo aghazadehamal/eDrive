@@ -9,7 +9,7 @@ function RegistrationForm() {
     surname: '',
     gmail: '',
     password: '',
-    roleType: 'Admin', 
+ 
     phoneNumber: ''
   });
 

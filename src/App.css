@@ -104,8 +104,7 @@ nav button:hover {
   justify-content: center;
   gap: 30px; /* Kartlar arasında boşluk */
   padding: 20px;
-  /* Eğer card-list arka planını da beyaz yapmak isterseniz */
-  /* background: #fff; */
+
 }
 
 .card {
@@ -322,7 +321,7 @@ nav button:hover {
 
 
 /* Question.css */
-/* Question.css */.faq-section {
+.faq-section {
   max-width: 1230px;
   margin: 0 auto;
   padding: 20px;
@@ -553,7 +552,7 @@ button {
 
 button:hover {
   background-color: lightgray;
-} */ */
+} */ g
 
 
 

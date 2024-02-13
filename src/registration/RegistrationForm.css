@@ -1,3 +1,4 @@
+/* RegistrationForm.css */
 form {
     background-color: #7c53c3;
     border-radius: 20px;
@@ -45,6 +46,7 @@ form {
     background-color: #d62828;
   }
   
+  /* Başlık için ek stil */
   h1 {
     text-align: center;
     color: #fff;

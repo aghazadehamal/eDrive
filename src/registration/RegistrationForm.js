@@ -20,7 +20,7 @@ function RegistrationForm() {
   const handleSubmit = async (e) => {
     e.preventDefault(); 
     try {
-      const response = await axios.post('http://edurive.onrender.com/auth/registration', formData);
+      const response = await axios.post('https://edurive.onrender.com/auth/registration', formData);
       console.log(response.data); 
    
     } catch (error) {

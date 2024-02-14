@@ -29,7 +29,7 @@ const featureData = [
 const WelcomeSection = () => {
   return (
     <div className="welcome-section">
-      <h1 style={{marginTop: "40px"}} className="main-title">Niyə novademy?</h1>
+      <h1 style={{marginTop: "40px", color: "black"}} className="main-title">Niyə novademy?</h1>
       <FeaturesSection features={featureData} />
      
     </div>

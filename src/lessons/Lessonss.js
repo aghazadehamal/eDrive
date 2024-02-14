@@ -116,7 +116,7 @@ const Lessonss = () => {
   </div>
   <div>
     <UserProfile className="userProfileLink" />
-    <Link to="/logout" className="logoutLink">Çıxış</Link>
+    <Link to="/" className="logoutLink">Çıxış</Link>
   </div>
 </div>
 

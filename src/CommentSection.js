@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 function CommentSection() {
   const [comment, setComment] = useState('');
+  const [list, setList] = useState([]);
 
   const handleCommentChange = (event) => {
     setComment(event.target.value);
@@ -9,12 +10,39 @@ function CommentSection() {
 
   const handleCommentSubmit = () => {
     console.log('Comment gönderildi: ', comment);
-    // Burada yorumu bir API'ye göndermek için bir istek yapabilirsiniz.
     setComment(''); // Yorum gönderildikten sonra input alanını temizle
+    setList([...list, comment]);
+  };
+
+  const handleDeleteComment = (indexToDelete) => {
+    setList(list.filter((_, index) => index !== indexToDelete));
+  };
+
+  const handleDeleteAllComments = () => {
+    setList([]); // Tüm yorumları sil
   };
 
   return (
     <div style={{ margin: '20px' }}>
+      {list.map((item, index) => (
+        <div key={index} style={{ marginBottom: '10px' }}>
+          <p>{item}</p>
+          <button
+            onClick={() => handleDeleteComment(index)}
+            style={{
+              padding: '5px 10px',
+              marginRight: '10px',
+              color: 'white',
+              backgroundColor: 'red',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer'
+            }}
+          >
+            Sil
+          </button>
+        </div>
+      ))}
       <input
         type="text"
         value={comment}
@@ -36,10 +64,24 @@ function CommentSection() {
           backgroundColor: '#007bff',
           border: 'none',
           borderRadius: '4px',
+          cursor: 'pointer',
+          marginRight: '10px'
+        }}
+      >
+        Fikir bildir
+      </button>
+      <button
+        onClick={handleDeleteAllComments}
+        style={{
+          padding: '10px 20px',
+          color: 'white',
+          backgroundColor: 'red',
+          border: 'none',
+          borderRadius: '4px',
           cursor: 'pointer'
         }}
       >
-       Fikir bildir
+        Hamısımı  Sil
       </button>
     </div>
   );

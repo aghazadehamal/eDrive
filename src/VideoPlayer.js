@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
 
 const VideoPlayer = () => {
-  const [url, setUrl] = useState('v1.MOV'); // Başlangıç URL'nizi buraya yerleştirin.
+  const [url, setUrl] = useState('v1.MOV'); 
 
   const handleQualityChange = (quality) => {
     const urls = {
@@ -10,7 +10,7 @@ const VideoPlayer = () => {
       '1080p': 'path/to/video-1080p.mp4',
       '4k': 'path/to/video-4k.mp4',
     };
-    setUrl(urls[quality]); // Kaliteye göre URL'i güncelleyin.
+    setUrl(urls[quality]); 
   };
 
   return (

@@ -26,9 +26,12 @@ import Lessonss from './lessons/Lessonss';
 import LoginForm from './registration/LoginForm';
 import RegistrationForm from './registration/RegistrationForm';
 import RegisterForm from './registration/RegisterForm';
-import EditUserProfile from './UserProfile/EditUserProfile';
+
 import UserProfile from './UserProfile/UserProfile';
 import User from './components/AdminPanel';
+
+
+import ProfileCard from './UserProfile/EditUserProfile';
 
 
 
@@ -48,7 +51,7 @@ function App() {
           {/* <Route path="/PaymentPage" element={<PaymentPage />} />  */}
           {/* <Route path="/kullaniciYönetim" element={<KullaniciYonetimPaneli />} /> */}
           <Route path="/RegisterForm" element={<RegisterForm />} />
-          <Route path="/edit-user-profile" element={<EditUserProfile />} />
+          <Route path="/profileCard" element={<ProfileCard />} />
           <Route path="/user-profile" element={<UserProfile />} />
           <Route path="/admin" element={<User />} />
           <Route path="/loginFormAdmin" element={<LoginFormAdmin />} />

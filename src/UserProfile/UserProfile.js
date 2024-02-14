@@ -2,11 +2,12 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
+
 function UserProfile({ user }) {
   const navigate = useNavigate();
 
   const goToEditProfile = () => {
-    navigate('/edit-user-profile');
+    navigate('/profileCard');
   };
 
   return (

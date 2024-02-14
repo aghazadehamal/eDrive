@@ -10,7 +10,7 @@ function CommentSection() {
 
   const handleCommentSubmit = () => {
     console.log('Comment gönderildi: ', comment);
-    setComment(''); // Yorum gönderildikten sonra input alanını temizle
+    setComment(''); 
     setList([...list, comment]);
   };
 
@@ -19,7 +19,7 @@ function CommentSection() {
   };
 
   const handleDeleteAllComments = () => {
-    setList([]); // Tüm yorumları sil
+    setList([]); 
   };
 
   return (

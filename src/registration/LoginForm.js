@@ -55,7 +55,37 @@ function LoginForm() {
         required
       />
       <button type="submit">Giriş et</button>
+
+      
+<div style={{ 
+  marginTop: '20px', 
+  textAlign: 'center',
+  display: "flex", 
+  justifyContent: "space-around"
+}}>
+  <p style={{
+    margin: '0', 
+    color: '#333', 
+    fontWeight: 'normal', 
+  }}>
+    Hesabınız yoxdur?
+  </p>
+   
+  <Link to="/RegistrationForm" style={{ 
+    color: 'red', 
+    textDecoration: 'none', 
+    fontWeight: 'bold', 
+    fontSize: "20px",
+   
+  }}>
+    Hesab yaradın
+  </Link>
+</div>
+
+
+     
     </form>
+  
 
     </div>
 

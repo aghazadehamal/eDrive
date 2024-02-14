@@ -1,6 +1,6 @@
 /* RegistrationForm.css */
 form {
-    background-color: #7c53c3;
+   background-color: #4CAF50;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     color: white;
@@ -30,7 +30,7 @@ form {
   }
   
   button[type="submit"] {
-    background-color: #e63946;
+    background-color: black;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -43,7 +43,7 @@ form {
   }
   
   button[type="submit"]:hover {
-    background-color: #d62828;
+    background-color: #d6cd28;
   }
   
   /* Başlık için ek stil */

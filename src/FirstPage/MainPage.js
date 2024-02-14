@@ -6,12 +6,13 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <header>
-   <img  src="/LOGO WHITE.png" alt="Novademy Logo" style={{ maxWidth: '150px'}} />
+   {/* <img  src="/LOGO WHITE.png" alt="Novademy Logo" style={{ maxWidth: '150px'}} /> */}
+   <img  src="/edurive.jpg" alt="Novademy Logo" style={{ maxWidth: '250px'}} />
       <nav>
 
-      <Link  to="/LoginForm"><button style={{marginTop: "30px"}}>Giriş</button></Link>
+      <Link  to="/LoginForm"><button style={{marginTop: "30px", color: "white"}}>Giriş</button></Link>
        
-        <Link to="/RegistrationForm"><button>Qeydiyyat</button></Link>
+        <Link to="/RegistrationForm"><button style={{color: "white"}}>Qeydiyyat</button></Link>
         {/* <Link to="/LoginFormAdmin"><button>Admin</button></Link> */}
       
       </nav>
@@ -32,7 +33,7 @@ const CallToAction = () => {
 const MainContent = () => {
   return (
     <main className="main-content">
-      <h1>Sürücülük bacarıqlarını bizimlə inkişaf etdir</h1>
+      <h1 style={{color: "black"}}>Sürücülük bacarıqlarını bizimlə inkişaf etdir</h1>
       <img  src="/car3.webp" alt="Car" className="car-image" /> 
     </main>
   );

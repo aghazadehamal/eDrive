@@ -28,6 +28,7 @@ import RegistrationForm from './registration/RegistrationForm';
 import RegisterForm from './registration/RegisterForm';
 import EditUserProfile from './UserProfile/EditUserProfile';
 import UserProfile from './UserProfile/UserProfile';
+import User from './components/AdminPanel';
 
 
 
@@ -49,7 +50,7 @@ function App() {
           <Route path="/RegisterForm" element={<RegisterForm />} />
           <Route path="/edit-user-profile" element={<EditUserProfile />} />
           <Route path="/user-profile" element={<UserProfile />} />
-          <Route path="/admin" element={<AdminPanel />} />
+          <Route path="/admin" element={<User />} />
           <Route path="/loginFormAdmin" element={<LoginFormAdmin />} />
           <Route path="/loginFormAdmin" element={<LoginPage />} />
 

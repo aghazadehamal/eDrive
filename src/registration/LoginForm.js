@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 
 function LoginForm() {
   const [formData, setFormData] = useState({
@@ -32,6 +33,10 @@ function LoginForm() {
   };
 
   return (
+    <div>
+  <Link to= "/">
+      <img  src="/edurive.jpg" alt="Novademy Logo" style={{ maxWidth: '250px'}} />
+      </Link>
     <form onSubmit={handleSubmit}>
       <input
         type="email"
@@ -51,6 +56,10 @@ function LoginForm() {
       />
       <button type="submit">Giriş et</button>
     </form>
+
+    </div>
+
+   
   );
 }
 

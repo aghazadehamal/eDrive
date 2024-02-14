@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #7C4DFF;
+  background-color: white;
   color: white;
   font-size: 16px;
 }
@@ -18,7 +18,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: #7C4DFF; 
+  background-color: white; 
 }
 
 .logo {
@@ -30,7 +30,7 @@ header {
 nav button {
   margin-left: 20px;
   padding: 10px 20px;
-  background-color: #FFC107;
+  background-color: rgb(96, 207, 96);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -47,7 +47,7 @@ nav button:hover {
   align-items: center;
   justify-content: space-evenly; 
   padding: 50px;
-  background-color: #7C4DFF;
+  background-color: white;
 }
 
 
@@ -337,7 +337,7 @@ nav button:hover {
   position: relative;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
-  border-left: 4px solid #4CAF50;
+  border-left: 4px solid #46cb4b;
   margin-top: 20px;
 }
 
@@ -821,7 +821,7 @@ button.next:hover {
 
 .course-header {
   padding: 20px;
-  background: linear-gradient(135deg, #7f7fd5, #86a8e7, #91eae4);
+ background-color: #52cd6e;
   color: white;
 }
 
@@ -1036,7 +1036,7 @@ h2 {
 
 /* COURSE CARD CSS */
 .continue-button {
-  background-color: #007bff; /* Parlak mavi arka plan rengi */
+ background-color: #44cb64;/* Parlak mavi arka plan rengi */
   color: white; /* Beyaz yazı rengi */
   padding: 12px 24px; /* Üst-alt ve sağ-sol padding */
   border-radius: 5px; /* Hafif yuvarlak köşeler */
@@ -1051,13 +1051,13 @@ h2 {
 }
 
 .continue-button:hover, .continue-button:focus {
-  background-color: #0056b3; /* Üzerine gelindiğinde veya odaklandığında koyu mavi arka plan rengi */
+  background-color: #c9cd52; /* Üzerine gelindiğinde veya odaklandığında koyu mavi arka plan rengi */
   transform: translateY(-2px); /* Üzerine gelindiğinde hafifçe yukarı kaydır */
   box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Üzerine gelindiğinde daha belirgin gölge efekti */
 }
 
 .continue-button:active {
-  background-color: #004494; /* Aktifken daha koyu mavi arka plan rengi */
+  background-color: #52cd6e; /* Aktifken daha koyu mavi arka plan rengi */
   transform: translateY(1px); /* Aktifken hafifçe aşağı kaydır */
   box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Aktifken daha az belirgin gölge efekti */
 }
@@ -1083,7 +1083,7 @@ h2 {
 .moduleList {
   flex: 1;
   padding: 20px;
-  background-color: #615b53;
+ background-color: white;
   border-right: 2px solid #d4d4d4; /* Sağ sınır ekle */
   box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Gölge ekle */
   border-radius: 5px; /* Köşeleri yuvarlaklaştır */

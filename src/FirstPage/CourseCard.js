@@ -64,7 +64,7 @@ function CourseCard() {
         </ul>
       </div>
       <div className="course-purchase">
-        <div className="course-price">49.99 AZN</div>
+        <div className="course-price">39.90 AZN</div>
         <button className="continue-button" onClick={handleContinue}>Daha Çox Video Üçün Davam Et</button>
       </div>
     </div>

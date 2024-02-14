@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './RegistrationForm.css';
+import { Link } from 'react-router-dom';
 
 
 function RegistrationForm() {
@@ -39,6 +40,10 @@ function RegistrationForm() {
   };
 
   return (
+    <div>
+  <Link to= "/">
+      <img  src="/edurive.jpg" alt="Novademy Logo" style={{ maxWidth: '250px'}} />
+      </Link>
     <form onSubmit={handleSubmit}>
       <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Ad" required />
       <input type="text" name="surname" value={formData.surname} onChange={handleChange} placeholder="Soyad" required />
@@ -47,6 +52,9 @@ function RegistrationForm() {
       <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="Telefon Nömrəsi" required />
       <button type="submit">Qeydiyyatdan keç</button>
     </form>
+
+    </div>
+   
   );
 }
 

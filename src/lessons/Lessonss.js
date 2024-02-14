@@ -111,8 +111,8 @@ const Lessonss = () => {
           <div>
         <div className="navigationButtons">
   <div>
-    <button className="button previousButton" onClick={handlePrevious}>Önceki</button>
-    <button className="button nextButton" onClick={handleNext}>Sonraki</button>
+    <button className="button previousButton" onClick={handlePrevious}>Öncəki</button>
+    <button className="button nextButton" onClick={handleNext}>Sonrakı</button>
   </div>
   <div>
     <UserProfile className="userProfileLink" />

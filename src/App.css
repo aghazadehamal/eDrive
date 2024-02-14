@@ -29,7 +29,7 @@ header {
 
 nav button {
   margin-left: 20px;
-  padding: 10px 20px;
+  padding: 14px 25px;
   background-color: rgb(96, 207, 96);
   border: none;
   border-radius: 4px;
@@ -1275,3 +1275,95 @@ button:hover {
 .admin-panel h1 {
   color: #333;
 }
+
+
+
+
+
+
+
+/* VİDEO  NEXT PREV CSS  */
+.navigationButtons {
+  display: flex;
+  justify-content: space-between; /* Elemanları sağa ve sola yasla */
+  align-items: center; /* İçerikleri dikey olarak ortala */
+  padding: 10px 20px; /* İç boşluk */
+  background-color: #ffffff; /* Arka plan rengi */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Kutu gölgesi */
+  border-radius: 8px; /* Kenar yuvarlaklığı */
+  margin-bottom: 20px; /* Alt boşluk */
+}
+
+.navigationButtons > div {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  padding: 10px 15px;
+  font-size: 14px; /* Font boyutu */
+  font-weight: bold; /* Font kalınlığı */
+  color: white; /* Yazı rengi */
+  background-color: #007bff; /* Buton arka plan rengi */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s; /* Geçiş efektleri */
+  margin-right: 10px; /* Sağdaki buton ile arada boşluk */
+}
+
+.previousButton {
+  background-color: #6c757d; /* Gri renk */
+}
+
+.nextButton {
+  background-color: #28a745; /* Yeşil renk */
+}
+
+.button:hover {
+  transform: translateY(-2px); /* Butonu yukarı taşı */
+}
+
+/* UserProfile.css */
+.userProfileButton {
+  border: none;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  padding: 0;
+ 
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif bir gölge ekleyin */
+  margin-right: 10px;
+}
+
+.userProfileButton img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+
+.userProfileLink:hover {
+  color: #0056b3; /* Link hover rengi */
+
+}
+
+.logoutLink {
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: #dc3545; /* Kırmızı arka plan rengi */
+  color: white; /* Yazı rengi */
+  text-decoration: none; /* Alt çizgisi kaldır */
+  border-radius: 5px; /* Kenar yuvarlaklığı */
+  transition: background-color 0.2s; /* Arka plan rengi geçişi */
+}
+
+.logoutLink:hover {
+  background-color: #bd2130; /* Koyu kırmızı hover rengi */
+}
+
+
+
+/* COMMENT FORM */
+

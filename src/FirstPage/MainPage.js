@@ -10,7 +10,7 @@ const Header = () => {
    <img  src="/edurive.jpg" alt="Novademy Logo" style={{ maxWidth: '250px'}} />
       <nav>
 
-      <Link  to="/LoginForm"><button style={{marginTop: "30px", color: "white"}}>Giriş</button></Link>
+      <Link  to="/LoginForm"><button style={{marginTop: "10px", color: "white"}}>Giriş</button></Link>
        
         <Link to="/RegistrationForm"><button style={{color: "white"}}>Qeydiyyat</button></Link>
         {/* <Link to="/LoginFormAdmin"><button>Admin</button></Link> */}

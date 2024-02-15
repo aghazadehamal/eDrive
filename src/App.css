@@ -1371,7 +1371,7 @@ button:hover {
 
 /* PARAGRAPH CSS */
 
-.paragraphStyle {
+.lessonText {
   padding: 20px; /* İçeriğin etrafında 20px boşluk */
   border: 2px solid #000000; /* Siyah renkte 2px kalınlığında kenarlık */
   background-color: #f0f0f0; /* Açık gri arka plan rengi */
@@ -1380,3 +1380,11 @@ button:hover {
   margin-bottom: 20px; /* Paragrafın altında 20px boşluk */
   margin-top: 10px;
 }
+
+
+
+
+
+
+
+

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 function LoginForm() {
@@ -9,21 +9,28 @@ function LoginForm() {
     password: '',
   });
 
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     try {
       const response = await axios.post('https://edurive.onrender.com/auth/login', formData);
-      console.log(response.data); 
-      navigate('/lessonss'); 
-    }catch (error) {
+      // Token kontrolü
+      if (response.data.accessToken) {
+        // Tokeni localStorage'a kaydet
+        localStorage.setItem('userToken', response.data.accessToken);
+        // Kullanıcıyı dersler sayfasına yönlendir
+        navigate('/lessonss');
+      } else {
+        console.error('Giriş başarısız, token alınamadı.');
+      }
+    } catch (error) {
       if (error.response && error.response.data) {
-        console.error('Giriş edərkən bir hata oluştu:', error.response.data);
+        console.error('Giriş yapılırken bir hata oluştu:', error.response.data);
       } else if (error.request) {
         console.error('Yanıt alınamadı:', error.request);
       } else {
@@ -34,30 +41,30 @@ function LoginForm() {
 
   return (
     <div>
-  <Link to= "/">
-      <img  src="/edurive.jpg" alt="Novademy Logo" style={{ maxWidth: '250px'}} />
+      <Link to="/">
+        <img src="/edurive.jpg" alt="Edurive Logo" style={{ maxWidth: '250px' }} />
       </Link>
-    <form onSubmit={handleSubmit}>
-      <input
-        type="email"
-        name="gmail"
-        value={formData.gmail}
-        onChange={handleChange}
-        placeholder="E-posta"
-        required
-      />
-      <input
-        type="password"
-        name="password"
-        value={formData.password}
-        onChange={handleChange}
-        placeholder="Şifrə"
-        required
-      />
-      <button type="submit">Giriş et</button>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="email"
+          name="gmail"
+          value={formData.gmail}
+          onChange={handleChange}
+          placeholder="E-posta"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          value={formData.password}
+          onChange={handleChange}
+          placeholder="Şifrə"
+          required
+        />
+        <button type="submit">Giriş et</button>
 
-      
-<div style={{ 
+
+        <div style={{ 
   marginTop: '20px', 
   textAlign: 'center',
   display: "flex", 
@@ -81,15 +88,8 @@ function LoginForm() {
     Hesab yaradın
   </Link>
 </div>
-
-
-     
-    </form>
-  
-
+      </form>
     </div>
-
-   
   );
 }
 

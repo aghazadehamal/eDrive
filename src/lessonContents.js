@@ -1,8 +1,12 @@
 export const lessonContents = {
-    'M1-Əsas anlayışlar (1-ci hissə)': {
-      // text: 'Bu dersin metin içeriği 1. hisse için...',
-      videoUrl: 'v1.MOV', 
-    },
+  'M1-Əsas anlayışlar (1-ci hissə)': {
+    // Mevcut özellikler
+    videoUrl: 'v1.MOV',
+    // Eklemek istediğiniz text özelliği
+    text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
+  },
+
+
     'M1-Əsas anlayışlar (2-ci hissə)': {
       // text: 'Bu dersin metin içeriği 2. hisse için...',
       videoUrl: 'v2.MOV', 

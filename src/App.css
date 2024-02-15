@@ -1367,3 +1367,16 @@ button:hover {
 
 /* COMMENT FORM */
 
+
+
+/* PARAGRAPH CSS */
+
+.paragraphStyle {
+  padding: 20px; /* İçeriğin etrafında 20px boşluk */
+  border: 2px solid #000000; /* Siyah renkte 2px kalınlığında kenarlık */
+  background-color: #f0f0f0; /* Açık gri arka plan rengi */
+  font-family: 'Arial', sans-serif; /* Yazı tipi */
+  line-height: 1.5; /* Satır yüksekliği */
+  margin-bottom: 20px; /* Paragrafın altında 20px boşluk */
+  margin-top: 10px;
+}

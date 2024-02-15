@@ -145,32 +145,10 @@ B1 - kvadrisiklləri idarə etmək üçün
 
 B - aşağıdakı nəqliyyat vasitələrini idarə etmək üçün
 
-“A” kateqoriyasına aid edilməyən, icazə verilən maksimum kütləsi 3.500 kq-dan, oturacaq yerlərinin sayı sürücü oturacağından əlavə 8-dən artıq olmayan avtomobilləri qoşqusunun icazə verilən maksimum kütləsi 750 kq-dan artıq olmayan “B” kateqoriyasından olan avtomobilləri; qoşqusunun icazə verilən maksimal kütləsi 750 kq-dan artıq, lakin avtomobilin yüksüz kütləsindən çox olmayan və bütövlükdə belə tərkibin icazə verilən maksimum kütləsi 3500 kq-dan artıq olmayan “B” kateqoriyasından olan avtomobilləri;
-
-C1 - “D” kateqoriyasına və "D1" altkateqoriyasına aid edilməyən, icazə verilən maksimum kütləsi 3500 kq-dan artıq, lakin 7500 kq-dan çox olmayan avtomobilləri, habelə qoşqusunun icazə verilən maksimum kütləsi 750 kq-dan artıq olmayan “C1” altkateqoriyasından olan avtomobilləri idarə etmək üçün;
-
-C - “D” kateqoriyasına aid edilməyən, icazə verilən maksimum kütləsi 3.500 kq-dan artıq, olan avtomobilləri, habelə qoşqusunun icazə verilən maksimum kütləsi 750 kq-dan artıq olmayan “C” kateqoriyasından olan avtomobilləri idarə etmək üçün;
-
-D1- sərnişin daşınması üçün nəzərdə tutulan və oturacaq yerlərinin sayı, sürücü oturacağından əlavə, 8-dən artıq, lakin 16-dan çox olmayan avtomobilləri, habelə qoşqusunun icazə verilən maksimum kütləsi 750 kq-dan artıq olmayan “D1” altkateqoriyasından olan avtomobilləri idarə etmək üçün;
-
-D - sərnişin daşınması üçün nəzərdə tutulan və oturacaq yerlərinin sayı, sürücü oturacağından əlavə, 8-dən artıq olan avtomobilləri, habelə qoşqusunun icazə verilən maksimum kütləsi 750 kq-dan artıq olmayan “D” kateqoriyasından olan avtomobilləri idarə etmək üçün;
-
-BE - qoşqusunun icazə verilən maksimum kütləsi 750 kq-dan artıq və avtomobilin yüksüz kütləsindən çox olan “B” kateqoriyasından olan avtomobilləri, habelə qoşqusunun icazə verilən maksimum kütləsi 750 kq-dan artıq olan və bütövlükdə belə tərkibin icazə verilən maksimum kütləsi 3500 kq-dan artıq olan “B” kateqoriyasından olan avtomobilləri idarə etmək üçün;
-
-C1E - qoşqusunun icazə verilən maksimum kütləsi 750 kq-dan artıq, lakin avtomobilin yüksüz kütləsindən çox olmayan və bütövlükdə belə tərkibin icazə verilən maksimum kütləsi 12.000 kq-dan artıq olmayan “C1” altkateqoriyasından olan avtomobilləri idarə etmək üçün;
-
-CE - qoşqusunun icazə verilən maksimum kütləsi 750 kq-dan artıq olan “C” kateqoriyasından olan avtomobilləri idarə etmək üçün;
-
-D1E - sərnişin daşınması üçün nəzərdə tutulmayan, qoşqusunun icazə verilən maksimum kütləsi 750 kq-dan artıq olan, lakin avtomobilin yüksüz kütləsindən çox olmayan və bütövlükdə belə tərkibin icazə verilən maksimum kütləsi 12.000 kq-dan artıq olmayan “D1” altkateqoriyasından olan avtomobilləri idarə etmək üçün;
-
-DE - qoşqusunun icazə verilən maksimum kütləsi 750 kq-dan artıq olan “D” kateqoriyasından olan avtomobilləri idarə etmək üçün;
-
-Tramvay - tramvayları idarə etmək üçün;
-
-Trolleybus - trolleybusları idarə etmək üçün.
+n
         </p>
 
-     <CommentSection/>
+     {/* <CommentSection/> */}
        
       </div>
     </div>

@@ -10,42 +10,52 @@ export const lessonContents = {
     'M1-Əsas anlayışlar (2-ci hissə)': {
       // text: 'Bu dersin metin içeriği 2. hisse için...',
       videoUrl: 'v2.MOV', 
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M1-Əsas anlayışlar (3-cü hissə)': {
       // text: 'Bu dersin metin içeriği 1. hisse için...',
       videoUrl: 'v3.MOV', 
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M1-Əsas anlayışlar (4-cü hissə)': {
       // text: 'Bu dersin metin içeriği 2. hisse için...',
       videoUrl: 'v4.MOV', 
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M1-Əsas anlayışlar (5-ci hissə)': {
       // text: 'Bu dersin metin içeriği 1. hisse için...',
       videoUrl: 'v5.MOV', 
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M37-Mexaniki NV-lərin sürücülərinin vəzifələri': {
       // text: 'Bu dersin metin içeriği 2. hisse için...',
       videoUrl: 'v6.MOV', 
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M34-Sürücülük vəsiqəsi (1-ci hissə)': {
       // text: 'Bu dersin metin içeriği 2. hisse için...',
       videoUrl: 'v1.MOV', 
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M34-Sürücülük vəsiqəsi (2-ci hissə)': {
       // text: 'Bu dersin metin içeriği 1. hisse için...',
       videoUrl: 'v2.MOV', 
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M34-Sürücülük vəsiqəsi (3-cü hissə)': {
       // text: 'Bu dersin metin içeriği 2. hisse için...',
       videoUrl: 'v3.MOV', 
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M36-Yol hərəkəti iştirakçılarının vəzifələri və hüquqları': {
       // text: 'Bu dersin metin içeriği 1. hisse için...',
       videoUrl: 'v4.MOV', 
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M62-Xəbərdarlıq nişanları(1-ci hissə)': {
       // text: 'Bu dersin metin içeriği 2. hisse için...',
-      videoUrl: 'v5.MOV', 
+      videoUrl: 'v5.MOV',
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir' 
     },
     // 'M1-Əsas anlayışlar (5-ci hissə)': {
     //   text: 'Bu dersin metin içeriği 1. hisse için...',
@@ -54,10 +64,12 @@ export const lessonContents = {
     'M62-Xəbərdarlıq nişanları (2-ci hissə)': {
       // text: 'Bu dersin metin içeriği 2. hisse için...',
       videoUrl: 'v6.MOV', 
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M40-Piyadaların vəzifələri': {
       // text: 'Bu dersin metin içeriği 2. hisse için...',
       videoUrl: 'v1.MOV', 
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
   //  { 'M40-Piyadaların vəzifələri',
   //   'M42-Hərəkətə başlama və manevr etmə (1-ci hissə)',
@@ -71,99 +83,124 @@ export const lessonContents = {
     'M42-Hərəkətə başlama və manevr etmə (1-ci hissə)': {
       // text: 'Bu dersin metin içeriği 1. hisse için...',
       videoUrl: 'v1.MOV', 
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M42-Hərəkətə başlama və manevr etmə (2-ci hissə)': {
       // text: 'Bu dersin metin içeriği 2. hisse için...',
       videoUrl: 'v2.MOV', 
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
+
     },
     'M42-Hərəkətə başlama və manevr etmə (3-cü hissə)': {
       // text: 'Bu dersin metin içeriği 1. hisse için...',
       videoUrl: 'v3.MOV', 
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M42-Hərəkətə başlama və manevr etmə (4-cü hissə)': {
       // text: 'Bu dersin metin içeriği 2. hisse için...',
       videoUrl: 'v4.MOV', 
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M43-Avtomagistrallarda hərəkət': {
       // text: 'Bu dersin metin içeriği 1. hisse için...',
       videoUrl: 'v5.MOV', 
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M46-Velosiped və mopedlərə aid qaydalar': {
       // text: 'Bu dersin metin içeriği 2. hisse için...',
       videoUrl: 'v6.MOV', 
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M47-At arabası və malqaranın keçirilməsinə dair tələblər': {
       // text: 'Bu dersin metin içeriği 2. hisse için...',
       videoUrl: 'v1.MOV', 
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M52-Dayanma və durma (1-ci hissə)': {
       // text: 'Bu dersin metin içeriği M52-Dayanma və durma 1-ci hisse için...',
       videoUrl: 'v2.MOV',
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M52-Dayanma və durma (2-ci hissə)': {
       // text: 'Bu dersin metin içeriği M52-Dayanma və durma 2-ci hisse için...',
       videoUrl: 'v3.MOV',
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M52-Dayanma və durma (3-cü hissə)': {
       // text: 'Bu dersin metin içeriği M52-Dayanma və durma 3-cü hisse için...',
       videoUrl: 'v4.MOV',
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M52-Dayanma və durma (4-cü hissə)': {
       // text: 'Bu dersin metin içeriği M52-Dayanma və durma 4-cü hisse için...',
       videoUrl: 'v5.MOV',
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M53-Parklanma': {
       // text: 'Bu dersin metin içeriği M53-Parklanma için...',
       videoUrl: 'v6.MOV',
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M64-Qadağan nişanları (1-ci hissə)': {
       // text: 'Bu dersin metin içeriği M64-Qadağan nişanları 1-ci hisse için...',
       videoUrl: 'v1.MOV',
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M64-Qadağan nişanları (2-ci hissə)': {
       // text: 'Bu dersin metin içeriği M64-Qadağan nişanları 2-ci hisse için...',
       videoUrl: 'v2.MOV',
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M64-Qadağan nişanları (3-cü hissə)': {
       // text: 'Bu dersin metin içeriği M64-Qadağan nişanları 3-cü hisse için...',
       videoUrl: 'v3.MOV',
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M64-Qadağan nişanları (4-cü hissə)': {
       // text: 'Bu dersin metin içeriği M64-Qadağan nişanları 4-cü hisse için...',
       videoUrl: 'v64_4.MOV',
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
 
     'DƏRS 4 – Dəmiryolu Keçidləri, Piyada Keçidləri və Sürücülük Təlimləri': {
       // text: 'Bu dersin metin içeriği Dəmiryolu Keçidləri, Piyada Keçidləri və Sürücülük Təlimləri için...',
       videoUrl: 'v1.MOV',
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M44-Dəmiryolu keçidlərində hərəkət': {
       // text: 'Bu dersin metin içeriği M44-Dəmiryolu keçidlərində hərəkət için...',
       videoUrl: 'v2.MOV',
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M49-NV-in yolun hərəkət hissəsində yerləşməsi': {
       // text: 'Bu dersin metin içeriği M49-NV-in yolun hərəkət hissəsində yerləşməsi için...',
       videoUrl: 'v3.MOV',
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M54-Piyada keçidləri və ÜİONV-in dayanması': {
       // text: 'Bu dersin metin içeriği M54-Piyada keçidləri və ÜİONV-in dayanması için...',
       videoUrl: 'v4.MOV',
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M65-Məcburi hərəkət istiqaməti nişanları (1-ci hissə)': {
       // text: 'Bu dersin metin içeriği M65-Məcburi hərəkət istiqaməti nişanları 1-ci hisse için...',
       videoUrl: 'v5.MOV',
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M65-Məcburi hərəkət istiqaməti nişanları (2-ci hissə)': {
       // text: 'Bu dersin metin içeriği M65-Məcburi hərəkət istiqaməti nişanları 2-ci hisse için...',
       videoUrl: 'v6.MOV',
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M72-NV-lərin tanınma nişanları': {
       // text: 'Bu dersin metin içeriği M72-NV-lərin tanınma nişanları için...',
       videoUrl: 'v4.MOV',
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
     'M75-Yolayrıclarının keçilməsi': {
       // text: 'Bu dersin metin içeriği M75-Yolayrıclarının keçilməsi için...',
       videoUrl: 'v1.MOV',
+      text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
     },
 
     
@@ -174,70 +211,87 @@ export const lessonContents = {
       'M48-NV-in üstün hərəkət rejimi': {
         // text: 'Bu dersin metin içeriği M48-NV-in üstün hərəkət rejimi için...',
         videoUrl: 'v2.MOV',
+        text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
       },
       'M51-Ötmə və qarşılıqlı keçmə (1-ci hissə)': {
         // text: 'Bu dersin metin içeriği M51-Ötmə və qarşılıqlı keçmə 1-ci hisse için...',
         videoUrl: 'v3.MOV',
+        text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
       },
       'M51-Ötmə və qarşılıqlı keçmə (2-ci hissə)': {
         // text: 'Bu dersin metin içeriği M51-Ötmə və qarşılıqlı keçmə 2-ci hisse için...',
         videoUrl: 'v4.MOV',
+        text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
       },
       'M56-Adamların daşınması': {
         // text: 'Bu dersin metin içeriği M56-Adamların daşınması için...',
         videoUrl: 'v5.MOV',
+        text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
       },
       'M67-Servis nişanları': {
         // text: 'Bu dersin metin içeriği M67-Servis nişanları için...',
         videoUrl: 'v6.MOV',
+        text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
       },
       'M73-Səs və xarici işıq siqnallarından istifadə edilmə qaydaları (1-ci hissə)': {
         // text: 'Bu dersin metin içeriği M73-Səs və xarici işıq siqnallarından istifadə edilmə qaydaları 1-ci hisse için...',
         videoUrl: 'v1.MOV',
+        text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
       },
       'M73-Səs və xarici işıq siqnallarından istifadə edilmə qaydaları (2-ci hissə)': {
         // text: 'Bu dersin metin içeriği M73-Səs və xarici işıq siqnallarından istifadə edilmə qaydaları 2-ci hisse için...',
         videoUrl: 'v2.MOV',
+        text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
       },
       'M73-Səs və xarici işıq siqnallarından istifadə edilmə qaydaları (3-cü hissə)': {
         // text: 'Bu dersin metin içeriği M73-Səs və xarici işıq siqnallarından istifadə edilmə qaydaları 3-cü hisse için...',
         videoUrl: 'v3.MOV',
+        text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
       },
       'DƏRS 6 – Yaşayış Zonalarında və Nizamlanmayan Yolayrıcılarında Hərəkət': {
         // text: 'Bu dersin metin içeriği DƏRS 6 – Yaşayış Zonalarında və Nizamlanmayan Yolayrıcılarında Hərəkət için...',
         videoUrl: 'v4.MOV',
+        text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
       },
       'M45-Yaşayış zonalarında hərəkət': {
         // text: 'Bu dersin metin içeriği M45-Yaşayış zonalarında hərəkət için...',
         videoUrl: 'v5.MOV',
+        text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
       },
       'M50-Hərəkət sürəti və ara məsafəsi': {
         // text: 'Bu dersin metin içeriği M50-Hərəkət sürəti və ara məsafəsi için...',
         videoUrl: 'v6.MOV',
+        text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
       },
       'M63-Üstünlük nişanları': {
         // text: 'Bu dersin metin içeriği M63-Üstünlük nişanları için...',
         videoUrl: 'v1.MOV',
+        text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
       },
       'M77-Nizamlanmayan yolayrıcı (1-ci hissə)': {
         // text: 'Bu dersin metin içeriği M77-Nizamlanmayan yolayrıcı 1-ci hisse için...',
         videoUrl: 'v2.MOV',
+        text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
       },
       'M77-Nizamlanmayan yolayrıcı (2-ci hissə)': {
         // text: 'Bu dersin metin içeriği M77-Nizamlanmayan yolayrıcı 2-ci hisse için...',
         videoUrl: 'v3.MOV',
+        text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
       },
       'M77-Nizamlanmayan yolayrıcı (3-cü hissə)': {
         // text: 'Bu dersin metin içeriği M77-Nizamlanmayan yolayrıcı 3-cü hisse için...',
         videoUrl: 'v4.MOV',
+        text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
       },
       'M77-Nizamlanmayan yolayrıcı (4-cü hissə)': {
         // text: 'Bu dersin metin içeriği M77-Nizamlanmayan yolayrıcı 4-cü hisse için...',
         videoUrl: 'v5.MOV',
+        text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
       },
       'M78-Sürmə təlimi': {
         // text: 'Bu dersin metin içeriği M78-Sürmə təlimi için...',
         videoUrl: 'v6.MOV',
+        text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
       },
 
 
@@ -246,94 +300,117 @@ export const lessonContents = {
         'DƏRS 7 – Nasaz NV-lərin Yedəyə Alınması və Xüsusi Siqnalların Tətbiqi': {
           // text: 'Bu dersin metin içeriği DƏRS 7 – Nasaz NV-lərin Yedəyə Alınması və Xüsusi Siqnalların Tətbiqi için...',
           videoUrl: 'v1.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
         'M55-Nasaz NV-ləri və onların yedəyə alınması (1-ci hissə)': {
           // text: 'Bu dersin metin içeriği M55-Nasaz NV-ləri və onların yedəyə alınması 1-ci hisse için...',
           videoUrl: 'v2.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
         'M55-Nasaz NV-ləri və onların yedəyə alınması (2-ci hissə)': {
           // text: 'Bu dersin metin içeriği M55-Nasaz NV-ləri və onların yedəyə alınması 2-ci hisse için...',
           videoUrl: 'v3.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
         'M66-Məlumatverici-göstərici nişanları (1-ci hissə)': {
           // text: 'Bu dersin metin içeriği M66-Məlumatverici-göstərici nişanları 1-ci hisse için...',
           videoUrl: 'v4.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
         'M66-Məlumatverici-göstərici nişanları (2-ci hissə)': {
           // text: 'Bu dersin metin içeriği M66-Məlumatverici-göstərici nişanları 2-ci hisse için...',
           videoUrl: 'v5.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
         'M66-Məlumatverici-göstərici nişanları (3-cü hissə)': {
           // text: 'Bu dersin metin içeriği M66-Məlumatverici-göstərici nişanları 3-cü hisse için...',
           videoUrl: 'v6.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
         'M66-Məlumatverici-göstərici nişanları (4-cü hissə)': {
           // text: 'Bu dersin metin içeriği M66-Məlumatverici-göstərici nişanları 4-cü hisse için...',
           videoUrl: 'v1.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
         'M74-Xüsusi siqnalların tətbiqi və texniki baxış': {
           // text: 'Bu dersin metin içeriği M74-Xüsusi siqnalların tətbiqi və texniki baxış için...',
           videoUrl: 'v2.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
         'DƏRS 8 – Nizamlayıcı və Svetofor Siqnalları': {
           // text: 'Bu dersin metin içeriği DƏRS 8 – Nizamlayıcı və Svetofor Siqnalları için...',
           videoUrl: 'v3.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
         'M58-Nizamlayıcının siqnalları (1-ci hissə)': {
           // text: 'Bu dersin metin içeriği M58-Nizamlayıcının siqnalları 1-ci hisse için...',
           videoUrl: 'v4.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
         'M58-Nizamlayıcının siqnalları (2-ci hissə)': {
           // text: 'Bu dersin metin içeriği M58-Nizamlayıcının siqnalları 2-ci hisse için...',
           videoUrl: 'v5.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
         'M59-Svetoforun siqnalları (1-ci hissə)': {
           // text: 'Bu dersin metin içeriği M59-Svetoforun siqnalları 1-ci hisse için...',
           videoUrl: 'v6.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
         'M59-Svetoforun siqnalları (2-ci hissə)': {
           // text: 'Bu dersin metin içeriği M59-Svetoforun siqnalları 2-ci hisse için...',
           videoUrl: 'v1.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
         'M60-Svetoforun və nizamlayıcının siqnallarının yerinə yetirilməsi': {
           // text: 'Bu dersin metin içeriği M60-Svetoforun və nizamlayıcının siqnallarının yerinə yetirilməsi için...',
           videoUrl: 'v2.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
         'M76-Nizamlanan yolayrıcı': {
           // text: 'Bu dersin metin içeriği M76-Nizamlanan yolayrıcı için...',
           videoUrl: 'v3.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
         'DƏRS 9 – Yüklərin Daşınması və Müvəqqəti Nişanlar': {
           // text: 'Bu dersin metin içeriği DƏRS 9 – Yüklərin Daşınması və Müvəqqəti Nişanlar için...',
           videoUrl: 'v4.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
         'M57-Yüklərin daşınması qaydaları': {
           // text: 'Bu dersin metin içeriği M57-Yüklərin daşınması qaydaları için...',
           videoUrl: 'v5.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
         'M68-Əlavə məlumat nişanları (1-ci hissə)': {
           // text: 'Bu dersin metin içeriği M68-Əlavə məlumat nişanları 1-ci hisse için...',
           videoUrl: 'v6.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
         'M68-Əlavə məlumat nişanları (2-ci hissə)': {
           // text: 'Bu dersin metin içeriği M68-Əlavə məlumat nişanları 2-ci hisse için...',
           videoUrl: 'v1.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
         'M69-Yolun nişanlanması (1-ci hissə)': {
           // text: 'Bu dersin metin içeriği M69-Yolun nişanlanması 1-ci hisse için...',
           videoUrl: 'v2.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
         'M69-Yolun nişanlanması (2-ci hissə)': {
           // text: 'Bu dersin metin içeriği M69-Yolun nişanlanması 2-ci hisse için...',
           videoUrl: 'v3.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
         'M69-Yolun nişanlanması (3-cü hissə)': {
           // text: 'Bu dersin metin içeriği M69-Yolun nişanlanması 3-cü hisse için...',
           videoUrl: 'v4.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
         'Müvəqqəti nişanlar': {
           // text: 'Bu dersin metin içeriği Müvəqqəti nişanlar için...',
           videoUrl: 'v5.MOV',
+          text: ' Sürücülük vəsiqəsi hər hansı şəxsin nəqliyyat vasitələrini idarə etmək hüququnu təsdiq edən sənəd. Bir qayda olaraq, sürücünün nəqliyyat vasitələrini idarə etmək bacarıqları kateqoriyalara bölünməklə göstərilir'
         },
 
 

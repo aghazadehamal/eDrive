@@ -40,7 +40,7 @@ function LoginForm() {
   };
 
   return (
-    <div>
+    <div style={{textAlign: "center"}}>
       <Link to="/">
         <img src="/edurive.jpg" alt="Edurive Logo" style={{ maxWidth: '250px' }} />
       </Link>
@@ -63,31 +63,13 @@ function LoginForm() {
         />
         <button type="submit">Giriş et</button>
 
+<hr></hr>
 
-        <div style={{ 
-  marginTop: '20px', 
-  textAlign: 'center',
-  display: "flex", 
-  justifyContent: "space-around"
-}}>
-  <p style={{
-    margin: '0', 
-    color: '#333', 
-    fontWeight: 'normal', 
-  }}>
-    Hesabınız yoxdur?
-  </p>
-   
-  <Link to="/RegistrationForm" style={{ 
-    color: 'red', 
-    textDecoration: 'none', 
-    fontWeight: 'bold', 
-    fontSize: "20px",
-   
-  }}>
-    Hesab yaradın
-  </Link>
-</div>
+        <div style={{ marginTop: "10px" }}>
+          <span>Hesabınız yoxdur?</span>
+          {/* Burada 'Daxil ol' metni için Link bileşenini kullanıyoruz */}
+          <Link to="/RegistrationForm" style={{ marginLeft: '5px' }}>Qeydiyyatdan keç</Link>.
+        </div>
       </form>
     </div>
   );

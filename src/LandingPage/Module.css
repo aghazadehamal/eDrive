@@ -1,0 +1,69 @@
+.module {
+    background-color: #F3F3F3; 
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1em;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .module-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+  
+    color: white;
+    cursor: pointer;
+  }
+  
+  .module-header h2 {
+    margin: 0;
+ font-size: 20px;
+  }
+  
+  .module-toggle {
+    font-size: 1.5em;
+  }
+  
+  .module-content {
+    padding: 1em;
+    background-color: #ffffff; 
+  }
+  
+  .video-counts {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1em;
+  }
+  
+  .video-count {
+    background-color: #4caf50; 
+    color: white;
+    border-radius: 8px;
+    padding: 0.5em 1em;
+    font-weight: bold;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .module-header h2 {
+      font-size: 1em;
+    }
+    .module-toggle {
+      font-size: 1.25em;
+    }
+  }
+  
+
+  
+  
+  .module-header-open {
+    background-color: #4caf50; 
+    color: white; 
+  }
+  
+
+  

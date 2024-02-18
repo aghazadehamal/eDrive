@@ -1,0 +1,51 @@
+/* Navbar.css - Sınıf isimleri güncellendi */
+.customNavbar {
+  display: flex;
+justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.customLogo {
+  height: 50px;
+  width: 221px;
+}
+
+.customNav {
+  display: flex;
+}
+
+.customNavLink {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.customButtons {
+  display: flex;
+}
+
+.customBtn {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.customLogin {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 8px;
+}
+
+.customRegister {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 8px;
+}
+
+
+.customNavbar img {
+  width: 221px;
+}

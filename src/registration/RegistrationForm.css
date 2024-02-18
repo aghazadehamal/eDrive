@@ -1,6 +1,6 @@
 /* RegistrationForm.css */
 form {
-   background-color: #4CAF50;
+   /* background-color: #4CAF50; */
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     color: white;
@@ -10,19 +10,20 @@ form {
     padding: 40px;
     margin: auto;
     margin-top: 5%;
+    text-align: center;
   }
   
   input[type="text"],
   input[type="email"],
   input[type="password"] {
-    border: none;
-    border-bottom: 2px solid #eee;
+ 
+   
     display: block;
     width: 100%;
     padding: 10px;
     margin: 20px 0;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 10px;
   }
   
   input::placeholder {
@@ -30,12 +31,12 @@ form {
   }
   
   button[type="submit"] {
-    background-color: black;
+  background-color: #50BB27;
     color: white;
     border: none;
     padding: 10px 20px;
     font-size: 18px;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     display: block;
     margin: 20px auto;

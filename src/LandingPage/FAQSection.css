@@ -1,0 +1,101 @@
+/* FAQSection.css - Sınıf isimleri güncellendi */
+.uniqueFaqSection {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+  }
+  
+  .uniqueFaqItem {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .uniqueFaqQuestion {
+    cursor: pointer;
+    padding: 15px 20px;
+    background-color: #e7e7e7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .uniqueFaqIcon {
+    
+  }
+  
+  .uniqueFaqAnswer {
+    padding: 15px 20px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    display: none;
+  }
+  
+  .uniqueFaqItem.uniqueOpen .uniqueFaqAnswer {
+    display: block; 
+  }
+  
+  .uniqueFaqContact {
+    text-align: center;
+    padding: 20px;
+    background-color: #e7e7e7;
+    margin-top: 20px;
+    border-radius: 4px;
+  }
+  
+
+  .uniqueFaqContact h3 {
+    margin-bottom: 15px;
+  }
+  
+  .uniqueFaqContact p {
+    margin-bottom: 20px;
+   
+  }
+  
+
+
+
+
+
+
+
+ 
+  
+  .uniqueFaqItemOpen {
+    background-color: #e8f5e9; /* Açık yeşil arkaplan */
+  }
+  
+  .uniqueFaqQuestion {
+    cursor: pointer;
+    /* Diğer stilleriniz */
+  }
+  
+  .uniqueFaqQuestion:hover,
+  .uniqueFaqItemOpen .uniqueFaqQuestion {
+    background-color: #4caf50; /* Koyu yeşil arkaplan */
+    color: white; /* Açık renk metin */
+  }
+  
+
+  .uniqueFaqAnswer {
+    /* Diğer stilleriniz */
+  }
+  
+
+  .uniqueFaqSection h2, div {
+    color: black;
+  }
+  .uniqueFaqSection button {
+    background-color: #4caf50;
+    padding: 10px;
+    color: #f9f9f9;
+    border-radius: 8px;
+    border: #fff;
+  }

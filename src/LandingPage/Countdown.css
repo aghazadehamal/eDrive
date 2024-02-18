@@ -1,0 +1,26 @@
+/* Countdown.css */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin-top: 20px;
+    margin-left: 5px;
+  }
+  
+  .countdown-component {
+    text-align: center;
+    margin: 0 10px;
+  }
+  
+  .time {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .time-label {
+    margin-top: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+  

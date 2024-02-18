@@ -1,0 +1,75 @@
+.footer {
+    background-color: #1F203F;
+    color: white;
+    padding: 20px 0;
+    font-size: 14px;
+    margin-top: 40px;
+  }
+  
+  .footer-nav .nav-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-nav .nav-list li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  .footer-nav .nav-list li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-nav .nav-list li a:hover {
+    color: #f1c40f;
+  }
+  
+  .footer-content {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .social-media-icons {
+    margin-top: 10px;
+  }
+  
+  .social-media-icons a {
+    margin: 0 5px;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .social-media-icons a:hover {
+    color: #f1c40f;
+  }
+  
+  .icon-facebook, .icon-instagram, .icon-linkedin {
+    /* Burada sosyal medya simgeleri için stil tanımlamaları yapılacak */
+  }
+  
+
+  .footer p {
+    width: 316px;
+    color: #fff;
+  }
+
+
+  .footer-divider {
+    border-top: 2px solid #000; /* Siyah renkli ve 2 piksel kalınlığında çizgi */
+    width: 100%; /* Tam genişlik */
+
+   width: 62%; /* Çizginin genişliği %50 olarak ayarlandı */
+  margin: 20px auto; 
+  margin-top: 50px;
+  }
+  
+  /* ... diğer stil tanımları ... */
+  

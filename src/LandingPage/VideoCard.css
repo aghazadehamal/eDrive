@@ -1,0 +1,33 @@
+.uniqueVideoCard {
+    /* Önceki stillerinizi buraya ekleyin */
+    position: relative;
+    cursor: pointer; /* Tıklanabilir olduğunu göstermek için */
+    overflow: hidden; /* Kenarlık dışına taşan içeriği kes */
+  }
+  
+  .video-thumbnail {
+    width: 100%;
+    height: auto; /* Resim boyutunu koruyarak genişlet */
+    display: block; /* Blok seviyesinde göster */
+  }
+  
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Diğer içeriklerin üzerinde görünmesini sağlar */
+  }
+  
+  .play-icon::before {
+    /* Oynatma ikonu için içerik ekleyin */
+    content: '▶'; /* Basit bir oynatma ikonu */
+    font-size: 50px; /* İkon boyutu */
+    color: white; /* İkon rengi */
+  }
+  

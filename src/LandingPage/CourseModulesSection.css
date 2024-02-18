@@ -1,0 +1,90 @@
+/* LearnDrivingSection.css - Sınıf isimleri güncellendi */
+.customCourseModulesSection {
+    padding: 20px;
+    background-color: #f0f2f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+  }
+  
+  .customAccordion {
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .customAccordionHeader {
+    cursor: pointer;
+    padding: 15px 20px;
+    background-color: #e7e7e7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .customAccordionContent {
+    padding: 15px 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+  }
+  
+  .customRegisterButton {
+    display: block;
+    width: 50%;
+    padding: 10px 0;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 8px;
+    margin-left: 170px;
+  }
+  
+ 
+  .customOpen .customAccordionContent {
+
+  }
+
+
+  .customCourseModulesSection h2, span {
+    color: black;
+  }
+  
+
+
+  .customOpen {
+    background-color: green !important; 
+  }
+
+  .customOpen .customAccordionHeader {
+    background-color: #50BB27; 
+  }
+  
+
+  .customAccordion:hover {
+    background-color: #50BB27; 
+  }
+
+  .customAccordionHeader:hover {
+    background-color: #50BB27;
+  }
+
+  
+  /* .customAccordion.customOpen:hover {
+    background-color: darkgreen; 
+  }
+  
+  .customAccordion:not(.customOpen):hover {
+    background-color: lightgreen; 
+  } */
+  
+
+  
+  
+  

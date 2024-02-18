@@ -40,18 +40,28 @@ function RegistrationForm() {
   };
 
   return (
-    <div>
+    <div style={{textAlign: "center"}}>
   <Link to= "/">
       <img  src="/edurive.jpg" alt="Novademy Logo" style={{ maxWidth: '250px'}} />
       </Link>
     <form onSubmit={handleSubmit}>
+      <h1 style={{color: "black"}}>Qeydiyyat</h1>
+      <p>Edurive-a indi qoşul!</p>
       <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Ad" required />
       <input type="text" name="surname" value={formData.surname} onChange={handleChange} placeholder="Soyad" required />
       <input type="email" name="gmail" value={formData.gmail} onChange={handleChange} placeholder="E-posta" required />
       <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="Şifrə" required />
       <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="Telefon Nömrəsi" required />
       <button type="submit">Qeydiyyatdan keç</button>
+      <hr></hr>
+      <div style={{ marginTop: "10px" }}>
+          <span>Hesabınız var?</span>
+          {/* Burada 'Daxil ol' metni için Link bileşenini kullanıyoruz */}
+          <Link to="/loginForm" style={{ marginLeft: '5px' }}>Daxil ol</Link>.
+        </div>
+     
     </form>
+
 
     </div>
    

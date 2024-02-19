@@ -13,7 +13,7 @@ const LearnDrivingSection = () => {
         <div className="learn-driving-info">
           {/* React Icons ile ikonlar */}
           <InfoItem Icon={FaVideo} text="Ətraflı və asan şəkildə izah edilən video dərslər." />
-          <InfoItem Icon={FaTasks} text="Her biz mövzu üçün test formatında praktika." />
+          <InfoItem Icon={FaTasks} text="Hər biz mövzu üçün test formatında praktika." />
           <InfoItem Icon={FaChalkboardTeacher} text="Morbi sed imperdiet in ipsum, adipiscing elit dui lectus." />
           <InfoItem Icon={FaCarAlt} text="Morbi sed imperdiet in ipsum, adipiscing elit dui lectus." />
         </div>

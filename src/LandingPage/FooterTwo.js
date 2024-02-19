@@ -8,10 +8,10 @@ const FooterTwo = () => {
       <img  src="/logoimage.png" alt="Novademy Logo" style={{ maxWidth: '250px'}} />
       <nav className="footer-nav">
         <ul className="nav-list">
-          <li><a href="#neden-biz">Neden biz</a></li>
-          <li><a href="#hakkimizda">Mentorumuz hakkında</a></li>
-          <li><a href="#kurslar">Kursumuz hakkında</a></li>
-          <li><a href="#ogrenim">Neler öğreneceksiniz?</a></li>
+          <li><a href="#neden-biz">Niyə biz</a></li>
+          <li><a href="#hakkimizda">Mentorumuz haqqında</a></li>
+          <li><a href="#kurslar">Kursumuz haqqında</a></li>
+          <li><a href="#ogrenim">Nələr öyrənəcəksiz?</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </nav>
@@ -19,7 +19,7 @@ const FooterTwo = () => {
       <hr className="footer-divider"/> {/* Yatay çizgi için eklenen kısım */}
 
       <div className="footer-content">
-        <p>Biz interaktif derslerle genç vatandaşlarımızı sürücülük imtahanına hazırlaşdıran startup'ıq.</p>
+        <p>Biz interaktif dərslərlə gənc vətəndaşlarımızı sürücülük imtahanına hazırlaşdıran startup'ıq.</p>
         <div className="social-media-icons">
           <a href="https://facebook.com"><FaFacebook /></a>
           <a href="https://instagram.com"><FaInstagramSquare /></a>

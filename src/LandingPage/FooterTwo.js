@@ -5,6 +5,7 @@ import { FaFacebook, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 const FooterTwo = () => {
   return (
     <footer className="footer">
+      <img  src="/logoimage.png" alt="Novademy Logo" style={{ maxWidth: '250px'}} />
       <nav className="footer-nav">
         <ul className="nav-list">
           <li><a href="#neden-biz">Neden biz</a></li>

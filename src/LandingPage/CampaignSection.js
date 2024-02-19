@@ -2,6 +2,7 @@ import React from 'react';
 import './CampaignSection.css'; // İlgili CSS stil dosyası
 import VideoCard from './VideoCard'; // VideoCard bileşenini import edin
 import Countdown from './Countdown';
+import { Link } from 'react-router-dom';
 
 // Ana kampanya bölümü komponenti
 const CampaignSection = () => {
@@ -10,7 +11,10 @@ const CampaignSection = () => {
       <h1>Ayın sonuna qədər <span style={{color: "#50BB27"}}>₼59-a yox</span> , <span style={{color: "#50BB27"}}>₼39-a</span>  kursumuzu alın</h1>
 
       <div style={{display: "flex", justifyContent: "center"}}>
-      <button className="uniqueCampaignButton">İndicə qeydiyyatdan keç</button>
+        <Link to="/RegistrationForm">
+        <button className="uniqueCampaignButton">İndicə qeydiyyatdan keç</button>
+        </Link>
+     
       <Countdown targetDate="2024-12-31T23:59:59" />
       </div>
       

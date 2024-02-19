@@ -1,6 +1,6 @@
 import React from 'react';
 import './CampaignSection.css'; // İlgili CSS stil dosyası
-import VideoCard from './VideoCard'; // VideoCard bileşenini import edin
+
 import Countdown from './Countdown';
 import { Link } from 'react-router-dom';
 
@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const CampaignSection = () => {
   return (
     <div className="uniqueCampaignSection">
-      <h1>Ayın sonuna qədər <span style={{color: "#50BB27"}}>₼59-a yox</span> , <span style={{color: "#50BB27"}}>₼39-a</span>  kursumuzu alın</h1>
+      <h2>Ayın sonuna qədər <span style={{color: "#50BB27"}}>₼59-a yox</span> , <span style={{color: "#50BB27"}}>₼39-a</span>  kursumuzu alın</h2>
 
       <div style={{display: "flex", justifyContent: "center"}}>
         <Link to="/RegistrationForm">
@@ -19,12 +19,7 @@ const CampaignSection = () => {
       </div>
       
 
-      <div className="uniqueVideoCards">
-        {/* Video kartları burada kullanılacak */}
-        <VideoCard url="/v1.MOV" />
-        <VideoCard url="/v2.MOV" />
-        <VideoCard url="v3.MOV" />
-      </div>
+     
     </div>
   );
 };

@@ -6,6 +6,7 @@ import FooterTwo from "../LandingPage/FooterTwo";
 import LearnDrivingSection from "../LandingPage/LearnDrivingSection";
 
 import Navbar from "../LandingPage/Navbar";
+import Videos from "../LandingPage/Videos";
 import WhyUsSection from "../LandingPage/WhyUsSection";
 // import VideoPlayer from "../VideoPlayer";
 import CourseCard from "./CourseCard";
@@ -28,6 +29,7 @@ function FirstPage() {
             
             <Navbar/>
        <CampaignSection/>    
+       <Videos/>
        <WhyUsSection/>
        <LearnDrivingSection/>
        <CourseModulesSection/>

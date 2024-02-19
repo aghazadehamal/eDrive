@@ -34,15 +34,16 @@ justify-content: space-around;
 }
 
 .customLogin {
-  background-color: #4CAF50;
+  background-color: #50BB27;
   color: white;
   border-radius: 8px;
 }
 
 .customRegister {
-  background-color: #4CAF50;
+  background-color: #50BB27;
   color: white;
   border-radius: 8px;
+  width: 158px;
 }
 
 

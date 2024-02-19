@@ -9,6 +9,7 @@
     width: 100%;
     height: auto; /* Resim boyutunu koruyarak genişlet */
     display: block; /* Blok seviyesinde göster */
+    width: 308px;
   }
   
   .video-overlay {
@@ -29,5 +30,46 @@
     content: '▶'; /* Basit bir oynatma ikonu */
     font-size: 50px; /* İkon boyutu */
     color: white; /* İkon rengi */
+  }
+  
+  .video-overlay i {
+    font-size: 50px;
+    color: #50BB27; /* İkonun dış çerçevesi yeşil */
+    position: relative;
+  }
+  
+  .video-overlay i::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px; /* Beyaz dairenin boyutunu ayarlayın */
+    height: 30px; /* Beyaz dairenin boyutunu ayarlayın */
+    background-color: white;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  
+ 
+  .uniqueVideoCard {
+    margin: 0 10px;
+    background: #ccc;
+    padding: 20px;
+    width: 300px;  
+    height: 200px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px; 
+    border-radius: 16px;
+  }
+
+  .uniqueVideoCards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
   }
   

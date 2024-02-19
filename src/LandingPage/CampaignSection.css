@@ -7,12 +7,15 @@
 
 .uniqueCampaignButton {
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: #50BB27;
   color: white;
   border: none;
   cursor: pointer;
   margin-top: 20px;
   border-radius: 8px;
+  width: 259px;
+  height: 54px;
+  font-size: 20px;
 }
 
 .uniqueCountdown {
@@ -28,44 +31,24 @@
 
 
 
-.uniqueVideoCard {
-  margin: 0 10px;
-  background: #ccc;
-  padding: 20px;
-  width: 300px;  
-  height: 200px; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin-bottom: 20px; 
-  border-radius: 10%;
-}
+
 
 .uniquePlayIcon {
   position: absolute;
   font-size: 30px;
 }
-.uniqueCampaignSection h1 {
-  color: black;
-}
+
 
 
 /* CampaignSection.css */
-.uniqueVideoCards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 40px;
-}
 
 
 
-.uniqueCampaignSection h1 {
-  font-size: 44px;
-  width: 653px;
-  margin-left: 400px;
-
+.uniqueCampaignSection h2 {
+  font-size: 64px;
+  width: 949px;
+  margin-left: 220px;
+  color: black;
 }
 
 

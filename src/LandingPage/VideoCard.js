@@ -18,7 +18,7 @@ const VideoCard = ({ url, thumbnail }) => {
         <>
           <img src={"videoimage.jpeg"} alt="Thumbnail" className="video-thumbnail" />
           <div className="video-overlay">
-            <i style={{fontSize: "40px", color: "aqua"}}>
+            <i >
             <BsPlayCircleFill />
 
 

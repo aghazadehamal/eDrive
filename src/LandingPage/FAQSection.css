@@ -97,19 +97,15 @@
   
   .uniqueFaqQuestion:hover,
   .uniqueFaqItemOpen .uniqueFaqQuestion {
-    background-color: #4caf50; /* Koyu yeşil arkaplan */
+    background-color: #50BB27; /* Koyu yeşil arkaplan */
     color: white; /* Açık renk metin */
   }
   
 
-  .uniqueFaqAnswer {
-    /* Diğer stilleriniz */
-  }
+ 
   
 
   .uniqueFaqSection h2, div {
     color: black;
   }
-  .uniqueFaqSection button {
-   
-  }
+  

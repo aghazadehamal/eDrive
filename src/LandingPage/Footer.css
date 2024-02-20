@@ -10,7 +10,7 @@
     list-style: none;
     padding: 0;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
   }
   
   .footer-nav .nav-list li {
@@ -64,7 +64,8 @@
 
   .footer-divider {
     border-top: 2px solid #000; /* Siyah renkli ve 2 piksel kalınlığında çizgi */
-    width: 100%; /* Tam genişlik */
+    width: 1127px;
+    height: 1px; /* Tam genişlik */
 
    width: 62%; /* Çizginin genişliği %50 olarak ayarlandı */
   margin: 20px auto; 
@@ -73,3 +74,7 @@
   
   /* ... diğer stil tanımları ... */
   
+  .footerLogo {
+    width: 221px;
+    height: 52px;
+  }

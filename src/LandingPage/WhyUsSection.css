@@ -30,8 +30,12 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-    max-width: 300px;
+    /* max-width: 300px; */
     margin: 10px;
+    width: 360px;
+    height: 228px;
+    border: 1px solid #BCBCC3
+
 
   }
   
@@ -41,13 +45,14 @@
   }
   
   .uniqueTitle {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+   font-size: 24px;
+  line-height: 36px;
   }
   
   .uniqueDescription {
-    font-size: 1rem;
+   font-size: 18px;
     color: #666; /* Açıklamanın rengini ayarlayın */
+    line-height: 27px;
   }
   
   

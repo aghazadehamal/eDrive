@@ -9,7 +9,7 @@ const FeatureCard = ({ Icon, title, description }) => {
     return (
       <div className="uniqueFeatureCard">
         <div className="uniqueIcon"><Icon /></div> {/* React Icons bileşenini JSX olarak kullan */}
-        <h3 className="uniqueTitle">{title}</h3>
+        <span className="uniqueTitle">{title}</span>
         <p className="uniqueDescription">{description}</p>
       </div>
     );
@@ -19,7 +19,7 @@ const FeatureCard = ({ Icon, title, description }) => {
 const WhyUsSection = () => {
   return (
     <div className="uniqueWhyUsSection">
-      <h2>Niyə biz?</h2>
+      <span style={{fontSize: "40px", lineHeight: "60px"}}>Niyə biz?</span>
       <div className="uniqueCardsContainer">
         <FeatureCard
           Icon={MdAttachMoney} // React Icons bileşenini prop olarak geçir

@@ -21,7 +21,7 @@ const Accordion = ({ moduleTitle, children }) => {
 const CourseModulesSection = () => {
   return (
     <div className="customCourseModulesSection">
-      <h2 style={{marginTop: "10px", marginBottom: "20px"}}>Kursumuzda nələri öyrənəcəksiniz</h2>
+      <span className='spanFirst' >Nələr öyrənəcəksiniz?</span>
   
       <Accordion moduleTitle=" Əsas Sürücülük Anlayışları">
       

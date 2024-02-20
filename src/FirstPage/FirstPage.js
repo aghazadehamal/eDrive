@@ -31,8 +31,9 @@ function FirstPage() {
        <CampaignSection/>    
        <Videos/>
        <WhyUsSection/>
-       <LearnDrivingSection/>
        <CourseModulesSection/>
+       <LearnDrivingSection/>
+       
        <FAQSectionTwo/>
        <FooterTwo/>
        

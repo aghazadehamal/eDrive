@@ -46,7 +46,7 @@ const FAQSectionTwo = () => {
       <div className="uniqueFaqContact">
         <p>Sualınız qalıb?</p>
         
-        <button> Bizimlə əlaqə saxlayın</button>
+        <button style={{marginTop: "10px"}}> Bizimlə əlaqə saxlayın</button>
       </div>
     </div>
   );

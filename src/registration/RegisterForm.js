@@ -2,6 +2,8 @@ import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup'; 
 import axios from 'axios';
+import './RegistrationForm.css'; // İlgili CSS stil dosyası
+
 
 
 
@@ -37,7 +39,7 @@ function RegisterForm() {
   });
 
   return (
-    <form  onSubmit={formik.handleSubmit}>
+    <form style={{height: "1000px"}}  onSubmit={formik.handleSubmit}>
       <input
         type="text"
         name="name"

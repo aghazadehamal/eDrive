@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import './LoginForm.css'; // İlgili CSS stil dosyası
 
 function LoginForm() {
   const [formData, setFormData] = useState({
@@ -40,35 +41,44 @@ function LoginForm() {
   };
 
   return (
-    <div style={{textAlign: "center"}}>
+    <div style={{textAlign: "center"}} className="login">
       <Link to="/">
         <img src="/edurive.jpg" alt="Edurive Logo" style={{ maxWidth: '250px' }} />
       </Link>
       <form onSubmit={handleSubmit}>
+        <h1 style={{color: "black"}}>Daxil ol</h1>
+        <p>
+          E-mail
+        </p>
         <input
+        
           type="email"
           name="gmail"
           value={formData.gmail}
           onChange={handleChange}
-          placeholder="E-posta"
+          placeholder="E-mailinizi əlavə edin"
           required
         />
+         <p>
+          Şifrə
+        </p>
         <input
           type="password"
           name="password"
           value={formData.password}
           onChange={handleChange}
-          placeholder="Şifrə"
+          placeholder="Şifrənizi əlavə edin"
           required
         />
-        <button type="submit">Giriş et</button>
+        <span style={{color: "#50BB27", marginLeft: "250px"}}>Şifrəmi unutdum</span>
+        <button type="submit">Davam et</button>
 
-<hr></hr>
 
-        <div style={{ marginTop: "10px" }}>
+
+        <div style={{  marginLeft: "50px", marginTop: "42px", height: "40px", width: "384px" }}>
           <span>Hesabınız yoxdur?</span>
           {/* Burada 'Daxil ol' metni için Link bileşenini kullanıyoruz */}
-          <Link to="/RegistrationForm" style={{ marginLeft: '5px' }}>Qeydiyyatdan keç</Link>.
+          <Link to="/RegistrationForm" style={{ marginLeft: '10px', color: "green", textDecoration: "none" }}>Qeydiyyatdan keçin</Link>
         </div>
       </form>
     </div>

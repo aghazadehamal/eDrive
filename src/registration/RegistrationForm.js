@@ -53,11 +53,11 @@ function RegistrationForm() {
       <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="Şifrə" required />
       <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="Telefon Nömrəsi" required />
       <button type="submit">Qeydiyyatdan keç</button>
-      <hr></hr>
-      <div style={{ marginTop: "10px" }}>
+      
+      <div style={{ marginTop: "42px", marginLeft: "90px", height: "40px", width: "384px" }}>
           <span>Hesabınız var?</span>
           {/* Burada 'Daxil ol' metni için Link bileşenini kullanıyoruz */}
-          <Link to="/loginForm" style={{ marginLeft: '5px' }}>Daxil ol</Link>.
+          <Link to="/loginForm" style={{ marginLeft: '10px', color: "green", textDecoration: "none" }}>Daxil olun</Link>.
         </div>
      
     </form>

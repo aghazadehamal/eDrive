@@ -1433,9 +1433,7 @@ nav a {
   cursor: pointer;
 }
 
-.login {
-  background-color: #f0f0f0; /* Giriş butonu arka plan rengi */
-}
+
 
 .register {
   background-color: #4CAF50; /* Kayıt butonu arka plan rengi */

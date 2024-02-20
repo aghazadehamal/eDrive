@@ -20,7 +20,7 @@ const FAQItem = ({ question, answer }) => {
 const FAQSectionTwo = () => {
   return (
     <div className="uniqueFaqSection">
-      <h2>FAQ</h2>
+      <span className='spanFirst'  >FAQ</span>
       <p style={{marginTop: "20px", marginBottom: "20px"}}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. .</p>
       <FAQItem
         question="Question text goes here"
@@ -44,9 +44,9 @@ const FAQSectionTwo = () => {
       />
     
       <div className="uniqueFaqContact">
-        <h3>Sualınız qalıb?</h3>
-        <p>Bizimlə əlaqə saxlayıb kurs haqqında daha ətraflı məlumat əldə edə bilərsiniz</p>
-        <button>Əlaqəyə keç!</button>
+        <p>Sualınız qalıb?</p>
+        
+        <button> Bizimlə əlaqə saxlayın</button>
       </div>
     </div>
   );

@@ -3,6 +3,7 @@
     position: relative;
     cursor: pointer; /* Tıklanabilir olduğunu göstermek için */
     overflow: hidden; /* Kenarlık dışına taşan içeriği kes */
+  
   }
   
   .video-thumbnail {
@@ -70,6 +71,6 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 40px;
+    margin-top: 90px;
   }
   

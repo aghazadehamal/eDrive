@@ -19,8 +19,8 @@ const FooterTwo = () => {
       <hr className="footer-divider"/> {/* Yatay çizgi için eklenen kısım */}
 
       <div className="footer-content">
-        <p>Biz interaktif dərslərlə gənc vətəndaşlarımızı sürücülük imtahanına hazırlaşdıran startup'ıq.</p>
-        <div className="social-media-icons">
+        <p >Biz interaktif dərslərlə gənc vətəndaşlarımızı sürücülük imtahanına hazırlaşdıran startup'ıq.</p>
+        <div  className="social-media-icons">
           <a href="https://facebook.com"><FaFacebook /></a>
           <a href="https://instagram.com"><FaInstagramSquare /></a>
           <a href="https://linkedin.com"><FaLinkedin /></a>

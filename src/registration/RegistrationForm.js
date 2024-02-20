@@ -46,12 +46,16 @@ function RegistrationForm() {
       </Link>
     <form onSubmit={handleSubmit}>
       <h1 style={{color: "black"}}>Qeydiyyat</h1>
-      <p>Edurive-a indi qoşul!</p>
-      <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Ad" required />
-      <input type="text" name="surname" value={formData.surname} onChange={handleChange} placeholder="Soyad" required />
-      <input type="email" name="gmail" value={formData.gmail} onChange={handleChange} placeholder="E-posta" required />
-      <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="Şifrə" required />
-      <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="Telefon Nömrəsi" required />
+      <p>Ad</p>
+      <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Adınızı əlavə edin" required />
+      <p>Soyad</p>
+      <input type="text" name="surname" value={formData.surname} onChange={handleChange} placeholder="Soyadınızı əlavə edin" required />
+      <p>E-mail</p>
+      <input type="email" name="gmail" value={formData.gmail} onChange={handleChange} placeholder="E-mailinizi əlavə edin" required />
+      <p>Şifrə</p>
+      <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="Şifrənizi əlavə edin" required />
+      <p>Telefon nömrəniz</p>
+      <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="Telefon nömrənizi əlavə edin" required />
       <button type="submit">Qeydiyyatdan keç</button>
       
       <div style={{ marginTop: "42px", marginLeft: "90px", height: "40px", width: "384px" }}>

@@ -4,13 +4,17 @@
     padding: 20px 0;
     font-size: 14px;
     margin-top: 40px;
+    height: 426px;
   }
   
   .footer-nav .nav-list {
     list-style: none;
     padding: 0;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 62px;
+    margin-right: 44px;
+    
+    
   }
   
   .footer-nav .nav-list li {
@@ -22,6 +26,7 @@
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
+    margin-left: 30px;
   }
   
   .footer-nav .nav-list li a:hover {
@@ -30,15 +35,19 @@
   
   .footer-content {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
     display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    margin-bottom: 20px;
+  justify-content: space-between;
+   
   }
   
   .social-media-icons {
-    margin-top: 10px;
+  
+    margin-right: 165px;
+    font-size: 20px;
+    width: 98px;
+    height: 24px;
+    gap: "13px"
   }
   
   .social-media-icons a {
@@ -67,9 +76,9 @@
     width: 1127px;
     height: 1px; /* Tam genişlik */
 
-   width: 62%; /* Çizginin genişliği %50 olarak ayarlandı */
+  
   margin: 20px auto; 
-  margin-top: 50px;
+  margin-top: 90px;
   }
   
   /* ... diğer stil tanımları ... */
@@ -77,4 +86,14 @@
   .footerLogo {
     width: 221px;
     height: 52px;
+    margin-top: 45px;
+  }
+
+  .footer-content p {
+    margin-left: 170px;
+    font-size: 14px;
+    line-height: 21px;
+    width: 477px;
+    height: 42px;
+    text-align: start;
   }

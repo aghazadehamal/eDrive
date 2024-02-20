@@ -6,7 +6,7 @@ form {
     color: white;
     font-family: 'Arial', sans-serif;
     max-width: 456px;
-    height: 673px;
+    height: 704px;
    
     padding: 40px;
     margin: auto;
@@ -24,12 +24,14 @@ form {
   
     width: 100%;
     padding: 10px;
-    margin: 20px 0;
+  
     font-size: 16px;
-    border-radius: 28px;
+    border-radius: 12px;
     border: 1px solid #BCBCC3;
     color: white;
     height: 54px;
+    margin-bottom: 10px;
+    margin-top: 5px;
    
     
   }

@@ -1,10 +1,13 @@
 /* Navbar.css - Sınıf isimleri güncellendi */
 .customNavbar {
   display: flex;
-justify-content: space-around;
+justify-content: space-between;
   align-items: center;
   padding: 10px;
   background-color: #fff;
+  width: 1200px;
+  height: 77px;
+  margin-left: 136px;
 }
 
 .customLogo {
@@ -12,12 +15,10 @@ justify-content: space-around;
   width: 221px;
 }
 
-.customNav {
-  display: flex;
-}
+
 
 .customNavLink {
-  margin: 0 10px;
+margin: 30px;
   text-decoration: none;
   color: black;
 }
@@ -34,19 +35,30 @@ justify-content: space-around;
 }
 
 .customLogin {
-  background-color: #50BB27;
-  color: white;
+
+ color: #50BB27;
   border-radius: 8px;
+  width: 85px;
+  height: 40px;
+  font-size: 16px;
+  background-color: white;
 }
 
 .customRegister {
   background-color: #50BB27;
   color: white;
-  border-radius: 8px;
+  border-radius: 12px;
   width: 158px;
+  height: 40px;
 }
 
 
 .customNavbar img {
-  width: 221px;
+  width: 3252px;
+  height: 112px;
+}
+
+.customLogin p {
+  color: #50BB27;
+  width: 53px;
 }

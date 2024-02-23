@@ -23,24 +23,28 @@ const FAQSectionTwo = () => {
       <span className='spanFirst'  >FAQ</span>
       <p style={{marginTop: "20px", marginBottom: "20px"}}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. .</p>
       <FAQItem
-        question="Question text goes here"
-        answer="Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+        question=" Edurive nədir?"
+        answer="Edurive hərtərəfli sürücülük dərsləri təklif edən onlayn sürücülük məktəbidir. Platformamızda 12 modul tapa bilərsiniz, bunların hər biri sürücülüyün bütün aspektlərini əhatə edən dərslərdən və testlərsən ibarətdir."
       />
        <FAQItem
-        question="Question text goes here"
-        answer="Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+        question="Kursun qiyməti nədir?"
+        answer="Bütün dərslərə access 39 manatdır. Bu, 12 modulun hamısına giriş imkanı verən birdəfəlik ödənişdir."
       />
        <FAQItem
-        question="Question text goes here"
-        answer="Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+        question="Necə qeydiyyatdan keçib təlimə başlaya bilərəm?"
+        answer="Təlimə başlamaq üçün saytımızda qeydiyyatdan keçməli, sonra da ödəniş etməlisiniz. Bundan sonra bütün dərslərə və testlərinə access əldə edəcəksiniz."
       />
        <FAQItem
-        question="Question text goes here"
-        answer="Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+        question="Təlimə başlamaq üçün əvvəlcədən sürücülük təcrübəsinə ehtiyacım var?"
+        answer="Xeyr, kursumuz həm təzə başlayanlar, həm də sürücülük təcrübəsi olanlar üçün uyğundur."
       />
        <FAQItem
-        question="Question text goes here"
-        answer="Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+        question=" Kursda hansı mövzular əhatə olunur?"
+        answer="Kursumuz yol hərəkəti qaydaları, sürücülük texnikası, təhlükəsizlik tədbirləri, fövqəladə halların idarə edilməsi və daha çox daxil olmaqla geniş mövzuları əhatə edir."
+      />
+       <FAQItem
+        question="Kurs hansı dillərdə mövcuddur?"
+        answer="Hazırda kursumuz Azərbaycan dilində təklif olunur. Gələcəkdə başqa dillərdə də kurslar təklif etmək üçün çalışırıq."
       />
     
       <div className="uniqueFaqContact">

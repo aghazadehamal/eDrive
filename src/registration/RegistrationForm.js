@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './RegistrationForm.css';
+import './RegistrationForm.css'; // Make sure your CSS handles the styling for the overlay and modal
 import { Link } from 'react-router-dom';
-
 
 function RegistrationForm() {
   const [formData, setFormData] = useState({
@@ -10,65 +9,91 @@ function RegistrationForm() {
     surname: '',
     gmail: '',
     password: '',
- 
     phoneNumber: ''
   });
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
+    setIsLoading(true);
+    setError('');
     try {
       const response = await axios.post('https://edurive.onrender.com/auth/registration', formData);
-      console.log(response.data); 
-   
-    } catch (error) {
-      if (error.response) {
-     
-        console.error('Qeydiyyat zamanl bir xəta oluştu:', error.response.data);
-      } else if (error.request) {
-     
-        console.error('Cavab alınmadı:', error.request);
-      } else {
-     
-        console.error('İstək sırasında bir xəta oluştu:', error.message);
-      }
+      console.log(response.data);
+      setIsSubmitted(true);
+      setIsLoading(false);
+    } catch (err) {
+      setError('Qeydiyyat zamanı bir xəta oluştu. Zəhmət olmasa yenidən cəhd edin.');
+      setIsLoading(false);
+      console.error(err);
     }
-    
   };
 
   return (
-    <div style={{textAlign: "center"}}>
-  <Link to= "/">
-      <img  src="/edurive.jpg" alt="Novademy Logo" style={{ maxWidth: '250px'}} />
+    <div style={{ textAlign: "center" }}>
+      <Link to="/">
+        <img src="/edurive.jpg" alt="Edurive Logo" style={{ maxWidth: '250px' }} />
       </Link>
-    <form onSubmit={handleSubmit}>
-      <h1 style={{color: "black"}}>Qeydiyyat</h1>
-      <p>Ad</p>
-      <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Adınızı əlavə edin" required />
-      <p>Soyad</p>
-      <input type="text" name="surname" value={formData.surname} onChange={handleChange} placeholder="Soyadınızı əlavə edin" required />
-      <p>E-mail</p>
-      <input type="email" name="gmail" value={formData.gmail} onChange={handleChange} placeholder="E-mailinizi əlavə edin" required />
-      <p>Şifrə</p>
-      <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="Şifrənizi əlavə edin" required />
-      <p>Telefon nömrəniz</p>
-      <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="Telefon nömrənizi əlavə edin" required />
-      <button type="submit">Qeydiyyatdan keç</button>
-      
-      <div style={{ marginTop: "42px", marginLeft: "90px", height: "40px", width: "384px" }}>
+      <div className="form-container">
+      <form onSubmit={handleSubmit}>
+        <h1 style={{ color: "black" }}>Qeydiyyat</h1>
+        {/* Form inputları */}
+        <div>
+          <p>Ad</p>
+          <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Adınızı əlavə edin" required />
+        </div>
+        <div>
+          <p>Soyad</p>
+          <input type="text" name="surname" value={formData.surname} onChange={handleChange} placeholder="Soyadınızı əlavə edin" required />
+        </div>
+        <div>
+          <p>E-mail</p>
+          <input type="email" name="gmail" value={formData.gmail} onChange={handleChange} placeholder="E-mailinizi əlavə edin" required />
+        </div>
+        <div>
+          <p>Şifrə</p>
+          <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="Şifrənizi əlavə edin" required />
+        </div>
+        <div>
+          <p>Telefon nömrəniz</p>
+          <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="Telefon nömrənizi əlavə edin" required />
+        </div>
+        <div>
+          <button type="submit" disabled={isLoading}>Qeydiyyatdan keç</button>
+
+          <div style={{ marginTop: "42px", marginLeft: "90px", height: "40px", width: "384px" }}>
           <span>Hesabınız var?</span>
           {/* Burada 'Daxil ol' metni için Link bileşenini kullanıyoruz */}
           <Link to="/loginForm" style={{ marginLeft: '10px', color: "green", textDecoration: "none" }}>Daxil olun</Link>.
         </div>
-     
-    </form>
-
-
+        </div>
+        {error && <p className="error">{error}</p>}
+      </form>
+      {isSubmitted && (
+  <div className="modal-overlay">
+    <div className="modal-content">
+      <div className="success-icon">✓</div>
+      <h1 className="modal-title">Müraciətiniz qeydə alındı</h1>
+      <p className="modal-message">
+        Siz hələ hazırda saytın free versiyasına yönləndirilirsiniz. Qeydiyyatınız təsdiqləndikdən sonra limitlər aradan qaldırılacaq
+      </p>
+      <button className="modal-button" onClick={() => setIsSubmitted(false)}>
+        Davam et
+      </button>
+      
     </div>
-   
+  </div>
+)}
+
+      </div>
+    </div>
   );
 }
 

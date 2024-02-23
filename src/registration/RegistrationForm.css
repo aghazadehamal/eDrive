@@ -27,7 +27,7 @@ form {
     font-size: 16px;
     border-radius: 12px;
     border: 1px solid #BCBCC3;
-    color: white;
+   color: #110f0f;
     height: 54px;
     margin-bottom: 10px;
     margin-top: 5px;
@@ -67,3 +67,76 @@ form {
     margin-bottom: 30px;
   }
   
+
+
+
+
+
+
+ /* Modalın genel arka planını belirleyen stil */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Yarı saydam arka plan */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Diğer içeriklerin önünde olmalı */
+}
+
+/* Modal içeriğini stilize eden CSS */
+.modal-content {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 50%; /* veya istediğiniz genişliği belirtin */
+  max-width: 500px; /* Maksimum genişlik */
+  text-align: center;
+  position: relative;
+  z-index: 1001; /* Arka planın üzerinde olmalı */
+}
+
+/* Başarılı işlem ikonunu stilize eden CSS */
+.success-icon {
+  color: #4BB543; /* Yeşil renk */
+  font-size: 4rem; /* İkon boyutu */
+}
+
+/* Başlık stilini belirleyen CSS */
+.modal-title {
+  font-size: 1.5rem; /* Başlık font boyutu */
+  color: #333; /* Başlık rengi */
+  margin: 0.5rem 0; /* Üst ve alt boşluk */
+}
+
+/* Mesaj metnini stilize eden CSS */
+.modal-message {
+  font-size: 1rem; /* Mesaj metni boyutu */
+  color: #666; /* Mesaj metni rengi */
+  margin-bottom: 1.5rem; /* Alt boşluk */
+}
+
+/* Düğme stilini belirleyen CSS */
+.modal-button {
+  background-color: #4BB543; /* Yeşil arka plan rengi */
+  color: white; /* Yazı rengi */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* 'Daxil ol' link stilini belirleyen CSS */
+.link-text {
+  display: block;
+  margin-top: 1.5rem;
+  color: #000; /* Link rengi */
+  text-decoration: none; /* Alt çizgi kaldır */
+  font-size: 1rem;
+}

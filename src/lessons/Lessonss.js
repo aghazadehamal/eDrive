@@ -7,12 +7,18 @@ import UserProfile from "../UserProfile/UserProfile";
 import { Link } from "react-router-dom";
 import { lessonContents } from "../lessonContents";
 import { modules } from "../modules";
+import Modal from "./Modal";
+import { useLocation } from "react-router-dom";
+
 
 const Lessonss = () => {
   const [activeModule, setActiveModule] = useState(null);
   const [activeLesson, setActiveLesson] = useState(null);
   const [activeQuiz, setActiveQuiz] = useState(false);
   const [activeLessonIndex, setActiveLessonIndex] = useState(0);
+  const [showModal, setShowModal] = useState(false); 
+
+  const location = useLocation();
 
   const handleNext = () => {
     const lessonCount = modules[activeModule]?.length || 0;
@@ -30,11 +36,18 @@ const Lessonss = () => {
   };
 
   useEffect(() => {
+    // Sayfa yüklendiğinde URL'deki sorgu parametrelerini kontrol eder
+    const queryParams = new URLSearchParams(location.search);
+    if (queryParams.get('showModal') === 'true') {
+      setShowModal(true); // Modalı göster
+    }
+
+    // Modül ve dersin başlangıç durumunu ayarlar
     const firstModuleKey = Object.keys(modules)[0];
     setActiveModule(firstModuleKey);
     setActiveLesson(modules[firstModuleKey][0]);
     setActiveLessonIndex(0);
-  }, []);
+  }, [location]);
 
   const handleModuleClick = (module) => {
     setActiveModule(module === activeModule ? null : module);
@@ -148,6 +161,9 @@ const Lessonss = () => {
         )}
         {activeQuiz && <Quiz />}
       </div>
+      {showModal && (
+        <Modal onClose={() => setShowModal(false)} />
+      )}
     </div>
   );
 };

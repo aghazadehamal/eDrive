@@ -20,12 +20,9 @@ function LoginForm() {
     e.preventDefault();
     try {
       const response = await axios.post('https://edurive.onrender.com/auth/login', formData);
-      // Token kontrolü
       if (response.data.accessToken) {
-        // Tokeni localStorage'a kaydet
         localStorage.setItem('userToken', response.data.accessToken);
-        // Kullanıcıyı dersler sayfasına yönlendir
-        navigate('/lessonss');
+        navigate('/lessonss?showModal=true'); // Burada URL parametresini ekleyin
       } else {
         console.error('Giriş başarısız, token alınamadı.');
       }

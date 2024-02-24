@@ -80,13 +80,16 @@ function RegistrationForm() {
   <div className="modal-overlay">
     <div className="modal-content">
       <div className="success-icon">✓</div>
-      <h1 className="modal-title">Müraciətiniz qeydə alındı</h1>
+      <span className="modal-title">Müraciətiniz qeydə alındı</span>
       <p className="modal-message">
         Siz hələ hazırda saytın free versiyasına yönləndirilirsiniz. Qeydiyyatınız təsdiqləndikdən sonra limitlər aradan qaldırılacaq
       </p>
+      <Link to="/lessonss">
       <button className="modal-button" onClick={() => setIsSubmitted(false)}>
         Davam et
       </button>
+      </Link>
+     
       
     </div>
   </div>

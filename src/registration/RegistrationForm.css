@@ -1,5 +1,5 @@
 /* RegistrationForm.css */
-form {
+.registration form {
   
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -14,9 +14,9 @@ form {
     border: 1px solid #BCBCC3;
   }
   
-  input[type="text"],
-  input[type="email"],
-  input[type="password"] {
+  .registration  input[type="text"],
+  .registration  input[type="email"],
+  .registration  input[type="password"] {
  
    
     display: block;
@@ -35,11 +35,11 @@ form {
     
   }
   
-  input::placeholder {
+  .registration  input::placeholder {
     color: #110f0f;
   }
   
-  button[type="submit"] {
+  .registration  button[type="submit"] {
   background-color: #50BB27;
     color: white;
     border: none;
@@ -56,12 +56,12 @@ form {
     
   }
   
-  button[type="submit"]:hover {
+ button[type="submit"]:hover {
     background-color: #d6cd28;
   }
   
   /* Başlık için ek stil */
-  h1 {
+  .registration h1 {
     text-align: center;
     color: #fff;
     margin-bottom: 30px;

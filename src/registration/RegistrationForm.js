@@ -37,7 +37,7 @@ function RegistrationForm() {
   };
 
   return (
-    <div style={{ textAlign: "center" }}>
+    <div className='registration' style={{ textAlign: "center" }}>
       <Link to="/">
         <img src="/edurive.jpg" alt="Edurive Logo" style={{ maxWidth: '250px' }} />
       </Link>

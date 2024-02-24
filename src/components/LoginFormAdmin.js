@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useNavigate, Link } from 'react-router-dom'; 
+
 const LoginFormAdmin = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -19,13 +20,13 @@ const LoginFormAdmin = () => {
 
   return (
 
-    <div>
+    <div className="login">
 
       <Link to= "/">
       <img  src="/edurive.jpg" alt="Novademy Logo" style={{ maxWidth: '250px'}} />
       </Link>
 
-    <form onSubmit={handleSubmit} className="login-form">
+    <form style={{height: "400px"}} g onSubmit={handleSubmit} >
     <div>
       <label>İstifadəçi Adı:</label>
       <input

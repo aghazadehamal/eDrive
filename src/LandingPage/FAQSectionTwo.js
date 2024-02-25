@@ -28,7 +28,7 @@ const FAQItem = ({ question, answer }) => {
 const FAQSectionTwo = () => {
   return (
     <div className="uniqueFaqSection">
-      <span className='spanFirst'  >FAQ</span>
+      <span className='spanFirst'>FAQ</span>
      
       <FAQItem
         question=" Edurive nədir?"

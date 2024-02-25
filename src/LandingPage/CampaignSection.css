@@ -45,12 +45,13 @@
 
 
 
-.uniqueCampaignSection h2 {
+.uniqueCampaignSection p {
   font-size: 64px;
   width: 949px;
   margin-left: 220px;
   color: black;
   line-height: 96px;
+  font-weight: 700;
 }
 
 

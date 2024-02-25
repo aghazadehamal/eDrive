@@ -67,7 +67,7 @@
   }
 
 
-  .customCourseModulesSection h2, span {
+  .customCourseModulesSection  span {
     color: black;
   }
   
@@ -104,7 +104,7 @@
 
 .spanFirst {
   font-size: 40px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 60px;
 }
   

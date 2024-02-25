@@ -19,7 +19,7 @@ const FeatureCard = ({ Icon, title, description }) => {
 const WhyUsSection = () => {
 return (
   <div className="uniqueWhyUsSection">
-    <span style={{fontSize: "40px", lineHeight: "60px"}}>Niyə biz?</span>
+    <span style={{fontSize: "40px", lineHeight: "60px", fontWeight: "700"}}>Niyə biz?</span>
     <div className="uniqueCardsContainer">
       <FeatureCard
         Icon={<img src={process.env.PUBLIC_URL + '/icons/niyeThree.svg'} alt="Clock Icon" />}

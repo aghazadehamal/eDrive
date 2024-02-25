@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const CampaignSection = () => {
   return (
     <div className="uniqueCampaignSection">
-      <h2>Ayın sonuna qədər <span style={{color: "#50BB27"}}>₼59-a yox</span> , <span style={{color: "#50BB27"}}>₼39-a</span>  kursumuzu alın</h2>
+      <p>Ayın sonuna qədər <span style={{color: "#50BB27"}}>₼59-a yox</span> , <span style={{color: "#50BB27"}}>₼39-a</span>  kursumuzu alın</p>
 
       <div style={{display: "flex", justifyContent: "center"}}>
         <Link to="/RegistrationForm">

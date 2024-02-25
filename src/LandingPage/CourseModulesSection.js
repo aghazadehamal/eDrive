@@ -26,9 +26,20 @@ const CourseModulesSection = () => {
       <Accordion moduleTitle=" Əsas Sürücülük Anlayışları">
       
       <div className="video-counts">
-            <div className="video-count">4 video</div>
-            <div className="video-count">4 video</div>
-            <div className="video-count">4 video</div>
+      
+
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+      <img src={`${process.env.PUBLIC_URL}/icons/clock.svg`} alt="Clock Icon" style={{ marginRight: '8px' }} />
+      <span>1 saat 20 dəq</span>
+    </div>
+    <div style={{ display: 'flex', alignItems: 'center', marginLeft: "15px" }}>
+      <img src={`${process.env.PUBLIC_URL}/icons/video.svg`} alt="Clock Icon" style={{ marginRight: '8px' }} />
+      <span>4 video</span>
+    </div>
+    <div style={{ display: 'flex', alignItems: 'center', marginLeft: "15px"  }}>
+      <img src={`${process.env.PUBLIC_URL}/icons/test.svg`} alt="Clock Icon" style={{ marginRight: '8px' }} />
+      <span>24 test</span>
+    </div>
           </div>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique...</p>
       </Accordion>
@@ -36,36 +47,72 @@ const CourseModulesSection = () => {
       <Accordion moduleTitle="Sürücülük vəsiqəsi">
       
       <div className="video-counts">
-            <div className="video-count">4 video</div>
-            <div className="video-count">4 video</div>
-            <div className="video-count">4 video</div>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+      <img src={`${process.env.PUBLIC_URL}/icons/clock.svg`} alt="Clock Icon" style={{ marginRight: '8px' }} />
+      <span>1 saat 20 dəq</span>
+    </div>
+    <div style={{ display: 'flex', alignItems: 'center', marginLeft: "15px" }}>
+      <img src={`${process.env.PUBLIC_URL}/icons/video.svg`} alt="Clock Icon" style={{ marginRight: '8px' }} />
+      <span>4 video</span>
+    </div>
+    <div style={{ display: 'flex', alignItems: 'center', marginLeft: "15px"  }}>
+      <img src={`${process.env.PUBLIC_URL}/icons/test.svg`} alt="Clock Icon" style={{ marginRight: '8px' }} />
+      <span>24 test</span>
+    </div>
           </div>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique...</p>
       </Accordion>
       <Accordion moduleTitle="Piyadaların vəzifələri">
       
       <div className="video-counts">
-            <div className="video-count">4 video</div>
-            <div className="video-count">4 video</div>
-            <div className="video-count">4 video</div>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+      <img src={`${process.env.PUBLIC_URL}/icons/clock.svg`} alt="Clock Icon" style={{ marginRight: '8px' }} />
+      <span>1 saat 20 dəq</span>
+    </div>
+    <div style={{ display: 'flex', alignItems: 'center', marginLeft: "15px" }}>
+      <img src={`${process.env.PUBLIC_URL}/icons/video.svg`} alt="Clock Icon" style={{ marginRight: '8px' }} />
+      <span>4 video</span>
+    </div>
+    <div style={{ display: 'flex', alignItems: 'center', marginLeft: "15px"  }}>
+      <img src={`${process.env.PUBLIC_URL}/icons/test.svg`} alt="Clock Icon" style={{ marginRight: '8px' }} />
+      <span>24 test</span>
+    </div>
           </div>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique...</p>
       </Accordion>
       <Accordion moduleTitle="Dayanma və durma ">
       
       <div className="video-counts">
-            <div className="video-count">4 video</div>
-            <div className="video-count">4 video</div>
-            <div className="video-count">4 video</div>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+      <img src={`${process.env.PUBLIC_URL}/icons/clock.svg`} alt="Clock Icon" style={{ marginRight: '8px' }} />
+      <span>1 saat 20 dəq</span>
+    </div>
+    <div style={{ display: 'flex', alignItems: 'center', marginLeft: "15px" }}>
+      <img src={`${process.env.PUBLIC_URL}/icons/video.svg`} alt="Clock Icon" style={{ marginRight: '8px' }} />
+      <span>4 video</span>
+    </div>
+    <div style={{ display: 'flex', alignItems: 'center', marginLeft: "15px"  }}>
+      <img src={`${process.env.PUBLIC_URL}/icons/test.svg`} alt="Clock Icon" style={{ marginRight: '8px' }} />
+      <span>24 test</span>
+    </div>
           </div>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique...</p>
       </Accordion>
       <Accordion moduleTitle="Dəmiryolu Keçidləri, Piyada Keçidləri və Sürücülük Təlimləri">
       
       <div className="video-counts">
-            <div className="video-count">4 video</div>
-            <div className="video-count">4 video</div>
-            <div className="video-count">4 video</div>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+      <img src={`${process.env.PUBLIC_URL}/icons/clock.svg`} alt="Clock Icon" style={{ marginRight: '8px' }} />
+      <span>1 saat 20 dəq</span>
+    </div>
+    <div style={{ display: 'flex', alignItems: 'center', marginLeft: "15px" }}>
+      <img src={`${process.env.PUBLIC_URL}/icons/video.svg`} alt="Clock Icon" style={{ marginRight: '8px' }} />
+      <span>4 video</span>
+    </div>
+    <div style={{ display: 'flex', alignItems: 'center', marginLeft: "15px"  }}>
+      <img src={`${process.env.PUBLIC_URL}/icons/test.svg`} alt="Clock Icon" style={{ marginRight: '8px' }} />
+      <span>24 test</span>
+    </div>
           </div>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique...</p>
       </Accordion>

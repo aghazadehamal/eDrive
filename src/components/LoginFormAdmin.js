@@ -26,7 +26,7 @@ const LoginFormAdmin = () => {
       <img  src="/edurive.jpg" alt="Novademy Logo" style={{ maxWidth: '250px'}} />
       </Link>
 
-    <form style={{height: "400px"}} g onSubmit={handleSubmit} >
+    <form style={{height: "400px"}}  onSubmit={handleSubmit} >
     <div>
       <label>İstifadəçi Adı:</label>
       <input

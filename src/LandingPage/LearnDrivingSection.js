@@ -1,6 +1,7 @@
 import React from 'react';
 import './LearnDrivingSection.css';
-import { FaCarAlt, FaVideo, FaChalkboardTeacher, FaTasks } from "react-icons/fa";
+
+
 
 const LearnDrivingSection = () => {
   return (
@@ -18,10 +19,22 @@ const LearnDrivingSection = () => {
        
         <div className="learn-driving-info">
           {/* React Icons ile ikonlar */}
-          <InfoItem Icon={FaVideo} text="Ətraflı və asan şəkildə izah edilən video dərslər." />
-          <InfoItem Icon={FaTasks} text="Hər biz mövzu üçün test formatında praktika." />
-          <InfoItem Icon={FaChalkboardTeacher} text="Morbi sed imperdiet in ipsum, adipiscing elit dui lectus." />
-          <InfoItem Icon={FaCarAlt} text="Morbi sed imperdiet in ipsum, adipiscing elit dui lectus." />
+        <InfoItem Icon={<img src={process.env.PUBLIC_URL + '/icons/clockTwo.svg'} alt="Clock Icon" style={{ marginRight: '8px' }} />} text="Ətraflı və asan şəkildə izah edilən video dərslər." />
+
+
+
+        <InfoItem Icon={<img src={process.env.PUBLIC_URL + '/icons/clockTwo.svg'} alt="Clock Icon" style={{ marginRight: '8px' }} />} text="Ətraflı və asan şəkildə izah edilən video dərslər." />
+
+
+
+       <InfoItem Icon={<img src={process.env.PUBLIC_URL + '/icons/clockTwo.svg'} alt="Clock Icon" style={{ marginRight: '8px' }} />} text="Ətraflı və asan şəkildə izah edilən video dərslər." />
+
+
+
+       <InfoItem Icon={<img src={process.env.PUBLIC_URL + '/icons/clockTwo.svg'} alt="Clock Icon" style={{ marginRight: '8px' }} />} text="Ətraflı və asan şəkildə izah edilən video dərslər." />
+
+
+
         </div>
 
         </div>
@@ -38,11 +51,12 @@ const LearnDrivingSection = () => {
 const InfoItem = ({ Icon, text }) => {
   return (
     <div className="info-item">
-      
-      <Icon className="info-icon" /> {/* React component olarak Icon */}
+      {Icon} {/* Icon, burada bir React bileşeni olarak render edilir */}
       <p>{text}</p>
     </div>
   );
 }
+
+
 
 export default LearnDrivingSection;

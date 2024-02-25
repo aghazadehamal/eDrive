@@ -36,6 +36,13 @@
     background-color: #ffffff;
     border-top: 1px solid #ddd;
   }
+
+  /* CourseModulesSection.css içerisinde */
+.customAccordionContent p {
+  text-align: left; /* Paragrafı sola hizalar */
+  margin: 0; /* Varsayılan kenar boşluklarını kaldırır, gerekiyorsa ayarlayabilirsiniz */
+}
+
   
   .customRegisterButton {
     display: block;

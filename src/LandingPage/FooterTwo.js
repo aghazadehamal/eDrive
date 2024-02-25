@@ -20,11 +20,18 @@ const FooterTwo = () => {
 
       <div className="footer-content">
         <p >Biz interaktif dərslərlə gənc vətəndaşlarımızı sürücülük imtahanına hazırlaşdıran startup'ıq.</p>
-        <div  className="social-media-icons">
-          <a href="https://facebook.com"><FaFacebook /></a>
-          <a href="https://instagram.com"><FaInstagramSquare /></a>
-          <a href="https://linkedin.com"><FaLinkedin /></a>
-        </div>
+        <div className="social-media-icons">
+  <a href="https://facebook.com">
+    <img src={process.env.PUBLIC_URL + '/icons/Facebook.png'} alt="Facebook" className="socialIcon" />
+  </a>
+  <a href="https://instagram.com">
+    <img src={process.env.PUBLIC_URL + '/icons/Instagram.png'} alt="Instagram" className="socialIcon" />
+  </a>
+  <a href="https://linkedin.com">
+    <img src={process.env.PUBLIC_URL + '/icons/Linkedin.png'} alt="LinkedIn" className="socialIcon" />
+  </a>
+</div>
+
       </div>
     </footer>
   );

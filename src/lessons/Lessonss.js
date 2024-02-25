@@ -50,15 +50,22 @@ const Lessonss = () => {
   }, [location]);
 
   const handleModuleClick = (module) => {
-    setActiveModule(module === activeModule ? null : module);
-    setActiveLesson(null);
-    setActiveQuiz(false);
+    if (module !== activeModule) {
+      setActiveModule(module);
+      // Yeni modül seçildiğinde, o modülün ilk dersini aktif ders olarak ayarlayın.
+      setActiveLesson(modules[module][0]);
+      setActiveQuiz(false);
+      setActiveLessonIndex(0); // İlk dersin index'ini ayarlayın
+    }
   };
+  
 
   const handleLessonClick = (lesson) => {
-    setActiveLesson(lesson === activeLesson ? null : lesson);
+    setActiveLesson(lesson);
     setActiveQuiz(false);
   };
+  
+  
 
   const handleQuizClick = () => {
     setActiveQuiz(true);

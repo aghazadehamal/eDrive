@@ -1,6 +1,8 @@
 import { useState } from "react";
 import './FAQSection.css'; 
 
+
+
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -8,7 +10,12 @@ const FAQItem = ({ question, answer }) => {
     <div className={`uniqueFaqItem ${isOpen ? 'uniqueOpen uniqueFaqItemOpen' : ''}`}>
       <div className="uniqueFaqQuestion" onClick={() => setIsOpen(!isOpen)}>
         {question}
-        <span className="uniqueFaqIcon">{isOpen ? '▼' : '►'}</span>
+        {/* isOpen durumuna bağlı olarak yukarı veya aşağı ikonunu göster */}
+        {isOpen ? (
+          <img src={process.env.PUBLIC_URL + '/icons/yuxari.svg'} alt="Yukarı" className="uniqueFaqIcon" />
+        ) : (
+          <img src={process.env.PUBLIC_URL + '/icons/asagi.svg'} alt="Aşağı" className="uniqueFaqIcon" />
+        )}
       </div>
       {isOpen && <div className="uniqueFaqAnswer">{answer}</div>}
     </div>
@@ -17,11 +24,12 @@ const FAQItem = ({ question, answer }) => {
 
 
 
+
 const FAQSectionTwo = () => {
   return (
     <div className="uniqueFaqSection">
       <span className='spanFirst'  >FAQ</span>
-      <p style={{marginTop: "20px", marginBottom: "20px"}}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. .</p>
+     
       <FAQItem
         question=" Edurive nədir?"
         answer="Edurive hərtərəfli sürücülük dərsləri təklif edən onlayn sürücülük məktəbidir. Platformamızda 12 modul tapa bilərsiniz, bunların hər biri sürücülüyün bütün aspektlərini əhatə edən dərslərdən və testlərsən ibarətdir."

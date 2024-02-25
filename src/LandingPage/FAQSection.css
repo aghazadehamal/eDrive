@@ -75,7 +75,10 @@
 
   }
   
- 
+  .uniqueFaqAnswer  {
+    text-align: left; /* Paragrafı sola hizalar */
+    margin: 0; /* Varsayılan kenar boşluklarını kaldırır, gerekiyorsa ayarlayabilirsiniz */
+  }
   
 
 

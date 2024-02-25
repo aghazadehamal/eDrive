@@ -10,11 +10,18 @@ const Accordion = ({ moduleTitle, children }) => {
     <div className={`customAccordion ${isOpen ? 'customOpen' : ''}`}>
       <div className="customAccordionHeader" onClick={() => setIsOpen(!isOpen)}>
         <span>{moduleTitle}</span>
-        <span>{isOpen ? '▲' : '▼'}</span>
+        {/* isOpen durumuna bağlı olarak farklı ikonları göster */}
+        {isOpen ? (
+          <img src={process.env.PUBLIC_URL + '/icons/yuxari.svg'} alt="Yukarı" />
+        ) : (
+          <img src={process.env.PUBLIC_URL + '/icons/asagi.svg'} alt="Aşağı" />
+        )}
       </div>
       {isOpen && <div className="customAccordionContent">{children}</div>}
     </div>
   );
+  
+  
 };
 
 // Kurs modülleri bölümü için ana komponent

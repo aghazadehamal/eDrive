@@ -19,19 +19,19 @@ const LearnDrivingSection = () => {
        
         <div className="learn-driving-info">
           {/* React Icons ile ikonlar */}
-        <InfoItem Icon={<img src={process.env.PUBLIC_URL + '/icons/clockTwo.svg'} alt="Clock Icon" style={{ marginRight: '8px' }} />} text="Ətraflı və asan şəkildə izah edilən video dərslər." />
+        <InfoItem Icon={<img src={process.env.PUBLIC_URL + '/icons/clockTwo.svg'} alt="Clock Icon" />} text="Ətraflı və asan şəkildə izah edilən video dərslər." />
 
 
 
-        <InfoItem Icon={<img src={process.env.PUBLIC_URL + '/icons/clockTwo.svg'} alt="Clock Icon" style={{ marginRight: '8px' }} />} text="Ətraflı və asan şəkildə izah edilən video dərslər." />
+        <InfoItem Icon={<img src={process.env.PUBLIC_URL + '/icons/clockTwo.svg'} alt="Clock Icon" />} text="Ətraflı və asan şəkildə izah edilən video dərslər." />
 
 
 
-       <InfoItem Icon={<img src={process.env.PUBLIC_URL + '/icons/clockTwo.svg'} alt="Clock Icon" style={{ marginRight: '8px' }} />} text="Ətraflı və asan şəkildə izah edilən video dərslər." />
+       <InfoItem Icon={<img src={process.env.PUBLIC_URL + '/icons/clockTwo.svg'} alt="Clock Icon" />} text="Ətraflı və asan şəkildə izah edilən video dərslər." />
 
 
 
-       <InfoItem Icon={<img src={process.env.PUBLIC_URL + '/icons/clockTwo.svg'} alt="Clock Icon" style={{ marginRight: '8px' }} />} text="Ətraflı və asan şəkildə izah edilən video dərslər." />
+       <InfoItem Icon={<img src={process.env.PUBLIC_URL + '/icons/clockTwo.svg'} alt="Clock Icon" />} text="Ətraflı və asan şəkildə izah edilən video dərslər." />
 
 
 

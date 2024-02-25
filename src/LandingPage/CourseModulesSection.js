@@ -9,7 +9,7 @@ const Accordion = ({ moduleTitle, children }) => {
   return (
     <div className={`customAccordion ${isOpen ? 'customOpen' : ''}`}>
       <div className="customAccordionHeader" onClick={() => setIsOpen(!isOpen)}>
-        <span>{moduleTitle}</span>
+        <span style={{fontSize: "20px", lineHeight: "30px", fontWeight: "700"}}>{moduleTitle}</span>
         {/* isOpen durumuna bağlı olarak farklı ikonları göster */}
         {isOpen ? (
           <img src={process.env.PUBLIC_URL + '/icons/yuxari.svg'} alt="Yukarı" />
@@ -30,7 +30,7 @@ const CourseModulesSection = () => {
     <div className="customCourseModulesSection">
       <span className='spanFirst' >Nələr öyrənəcəksiniz?</span>
   
-      <Accordion moduleTitle=" Əsas Sürücülük Anlayışları">
+      <Accordion  moduleTitle=" Əsas Sürücülük Anlayışları">
       
       <div className="video-counts">
       

@@ -22,17 +22,17 @@ return (
     <span style={{fontSize: "40px", lineHeight: "60px"}}>Niyə biz?</span>
     <div className="uniqueCardsContainer">
       <FeatureCard
-        Icon={<img src={process.env.PUBLIC_URL + '/icons/clockTwo.svg'} alt="Clock Icon" style={{ marginRight: '8px' }} />}
+        Icon={<img src={process.env.PUBLIC_URL + '/icons/niyeThree.svg'} alt="Clock Icon" style={{ marginRight: '8px' }} />}
         title="Münasib qiymət"
         description="Kurslarımızın qiyməti hər bir yaşayış qrupu üçün münasibdir."
       />
      <FeatureCard
-        Icon={<img src={process.env.PUBLIC_URL + '/icons/clockTwo.svg'} alt="Clock Icon" style={{ marginRight: '8px' }} />}
+        Icon={<img src={process.env.PUBLIC_URL + '/icons/niyeTwo.svg'} alt="Clock Icon" style={{ marginRight: '8px' }} />}
         title="Münasib qiymət"
         description="Kurslarımızın qiyməti hər bir yaşayış qrupu üçün münasibdir."
       />
        <FeatureCard
-        Icon={<img src={process.env.PUBLIC_URL + '/icons/clockTwo.svg'} alt="Clock Icon" style={{ marginRight: '8px' }} />}
+        Icon={<img src={process.env.PUBLIC_URL + '/icons/niyeOne.svg'} alt="Clock Icon" style={{ marginRight: '8px' }} />}
         title="Münasib qiymət"
         description="Kurslarımızın qiyməti hər bir yaşayış qrupu üçün münasibdir."
       />

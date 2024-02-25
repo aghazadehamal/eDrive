@@ -18,15 +18,7 @@ const VideoCard = ({ url, thumbnail }) => {
         <>
           <img src={"videoimage.jpeg"} alt="Thumbnail" className="video-thumbnail" />
           <div className="video-overlay">
-            <i >
-            <BsPlayCircleFill />
-
-
-
-
-            </i>
-       
-
+            <img src={process.env.PUBLIC_URL + '/icons/iconVideo.svg'} alt="Play" className="play-icon" />
           </div>
         </>
       )}
@@ -36,5 +28,6 @@ const VideoCard = ({ url, thumbnail }) => {
     </div>
   );
 };
+
 
 export default VideoCard;

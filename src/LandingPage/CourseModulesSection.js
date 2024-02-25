@@ -29,8 +29,9 @@ const CourseModulesSection = () => {
   return (
     <div className="customCourseModulesSection">
       <span className='spanFirst' >Nələr öyrənəcəksiniz?</span>
-  
-      <Accordion  moduleTitle=" Əsas Sürücülük Anlayışları">
+  <div style={{marginTop: "40px"}}>
+
+  <Accordion  moduleTitle=" Əsas Sürücülük Anlayışları">
       
       <div className="video-counts">
       
@@ -123,6 +124,7 @@ const CourseModulesSection = () => {
           </div>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique...</p>
       </Accordion>
+  </div>
       <button className="customRegisterButton">Daha çoxu üçün qeydiyyatdan keçin</button>
     </div>
   );

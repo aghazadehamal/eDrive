@@ -29,7 +29,9 @@ const FAQSectionTwo = () => {
   return (
     <div className="uniqueFaqSection">
       <span className='spanFirst'>FAQ</span>
-     
+
+      <div style={{marginTop: "40px"}}>
+
       <FAQItem
         question=" Edurive nədir?"
         answer="Edurive hərtərəfli sürücülük dərsləri təklif edən onlayn sürücülük məktəbidir. Platformamızda 12 modul tapa bilərsiniz, bunların hər biri sürücülüyün bütün aspektlərini əhatə edən dərslərdən və testlərsən ibarətdir."
@@ -54,6 +56,9 @@ const FAQSectionTwo = () => {
         question="Kurs hansı dillərdə mövcuddur?"
         answer="Hazırda kursumuz Azərbaycan dilində təklif olunur. Gələcəkdə başqa dillərdə də kurslar təklif etmək üçün çalışırıq."
       />
+
+      </div>
+     
     
       <div className="uniqueFaqContact">
         <p>Sualınız qalıb?</p>

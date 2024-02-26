@@ -40,7 +40,7 @@ function LoginForm() {
   return (
     <div style={{textAlign: "center"}} className="login">
       <Link to="/">
-        <img src="/edurive.svg" alt="Edurive Logo" style={{ maxWidth: '250px', marginTop: "20pxg" }} />
+        <img src="/edurive.svg" alt="Edurive Logo" style={{ maxWidth: '250px', marginTop: "20px" }} />
       </Link>
       <form onSubmit={handleSubmit}>
         <h1 style={{color: "black"}}>Daxil ol</h1>

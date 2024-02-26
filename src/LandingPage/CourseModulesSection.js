@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './CourseModulesSection.css'; // İlgili CSS stil dosyası
 import Module from './Module';
+import { Link } from 'react-router-dom';
 
 // Tek bir modül için accordion komponenti
 const Accordion = ({ moduleTitle, children }) => {
@@ -125,7 +126,10 @@ const CourseModulesSection = () => {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique...</p>
       </Accordion>
   </div>
-      <button className="customRegisterButton">Daha çoxu üçün qeydiyyatdan keçin</button>
+  <Link style={{textDecoration: "none"}} to="/RegistrationForm">
+  <button className="customRegisterButton">Daha çoxu üçün qeydiyyatdan keçin</button>
+  </Link>
+      
     </div>
   );
 };

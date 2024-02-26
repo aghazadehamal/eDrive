@@ -79,7 +79,7 @@ const Lessonss = () => {
           <img
             src="/edurive.svg"
             alt="Novademy Logo"
-            style={{ maxWidth: "250px" }}
+            style={{ maxWidth: "250px", marginBottom: "20px" }}
           />
         </Link>
 

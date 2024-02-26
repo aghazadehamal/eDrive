@@ -1,0 +1,45 @@
+/* Modalın genel stilini ayarlayın */
+.modaln {
+    position: fixed; /* Modalı sabit bir pozisyona yerleştir */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999; /* Z-index, modalın en üstte olmasını sağlar */
+    display: flex; /* Flexbox, içeriği ortalamak için */
+    align-items: center; /* İçeriği dikey olarak ortalar */
+    justify-content: center; /* İçeriği yatay olarak ortalar */
+    background: rgba(0, 0, 0, 0.5); /* Yarı saydam arka plan */
+  }
+  
+  /* Modal içeriğinin stilini ayarlayın */
+  .modal-contentn {
+    position: relative; /* İçerik için pozisyon */
+    width: 639px; /* Modal içeriğinin genişliği viewport'a göre ayarlanır */
+    height: 90vh; /* Modal içeriğinin yüksekliği viewport'a göre ayarlanır */
+    max-width: 1200px; /* İçeriğin maksimum genişliği */
+    max-height: 675px; /* İçeriğin maksimum yüksekliği */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Gölge efekti */
+  }
+  
+  /* Kapat butonunun stilini ayarlayın */
+  .close-buttonn {
+    position: absolute; /* Butonu içeriğin sağ üst köşesine yerleştir */
+    top: 16px;
+    right: 16px;
+    background: none; /* Arkaplanı temizle */
+    border: none; /* Kenar çizgilerini kaldır */
+    font-size: 24px; /* İkon boyutunu ayarla */
+    color: white; /* İkon rengini ayarla */
+    cursor: pointer; /* İmleci pointer olarak değiştir */
+  }
+  
+  /* ReactPlayer'ın stilini ayarlayın */
+  .react-playern {
+    position: absolute; /* Oynatıcıyı içerik içinde tam yerleştirmek için */
+    top: 0;
+    left: 0;
+    width: 100%; /* Genişlik tam ekran olacak */
+    height: 100%; /* Yükseklik tam ekran olacak */
+  }
+  

@@ -1,24 +1,46 @@
-
+import React, { useState } from 'react';
+import ReactPlayer from 'react-player';
 import VideoCard from './VideoCard';
+import ModalTwo from './ModalTwo';
 
 function Videos() {
+  const [selectedVideoUrl, setSelectedVideoUrl] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (url) => {
+    setSelectedVideoUrl(url);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="uniqueVideoCards">
-      {/* Video kartları burada kullanılacak */}
-      <div className="videoCardWrapper">
+      
+      {isModalOpen && (
+        <ModalTwo isOpen={isModalOpen} onClose={closeModal}>
+          <ReactPlayer url={selectedVideoUrl} playing={true} controls={true} />
+        </ModalTwo>
+      )}
+
+  
+      <div className="videoCardWrapper" onClick={() => openModal('/v1.MOV')}>
         <VideoCard url="/v1.MOV" />
-        <p style={{textAlign: "left", marginLeft: "10px", fontSize: "24px", lineHeight: "36px"}} >Giriş videosu</p>
+        <p>Giriş videosu</p>
       </div>
 
-      <div className="videoCardWrapper">
-        <VideoCard url="/v2.MOV" />
-        <p style={{textAlign: "left", marginLeft: "10px", fontSize: "24px", lineHeight: "36px"}}  >Giriş videosu</p>
+      <div className="videoCardWrapper" onClick={() => openModal('/v1.MOV')}>
+        <VideoCard url="/v1.MOV" />
+        <p>Giriş videosu</p>
       </div>
 
-      <div className="videoCardWrapper">
-        <VideoCard url="/v3.MOV" />
-        <p style={{textAlign: "left", marginLeft: "10px", fontSize: "24px", lineHeight: "36px"}}  >Giriş videosu</p>
+      <div className="videoCardWrapper" onClick={() => openModal('/v1.MOV')}>
+        <VideoCard url="/v1.MOV" />
+        <p>Giriş videosu</p>
       </div>
+  
     </div>
   );
 }

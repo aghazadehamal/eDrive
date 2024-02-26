@@ -73,7 +73,7 @@ function LoginForm() {
 
 
         <div style={{  marginLeft: "50px", marginTop: "42px", height: "40px", width: "384px" }}>
-          <span>Hesabınız yoxdur?</span>
+          <span style={{color: "#1F203F" }}>Hesabınız yoxdur?</span>
           {/* Burada 'Daxil ol' metni için Link bileşenini kullanıyoruz */}
           <Link to="/RegistrationForm" style={{ marginLeft: '10px', color: "green", textDecoration: "none" }}>Qeydiyyatdan keçin</Link>
         </div>

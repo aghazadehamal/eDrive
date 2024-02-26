@@ -34,7 +34,7 @@
   }
   
   .login input::placeholder {
-    color: #110f0f;
+    color: #6E6E81;
   }
   
   .login button[type="submit"] {
@@ -65,3 +65,7 @@
     margin-bottom: 30px;
   }
   
+
+  .login p {
+    color: #1F203F;
+  }

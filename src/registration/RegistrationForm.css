@@ -36,7 +36,10 @@
   }
   
   .registration  input::placeholder {
-    color: #110f0f;
+   color: #6E6E81;
+  }
+  .registration p {
+    color: #1F203F;
   }
   
   .registration  button[type="submit"] {

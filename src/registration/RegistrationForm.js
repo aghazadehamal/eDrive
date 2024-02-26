@@ -39,7 +39,7 @@ function RegistrationForm() {
   return (
     <div className='registration' style={{ textAlign: "center" }}>
       <Link to="/">
-        <img src="/edurive.svg" alt="Edurive Logo" style={{ maxWidth: '250px' }} />
+        <img src="/edurive.svg" alt="Edurive Logo" style={{ maxWidth: '250px', marginTop: "20px", marginBottom: "20px" }} />
       </Link>
       <div className="form-container">
       <form onSubmit={handleSubmit}>

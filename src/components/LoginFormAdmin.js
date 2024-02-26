@@ -23,7 +23,7 @@ const LoginFormAdmin = () => {
     <div className="login">
 
       <Link to= "/">
-      <img  src="/edurive.svg" alt="Novademy Logo" style={{ maxWidth: '250px'}} />
+      <img  src="/edurive.svg" alt="Novademy Logo" style={{ maxWidth: '250px', marginTop: "20px"}} />
       </Link>
 
     <form style={{height: "400px"}}  onSubmit={handleSubmit} >

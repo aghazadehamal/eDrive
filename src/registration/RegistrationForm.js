@@ -66,7 +66,7 @@ function RegistrationForm() {
           <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="Telefon nömrənizi əlavə edin" required />
         </div>
         <div>
-          <button type="submit" disabled={isLoading}>Qeydiyyatdan keç</button>
+          <button type="submit" disabled={isLoading}>Təsdiq et</button>
 
           <div style={{ marginTop: "42px", marginLeft: "90px", height: "40px", width: "384px" }}>
           <span>Hesabınız var?</span>

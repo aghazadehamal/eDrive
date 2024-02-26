@@ -68,7 +68,7 @@ function LoginForm() {
           required
         />
         <span style={{color: "#50BB27", marginLeft: "250px"}}>Şifrəmi unutdum</span>
-        <button type="submit">Davam et</button>
+        <button type="submit">Daxil ol</button>
 
 
 

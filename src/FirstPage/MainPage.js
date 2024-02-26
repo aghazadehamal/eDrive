@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header>
    {/* <img  src="/LOGO WHITE.png" alt="Novademy Logo" style={{ maxWidth: '150px'}} /> */}
-   <img  src="/edurive.jpg" alt="Novademy Logo" style={{ maxWidth: '250px'}} />
+   <img  src="/edurive.svg" alt="Novademy Logo" style={{ maxWidth: '250px'}} />
       <nav>
 
       <Link  to="/LoginForm"><button style={{marginTop: "10px", color: "white"}}>Giriş</button></Link>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <div className="customNavbar">
-      <img  src="/edurive.jpg" alt="Novademy Logo" style={{ maxWidth: '250px'}} />
+      <img  src="/edurive.svg" alt="Novademy Logo" style={{ maxWidth: '250px'}} />
       <nav  className="customNav">
         <a href="#about" className="customNavLink">Niyə biz?</a> {/* Linkler */}
         <a href="#mentor" className="customNavLink">Mentorumuz haqqında</a>

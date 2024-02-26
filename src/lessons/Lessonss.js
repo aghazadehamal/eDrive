@@ -77,7 +77,7 @@ const Lessonss = () => {
       <div className="moduleList">
         <Link to="/">
           <img
-            src="/edurive.jpg"
+            src="/edurive.svg"
             alt="Novademy Logo"
             style={{ maxWidth: "250px" }}
           />

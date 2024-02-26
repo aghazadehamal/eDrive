@@ -27,7 +27,7 @@ const FAQItem = ({ question, answer }) => {
 
 const FAQSectionTwo = () => {
   return (
-    <div className="uniqueFaqSection">
+    <div id="courses"  className="uniqueFaqSection">
       <span className='spanFirst'>FAQ</span>
 
       <div style={{marginTop: "40px"}}>

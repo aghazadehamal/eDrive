@@ -18,7 +18,7 @@ const FeatureCard = ({ Icon, title, description }) => {
 // "Neden Biz?" bölümü için ana komponent
 const WhyUsSection = () => {
 return (
-  <div className="uniqueWhyUsSection">
+  <div id="why-us"  className="uniqueWhyUsSection">
     <span style={{fontSize: "40px", lineHeight: "60px", fontWeight: "700"}}>Niyə biz?</span>
     <div className="uniqueCardsContainer">
       <FeatureCard

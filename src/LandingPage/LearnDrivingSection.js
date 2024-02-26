@@ -10,7 +10,7 @@ const LearnDrivingSection = () => {
        
         
     
-      <div className="learn-driving-content">
+      <div id="mentor"  className="learn-driving-content">
         <div className='learn-driving-two'>
           <div className='learn-driving-three'>
           <span>Sürücülüyü peşəkarlardan öyrən</span>

@@ -17,7 +17,13 @@
   width: 259px;
   height: 54px;
   font-size: 20px;
+  
 }
+.uniqueCampaignButton:hover {
+  background-color: #3C951B;
+}
+
+
 
 .uniqueCountdown {
   display: flex;

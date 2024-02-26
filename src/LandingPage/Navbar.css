@@ -53,6 +53,11 @@ margin: 30px;
 }
 
 
+.customRegister:hover {
+  background-color: #3C951B;
+}
+
+
 .customNavbar img {
   width: 3252px;
   height: 112px;

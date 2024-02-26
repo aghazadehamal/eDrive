@@ -74,6 +74,13 @@
     height: 54px;
 
   }
+
+
+  .uniqueFaqContact button:hover {
+    background-color: #3C951B;
+  }
+
+  
   
   .uniqueFaqAnswer  {
     text-align: left; /* Paragrafı sola hizalar */

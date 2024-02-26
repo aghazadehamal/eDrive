@@ -60,6 +60,10 @@
     border-radius: 12px;
     line-height: 30px;
   }
+
+  .customRegisterButton:hover {
+    background-color: #3C951B;
+  }
   
  
   .customOpen .customAccordionContent {

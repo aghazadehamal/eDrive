@@ -34,7 +34,7 @@ function App() {
             <Route path="/profileCard" element={<ProtectedRoute component={ProfileCard} />} />
             <Route path="/user-profile" element={<ProtectedRoute component={UserProfile} />} />
             <Route path="/admin" element={<ProtectedRoute component={User} />} />
-            <Route path="/loginFormAdmin" element={<ProtectedRoute component={LoginFormAdmin} />} />
+            <Route path="/loginFormAdmin" element={<LoginFormAdmin/>} />
             
           </Routes>
         </div>

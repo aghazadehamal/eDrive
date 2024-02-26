@@ -3,7 +3,7 @@
   text-align: center;
   margin: 20px;
   margin-top: 90px;
-  
+  color: #1F203F;
 }
 
 .uniqueCampaignButton {
@@ -48,10 +48,11 @@
 .uniqueCampaignSection p {
   font-size: 64px;
   width: 949px;
-  margin-left: 220px;
+margin: auto;
   color: black;
   line-height: 96px;
   font-weight: 700;
+  color: #1F203F;
 }
 
 

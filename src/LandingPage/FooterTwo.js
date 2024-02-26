@@ -1,11 +1,11 @@
 import React from 'react';
 import './Footer.css'; // Footer stil dosyası için
-import { FaFacebook, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
+
 
 const FooterTwo = () => {
   return (
     <footer className="footer">
-      <img  src="/logoimage.png" alt="Novademy Logo" className='footerLogo' />
+      <img  src="/logoimage.svg" alt="Novademy Logo" className='footerLogo' />
       <nav className="footer-nav">
         <ul className="nav-list">
           <li><a href="#neden-biz">Niyə biz</a></li>

@@ -24,14 +24,14 @@ const VideoCard = ({ url, thumbnail }) => {
       )}
       {playVideo && (
       <ReactPlayer 
-      className="react-player"
-      url={url} 
-      playing={true} 
-      controls={true} 
-      width="100%" 
-      height="100%" 
-    />
-    
+  className="react-player"
+  url={url} 
+  playing={false} 
+  controls={false} 
+  width="100%" 
+  height="100%" 
+/>
+
       )}
     </div>
   );

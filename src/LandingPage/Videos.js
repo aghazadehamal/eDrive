@@ -21,7 +21,7 @@ function Videos() {
       
       {isModalOpen && (
         <ModalTwo isOpen={isModalOpen} onClose={closeModal}>
-          <ReactPlayer url={selectedVideoUrl} playing={true} controls={true} />
+          <ReactPlayer className="aaa" url={selectedVideoUrl} playing={true} controls={true} />
         </ModalTwo>
       )}
 

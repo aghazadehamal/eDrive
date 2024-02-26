@@ -15,7 +15,7 @@
   /* Modal içeriğinin stilini ayarlayın */
   .modal-contentn {
     position: relative; /* İçerik için pozisyon */
-    width: 639px; /* Modal içeriğinin genişliği viewport'a göre ayarlanır */
+    width: 890px; /* Modal içeriğinin genişliği viewport'a göre ayarlanır */
     height: 90vh; /* Modal içeriğinin yüksekliği viewport'a göre ayarlanır */
     max-width: 1200px; /* İçeriğin maksimum genişliği */
     max-height: 675px; /* İçeriğin maksimum yüksekliği */
@@ -43,8 +43,8 @@
     height: 100%; /* Yükseklik tam ekran olacak */
   }
   
-  /* .aaa video{
-    width: 800px !important;
+  .aaa video{
+    width: 900px !important;
     height: auto !important;
     margin: auto;
-  } */
+  }

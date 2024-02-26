@@ -62,7 +62,7 @@
 
   .uniqueFaqContact button {
     background-color: #50BB27;
-    
+    cursor: pointer;
     color: #f9f9f9;
     border-radius: 12px;
     border: #fff;
@@ -110,5 +110,27 @@
 
   .uniqueFaqSection h2, div {
     color: black;
+  }
+  
+
+
+  .uniqueFaqContactInfo {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9; /* Hafif gri arka plan rengi */
+    border-radius: 8px; /* Kenarları yuvarlaklaştır */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+  }
+  
+  .uniqueFaqContactInfo p {
+    color: #333; /* Metin rengi */
+    font-size: 16px; /* Metin boyutu */
+    line-height: 1.5; /* Satır yüksekliği */
+    margin: 0 0 10px 0; /* Altta boşluk bırak */
+  }
+  
+  /* Son paragraf için alt marjı sıfırla */
+  .uniqueFaqContactInfo p:last-child {
+    margin-bottom: 0;
   }
   

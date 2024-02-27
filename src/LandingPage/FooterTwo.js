@@ -3,16 +3,25 @@ import './Footer.css'; // Footer stil dosyası için
 
 
 const FooterTwo = () => {
+
+  const scrollToSection = (event, sectionId) => {
+    event.preventDefault(); // Varsayılan davranışı engelle
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <footer className="footer">
       <img  src="/logoimage.svg" alt="Novademy Logo" className='footerLogo' />
       <nav className="footer-nav">
         <ul className="nav-list">
-          <li><a href="#neden-biz">Niyə biz</a></li>
-          <li><a href="#hakkimizda">Mentorumuz haqqında</a></li>
-          <li><a href="#kurslar">Kursumuz haqqında</a></li>
-          <li><a href="#ogrenim">Nələr öyrənəcəksiz?</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#why-us" className="customNavLink" onClick={(e) => scrollToSection(e, 'why-us')}>Niyə biz</a></li>
+          <li><a href="#mentor" className="customNavLink" onClick={(e) => scrollToSection(e, 'mentor')}>Mentorumuz haqqında</a></li>
+          <li><a href="#courses" className="customNavLink" onClick={(e) => scrollToSection(e, 'courses')}>Kursumuz haqqında</a></li>
+          <li><a href="#what" className="customNavLink" onClick={(e) => scrollToSection(e, 'what')}>Nələr öyrənəcəksiz?</a></li>
+          <li><a  href="#courses" className="customNavLink" onClick={(e) => scrollToSection(e, 'courses')}>FAQ</a></li>
         </ul>
       </nav>
       

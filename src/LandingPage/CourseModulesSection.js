@@ -8,7 +8,7 @@ const Accordion = ({ moduleTitle, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={`customAccordion ${isOpen ? 'customOpen' : ''}`}>
+    <div   className={`customAccordion ${isOpen ? 'customOpen' : ''}`}>
       <div className="customAccordionHeader" onClick={() => setIsOpen(!isOpen)}>
         <span style={{fontSize: "20px", lineHeight: "30px", fontWeight: "700"}}>{moduleTitle}</span>
         {/* isOpen durumuna bağlı olarak farklı ikonları göster */}
@@ -28,7 +28,7 @@ const Accordion = ({ moduleTitle, children }) => {
 // Kurs modülleri bölümü için ana komponent
 const CourseModulesSection = () => {
   return (
-    <div className="customCourseModulesSection">
+    <div id="what"  className="customCourseModulesSection">
       <span className='spanFirst' >Nələr öyrənəcəksiniz?</span>
   <div style={{marginTop: "40px"}}>
 

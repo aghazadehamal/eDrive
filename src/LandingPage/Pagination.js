@@ -23,7 +23,7 @@ const Pagination = ({ total, itemsPerPage, onPageChange }) => { // Burada props 
 
   return (
     <div className="pagination-container">
-      <span className="pagination-text">Tamamlandı {currentPage}/{totalPages}</span>
+      <span className="pagination-text">Dərs {currentPage}/{totalPages}</span>
       <div className="pagination-buttons">
         <button onClick={prevPage} disabled={currentPage === 1} className="pagination-button">
           <img src={`${process.env.PUBLIC_URL}/icons/sol.svg`} alt="sol" />

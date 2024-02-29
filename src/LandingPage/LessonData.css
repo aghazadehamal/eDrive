@@ -71,6 +71,8 @@ height: 110vh;
   overflow: hidden;
   text-overflow: ellipsis; /* Uzun metni "..." ile kısaltır */
   cursor: pointer;
+  text-align: left;
+  margin-left: 10px;
 }
 
 .lessonItem {
@@ -87,6 +89,9 @@ height: 110vh;
 .lessonItemText {
   font-size: 16px;
   text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .lessonNameText {

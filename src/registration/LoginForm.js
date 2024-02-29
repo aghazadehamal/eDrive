@@ -25,7 +25,7 @@ function LoginForm() {
       );
       if (response.data.accessToken) {
         localStorage.setItem("userToken", response.data.accessToken);
-        navigate("/lessonss?showModal=true");
+        navigate("/lessonData?showModal=true");
       } else {
         console.error("Giriş başarısız, token alınamadı.");
       }

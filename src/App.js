@@ -18,6 +18,7 @@ import UserProfile from './UserProfile/UserProfile';
 import User from './components/AdminPanel';
 import ProfileCard from './UserProfile/EditUserProfile';
 import ProtectedRoute from './routes/ProtectedRoute';
+import LessonData from './LandingPage/LessonData';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             <Route path="/user-profile" element={<ProtectedRoute component={UserProfile} />} />
             <Route path="/admin" element={<ProtectedRoute component={User} />} />
             <Route path="/loginFormAdmin" element={<LoginFormAdmin/>} />
+            <Route path="/lessonData" element={<LessonData/>} />
             
           </Routes>
         </div>

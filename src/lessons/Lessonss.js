@@ -9,6 +9,7 @@ import { lessonContents } from "../lessonContents";
 import { modules } from "../modules";
 import Modal from "./Modal";
 import { useLocation } from "react-router-dom";
+import DataFetcher from "../LandingPage/LessonData";
 
 
 const Lessonss = () => {
@@ -75,6 +76,7 @@ const Lessonss = () => {
   return (
     <div className="container">
       <div className="moduleList">
+   
         <Link to="/">
           <img
             src="/edurive.svg"

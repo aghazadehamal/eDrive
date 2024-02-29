@@ -59,6 +59,7 @@
 
 // export default EditUserProfile;
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function ProfileCard() {
   const profile = {
@@ -108,6 +109,11 @@ function ProfileCard() {
         marginTop: '10px', // Butonun üstündeki boşluk
         transition: 'background-color 0.3s ease' // Renk değişimi animasyonu
       }}>Hesab məlumatlarını düzəlt</button>
+       <Link onClick={()=> localStorage.clear()} to="/" className="logoutLink">
+                  Çıxış
+                </Link>
+
+
     </div>
   );
 }

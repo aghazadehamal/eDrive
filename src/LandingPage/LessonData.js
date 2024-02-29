@@ -139,6 +139,7 @@ const [totalLessons, setTotalLessons] = useState(0);
                   {lesson.subjectResponse.map((subject) => (
                     <div className="subjectContainer" key={subject.id}>
                       {" "}
+                      <img src={`${process.env.PUBLIC_URL}/icons/play.svg`} alt="play" />
                       <p
                         className="subjectItem"
                         onClick={() => setSelectedSubject(subject)}

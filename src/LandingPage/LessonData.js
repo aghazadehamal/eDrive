@@ -95,15 +95,17 @@ const [totalLessons, setTotalLessons] = useState(0);
       <div className="lessonsContainer">
         <div className="lessonList">
           {/* Ders listesinin üst kısmına veya uygun bir yere ekleyin */}
-<div className="currentLessonDisplay">
+          <div className="currentLessonDisplay">
   {currentLessonIndex !== null ? `${currentLessonIndex + 1}/${totalLessons}` : ""}
-  <div className="lessonIcons">
-  {Array.from({ length: currentLessonIndex + 1 }).map((_, index) => (
-   <img src={`${process.env.PUBLIC_URL}/icons/tamam.svg`} alt="tamam" />
-  ))}
+  {openLessonId !== null && ( // Eğer bir lessonName açıksa, ikonu göster
+    <div className="lessonIcons">
+      {Array.from({ length: currentLessonIndex + 1 }).map((_, index) => (
+        <img src={`${process.env.PUBLIC_URL}/icons/tamam.svg`} alt="tamam" />
+      ))}
+    </div>
+  )}
 </div>
 
-</div>
 
           {/* <ProgressBar/> */}
           {/* <img style={{width: "279px"}} src="/screen.png" alt="Yukarı" /> */}

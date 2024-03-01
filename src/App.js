@@ -19,6 +19,7 @@ import User from './components/AdminPanel';
 import ProfileCard from './UserProfile/EditUserProfile';
 import ProtectedRoute from './routes/ProtectedRoute';
 import LessonData from './LandingPage/LessonData';
+import UserListTwo from './LandingPage/UserListTwo';
 
 function App() {
   return (
@@ -36,7 +37,9 @@ function App() {
             <Route path="/user-profile" element={<ProtectedRoute component={UserProfile} />} />
             <Route path="/admin" element={<ProtectedRoute component={User} />} />
             <Route path="/loginFormAdmin" element={<LoginFormAdmin/>} />
-            <Route path="/lessonData" element={<LessonData/>} />
+       
+            <Route path="/lessonData" element={<ProtectedRoute component={LessonData} />} />
+            <Route path="/UserListTwo" element={<UserListTwo/>} />
             
           </Routes>
         </div>

@@ -14,6 +14,7 @@ const LessonData = () => {
 const [currentLessonIndex, setCurrentLessonIndex] = useState(null);
 const [totalLessons, setTotalLessons] = useState(0);
 
+
   const handlePlayVideo = () => {
     setPlayVideo(true); // Videoyu oynat
   };
@@ -217,6 +218,7 @@ const [totalLessons, setTotalLessons] = useState(0);
               <p className="lessonText">
                 {selectedSubject.videoResponse.title}
               </p>
+            
             </>
           )}
         </div>

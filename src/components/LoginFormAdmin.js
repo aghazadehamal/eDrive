@@ -12,7 +12,7 @@ const LoginFormAdmin = () => {
     e.preventDefault();
     if (username === 'admin' && password === 'admin') {
       login({ username }); 
-      navigate('/admin'); 
+      navigate('/UserListTwo'); 
     } else {
       alert('Hatalı kullanıcı adı veya şifre!');
     }

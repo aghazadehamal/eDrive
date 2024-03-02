@@ -105,7 +105,8 @@ const toggleLessons = () => {
   
 
   return (
-    <div style={{width: "75%", margin: "auto"}}>
+    <div style={{ width: "75%", margin: "auto", height: "140vh" }}
+    >
       <div className="imageLogo">
         <Link to="/">
           <img

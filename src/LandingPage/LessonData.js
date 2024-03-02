@@ -13,6 +13,22 @@ const LessonData = () => {
   // Mevcut useState çağrılarınızın altına ekleyin
 const [currentLessonIndex, setCurrentLessonIndex] = useState(null);
 const [totalLessons, setTotalLessons] = useState(0);
+const [showLessons, setShowLessons] = useState(false);
+const [animateOut, setAnimateOut] = useState(false);
+
+const handleCloseClick = () => {
+  document.querySelector('.lessonList').classList.add('hide'); // Önce gizlenme animasyonunu başlat
+  setTimeout(() => {
+    setShowLessons(false); // Animasyon tamamlandıktan sonra div'i gizle
+  }, 500); // 500ms animasyon süresi
+};
+
+
+const toggleLessons = () => {
+  setShowLessons(!showLessons);
+};
+
+
 
 
   const handlePlayVideo = () => {
@@ -45,6 +61,24 @@ const [totalLessons, setTotalLessons] = useState(0);
     fetchLessonData();
   }, []);
 
+  useEffect(() => {
+    let timer;
+    if (!showLessons && animateOut) {
+      // Animasyon süresi kadar bekleyin ve ardından animateOut'i sıfırlayın
+      timer = setTimeout(() => {
+        setAnimateOut(false);
+      }, 500); // Animasyon sürenize uygun olarak ayarlayın
+    }
+  
+    return () => clearTimeout(timer);
+  }, [showLessons, animateOut]);
+  
+  useEffect(() => {
+    if (showLessons) {
+      document.querySelector('.lessonList').style.display = 'block';
+      document.querySelector('.lessonList').classList.remove('hide');
+    }
+  }, [showLessons]);
   
   
 
@@ -70,7 +104,7 @@ const [totalLessons, setTotalLessons] = useState(0);
   
 
   return (
-    <div>
+    <div style={{width: "85%", margin: "auto"}}>
       <div className="imageLogo">
         <Link to="/">
           <img
@@ -79,6 +113,7 @@ const [totalLessons, setTotalLessons] = useState(0);
             style={{ maxWidth: "250px" }}
           />
         </Link>
+      
 
 <Link to="/profileCard">
 <img
@@ -94,7 +129,13 @@ const [totalLessons, setTotalLessons] = useState(0);
       {/* <hr style={{ marginTop: "15px" }}></hr> */}
 
       <div className="lessonsContainer">
-        <div className="lessonList">
+     
+
+      <div className={`lessonList ${showLessons ? "show" : ""}`} style={{display: showLessons ? 'block' : 'none'}}>
+  
+ 
+
+
           {/* Ders listesinin üst kısmına veya uygun bir yere ekleyin */}
           <div className="currentLessonDisplay">
   {currentLessonIndex !== null ? `${currentLessonIndex + 1}/${totalLessons}` : ""}
@@ -111,7 +152,12 @@ const [totalLessons, setTotalLessons] = useState(0);
           {/* <ProgressBar/> */}
           {/* <img style={{width: "279px"}} src="/screen.png" alt="Yukarı" /> */}
 
-        <span style={{display: "block", textAlign: "left", fontSize: "20px", lineHeight: "30px", color: "#1F203F", fontWeight: "700", marginLeft: "8px", marginTop: "5px"}}>Sürücülük dərslərimiz</span>
+<div style={{display: "flex", justifyContent: "space-between"}}>
+<span style={{display: "block", textAlign: "left", fontSize: "20px", lineHeight: "30px", color: "#1F203F", fontWeight: "700", marginLeft: "8px", marginTop: "5px"}}>Sürücülük dərslərimiz</span>
+        <img onClick={handleCloseClick} src={`${process.env.PUBLIC_URL}/icons/CabinetX.svg`} alt="CabinetX" />
+
+</div>
+       
 
           {lessons.map((lesson) => (
             <div key={lesson.id}>
@@ -159,7 +205,7 @@ const [totalLessons, setTotalLessons] = useState(0);
         <div className="detailsContainer">
           {selectedSubject && (
             <>
-            <div>
+            <div className="ContainerHomeKabinet">
               <div className="lessonNameTextHome">
               <span style={{color: "#6E6E81"}}> Home/</span>
               <span style={{color: "#1F203F"}} >Kabinet</span>
@@ -170,6 +216,8 @@ const [totalLessons, setTotalLessons] = useState(0);
              <span className="lessonNameText">
                 {selectedSubject.subjectName}
               </span>
+
+             <img style={{marginTop: "10px", cursor: "pointer"}} onClick={toggleLessons} src={`${process.env.PUBLIC_URL}/icons/Cabinet.svg`} alt="Cabinet" />
               <Pagination
               
   total={5}

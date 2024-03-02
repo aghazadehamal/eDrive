@@ -257,3 +257,65 @@ text-align: left;
 margin-top: 15px;
 margin-left: 10px;
 }
+
+.containerPaginationLogo {
+  display: flex;
+}
+
+
+.containerPaginationLessonNameText {
+  display: flex;
+  width: 100%;
+  margin: auto;
+}
+
+
+
+
+
+
+
+/* Mobil cihazlar için küçük ekranlar (genellikle 600px'e kadar) */
+@media (max-width: 600px) {
+  .lessonNameText {
+    font-size: 20px; /* Mobil cihazlarda daha küçük font boyutu */
+    line-height: 30px; /* Mobil cihazlarda daha dar satır yüksekliği */
+    margin-top: 5px; /* Daha az üst boşluk */
+  }
+  .containerPaginationLessonNameText {
+    display: block; /* Flex özelliğini kaldır ve blok seviyesinde bir düzen kullan */
+  }
+  .containerPaginationLogo {
+    justify-content: space-around;
+  }
+}
+
+/* Tablet cihazlar için orta ekranlar (genellikle 600px ile 900px arası) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .lessonNameText {
+    font-size: 24px; /* Tablet cihazlarda orta boy font */
+    line-height: 36px; /* Tablet cihazlarda uygun satır yüksekliği */
+    margin-top: 8px; /* Orta derecede üst boşluk */
+  }
+  .containerPaginationLessonNameText {
+    display: block; 
+  }
+  .containerPaginationLogo {
+    justify-content: space-around;
+  }
+}
+
+/* Büyük ekranlar için (genellikle 900px üzeri) */
+@media (min-width: 901px) {
+  .lessonNameText {
+    font-size: 28px; /* Büyük ekranlar için varsayılan font boyutu */
+    line-height: 42px; /* Büyük ekranlar için varsayılan satır yüksekliği */
+    margin-top: 10px; /* Varsayılan üst boşluk */
+  }
+  .containerPaginationLessonNameText {
+    display: block; 
+  }
+  .containerPaginationLogo {
+    justify-content: space-around;
+  }
+}

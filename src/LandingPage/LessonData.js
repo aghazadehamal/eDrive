@@ -229,19 +229,24 @@ const toggleLessons = () => {
              
               </div>
              
-             <div style={{display: "flex", width: "100%", margin: "auto"}}>
+             <div className="containerPaginationLessonNameText" >
              <span className="lessonNameText">
                 {selectedSubject.subjectName}
               </span>
 
             
-              <Pagination
+            <div className="containerPaginationLogo">
+
+            <Pagination
               
-  total={5}
-  itemsPerPage={1}
-  onPageChange={handlePageChange} // Bu fonksiyonu LessonData bileşeninde tanımlayıp buraya geçirmelisiniz
-/>
-<img style={{marginTop: "10px", cursor: "pointer"}} onClick={toggleLessons} src={`${process.env.PUBLIC_URL}/icons/Cabinet.svg`} alt="Cabinet" />
+              total={5}
+              itemsPerPage={1}
+              onPageChange={handlePageChange} // Bu fonksiyonu LessonData bileşeninde tanımlayıp buraya geçirmelisiniz
+            />
+            <img style={{marginTop: "10px", cursor: "pointer"}} onClick={toggleLessons} src={`${process.env.PUBLIC_URL}/icons/Cabinet.svg`} alt="Cabinet" />
+            </div>
+
+             
 
 
 
@@ -294,3 +299,6 @@ const toggleLessons = () => {
 };
 
 export default LessonData;
+
+
+

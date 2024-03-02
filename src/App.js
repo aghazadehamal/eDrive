@@ -7,7 +7,7 @@ import Quiz from './FirstPage/Quiz';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import AdminPanel from './components/AdminPanel';
-import LoginPage from './components/LoginPage';
+
 import LoginFormAdmin from './components/LoginFormAdmin';
 import { AuthProvider } from './contexts/AuthContext';
 import Lessonss from './lessons/Lessonss';

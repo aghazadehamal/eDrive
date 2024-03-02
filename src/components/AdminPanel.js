@@ -38,33 +38,3 @@ export default AdminPanel;
 
 
 
-// import React, { useState, useEffect } from 'react';
-
-// function User() {
-//   const [data, setData] = useState(null);
-
-//   useEffect(() => {
-//     const headers = new Headers();
-//     // Token buraya eklenmelidir; "YOUR_TOKEN_HERE" kısmını gerçek token ile değiştirin.
-//     headers.append("Authorization", "Bearer YOUR_TOKEN_HERE");
-
-//     fetch('https://edurive.onrender.com/v1/user', { headers })
-//       .then(response => {
-//         if (response.ok) {
-//           return response.json();
-//         }
-//         throw new Error('Network response was not ok.');
-//       })
-//       .then(data => setData(data))
-//       .catch(error => console.error('There was a problem with your fetch operation:', error));
-//   }, []);
-
-//   return (
-//     <div>
-//       <h1>User Data</h1>
-//       {data ? <pre>{JSON.stringify(data, null, 2)}</pre> : <p>Loading...</p>}
-//     </div>
-//   );
-// }
-
-// export default User;

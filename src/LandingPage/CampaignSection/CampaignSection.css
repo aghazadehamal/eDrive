@@ -1,4 +1,4 @@
-/* Mevcut stil kurallarınız */
+
 
 .uniqueCampaignSection {
   text-align: center;
@@ -50,7 +50,7 @@
   color: #1F203F;
 }
 
-/* Mobil ve tablet cihazlar için medya sorguları */
+
 @media (max-width: 768px) {
   .uniqueCampaignSection p {
     font-size: 32px; /* Mobil cihazlarda daha küçük font boyutu */

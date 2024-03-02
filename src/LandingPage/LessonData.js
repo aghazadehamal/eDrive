@@ -262,7 +262,7 @@ const toggleLessons = () => {
                   </video>
                 )}
               </div>
-              <span style={{fontSize: "28px", lineHeight: "42px", fontWeight: "600", color: "#1F203F", display: "block", textAlign: "left", width: "98%", margin: "auto", marginTop: "20px"}}>Burada sizin reklamınız ola bilərdi</span>
+              <span style={{fontSize: "28px", lineHeight: "42px", fontWeight: "600", color: "#1F203F", display: "block", textAlign: "left", width: "100%", margin: "auto", marginTop: "20px"}}>Burada sizin reklamınız ola bilərdi</span>
               <p className="lessonText">
                 {selectedSubject.videoResponse.title}
               </p>

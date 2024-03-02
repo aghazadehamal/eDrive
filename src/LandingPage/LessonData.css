@@ -305,12 +305,12 @@ margin-left: 10px;
   }
 }
 
-/* Büyük ekranlar için (genellikle 900px üzeri) */
-@media (min-width: 901px) {
+
+/* @media (min-width: 901px) {
   .lessonNameText {
-    font-size: 28px; /* Büyük ekranlar için varsayılan font boyutu */
-    line-height: 42px; /* Büyük ekranlar için varsayılan satır yüksekliği */
-    margin-top: 10px; /* Varsayılan üst boşluk */
+    font-size: 28px; 
+    line-height: 42px; 
+    margin-top: 10px;
   }
   .containerPaginationLessonNameText {
     display: block; 
@@ -318,4 +318,4 @@ margin-left: 10px;
   .containerPaginationLogo {
     justify-content: space-around;
   }
-}
+} */

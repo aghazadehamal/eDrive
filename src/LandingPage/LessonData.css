@@ -156,7 +156,7 @@ height: 110vh;
 
 .videoDetails video {
   width: 100%; /* Kapsayıcının genişliğine göre ayarla */
-  height: auto; /* Yüksekliği orantılı yap */
+ height: 638px; /* Yüksekliği orantılı yap */
   object-fit: contain; /* Videoyu kırpma, tamamını göster */
   border-radius: 24px;
 }
@@ -189,24 +189,9 @@ height: 110vh;
   background-color: #bd2130; /* Koyu kırmızı hover rengi */
 }
 
-
-
-.lessonList.show {
-  display: block;
-  z-index: 2; /* detailsContainer üzerine çıkmasını sağlar */
-}
-
-.lessonList.hide {
-  display: none;
-}
-
-.detailsContainer {
-  z-index: 1;
-}
-
-@keyframes slideRight {
+@keyframes slideInFromRight {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(100%);
     opacity: 0;
   }
   100% {
@@ -215,13 +200,13 @@ height: 110vh;
   }
 }
 
-@keyframes slideLeft {
+@keyframes slideOutToRight {
   0% {
     transform: translateX(0);
     opacity: 1;
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(100%);
     opacity: 0;
   }
 }
@@ -229,7 +214,7 @@ height: 110vh;
 .lessonList {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0; /* Menüyü sağ tarafta başlat */
   height: 100%;
   animation-fill-mode: forwards;
   z-index: 2;
@@ -238,18 +223,16 @@ height: 110vh;
 
 .lessonList.show {
   display: block;
-  animation: slideRight 0.5s ease-in-out forwards;
+  animation: slideInFromRight 0.5s ease-in-out forwards; /* Sağdan sola açılma animasyonu */
 }
 
 .lessonList.hide {
-  animation: slideLeft 0.5s ease-in-out forwards;
+  animation: slideOutToRight 0.5s ease-in-out forwards; /* Soldan sağa kapanma animasyonu */
 }
-
 
 .lessonListCloseButton {
-
   cursor: pointer; /* İmleci el simgesine dönüştür */
- 
 }
+
 
 

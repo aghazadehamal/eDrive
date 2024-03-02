@@ -217,13 +217,14 @@ const toggleLessons = () => {
                 {selectedSubject.subjectName}
               </span>
 
-             <img style={{marginTop: "10px", cursor: "pointer"}} onClick={toggleLessons} src={`${process.env.PUBLIC_URL}/icons/Cabinet.svg`} alt="Cabinet" />
+            
               <Pagination
               
   total={5}
   itemsPerPage={1}
   onPageChange={handlePageChange} // Bu fonksiyonu LessonData bileşeninde tanımlayıp buraya geçirmelisiniz
 />
+<img style={{marginTop: "10px", cursor: "pointer"}} onClick={toggleLessons} src={`${process.env.PUBLIC_URL}/icons/Cabinet.svg`} alt="Cabinet" />
 
 
 

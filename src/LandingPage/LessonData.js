@@ -183,22 +183,28 @@ const toggleLessons = () => {
                 )}
               </div>
 
-              {openLessonId === lesson.id && (
-                <div>
-                  {lesson.subjectResponse.map((subject) => (
-                    <div className="subjectContainer" key={subject.id}>
-                      {" "}
-                      <img src={`${process.env.PUBLIC_URL}/icons/play.svg`} alt="play" />
-                      <p
-                        className="subjectItem"
-                        onClick={() => setSelectedSubject(subject)}
-                      >
-                        {subject.subjectName}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              )}
+            {openLessonId === lesson.id && (
+  <div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
+    {lesson.subjectResponse.map((subject) => (
+      <div className="subjectContainer" key={subject.id}>
+        {/* Fotoğrafı göster */}
+        <img onClick={() => setSelectedSubject(subject)}
+          src="videoimage.jpeg" // Fotoğrafın yolu
+          alt="Thumbnail"
+          className="smallThumbnail"
+        />
+        {/* subjectName'i fotoğrafın altında göstermek için <span> kullan */}
+        <div>
+          <span className="subjectItem" onClick={() => setSelectedSubject(subject)}>
+            {subject.subjectName}
+          </span>
+        </div>
+      </div>
+    ))}
+  </div>
+)}
+
+
             </div>
           ))}
         </div>

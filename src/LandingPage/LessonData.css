@@ -10,7 +10,7 @@ height: 110vh;
 }
 
 .lessonList {
-  width: 300px; /* Width değeri "Hug" olarak belirtilmiş ancak burada 300px olarak verilmiş */
+  width: 307px; /* Width değeri "Hug" olarak belirtilmiş ancak burada 300px olarak verilmiş */
   height: auto; /* Height değeri "Hug" olarak belirtilmiş, otomatik yükseklik için auto kullanabiliriz */
   padding: 12px 2px; /* Sırasıyla üst-alt ve sağ-sol padding değerleri */
   background-color: #FFFFFF; /* Arka plan rengi beyaz */
@@ -51,19 +51,23 @@ height: 110vh;
 
 /* LessonData.css */
 .subjectContainer {
-  width: 295px;
-  height: 53px;
+  width: 145px;
+  height: 103px;
   border-radius: 8px;
   /* Eğer içerik merkezlenmeliyse */
-  display: flex;
+  /* display: flex; */
   align-items: center; /* Dikey olarak ortalar */
-  margin-left: 8px;
+  /* margin-left: 8px; */
+  text-align: left;
+  flex: 1 1 48%; /* Her bir eleman genişliğini %48 yap, böylece her satırda 2 eleman olur */
+  margin-bottom: 20px; /* Alt elemanlar arasında boşluk bırak */
+  
 }
 
 .subjectItem {
   font-size: 14px;
   line-height: 21px;
-  width: 222px;
+  width: 145px;
   height: 21px;
   cursor: pointer; /* Fare imlecini tıklanabilir olarak değiştirir */
   /* Eğer metni kesmek isterseniz */
@@ -72,7 +76,9 @@ height: 110vh;
   text-overflow: ellipsis; /* Uzun metni "..." ile kısaltır */
   cursor: pointer;
   text-align: left;
-  margin-left: 10px;
+  /* margin-left: 10px; */
+  color: #1F203F;
+  display: block;
 }
 
 .lessonItem {
@@ -234,5 +240,14 @@ height: 110vh;
   cursor: pointer; /* İmleci el simgesine dönüştür */
 }
 
+
+
+.smallThumbnail {
+  width: 141px; /* Genişliği 50 piksel olarak ayarla */
+  height: 80px; /* Yüksekliği orantılı olarak ayarla */
+  border-radius: 8px;
+  margin-left: 5px;
+  cursor: pointer;
+}
 
 

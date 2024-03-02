@@ -22,8 +22,9 @@ height: 110vh;
 .lessonItem {
   padding: 8px;
   margin-bottom: 5px;
-
+border-top: 1px solid #F3F4F8;
   border-radius: 4px;
+ 
 }
 
 
@@ -251,3 +252,8 @@ height: 110vh;
 }
 
 
+.currentLessonDisplay {
+text-align: left;
+margin-top: 15px;
+margin-left: 10px;
+}

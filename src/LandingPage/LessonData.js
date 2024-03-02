@@ -137,16 +137,7 @@ const toggleLessons = () => {
 
 
           {/* Ders listesinin üst kısmına veya uygun bir yere ekleyin */}
-          <div className="currentLessonDisplay">
-  {currentLessonIndex !== null ? `${currentLessonIndex + 1}/${totalLessons}` : ""}
-  {openLessonId !== null && ( // Eğer bir lessonName açıksa, ikonu göster
-    <div className="lessonIcons">
-      {Array.from({ length: currentLessonIndex + 1 }).map((_, index) => (
-        <img src={`${process.env.PUBLIC_URL}/icons/tamam.svg`} alt="tamam" />
-      ))}
-    </div>
-  )}
-</div>
+          
 
 
           {/* <ProgressBar/> */}
@@ -157,9 +148,23 @@ const toggleLessons = () => {
         <img className="lessonListCloseButton"  onClick={handleCloseClick} src={`${process.env.PUBLIC_URL}/icons/CabinetX.svg`} alt="CabinetX" />
 
 </div>
-       
 
-          {lessons.map((lesson) => (
+<div  className="currentLessonDisplay">
+            <span style={{marginRight: "10px", color: "#6E6E81", fontSize: "14px", lineHeight: "21px"}}>
+            {currentLessonIndex !== null ? `${currentLessonIndex + 1}/${totalLessons}` : ""}
+            </span>
+
+  {openLessonId !== null && ( // Eğer bir lessonName açıksa, ikonu göster
+    <div className="lessonIcons">
+      {Array.from({ length: currentLessonIndex + 1 }).map((_, index) => (
+        <img src={`${process.env.PUBLIC_URL}/icons/tamam.svg`} alt="tamam" />
+      ))}
+    </div>
+  )}
+</div>
+
+<div style={{marginTop: "15px"}}>
+{lessons.map((lesson) => (
             <div key={lesson.id}>
               <div
                 className={`lessonItem ${
@@ -207,6 +212,11 @@ const toggleLessons = () => {
 
             </div>
           ))}
+  
+</div>
+       
+
+          
         </div>
         <div className="detailsContainer">
           {selectedSubject && (

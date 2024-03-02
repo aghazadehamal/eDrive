@@ -154,7 +154,7 @@ const toggleLessons = () => {
 
 <div style={{display: "flex", justifyContent: "space-between"}}>
 <span style={{display: "block", textAlign: "left", fontSize: "20px", lineHeight: "30px", color: "#1F203F", fontWeight: "700", marginLeft: "8px", marginTop: "5px"}}>Sürücülük dərslərimiz</span>
-        <img onClick={handleCloseClick} src={`${process.env.PUBLIC_URL}/icons/CabinetX.svg`} alt="CabinetX" />
+        <img className="lessonListCloseButton"  onClick={handleCloseClick} src={`${process.env.PUBLIC_URL}/icons/CabinetX.svg`} alt="CabinetX" />
 
 </div>
        
@@ -212,7 +212,7 @@ const toggleLessons = () => {
              
               </div>
              
-             <div style={{display: "flex", width: "98%", margin: "auto"}}>
+             <div style={{display: "flex", width: "100%", margin: "auto"}}>
              <span className="lessonNameText">
                 {selectedSubject.subjectName}
               </span>

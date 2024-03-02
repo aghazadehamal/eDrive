@@ -168,7 +168,7 @@ height: 110vh;
 
 
 .detailsContainer {
- margin-left: 20px;
+
 }
 
 
@@ -247,15 +247,9 @@ height: 110vh;
 
 
 .lessonListCloseButton {
-  position: absolute;
-  top: 10px; /* Üstten bir miktar boşluk */
-  right: 10px; /* Sağdan bir miktar boşluk */
+
   cursor: pointer; /* İmleci el simgesine dönüştür */
-  padding: 5px 10px; /* İç boşluk */
-  background-color: red; /* Arka plan rengi */
-  color: white; /* İkon rengi */
-  font-weight: bold; /* Yazı tipi kalınlığı */
-  border-radius: 50%; /* Dairesel şekil */
+ 
 }
 
 

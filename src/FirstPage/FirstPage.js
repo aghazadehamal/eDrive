@@ -4,9 +4,9 @@ import CampaignSection from "../LandingPage/CampaignSection/CampaignSection";
 import CourseModulesSection from "../LandingPage/CourseModulesSection/CourseModulesSection";
 import FAQSectionTwo from "../LandingPage/Faq/FAQSectionTwo";
 import FooterTwo from "../LandingPage/Footer/FooterTwo";
-import LearnDrivingSection from "../LandingPage/LearnDrivingSection/LearnDrivingSection";
 
-import Navbar from "../LandingPage/Navbar";
+
+import Navbar from "../LandingPage/NavBar/Navbar";
 import UserListTwo from "../LandingPage/UserListTwo";
 import Videos from "../LandingPage/Videos";
 import WhyUsSection from "../LandingPage/WhyUsSection";
@@ -21,7 +21,9 @@ import MainPage from "./MainPage";
 
 
 
+
 import WelcomeSection from "./WelcomeSection";
+import LearnDrivingSection from '../LandingPage/LearnDrivingSection/LearnDrivingSection';
 
 
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
 import VideoCard from './VideoCard';
-import ModalTwo from './ModalTwo';
+import ModalTwo from './ModalTwo/ModalTwo';
 
 
 function Videos() {

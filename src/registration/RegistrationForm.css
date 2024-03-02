@@ -158,3 +158,105 @@
   text-decoration: none; /* Alt çizgi kaldır */
   font-size: 1rem;
 }
+
+
+
+
+.account-check {
+  margin-top: 42px;
+  margin-left: 90px;
+  height: 40px;
+  width: 384px;
+  color: #1F203F;
+}
+
+.login-link {
+  margin-left: 10px;
+  color: green;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+/* Mevcut stil kurallarınız */
+
+/* Mobil cihazlar için stil */
+@media (max-width: 768px) {
+  .registration form, .modal-content {
+    max-width: 90%; /* Form ve modal genişliğini ekranın %90'ına ayarla */
+    padding: 20px; /* Daha az padding */
+    margin-top: 10%; /* Üst marjı azalt */
+    height: auto; /* Yüksekliği içeriğe göre ayarla */
+  }
+
+  .registration input[type="text"],
+  .registration input[type="email"],
+  .registration input[type="password"],
+  .registration button[type="submit"],
+  .modal-button {
+    width: auto; /* Genişliği %100'e ayarla, padding ve border dikkate alınarak */
+    margin: 10px 0; /* Daha sıkı bir düzen için azaltılmış marj */
+  }
+
+  .modal-content {
+    padding: 1em; /* Modal için daha az padding */
+    width: auto; /* Modal genişliğini otomatik ayarla */
+  }
+
+  .modal-button, .registration button[type="submit"] {
+    padding: 12px; /* Daha rahat tıklanabilirlik için */
+  }
+
+  .success-icon {
+    font-size: 6rem; /* İkon boyutunu azalt */
+  }
+}
+
+/* Tablet cihazlar için stil */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .registration form, .modal-content {
+    max-width: 80%; /* Tabletler için form ve modal genişliğini ayarla */
+    padding: 30px; /* Tabletler için daha fazla padding */
+  }
+
+  .registration input[type="text"],
+  .registration input[type="email"],
+  .registration input[type="password"],
+  .registration button[type="submit"],
+  .modal-button {
+    margin: 15px 0; /* Tabletler için inputlar ve butonlar arası marj */
+  }
+
+  .modal-content {
+    width: 75%; /* Tablet genişliğine uygun modal genişliği */
+  }
+
+  .modal-button, .registration button[type="submit"] {
+    padding: 15px 20px; /* Tabletler için buton padding'ini artır */
+  }
+
+  .success-icon {
+    font-size: 7rem; /* Tablet için ikon boyutunu ayarla */
+  }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .account-check {
+    margin-top: 20px;
+    margin-left: 20px; /* Mobil cihazlarda kenarlardan boşluk azaltılacak */
+    width: auto; /* Genişlik otomatik olarak ayarlanacak */
+  }
+
+  .login-link {
+    margin-left: 5px; /* Mobil cihazlarda metinler arası boşluk azaltılacak */
+  }
+}

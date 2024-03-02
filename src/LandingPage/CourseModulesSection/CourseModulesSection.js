@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './CourseModulesSection.css'; // İlgili CSS stil dosyası
-import Module from './Module';
+import Module from '../Module';
 import { Link } from 'react-router-dom';
 
 // Tek bir modül için accordion komponenti

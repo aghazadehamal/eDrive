@@ -1,10 +1,10 @@
 import AdminPanel from "../components/AdminPanel";
 import UserList from "../components/UserList";
-import CampaignSection from "../LandingPage/CampaignSection";
-import CourseModulesSection from "../LandingPage/CourseModulesSection";
-import FAQSectionTwo from "../LandingPage/FAQSectionTwo";
-import FooterTwo from "../LandingPage/FooterTwo";
-import LearnDrivingSection from "../LandingPage/LearnDrivingSection";
+import CampaignSection from "../LandingPage/CampaignSection/CampaignSection";
+import CourseModulesSection from "../LandingPage/CourseModulesSection/CourseModulesSection";
+import FAQSectionTwo from "../LandingPage/Faq/FAQSectionTwo";
+import FooterTwo from "../LandingPage/Footer/FooterTwo";
+import LearnDrivingSection from "../LandingPage/LearnDrivingSection/LearnDrivingSection";
 
 import Navbar from "../LandingPage/Navbar";
 import UserListTwo from "../LandingPage/UserListTwo";

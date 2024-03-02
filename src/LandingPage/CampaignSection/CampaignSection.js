@@ -1,7 +1,7 @@
 import React from 'react';
 import './CampaignSection.css'; // İlgili CSS stil dosyası
 
-import Countdown from './Countdown';
+import Countdown from '../Countdown/Countdown';
 import { Link } from 'react-router-dom';
 
 // Ana kampanya bölümü komponenti

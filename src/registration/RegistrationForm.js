@@ -68,10 +68,10 @@ function RegistrationForm() {
         <div>
           <button type="submit" disabled={isLoading}>Təsdiq et</button>
 
-          <div style={{ marginTop: "42px", marginLeft: "90px", height: "40px", width: "384px", color: "#1F203F" }}>
+          <div className=' account-check' >
           <span>Hesabınız var?</span>
           {/* Burada 'Daxil ol' metni için Link bileşenini kullanıyoruz */}
-          <Link to="/loginForm" style={{ marginLeft: '10px', color: "green", textDecoration: "none" }}>Daxil olun</Link>.
+          <Link className='login-link' to="/loginForm" >Daxil olun</Link>.
         </div>
         </div>
         {error && <p className="error">{error}</p>}

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
-import "./LoginForm.css"; 
+import { useNavigate, Link } from "react-router-dom";
+import "./LoginForm.css";
 
 function LoginForm() {
   const [formData, setFormData] = useState({
@@ -27,30 +26,24 @@ function LoginForm() {
         localStorage.setItem("userToken", response.data.accessToken);
         navigate("/lessonData?showModal=true");
       } else {
-        console.error("Giriş başarısız, token alınamadı.");
+        console.error("Login failed, no token received.");
       }
     } catch (error) {
-      if (error.response && error.response.data) {
-        console.error("Giriş yapılırken bir hata oluştu:", error.response.data);
-      } else if (error.request) {
-        console.error("Yanıt alınamadı:", error.request);
-      } else {
-        console.error("İstek sırasında bir hata oluştu:", error.message);
-      }
+      console.error("An error occurred during login:", error);
     }
   };
 
   return (
-    <div style={{ textAlign: "center" }} className="login">
+    <div className="login">
       <Link to="/">
         <img
           src="/edurive.svg"
           alt="Edurive Logo"
-          style={{ maxWidth: "250px", marginTop: "20px" }}
+          className="login-logo"
         />
       </Link>
       <form onSubmit={handleSubmit}>
-        <h1 style={{ color: "black" }}>Daxil ol</h1>
+        <h1 className="login-title">Daxil ol</h1>
         <p>E-mail</p>
         <input
           type="email"
@@ -69,27 +62,16 @@ function LoginForm() {
           placeholder="Şifrənizi əlavə edin"
           required
         />
-        <span style={{ color: "#50BB27", marginLeft: "250px" }}>
+        <span className="forgot-password">
           Şifrəmi unutdum
         </span>
         <button type="submit">Daxil ol</button>
 
-        <div
-          style={{
-            marginLeft: "50px",
-            marginTop: "42px",
-            height: "40px",
-            width: "384px",
-          }}
-        >
+        <div className="registration-reminder">
           <span style={{ color: "#1F203F" }}>Hesabınız yoxdur?</span>
           <Link
             to="/RegistrationForm"
-            style={{
-              marginLeft: "10px",
-              color: "green",
-              textDecoration: "none",
-            }}
+            className="registration-link"
           >
             Qeydiyyatdan keçin
           </Link>

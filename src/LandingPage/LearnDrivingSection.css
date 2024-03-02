@@ -1,9 +1,10 @@
+/* Mevcut stil kurallarınız */
+
 .learn-driving-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #fff;  
-
+  background: #fff;
 }
 
 .learn-driving-header {
@@ -12,10 +13,11 @@
 
 .learn-driving-content {
   display: flex;
-justify-content: center;
+  justify-content: center;
   align-items: center;
   padding: 20px;
   margin-top: 90px;
+  /* Varsayılan olarak içerikler yatay olarak sıralanır */
 }
 
 .learn-driving-info {
@@ -28,11 +30,10 @@ justify-content: center;
   border-radius: 24px;
 }
 
+
 .info-item {
-  /* background: #f9f9f9; */
   border-radius: 20px;
   padding: 12px;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   display: flex;
   align-items: center;
   gap: 10px;
@@ -46,40 +47,8 @@ justify-content: center;
   height: 50px;
 }
 
-.learn-driving-instructor img {
-  /* Resmi uygun boyuta getirmek için gerekli stilleri uygulayın */
-  max-width: 100%; /* Bu değeri eğitmenin resmi için uygun bir boyuta ayarlayın */
-  height: auto;
-}
-
-/* @media sorguları ile responsive tasarım ekleyebilirsiniz */
-@media (max-width: 768px) {
-  .learn-driving-info {
-    grid-template-columns: 1fr;
-  }
-
-  
-  .learn-driving-instructor img {
-    width: 80%; /* Küçük ekranlarda resmin boyutunu ayarlayın */
-  }
-}
-
 .learn-driving-header p {
   width: 700px;
-}
-
-
-.learn-driving-header h1 {
-  color: black;
-}
-
-.info-icon {
-  width: 50px;
-  height: 50px;
-}
-
-.info-item  p {
-  margin-left: 10px;
 }
 
 .learn-driving-two {
@@ -88,21 +57,80 @@ justify-content: center;
   border-radius: 16px;
 }
 
-.learn-driving-two span {
+.learn-driving-two span,
+.learn-driving-two p {
   color: black;
+}
+
+.learn-driving-two span {
   font-size: 34px;
   line-height: 51px;
   font-weight: 700;
-  
 }
 
 .learn-driving-two p {
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
-  color: #212121;
 }
 
-.learn-driving-three {
-  text-align: start;
+/* Responsive Tasarım için Medya Sorguları */
+
+@media (max-width: 768px) {
+  .learn-driving-info {
+    grid-template-columns: 1fr; /* Tüm bilgi kartlarını dikey sıralamak için */
+    width: auto; /* Konteynerin genişliğini ekran boyutuna göre ayarlamak için */
+    padding: 20px; /* İç padding'i koruyarak daha fazla alan sağlamak için */
+  }
+
+  .info-item {
+    width: auto; /* Öğe genişliğini esnek yapmak için */
+    height: auto; /* İçerik miktarına bağlı olarak yüksekliği ayarlamak için */
+  }
+
+  .learn-driving-header p,
+  .learn-driving-two {
+    width: 90%; /* Başlık ve içerik genişliğini ekran boyutuna göre ayarlamak için */
+  }
+
+  .learn-driving-two span {
+    font-size: 24px; /* Küçük ekranlarda başlık font boyutunu azaltmak için */
+    line-height: 36px; /* Satır yüksekliğini ayarlamak için */
+  }
+
+  .learn-driving-two p {
+    font-size: 14px; /* Küçük ekranlarda paragraf font boyutunu azaltmak için */
+    line-height: 21px; /* Satır yüksekliğini ayarlamak için */
+  }
+
+  .learn-driving-content {
+    flex-direction: column; /* İçerikleri dikey olarak sırala */
+  }
+  
+  .learn-driving-instructor img {
+    order: 2; /* Eğer belirli bir item'ı en alta almak istiyorsak */
+    width: 100%; /* Mobil görünümde resmin genişliğini ayarla */
+    height: auto; /* Yüksekliği orantılı olarak ayarla */
+    margin-top: 20px; /* Üstteki içerikle arasında boşluk bırak */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .learn-driving-info {
+    grid-template-columns: repeat(2, 1fr); /* Tablet boyutlarında 2 sütunlu düzen */
+    width: 90%; /* Konteyner genişliğini ekran boyutuna göre ayarlamak için */
+  }
+
+  .learn-driving-header p,
+  .learn-driving-two {
+    width: 80%; /* Tablet boyutlarında genişlik ayarlaması */
+  }
+
+  .learn-driving-two span {
+    font-size: 28px; /* Tablet boyutlarında başlık font boyutunu ayarlamak için */
+  }
+
+  .learn-driving-two p {
+    font-size: 15px; /* Tablet boyutlarında paragraf font boyutunu ayarlamak için */
+  }
 }

@@ -114,4 +114,47 @@
 }
   
   
-  
+  /* Mevcut stil kurallarınız */
+
+@media (max-width: 768px) {
+  .customCourseModulesSection {
+    padding: 10px; /* Mobil cihazlarda padding'i azalt */
+    margin: 10px auto; /* Üst ve alt marjı azalt */
+    margin-top: 50px; /* Üst marjı azalt */
+  }
+
+  .customAccordionHeader {
+    padding: 10px 15px; /* Mobil cihazlarda padding'i azalt */
+    font-size: 18px; /* Mobil cihazlarda font boyutunu azalt */
+    line-height: 25px; /* Mobil cihazlarda satır yüksekliğini azalt */
+    height: auto; /* Sabit yüksekliği kaldır ve içeriğe göre ayarla */
+  }
+
+  .customRegisterButton {
+    width: auto; /* Butonun genişliğini ekranın genişliğine göre ayarla */
+    margin: 20px 10px; /* Üstten marj ekleyip, yan marjları azalt */
+    padding: 10px; /* Padding'i azalt */
+    font-size: 18px; /* Font boyutunu azalt */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .customCourseModulesSection {
+    /* Tabletler için özel stil kuralları */
+    padding: 15px;
+    margin-top: 70px; /* Üst marjı ayarla */
+  }
+
+  .customAccordionHeader {
+    /* Tabletler için özel stil kuralları */
+    padding: 12px 18px;
+    font-size: 19px;
+    line-height: 28px;
+  }
+
+  .customRegisterButton {
+    width: 80%; /* Tablet genişliğine göre buton genişliğini ayarla */
+    margin: 20px auto; /* Butonu merkeze al */
+    font-size: 19px;
+  }
+}

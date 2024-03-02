@@ -1,4 +1,5 @@
-/* CampaignSection.css - Sınıf isimleri güncellendi */
+/* Mevcut stil kurallarınız */
+
 .uniqueCampaignSection {
   text-align: center;
   margin: 20px;
@@ -17,13 +18,11 @@
   width: 259px;
   height: 54px;
   font-size: 20px;
-  
 }
+
 .uniqueCampaignButton:hover {
   background-color: #3C951B;
 }
-
-
 
 .uniqueCountdown {
   display: flex;
@@ -36,40 +35,64 @@
   margin: 0 10px;
 }
 
-
-
-
-
 .uniquePlayIcon {
   position: absolute;
   font-size: 30px;
 }
 
-
-
-/* CampaignSection.css */
-
-
-
 .uniqueCampaignSection p {
   font-size: 64px;
   width: 949px;
-margin: auto;
+  margin: auto;
   color: black;
   line-height: 96px;
   font-weight: 700;
   color: #1F203F;
 }
 
+/* Mobil ve tablet cihazlar için medya sorguları */
+@media (max-width: 768px) {
+  .uniqueCampaignSection p {
+    font-size: 32px; /* Mobil cihazlarda daha küçük font boyutu */
+    width: 90%; /* Genişliği ekran boyutuna göre ayarlama */
+    line-height: 48px; /* Daha küçük ekranlar için satır yüksekliğini azaltma */
+  }
 
+  .uniqueCampaignButton {
+    width: 80%; /* Düğmeyi ekran genişliğine göre ayarlama */
+    padding: 10px; /* Padding'i azaltma */
+    font-size: 16px; /* Font boyutunu azaltma */
+    margin-top: 10px; /* Üst marjını azaltma */
+    height: auto; /* Yüksekliği içeriğe göre ayarlama */
+  }
 
+  .uniqueCountdown {
+    flex-direction: column; /* Elemanları dikey olarak hizalama */
+  }
 
+  .uniqueTime {
+    margin: 10px 0; /* Zaman blokları arasında dikey marj ekleme */
+  }
+}
 
+@media (min-width: 769px) and (max-width: 1024px) {
+  .uniqueCampaignSection p {
+    font-size: 48px; /* Tablet cihazlar için font boyutunu ayarlama */
+    width: 80%; /* Genişliği ekran boyutuna göre ayarlama */
+    line-height: 72px; /* Satır yüksekliğini ayarlama */
+  }
 
+  .uniqueCampaignButton {
+    width: 70%; /* Düğmeyi ekran genişliğine göre ayarlama */
+    padding: 10px 15px; /* Padding'i azaltma */
+    font-size: 18px; /* Font boyutunu azaltma */
+  }
 
+  .uniqueCountdown {
+    flex-direction: row; /* Elemanları yatay olarak hizalama */
+  }
 
-
-
-
-
-
+  .uniqueTime {
+    margin: 0 5px; /* Zaman blokları arasında yatay marj azaltma */
+  }
+}

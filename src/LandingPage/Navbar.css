@@ -1,24 +1,25 @@
-/* Navbar.css - Sınıf isimleri güncellendi */
+/* Genel stil kuralları - mevcut kurallarınız */
+
 .customNavbar {
   display: flex;
-justify-content: space-between;
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
   background-color: #fff;
-  width: 1200px;
-  height: 77px;
- margin: auto;
+  /* Responsivlik için max-width kullanımı ve width'i %100 yapma */
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
 }
 
-.customLogo {
-  height: 50px;
-  width: 221px;
+.customLogo, .customNavbar img {
+  /* Logo ve navbar resmi için maksimum genişlik ayarlama */
+  max-width: 100%;
+  height: auto;
 }
-
-
 
 .customNavLink {
-margin: 30px;
+  margin: 30px;
   text-decoration: none;
   color: black;
 }
@@ -35,10 +36,8 @@ margin: 30px;
 }
 
 .customLogin {
-
- color: #50BB27;
+  color: #50BB27;
   border-radius: 8px;
- 
   height: 40px;
   font-size: 16px;
   background-color: white;
@@ -52,18 +51,42 @@ margin: 30px;
   height: 40px;
 }
 
-
 .customRegister:hover {
   background-color: #3C951B;
 }
 
+/* Mobil cihazlar için medya sorgusu */
+@media (max-width: 768px) {
+  .customNavbar {
+    flex-direction: column;
+    padding: 20px;
+  }
 
-.customNavbar img {
-  width: 3252px;
-  height: 112px;
+  .customNavLink, .customBtn {
+    margin: 10px 0; /* Daha az yer kaplaması için */
+  }
+
+  .customButtons {
+    flex-direction: column;
+  }
+
+  .customLogo, .customNavbar img {
+    max-width: 80%; /* Logonun ve resmin ekran genişliğine göre ayarlanması */
+  }
 }
 
-.customLogin p {
-  color: #50BB27;
-  width: 53px;
+/* Tablet cihazlar için medya sorgusu */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .customNavbar {
+    /* Tablet boyutları için hafif ayarlamalar */
+    padding: 15px;
+  }
+
+  .customNavLink, .customBtn {
+    margin: 15px 10px;
+  }
+
+  .customLogo, .customNavbar img {
+    max-width: 90%;
+  }
 }

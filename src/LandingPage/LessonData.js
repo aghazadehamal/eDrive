@@ -16,6 +16,7 @@ const [totalLessons, setTotalLessons] = useState(0);
 const [showLessons, setShowLessons] = useState(false);
 const [animateOut, setAnimateOut] = useState(false);
 
+
 const handleCloseClick = () => {
   document.querySelector('.lessonList').classList.add('hide'); // Önce gizlenme animasyonunu başlat
   setTimeout(() => {

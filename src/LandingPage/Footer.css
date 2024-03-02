@@ -97,3 +97,49 @@
     height: 42px;
     text-align: start;
   }
+
+
+
+
+
+
+  /* Mevcut CSS kodunuz */
+
+@media (max-width: 768px) {
+  .footer {
+    height: auto; /* Mobil cihazlarda footer'ın yüksekliğini içeriğe göre ayarla */
+  }
+
+  .footer-nav .nav-list {
+    margin-right: 0; /* Mobil cihazlarda sağ marjı kaldır */
+  }
+
+  .footer-nav .nav-list li a {
+    margin-left: 10px; /* Mobil cihazlarda linkler arası mesafeyi azalt */
+  }
+
+  .footer-content {
+    flex-direction: column; /* Mobil cihazlarda içeriği dikey olarak sırala */
+    justify-content: center; /* İçeriği merkeze al */
+  }
+
+  .social-media-icons {
+    margin: 20px 0; /* Sosyal medya ikonlarının üst ve altındaki boşluğu artır */
+    justify-content: center; /* İkonları merkeze al */
+    width: auto; /* İkonların genişliğini içeriğe göre ayarla */
+  }
+
+  .footer-divider {
+    width: 90%; /* Mobil cihazlarda çizginin genişliğini ekranın %90'ı yap */
+  }
+
+  .footer-content p, .footer p {
+    width: auto; /* Paragrafların genişliğini içeriğe göre ayarla */
+    text-align: center; /* Metni merkeze al */
+    margin-left: 0; /* Sol marjı sıfırla */
+  }
+
+  .footerLogo {
+    margin-top: 20px; /* Logo için üst boşluğu azalt */
+  }
+}

@@ -141,3 +141,55 @@
     margin-bottom: 0;
   }
   
+
+
+
+
+  @media (max-width: 768px) {
+    .uniqueFaqSection {
+      padding: 10px;
+      margin: 10px auto;
+      margin-top: 50px; /* Mobil cihazlarda üst marjı azalt */
+      max-width: 100%; /* Ekranın tam genişliğini kullan */
+    }
+  
+    .uniqueFaqQuestion {
+      padding: 10px 15px; /* Mobil cihazlarda iç boşluğu azalt */
+      font-size: 18px; /* Küçük ekranlarda yazı boyutunu azalt */
+      height: auto; /* Sabit yüksekliği kaldır, içeriğe göre ayarla */
+      line-height: 25px; /* Satır yüksekliğini azalt */
+    }
+  
+    .uniqueFaqAnswer {
+      padding: 10px 15px; /* Mobil cihazlarda iç boşluğu azalt */
+    }
+  
+    .uniqueFaqContact p {
+      font-size: 24px; /* Mobil cihazlarda yazı boyutunu azalt */
+      line-height: 30px; /* Satır yüksekliğini azalt */
+    }
+  
+    .uniqueFaqContact button {
+      width: auto; /* Buton genişliğini ekranın genişliğine göre ayarla */
+      padding: 10px; /* Buton iç boşluğunu azalt */
+      font-size: 18px; /* Buton yazı boyutunu azalt */
+      margin: 20px 0; /* Üst ve alt marj ekle */
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    /* Tablet cihazlar için stil ayarlamaları */
+    .uniqueFaqContact p {
+      font-size: 28px; /* Tablet cihazlarda yazı boyutu */
+      line-height: 34px; /* Tablet cihazlarda satır yüksekliği */
+    }
+  
+    .uniqueFaqContact button {
+      padding: 12px 20px; /* Tablet cihazlarda buton iç boşluğu */
+      font-size: 19px; /* Tablet cihazlarda buton yazı boyutu */
+      width: 80%; /* Tablet genişliğine göre buton genişliği */
+      margin-left: 10%; /* Merkezi hizalamak için sol marj */
+      margin-right: 10%; /* Merkezi hizalamak için sağ marj */
+    }
+  }
+  

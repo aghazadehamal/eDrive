@@ -54,7 +54,7 @@ function UserListTwo() {
               {lessons.map(lesson => (
                 <div key={lesson.id}>
                   <button className='UserButton' onClick={() => giveAccessToUser(user.id, lesson.id)}>
-                    {lesson.title} İvazə Ver
+                    {lesson.lessonName} İvazə Ver
                   </button>
                 </div>
               ))}

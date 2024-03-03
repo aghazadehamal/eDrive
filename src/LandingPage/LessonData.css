@@ -114,15 +114,16 @@ border-top: 1px solid #F3F4F8;
 }
 
 .lessonNameTextHome {
-   text-align: left; /* Metni sola hizala */
-  display: block; /* span'ı blok seviyesinde bir eleman yap */
-  width: 100%; /* Ebeveyn konteynerin tam genişliğini al */
+  display: flex; /* Elemanları yatay olarak hizala */
+  align-items: center; /* Elemanları dikey olarak ortala */
+  text-align: left;
+  width: 100%;
   margin: auto;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 16px;
+  line-height: 24px;
   font-weight: 400;
- 
 }
+
 
 .lessonNameTextKabinet {
   text-align: left; /* Metni sola hizala */
@@ -297,6 +298,13 @@ margin-left: 10px;
   .videoDetails video {
     width: 100%; /* Kapsayıcının genişliğine göre ayarla */
    height: auto; /* Yüksekliği orantılı yap */
+  }
+
+  .lessonNameTextHome {
+   
+  
+    font-size: 9px;
+  
   }
 }
 

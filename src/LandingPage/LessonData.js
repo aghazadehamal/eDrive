@@ -225,8 +225,11 @@ const toggleLessons = () => {
             <>
             <div className="ContainerHomeKabinet">
               <div className="lessonNameTextHome">
-              <span style={{color: "#6E6E81"}}> Home/</span>
-              <span style={{color: "#1F203F"}} >Kabinet</span>
+              <span style={{color: "#1F203F"}}> Əsas səhifə</span>
+              <img  src={`${process.env.PUBLIC_URL}/icons/left.svg`} alt="left" />
+              <span style={{color: "#1F203F"}} >Kabinetim</span>
+              <img  src={`${process.env.PUBLIC_URL}/icons/left.svg`} alt="left" />
+              <span style={{color: "#6E6E81"}} >Əsas sürücülük anlayışları</span>
              
               </div>
              

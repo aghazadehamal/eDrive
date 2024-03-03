@@ -149,8 +149,9 @@
     .uniqueFaqSection {
       padding: 10px;
       
-      margin-top: 311px; /* Mobil cihazlarda üst marjı azalt */
+      margin-top: 411px; /* Mobil cihazlarda üst marjı azalt */
       max-width: 100%; /* Ekranın tam genişliğini kullan */
+     
     }
   
     .uniqueFaqQuestion {
@@ -158,6 +159,7 @@
       font-size: 18px; /* Küçük ekranlarda yazı boyutunu azalt */
       height: auto; /* Sabit yüksekliği kaldır, içeriğe göre ayarla */
       line-height: 25px; /* Satır yüksekliğini azalt */
+      text-align: left;
     }
   
     .uniqueFaqAnswer {

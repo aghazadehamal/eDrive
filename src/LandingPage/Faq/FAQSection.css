@@ -148,8 +148,8 @@
   @media (max-width: 768px) {
     .uniqueFaqSection {
       padding: 10px;
-      margin: 10px auto;
-      margin-top: 50px; /* Mobil cihazlarda üst marjı azalt */
+      
+      margin-top: 311px; /* Mobil cihazlarda üst marjı azalt */
       max-width: 100%; /* Ekranın tam genişliğini kullan */
     }
   

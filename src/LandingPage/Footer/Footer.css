@@ -73,7 +73,7 @@
 
   .footer-divider {
     border-top: 2px solid #000; /* Siyah renkli ve 2 piksel kalınlığında çizgi */
-    width: 1127px;
+    width: 77%;
     height: 1px; /* Tam genişlik */
 
   
@@ -129,9 +129,9 @@
     width: auto; /* İkonların genişliğini içeriğe göre ayarla */
   }
 
-  .footer-divider {
-    width: 90%; /* Mobil cihazlarda çizginin genişliğini ekranın %90'ı yap */
-  }
+  /* .footer-divider {
+    width: 90%; 
+  } */
 
   .footer-content p, .footer p {
     width: auto; /* Paragrafların genişliğini içeriğe göre ayarla */

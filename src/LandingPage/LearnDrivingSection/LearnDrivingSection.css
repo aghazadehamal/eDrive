@@ -116,6 +116,7 @@
     width: 100%; /* Mobil görünümde resmin genişliğini ayarla */
     height: auto; /* Yüksekliği orantılı olarak ayarla */
     margin-top: 20px; /* Üstteki içerikle arasında boşluk bırak */
+    display: none;
   }
 }
 

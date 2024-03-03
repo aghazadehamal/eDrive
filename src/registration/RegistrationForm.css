@@ -199,7 +199,7 @@
   .registration input[type="password"],
   .registration button[type="submit"],
   .modal-button {
-    width: auto; /* Genişliği %100'e ayarla, padding ve border dikkate alınarak */
+    width: 100%; /* Genişliği %100'e ayarla, padding ve border dikkate alınarak */
     margin: 10px 0; /* Daha sıkı bir düzen için azaltılmış marj */
   }
 

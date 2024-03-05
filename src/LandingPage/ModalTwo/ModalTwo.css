@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 9999;
+  /* z-index: 9999; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,22 +17,36 @@
   position: relative;
   width: auto;
   height: auto;
-  max-width: 600px; /* Maksimum genişlik varsayılan olarak ayarlanır */
+  max-width: 1000px; /* Maksimum genişlik varsayılan olarak ayarlanır */
   max-height: 80vh; /* Maksimum yükseklik viewport yüksekliğinin %80'i olarak ayarlanır */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   overflow: auto; /* İçerik max-height'i aşarsa kaydırma çubuğu görünsün */
+  margin-bottom: 190px;
+}
+.modal-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 50px; /* İhtiyacınıza göre ayarlayın */
+  display: flex;
+  justify-content: flex-end; /* Butonu sağa hizalar */
+  align-items: center;
+  padding-right: 10px; /* Sağ padding */
+  z-index: 1001; /* Modal içeriği ve backdrop'tan üstte olması için */
 }
 
 /* Kapat butonunun stilini ayarlayın */
 .close-buttonn {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 22px;
+  right: 166px;
   background: none;
   border: none;
   font-size: 24px;
   color: white;
   cursor: pointer;
+  z-index: 1002; 
 }
 
 /* ReactPlayer'ın stilini ayarlayın */

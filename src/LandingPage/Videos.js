@@ -17,31 +17,26 @@ function Videos() {
     setIsModalOpen(false);
   };
 
+  const videoList = [
+    { url: '/v1.MOV', description: 'Giriş Videosu 1' },
+    { url: '/v2.MOV', description: 'Giriş Videosu 2' },
+    { url: '/v3.MOV', description: 'Giriş Videosu 3' },
+  ];
+
   return (
     <div className="uniqueVideoCards">
-      
       {isModalOpen && (
         <ModalTwo isOpen={isModalOpen} onClose={closeModal}>
-          <ReactPlayer className="aaa" url={selectedVideoUrl} playing={true} controls={true} />
+          <ReactPlayer className="react-player" url={selectedVideoUrl} playing={true} controls={true} />
         </ModalTwo>
       )}
 
-  
-      <div className="videoCardWrapper" onClick={() => openModal('/v1.MOV')}>
-        <VideoCard url="/v1.MOV" />
-        <p>Giriş videosu</p>
-      </div>
-
-      <div className="videoCardWrapper" onClick={() => openModal('/v1.MOV')}>
-        <VideoCard url="/v1.MOV" />
-        <p>Giriş videosu</p>
-      </div>
-
-      <div className="videoCardWrapper" onClick={() => openModal('/v1.MOV')}>
-        <VideoCard url="/v1.MOV" />
-        <p>Giriş videosu</p>
-      </div>
-  
+      {videoList.map((video, index) => (
+        <div key={index} className="videoCardWrapper" onClick={() => openModal(video.url)}>
+          <VideoCard url={video.url} />
+          <p>{video.description}</p>
+        </div>
+      ))}
     </div>
   );
 }

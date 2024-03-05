@@ -20,6 +20,10 @@ import ProfileCard from './UserProfile/EditUserProfile';
 import ProtectedRoute from './routes/ProtectedRoute';
 import LessonData from './LandingPage/LessonData';
 import UserListTwo from './LandingPage/UserListTwo';
+import Parol from './registration/Parol';
+import ParolTwo from './registration/ParolTwo';
+
+
 
 function App() {
   return (
@@ -40,7 +44,9 @@ function App() {
        
             <Route path="/lessonData" element={<ProtectedRoute component={LessonData} />} />
             <Route path="/UserListTwo" element={<UserListTwo/>} />
-            
+            <Route path="/Parol" element={<Parol/>} />
+            <Route path="/ParolTwo" element={<ParolTwo/>} />
+
           </Routes>
         </div>
       </Router>

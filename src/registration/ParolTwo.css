@@ -1,0 +1,189 @@
+/* RegistrationForm.css */
+.login form {
+  
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    max-width: 456px;
+    height: auto;
+   
+    padding: 40px;
+    margin: auto;
+    margin-top: 5%;
+    text-align: start;
+    border: 1px solid #BCBCC3;
+  }
+  
+  .login input[type="text"],
+  .login input[type="email"],
+  .login input[type="password"] {
+ 
+   
+    display: block;
+  
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 1px solid #BCBCC3;
+  color: #110f0f;
+    height: 54px;
+   
+    
+  }
+  
+  .login input::placeholder {
+    color: #6E6E81;
+  }
+  
+  .login button[type="submit"] {
+  background-color: #50BB27;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    transition: background-color 0.3s;
+    width: 384px;
+    height: 54px;
+    line-height: 30px;
+    
+  }
+  
+  .login button[type="submit"]:hover {
+    background-color: #3C951B;
+  }
+  
+ 
+  
+
+  .login p {
+    color: #1F203F;
+  }
+
+
+
+
+  .login-logo {
+  max-width: 250px;
+  margin-top: 20px;
+}
+
+.login-title {
+  text-align: center;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.forgot-password {
+  color: #50BB27;
+  margin-left: 250px; /* Bu, layout'unuza bağlı olarak değişebilir */
+}
+
+.registration-reminder {
+  margin-left: 50px;
+  margin-top: 42px;
+  height: 40px;
+  width: 384px;
+}
+
+.registration-link {
+  margin-left: 10px;
+  color: green;
+ text-decoration: none;
+}
+
+
+.loginContainer {
+  display: flex;
+  justify-content: center; /* Yatay olarak merkezle */
+  align-items: center; /* Dikey olarak merkezle */
+ margin-bottom: 10px;
+}
+
+.loginSpan {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  color: #9596A2;
+  /* width ve height otomatik olduğundan bu değerlere gerek yok */
+  /* text-align: center; Yalnızca içeriği değil, kendisini de merkezlemek için kullanılmaz */
+}
+
+
+
+
+
+
+/* Mevcut stil kurallarınız */
+
+/* Mobil cihazlar için stil */
+@media (max-width: 768px) {
+  .login form {
+    padding: 20px; /* Mobil cihazlarda daha az padding */
+    max-width: 90%; /* Ekranın daha büyük bir kısmını kaplasın */
+    margin-top: 10%; /* Üstte daha az boşluk */
+  }
+
+  .login input[type="text"],
+  .login input[type="email"],
+  .login input[type="password"],
+  .login button[type="submit"] {
+    width: 100%; /* İnput ve buton genişliğini ekran genişliğine uyarla */
+    margin: 15px 0; /* Daha sıkı bir düzen için azaltılmış marj */
+  }
+
+  .login button[type="submit"] {
+    width: auto; /* Buton genişliğini otomatik ayarla */
+    padding: 12px; /* Daha rahat tıklanabilirlik için */
+  }
+
+  .forgot-password {
+    margin-left: 0; /* Şifremi unuttum bağlantısını sola hizala */
+    margin-bottom: 20px; /* Butonla arasında boşluk bırak */
+    display: block; /* Yeni satırda göster */
+  }
+
+  .registration-reminder {
+    width: auto; /* Genişliği ekranın genişliğine göre ayarla */
+    margin: 20px auto; /* Otomatik marj ile merkezle */
+  }
+
+  .loginSpan {
+    font-size: 14px;
+    
+    /* width ve height otomatik olduğundan bu değerlere gerek yok */
+    /* text-align: center; Yalnızca içeriği değil, kendisini de merkezlemek için kullanılmaz */
+  }
+}
+
+/* Tablet cihazlar için stil */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .login form {
+    padding: 30px; /* Tabletlerde biraz daha fazla padding */
+    max-width: 80%; /* Ekranın daha büyük bir kısmını kaplasın */
+    margin-top: 5%; /* Üstte daha az boşluk */
+  }
+
+  .login input[type="text"],
+  .login input[type="email"],
+  .login input[type="password"],
+  .login button[type="submit"] {
+    margin: 20px 0; /* İnputlar ve butonlar arası marj */
+  }
+
+  .login button[type="submit"] {
+    padding: 15px 20px; /* Tabletlerde buton padding'ini artır */
+  }
+
+  .forgot-password,
+  .registration-reminder {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}

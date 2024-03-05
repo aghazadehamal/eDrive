@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
-import "./LoginForm.css";
+import "./Parol.css";
 
-function LoginForm() {
+function Parol() {
   const [formData, setFormData] = useState({
     gmail: "",
     password: "",
@@ -34,7 +34,7 @@ function LoginForm() {
   };
 
   return (
-    <div className="login">
+    <div style={{height: "auto"}} className="login">
       <Link to="/">
         <img
           src="/edurive.svg"
@@ -43,7 +43,10 @@ function LoginForm() {
         />
       </Link>
       <form onSubmit={handleSubmit}>
-        <h1 className="login-title">Daxil ol</h1>
+        <h1 className="login-title">Şifrənin yenilənməsi</h1>
+        <div class="loginContainer">
+  <span className="loginSpan">Qeydiyyatdan keçdiyiniz e-mailinizi daxil edin</span>
+</div>
         <p>E-mail</p>
         <input
           type="email"
@@ -53,35 +56,16 @@ function LoginForm() {
           placeholder="E-mailinizi əlavə edin"
           required
         />
-        <p>Şifrə</p>
-        <input
-          type="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          placeholder="Şifrənizi əlavə edin"
-          required
-        />
-        <Link style={{textDecoration: "none"}} to="/Parol">
-        <span className="forgot-password">
-          Şifrəmi unutdum
-        </span> 
-        </Link>
        
-        <button type="submit">Daxil ol</button>
+      <Link to="/ParolTwo" style={{textDecoration: "none"}}>
+      <button type="submit">Göndər</button>
+      </Link>
+       
 
-        <div className="registration-reminder">
-          <span style={{ color: "#1F203F" }}>Hesabınız yoxdur?</span>
-          <Link
-            to="/RegistrationForm"
-            className="registration-link"
-          >
-            Qeydiyyatdan keçin
-          </Link>
-        </div>
+       
       </form>
     </div>
   );
 }
 
-export default LoginForm;
+export default Parol;

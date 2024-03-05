@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
-import "./LoginForm.css";
+import "./ParolTwo.css";
 
-function LoginForm() {
+function ParolTwo() {
   const [formData, setFormData] = useState({
     gmail: "",
     password: "",
@@ -43,17 +43,17 @@ function LoginForm() {
         />
       </Link>
       <form onSubmit={handleSubmit}>
-        <h1 className="login-title">Daxil ol</h1>
-        <p>E-mail</p>
-        <input
-          type="email"
-          name="gmail"
-          value={formData.gmail}
-          onChange={handleChange}
-          placeholder="E-mailinizi əlavə edin"
-          required
-        />
-        <p>Şifrə</p>
+     
+        <h1 className="login-title">Şifrənin yenilənməsi</h1>
+        <div class="loginContainer">
+  <span className="loginSpan">Yeni şifrə yaradın</span>
+</div>
+
+
+      
+      
+        
+        <p>Yeni şifrə</p>
         <input
           type="password"
           name="password"
@@ -62,26 +62,22 @@ function LoginForm() {
           placeholder="Şifrənizi əlavə edin"
           required
         />
-        <Link style={{textDecoration: "none"}} to="/Parol">
-        <span className="forgot-password">
-          Şifrəmi unutdum
-        </span> 
-        </Link>
+        <p>Şifrənizi təsdiq edin</p>
+        <input
+          type="password"
+          name="password"
+          value={formData.password}
+          onChange={handleChange}
+          placeholder="Şifrənizi əlavə edin"
+          required
+        />
        
-        <button type="submit">Daxil ol</button>
+        <button type="submit">Təsdiq et</button>
 
-        <div className="registration-reminder">
-          <span style={{ color: "#1F203F" }}>Hesabınız yoxdur?</span>
-          <Link
-            to="/RegistrationForm"
-            className="registration-link"
-          >
-            Qeydiyyatdan keçin
-          </Link>
-        </div>
+        
       </form>
     </div>
   );
 }
 
-export default LoginForm;
+export default ParolTwo;

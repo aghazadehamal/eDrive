@@ -56,7 +56,7 @@
     font-size: 20px;
     margin-top: 20px;
     border-radius: 8px;
-    margin-left: 370px;
+  
     border-radius: 12px;
     line-height: 30px;
   }
@@ -111,6 +111,13 @@
   font-weight: 700;
   line-height: 60px;
   
+}
+
+.customRegisterButtonDiv {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
   
   

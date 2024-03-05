@@ -126,9 +126,12 @@ const CourseModulesSection = () => {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique...</p>
       </Accordion>
   </div>
+  <div className='customRegisterButtonDiv'>
   <Link style={{textDecoration: "none"}} to="/RegistrationForm">
   <button className="customRegisterButton">Daha çoxu üçün qeydiyyatdan keçin</button>
   </Link>
+  </div>
+
       
     </div>
   );

@@ -1,20 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactPlayer from 'react-player';
 import './VideoCard.css'; // VideoCard CSS dosyası
-import { BsPlayCircleFill } from "react-icons/bs";
 
-
-
-const VideoCard = ({ url, thumbnail }) => {
-  const [playVideo, setPlayVideo] = useState(false);
-
-  const handlePlayVideo = () => {
-    setPlayVideo(true);
-  };
-
+const VideoCard = ({ url, thumbnail, onVideoSelect, isSelected }) => {
   return (
-    <div className="uniqueVideoCard" onClick={handlePlayVideo}>
-      {!playVideo && (
+    <div className="uniqueVideoCard" onClick={() => onVideoSelect(url)}>
+      {!isSelected && (
         <>
           <img src={"videoimage.jpeg"} alt="Thumbnail" className="video-thumbnail" />
           <div className="video-overlay">
@@ -22,20 +13,18 @@ const VideoCard = ({ url, thumbnail }) => {
           </div>
         </>
       )}
-      {playVideo && (
-      <ReactPlayer 
-  className="react-player"
-  url={url} 
-  playing={false} 
-  controls={false} 
-  width="100%" 
-  height="100%" 
-/>
-
+      {isSelected && (
+        <ReactPlayer 
+          className="react-player"
+          url={url} 
+          playing 
+          controls 
+          width="100%" 
+          height="100%" 
+        />
       )}
     </div>
   );
 };
-
 
 export default VideoCard;

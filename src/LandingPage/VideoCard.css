@@ -73,6 +73,16 @@
     flex-wrap: wrap;
     margin-top: 90px;
   }
+
+
+
+
+  @media (max-width: 768px) {
+    .videoCardWrapper p{
+   margin-bottom: 20px;
+  
+    }
+  }
   
 
   

@@ -112,10 +112,18 @@
 
   .footer-nav .nav-list {
     margin-right: 0; /* Mobil cihazlarda sağ marjı kaldır */
+    display: grid;
+  
   }
 
   .footer-nav .nav-list li a {
     margin-left: 10px; /* Mobil cihazlarda linkler arası mesafeyi azalt */
+   
+  }
+
+  .footer-nav .nav-list li  {
+    margin-top: 10px; /* Mobil cihazlarda linkler arası mesafeyi azalt */
+   
   }
 
   .footer-content {

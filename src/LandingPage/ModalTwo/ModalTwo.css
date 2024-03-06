@@ -22,6 +22,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   overflow: auto; /* İçerik max-height'i aşarsa kaydırma çubuğu görünsün */
   margin-bottom: 190px;
+  overflow: hidden; 
 }
 .modal-header {
   position: absolute;

@@ -59,6 +59,8 @@
   height: 100%;
 }
 
+
+
 .aaa video {
   width: 100%; /* Videoyu içeriğin genişliğine sığdır */
   height: auto; /* Yüksekliği orantılı olarak ayarla */

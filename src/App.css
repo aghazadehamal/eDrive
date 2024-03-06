@@ -16,3 +16,15 @@ body {
   
 }
 
+
+
+
+
+@media (max-width: 600px) { 
+  .react-player {
+    width: 100% !important; 
+    height: auto !important;
+  }
+}
+
+

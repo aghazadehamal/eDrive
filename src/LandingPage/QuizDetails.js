@@ -168,7 +168,7 @@ function QuizDetails({ quiz }) {
   return (
     <div className="quiz-details">
      <div>
-  <h2>{quiz.quizName}</h2>
+  <h2 className='textQuizName'>{quiz.quizName}</h2>
   {quiz.questionResponses.map(question => (
     <div key={question.id} className="question">
       <h4>{question.text}</h4>

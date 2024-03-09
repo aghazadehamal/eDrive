@@ -24,6 +24,7 @@ import MainPage from "./MainPage";
 
 import WelcomeSection from "./WelcomeSection";
 import LearnDrivingSection from '../LandingPage/LearnDrivingSection/LearnDrivingSection';
+import OlmazOlsun from "./OlmazOLsun";
 
 
 
@@ -40,6 +41,7 @@ function FirstPage() {
        
        <FAQSectionTwo/>
        <FooterTwo/>
+       {/* <OlmazOlsun/> */}
        {/* <UserListTwo/> */}
        
             

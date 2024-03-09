@@ -1,0 +1,252 @@
+/* QuizDetails genel stil ayarları */
+.quiz-details {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 20px 0;
+    border-radius: 24px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* Her bir soru için stil ayarları */
+  .question {
+    margin-bottom: 20px;
+  }
+  
+  /* Soru metni için stil ayarları */
+  .question h4 {
+    margin-bottom: 10px;
+    color: #333;
+    text-align: left;
+    margin-left: 5px;
+    padding: 15px;
+  }
+  
+ 
+
+  .submit-button {
+    display: block; /* Butonu block elementi yapar */
+    margin-left: 0; /* Sol kenardan herhangi bir boşluk bırakmaz */
+    text-align: left; /* Metni sola hizalar */
+    background-color: #50BB27;
+    width: 170px;
+    height: 54px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    border: white;
+   margin-left: 21px;
+   font-size: 20px;
+   line-height: 30px;
+   cursor: pointer;
+  }
+  
+  
+  
+  
+
+  .containerQuizButton {
+    display: grid;
+  }
+
+
+
+
+  /* Seçeneklerin genel stil ayarları */
+.option {
+  margin-bottom: 10px;
+  border-radius: 12px;
+  
+  height: 51px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 1055px;
+}
+
+.option-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.option-input {
+  opacity: 0;
+  position: absolute;
+}
+
+.custom-radio {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  margin-right: 10px;
+  display: inline-block;
+  position: relative;
+}
+
+.option-input:checked + .custom-radio::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #333;
+}
+
+
+
+
+  
+  
+ /* ... Diğer CSS stilleri */
+
+.option {
+  /* varsayılan seçenek stili */
+  padding: 5px;
+  margin-bottom: 2px;
+}
+
+.option.correct {
+  background-color: #c8e6c9; /* Doğru cevap için yeşil arka plan */
+  width: 1055px;
+}
+
+.option.incorrect {
+  background-color: #ffcdd2; /* Yanlış cevap için kırmızı arka plan */
+  width: 1055px;
+}
+
+/* ... */
+
+
+.option.selected {
+  background-color: gray; /* Gri arka plan */
+  width: 1055px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.correct {
+background-color: #F3F4F8;
+  color: white;
+  width: 500px;
+  height: 67px;
+  color: #000000;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 600;
+}
+
+.incorrect {
+  background-color: #F3F4F8;
+  color: white;
+  width: 500px;
+  height: 67px;
+ 
+  color: #000000;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 600;
+}
+
+/* Buton aktif olduğunda yani gösterilen cevaplar doğruysa */
+.active.correct {
+  /* box-shadow: 0 4px #2e7d32; */
+  background-color: white;
+}
+
+/* Buton aktif olduğunda yani gösterilen cevaplar yanlışsa */
+.active.incorrect {
+  /* box-shadow: 0 4px #d32f2f; */
+  background-color: white;
+}
+
+
+.correctSpan {
+width: 24px;
+height: 24px;
+border-radius: 99px;
+padding: 8px;
+gap: 10px;
+
+font-size: 14px;
+line-height: 21px;
+color: white;
+background-color: #50BB27;
+text-align: center;
+}
+
+.falseSpan {
+  width: 24px;
+height: 24px;
+border-radius: 99px;
+padding: 8px;
+gap: 10px;
+
+background-color: #EE3300;
+font-size: 14px;
+line-height: 21px;
+color: white;
+text-align: center;
+}
+
+
+
+/* Yeniden Dene butonu için genel stil */
+.quizRestart {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+ background-color: #50BB27;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  width: 300px;
+}
+
+/* .quizRestart:hover {
+  background-color: #0056b3;
+} */
+
+/* .quizRestart:active {
+  background-color: #004094;
+} */
+
+
+
+
+
+
+.containertCorrect {
+background-color: #F3F4F8;
+border-radius: 16px;
+width: 1005px;
+height: 75px;
+
+align-items: center;
+justify-content: center;
+display: flex;
+text-align: center;
+}

@@ -124,6 +124,10 @@ border-top: 1px solid #F3F4F8;
   font-weight: 400;
 }
 
+.ContainerHomeKabinet {
+  display: flex;
+}
+
 
 .lessonNameTextKabinet {
   text-align: left; /* Metni sola hizala */
@@ -146,6 +150,7 @@ border-top: 1px solid #F3F4F8;
   width: 100%; /* Kapsayıcının genişliğine göre ayarla */
   height: 638px; /* Yüksekliği orantılı yap */
   border-radius: 24px;
+  
 }
 
 .video-overlayn {
@@ -197,6 +202,15 @@ border-top: 1px solid #F3F4F8;
   background-color: #bd2130; /* Koyu kırmızı hover rengi */
 }
 
+.quizName {
+  cursor: pointer; /* İmleci el simgesine dönüştür */
+ 
+}
+
+.quizNameContainer {
+  margin-bottom: 10px;
+}
+
 @keyframes slideInFromRight {
   0% {
     transform: translateX(100%);
@@ -223,7 +237,7 @@ border-top: 1px solid #F3F4F8;
   position: absolute;
   top: 0;
   right: 0; /* Menüyü sağ tarafta başlat */
-  height: 100%;
+  height: auto;
   animation-fill-mode: forwards;
   z-index: 2;
   display: none; /* Başlangıçta gizli */
@@ -311,6 +325,8 @@ margin-left: 10px;
 
 
 
+
+
 @media (min-width: 601px) and (max-width: 900px) {
   /* .lessonNameText {
     font-size: 24px; 
@@ -359,6 +375,8 @@ margin-left: 10px;
    height: auto; /* Yüksekliği orantılı yap */
   }
 }
+
+
 
 
 

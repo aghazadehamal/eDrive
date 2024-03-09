@@ -17,8 +17,8 @@ const VideoCard = ({ url, thumbnail, onVideoSelect, isSelected }) => {
         <ReactPlayer 
           className="react-player"
           url={url} 
-          playing 
-          controls 
+          playing={false}
+          controls={false}
           width="100%" 
           height="100%" 
         />

@@ -4,7 +4,7 @@
   
   width: 100%;
   margin: auto;
-  margin-top: 20px;
+  
 
 height: 110vh;
 }
@@ -150,7 +150,7 @@ border-top: 1px solid #F3F4F8;
   width: 100%; /* Kapsayıcının genişliğine göre ayarla */
   height: 638px; /* Yüksekliği orantılı yap */
   border-radius: 24px;
-  
+  margin-top: 18px;
 }
 
 .video-overlayn {
@@ -172,11 +172,12 @@ border-top: 1px solid #F3F4F8;
  height: 638px; /* Yüksekliği orantılı yap */
   object-fit: contain; /* Videoyu kırpma, tamamını göster */
   border-radius: 24px;
+  margin-top: 18px;
 }
 
 .videoDetails {
   position: relative; /* Bu, .video-overlayn için bir konumlandırma bağlamı oluşturur */
-  margin-top: 30px;
+
 }
 
 

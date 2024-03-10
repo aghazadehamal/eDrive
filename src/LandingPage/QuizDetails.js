@@ -77,7 +77,7 @@ function QuizDetails({ quiz }) {
               }
             }}
           >
-            Doğru Cevaplar{" "}
+            Doğru Cavablar{" "}
             <p className="correctSpan">
               {" "}
               {detailedResults.correctAnswers.length}{" "}
@@ -94,7 +94,7 @@ function QuizDetails({ quiz }) {
               }
             }}
           >
-            Yanlış Cevaplar{" "}
+            Yanlış Cavablar{" "}
             <p className="falseSpan">
               {detailedResults.incorrectAnswers.length}{" "}
             </p>

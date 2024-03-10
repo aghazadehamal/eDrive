@@ -111,30 +111,7 @@
   font-weight: bold;
 }
 
-.correct {
-  background-color: #f3f4f8;
-  color: white;
-  width: 97%;
-  height: 67px;
-  color: #000000;
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 600;
-  border-radius: 16px;
-}
 
-.incorrect {
-  background-color: #f3f4f8;
-  color: white;
-  width: 97%;
-  height: 67px;
-
-  color: #000000;
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 600;
-  border-radius: 16px;
-}
 
 .active.correct {
   background-color: white;
@@ -204,7 +181,7 @@
 .containertCorrect {
   background-color: #f3f4f8;
   border-radius: 16px;
-  width: 1102px;
+  width: 100%;
   height: 75px;
 margin-bottom: 20px;
   align-items: center;
@@ -212,6 +189,31 @@ margin-bottom: 20px;
   display: flex;
   text-align: center;
   margin-top: 20px;
+}
+
+.correct {
+  background-color: #f3f4f8;
+  color: white;
+  width: 49.6%;
+  height: 67px;
+  color: #000000;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 600;
+  border-radius: 16px;
+}
+
+.incorrect {
+  background-color: #f3f4f8;
+  color: white;
+  width: 49.6%;
+  height: 67px;
+
+  color: #000000;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 600;
+  border-radius: 16px;
 }
 
 @media (max-width: 601px) {
@@ -235,6 +237,7 @@ margin-bottom: 20px;
     width: auto;
     margin: 20px auto;
     font-size: 18px;
+    padding: 5px;
   }
 
   .option {
@@ -256,17 +259,19 @@ margin-bottom: 20px;
     width: auto;
   }
 
-  .containertCorrect,
-  .correct,
-  .incorrect {
-    width: auto;
-    height: auto;
-    font-size: 16px;
-  }
+  
 
   .quizRestart {
     width: auto;
     padding: 10px;
+  }
+
+  .correct {
+    font-size: 14px;
+  }
+  
+  .incorrect {
+    font-size: 14px;
   }
 }
 
@@ -292,6 +297,7 @@ margin-bottom: 20px;
     width: auto;
     margin: 20px auto;
     font-size: 18px;
+   
   }
 
   .option {
@@ -311,15 +317,18 @@ margin-bottom: 20px;
     margin-right: 10px;
   }
 
-  .containertCorrect,
-  .correct,
-  .incorrect {
-    width: auto;
-    font-size: 18px;
-  }
+ 
 
   .quizRestart {
     padding: 15px 20px;
     width: auto;
+  }
+
+  .correct {
+    font-size: 14px;
+  }
+  
+  .incorrect {
+    font-size: 14px;
   }
 }

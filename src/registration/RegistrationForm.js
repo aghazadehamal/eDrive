@@ -26,7 +26,7 @@ const navigate = useNavigate(); // Bu satırı ekleyin
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    setError("");
+    // setError("");
     try {
       const response = await axios.post(
         "https://edurive.onrender.com/auth/registration",

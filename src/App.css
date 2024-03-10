@@ -10,6 +10,7 @@ body {
   color: white;
   font-size: 16px;
   text-align: center;
+  padding-bottom: 30px; 
 }
 
 @media (max-width: 600px) {

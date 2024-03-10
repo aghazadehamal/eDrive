@@ -319,24 +319,23 @@ const LessonData = () => {
                       </div>
                     </div>
                     {!playVideo && (
-                      <>
-                        <img
-                          src={"videoimage.jpeg"}
-                          alt="Thumbnail"
-                          className="video-thumbnailTwo"
-                        />
-                        <div className="video-overlayn">
-                          <img
-                            style={{ width: "111px", height: "111px" }}
-                            src={
-                              process.env.PUBLIC_URL + "/icons/iconVideo.svg"
-                            }
-                            alt="Play"
-                            className="play-icon"
-                          />
-                        </div>
-                      </>
-                    )}
+  <div className="video-container">
+    <img
+      src={"videoimage.jpeg"}
+      alt="Thumbnail"
+      className="video-thumbnailTwo"
+    />
+    <div className="video-overlayn">
+      <img
+        style={{ width: "111px", height: "111px" }}
+        src={process.env.PUBLIC_URL + "/icons/iconVideo.svg"}
+        alt="Play"
+        className="play-icon"
+      />
+    </div>
+  </div>
+)}
+
                     {playVideo && (
                       <video key={selectedSubject.id} controls>
                         <source

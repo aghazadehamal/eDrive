@@ -1,5 +1,6 @@
 .quiz-details {
   margin: 20px 0;
+  width: auto;
 }
 
 .question {
@@ -240,6 +241,7 @@
     margin-left: 0px;
     margin-top: 20px;
     text-align: left;
+    height: 100%;
   }
 
   .option-label {

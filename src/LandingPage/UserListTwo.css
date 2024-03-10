@@ -1,23 +1,38 @@
+/* UserListTwo.css için güncellenmiş CSS tasarımı */
+
 .user-list-container {
   max-width: 800px;
-  margin: 20px auto;
+  margin: auto;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #f8f9fa;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #343a40;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .user-list {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .user-list li {
   background-color: #ffffff;
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  display: block;
+}
+
+.user-list li:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .user-list li div {
@@ -25,16 +40,30 @@
 }
 
 .UserButton {
-  background-color: #007bff;
-  color: white;
-  padding: 6px 12px;
-  margin-right: 5px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  display: block; /* Butonları alt alta getirir */
+  width: 100%; /* Butonun genişliğini li elementinin genişliğine uydurur */
+  padding: 14px;
+  margin-bottom: 10px; /* Butonlar arasında boşluk bırakır */
+  background-color: #50BB27;
   font-size: 14px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .UserButton:hover {
   background-color: #0056b3;
+}
+
+
+.user-name {
+  display: block; /* Her ismi yeni bir satırda gösterir */
+  font-size: 18px; /* Yazı tipi boyutu */
+  font-weight: bold; /* Yazı tipi kalınlığı */
+  color: white; /* Yazı tipi rengi */
+  margin-bottom: 10px; /* Alt elemanlardan boşluk */
+  background-color: rgb(52, 52, 44);
+  padding: 10px;
 }

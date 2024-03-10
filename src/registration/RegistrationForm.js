@@ -12,7 +12,7 @@ function RegistrationForm() {
     phoneNumber: "",
   });
 
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  // const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -30,16 +30,18 @@ function RegistrationForm() {
         formData
       );
       console.log(response.data);
-      setIsSubmitted(true);
+      // Başarılı kayıt sonrası alert
+      alert('Kayıt işlemi başarılı!');
       setIsLoading(false);
     } catch (err) {
-      setError(
-        "Qeydiyyat zamanı bir xəta oluştu. Zəhmət olmasa yenidən cəhd edin."
-      );
+      setError("Qeydiyyat zamanı bir xəta yarandı. Zəhmət olmasa yenidən cəhd edin.");
+      // Hata oluştuğunda alert
+      alert('Kayıt işlemi sırasında bir hata oluştu. Lütfen tekrar deneyin.');
       setIsLoading(false);
       console.error(err);
     }
   };
+  
 
   return (
     <div className="registration" style={{ textAlign: "center" }}>
@@ -124,7 +126,7 @@ function RegistrationForm() {
           </div>
           {error && <p className="error">{error}</p>}
         </form>
-        {isSubmitted && (
+        {/* {isSubmitted && (
           <div className="modal-overlay">
             <div className="modal-content">
               <div className="success-icon">✓</div>
@@ -143,7 +145,7 @@ function RegistrationForm() {
               </Link>
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );

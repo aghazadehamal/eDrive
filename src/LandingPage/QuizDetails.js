@@ -66,6 +66,7 @@ function QuizDetails({ quiz }) {
     return (
       <div>
         <div className="containertCorrect">
+          
           <button
             className={`buttonCorrect button correct ${
               showCorrectAnswers ? "active" : ""

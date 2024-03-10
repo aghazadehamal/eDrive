@@ -66,7 +66,7 @@ function QuizDetails({ quiz }) {
       <div>
         <div className='containertCorrect'>
   <button 
-    className={`button correct ${showCorrectAnswers ? 'active' : ''}`}
+    className={`buttonCorrect button correct ${showCorrectAnswers ? 'active' : ''}`}
     onClick={() => {
       setShowCorrectAnswers(!showCorrectAnswers);
       if (showIncorrectAnswers) {
@@ -74,10 +74,10 @@ function QuizDetails({ quiz }) {
       }
     }}
   >
-    Doğru Cevaplar  <span className='correctSpan'> {detailedResults.correctAnswers.length}  </span> 
+    Doğru Cevaplar  <p className='correctSpan'> {detailedResults.correctAnswers.length}  </p> 
   </button>
   <button
-    className={`button incorrect ${showIncorrectAnswers ? 'active' : ''}`} 
+    className={`buttonFalse button incorrect ${showIncorrectAnswers ? 'active' : ''}`} 
     onClick={() => {
       setShowIncorrectAnswers(!showIncorrectAnswers);
       if (showCorrectAnswers) {
@@ -85,7 +85,7 @@ function QuizDetails({ quiz }) {
       }
     }}
   >
-    Yanlış Cevaplar <span className='falseSpan'>{detailedResults.incorrectAnswers.length}  </span> 
+    Yanlış Cevaplar <p className='falseSpan'>{detailedResults.incorrectAnswers.length}  </p> 
   </button>
 </div>
 
@@ -103,10 +103,27 @@ function QuizDetails({ quiz }) {
                 <li key={question.id} className="question">
                   <h4>{question.text}</h4>
                   {question.optionResponses.map((option) => (
-                    <div key={option.id} className={getOptionClass(option, correctOptionId, selectedOptionId)}>
-                      {option.optionText}
-                    </div>
-                  ))}
+  <div key={option.id} className={getOptionClass(option, correctOptionId, selectedOptionId)}>
+    {/* Seçeneğin doğruluğuna göre uygun ikonu göster */}
+    {selectedOptionId === option.id && (
+      option.id === correctOptionId ? 
+      <img
+        src={`${process.env.PUBLIC_URL}/icons/truedone.svg`} // Doğru cevap için ikon
+        alt="truedone"
+        style={{ width: "24px", height: "24px", marginRight: "8px" }}
+      /> : 
+      <img
+        src={`${process.env.PUBLIC_URL}/icons/false.svg`} // Yanlış cevap için ikon
+        alt="Incorrect"
+        style={{ width: "24px", height: "24px", marginRight: "8px" }}
+      />
+    )}
+    {option.optionText}
+  </div>
+))}
+
+
+
                 </li>
               );
             })}
@@ -132,10 +149,29 @@ function QuizDetails({ quiz }) {
                 <li key={question.id} className="question">
                   <h4>{question.text}</h4>
                   {question.optionResponses.map((option) => (
-                    <div key={option.id} className={getOptionClass(option, correctOptionId, selectedOptionId)}>
-                      {option.optionText}
-                    </div>
-                  ))}
+  <div key={option.id} className={getOptionClass(option, correctOptionId, selectedOptionId)}>
+    {/* Eğer seçenek, kullanıcı tarafından seçilmiş ve yanlışsa bir kırmızı çarpı göster */}
+    {selectedOptionId === option.id && selectedOptionId !== correctOptionId && (
+      <img
+        src={`${process.env.PUBLIC_URL}/icons/false.svg`} // Yanlış cevap için ikon
+        alt="Incorrect"
+        style={{ width: "24px", height: "24px", marginRight: "8px" }}
+      />
+    )}
+    {/* Eğer seçenek doğruysa (ve bu doğru cevap yanlış cevaplananlar listesinde olduğundan, kullanıcı tarafından seçilmemiş olmalı), bir yeşil onay göster */}
+    {option.id === correctOptionId && (
+      <img
+        src={`${process.env.PUBLIC_URL}/icons/truedone.svg`} // Doğru cevap için ikon, bu örnekte "Avatar.svg" kullanılmış ancak bu doğru bir yeşil onay ikonu olmalı
+        alt="truedone"
+        style={{ width: "24px", height: "24px", marginRight: "8px" }}
+      />
+    )}
+    {option.optionText}
+  </div>
+))}
+
+
+
                 </li>
               );
             })}

@@ -117,7 +117,7 @@
 }
 
 .option.correct {
-  background-color: #c8e6c9; /* Doğru cevap için yeşil arka plan */
+  background-color: #BEF0A6; /* Doğru cevap için yeşil arka plan */
   width: 1055px;
 }
 
@@ -157,24 +157,26 @@
 .correct {
 background-color: #F3F4F8;
   color: white;
-  width: 500px;
+  width: 547px;
   height: 67px;
   color: #000000;
   font-size: 18px;
   line-height: 27px;
   font-weight: 600;
+  border-radius: 16px;
 }
 
 .incorrect {
   background-color: #F3F4F8;
   color: white;
-  width: 500px;
+  width: 547px;
   height: 67px;
  
   color: #000000;
   font-size: 18px;
   line-height: 27px;
   font-weight: 600;
+  border-radius: 16px;
 }
 
 /* Buton aktif olduğunda yani gösterilen cevaplar doğruysa */
@@ -194,7 +196,7 @@ background-color: #F3F4F8;
 width: 24px;
 height: 24px;
 border-radius: 99px;
-padding: 8px;
+
 gap: 10px;
 
 font-size: 14px;
@@ -202,13 +204,14 @@ line-height: 21px;
 color: white;
 background-color: #50BB27;
 text-align: center;
+margin-left: 5px;
 }
 
 .falseSpan {
   width: 24px;
 height: 24px;
 border-radius: 99px;
-padding: 8px;
+
 gap: 10px;
 
 background-color: #EE3300;
@@ -216,8 +219,25 @@ font-size: 14px;
 line-height: 21px;
 color: white;
 text-align: center;
+margin-left: 5px;
 }
 
+
+
+
+.buttonCorrect {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.buttonFalse {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
 
 
 /* Yeniden Dene butonu için genel stil */
@@ -250,7 +270,7 @@ text-align: center;
 .containertCorrect {
 background-color: #F3F4F8;
 border-radius: 16px;
-width: 1005px;
+width: 1102px;
 height: 75px;
 
 align-items: center;

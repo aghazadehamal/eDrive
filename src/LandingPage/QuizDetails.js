@@ -208,7 +208,7 @@ function QuizDetails({ quiz }) {
   <h2 className='textQuizName'>{quiz.quizName}</h2>
   {quiz.questionResponses.map(question => (
     <div key={question.id} className="question">
-      <h4>{question.text}</h4>
+      <h4 className='questionText'>{question.text}</h4>
       <div>
       {question.optionResponses.map(option => (
   <div key={option.id} className={getOptionClass(option, question.correctOptionId, selectedOptions[question.id])}>

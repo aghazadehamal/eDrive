@@ -1,74 +1,50 @@
-/* QuizDetails genel stil ayarları */
 .quiz-details {
-   
-   
-    margin: 20px 0;
-    
-    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
-  }
-  
-  /* Her bir soru için stil ayarları */
-  .question {
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 24px;
-  }
-  
-  .textQuizName {
-    text-align: left;
-    padding: 8px;
-  }
-  
-  /* Soru metni için stil ayarları */
-  .question h4 {
-    margin-bottom: 10px;
-    color: #333;
-    text-align: left;
-    margin-left: 5px;
-    padding: 15px;
-  }
-  
- 
-
-  .submit-button {
-    display: block; /* Butonu block elementi yapar */
-    margin-left: 0; /* Sol kenardan herhangi bir boşluk bırakmaz */
-    text-align: left; /* Metni sola hizalar */
-    background-color: #50BB27;
-    width: 170px;
-    height: 54px;
-    border-radius: 8px;
-    text-align: center;
-    color: white;
-    border: white;
-   margin-left: 21px;
-   font-size: 20px;
-   line-height: 30px;
-   cursor: pointer;
-  }
-  
-  
-  
-  
-
-  .containerQuizButton {
-    display: grid;
-  }
-
-
-
-
-  /* Seçeneklerin genel stil ayarları */
-.option {
-  margin-bottom: 10px;
-  border-radius: 12px;
-  
-  height: 51px;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  width: 1055px;
+  margin: 20px 0;
 }
+
+.question {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 24px;
+  width: 100%;
+  height: auto;
+}
+
+.textQuizName {
+  text-align: left;
+  padding: 8px;
+}
+
+.question h4 {
+  margin-bottom: 10px;
+  color: #333;
+  text-align: left;
+  margin-left: 5px;
+  padding: 15px;
+}
+
+.submit-button {
+  display: block;
+  margin-left: 0;
+  text-align: left;
+  background-color: #50bb27;
+  width: 170px;
+  height: 54px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  border: white;
+  margin-left: 21px;
+  font-size: 20px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.containerQuizButton {
+  display: grid;
+}
+
+
 
 .option-label {
   display: flex;
@@ -103,48 +79,32 @@
   background-color: #333;
 }
 
-
-
-
-  
-  
- /* ... Diğer CSS stilleri */
-
 .option {
-  /* varsayılan seçenek stili */
+  margin-bottom: 10px;
+  border-radius: 12px;
   padding: 5px;
   margin-bottom: 2px;
+  height: 51px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 97%;
 }
 
 .option.correct {
-  background-color: #BEF0A6; /* Doğru cevap için yeşil arka plan */
-  width: 1055px;
+  background-color: #bef0a6;
+  width: 97%;
 }
 
 .option.incorrect {
-  background-color: #ffcdd2; /* Yanlış cevap için kırmızı arka plan */
-  width: 1055px;
+  background-color: #ffcdd2;
+  width: 97%;
 }
-
-/* ... */
-
 
 .option.selected {
-  background-color: #F3F4F8; /* Gri arka plan */
-  width: 1055px;
+  background-color: #f3f4f8;
+  width: 97%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .button {
   padding: 10px 20px;
@@ -155,7 +115,7 @@
 }
 
 .correct {
-background-color: #F3F4F8;
+  background-color: #f3f4f8;
   color: white;
   width: 547px;
   height: 67px;
@@ -167,11 +127,11 @@ background-color: #F3F4F8;
 }
 
 .incorrect {
-  background-color: #F3F4F8;
+  background-color: #f3f4f8;
   color: white;
   width: 547px;
   height: 67px;
- 
+
   color: #000000;
   font-size: 18px;
   line-height: 27px;
@@ -179,51 +139,43 @@ background-color: #F3F4F8;
   border-radius: 16px;
 }
 
-/* Buton aktif olduğunda yani gösterilen cevaplar doğruysa */
 .active.correct {
-  /* box-shadow: 0 4px #2e7d32; */
   background-color: white;
 }
 
-/* Buton aktif olduğunda yani gösterilen cevaplar yanlışsa */
 .active.incorrect {
-  /* box-shadow: 0 4px #d32f2f; */
   background-color: white;
 }
-
 
 .correctSpan {
-width: 24px;
-height: 24px;
-border-radius: 99px;
+  width: 24px;
+  height: 24px;
+  border-radius: 99px;
 
-gap: 10px;
+  gap: 10px;
 
-font-size: 14px;
-line-height: 21px;
-color: white;
-background-color: #50BB27;
-text-align: center;
-margin-left: 5px;
+  font-size: 14px;
+  line-height: 21px;
+  color: white;
+  background-color: #50bb27;
+  text-align: center;
+  margin-left: 5px;
 }
 
 .falseSpan {
   width: 24px;
-height: 24px;
-border-radius: 99px;
+  height: 24px;
+  border-radius: 99px;
 
-gap: 10px;
+  gap: 10px;
 
-background-color: #EE3300;
-font-size: 14px;
-line-height: 21px;
-color: white;
-text-align: center;
-margin-left: 5px;
+  background-color: #ee3300;
+  font-size: 14px;
+  line-height: 21px;
+  color: white;
+  text-align: center;
+  margin-left: 5px;
 }
-
-
-
 
 .buttonCorrect {
   display: flex;
@@ -239,13 +191,11 @@ margin-left: 5px;
   align-items: center;
 }
 
-
-/* Yeniden Dene butonu için genel stil */
 .quizRestart {
   padding: 10px 20px;
   font-size: 16px;
   color: #fff;
- background-color: #50BB27;
+  background-color: #50bb27;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -254,27 +204,83 @@ margin-left: 5px;
   width: 300px;
 }
 
-/* .quizRestart:hover {
-  background-color: #0056b3;
-} */
-
-/* .quizRestart:active {
-  background-color: #004094;
-} */
-
-
-
-
-
-
 .containertCorrect {
-background-color: #F3F4F8;
-border-radius: 16px;
-width: 1102px;
-height: 75px;
+  background-color: #f3f4f8;
+  border-radius: 16px;
+  width: 1102px;
+  height: 75px;
 
-align-items: center;
-justify-content: center;
-display: flex;
-text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+  .quiz-details {
+    margin: 10px 0;
+  }
+
+  .question {
+    margin-bottom: 15px;
+    border-radius: 12px;
+    padding: 10px;
+  }
+
+  .textQuizName, .question h4 {
+    margin-left: 10px;
+    padding: 10px;
+  }
+
+  .submit-button {
+    width: auto; /* Ekran genişliğine göre boyutlandır */
+    margin: 20px auto; /* Merkeze al */
+    font-size: 18px; /* Daha küçük ekranda yazı boyutunu azalt */
+  }
+
+  .option {
+    margin-bottom: 8px;
+    padding: 10px; /* Mobil cihazlar için padding */
+    margin-left: 0px;
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  .option-label {
+    font-size: 14px; /* Mobil cihazlarda yazı boyutunu azalt */
+  }
+
+
+
+  .custom-radio {
+    margin-right: 8px; /* Mobil cihazlar için sağ marjını azalt */
+    height: auto;
+  width: auto;
+  }
+
+  .containertCorrect, .correct, .incorrect {
+    width: auto; /* Ekran genişliğine göre otomatik boyutlandırma */
+    height: auto; /* İçerik yüksekliğine göre otomatik ayarlama */
+    font-size: 16px; /* Mobil cihazlar için yazı boyutunu azalt */
+  }
+
+  .quizRestart {
+    width: auto; /* Ekran genişliğine uygun hale getir */
+    padding: 10px; /* Düğme üzerinde daha fazla yer sağla */
+  }
+}
+
+
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+ 
+
+ 
 }

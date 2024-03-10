@@ -156,6 +156,15 @@
   justify-content: center;
   text-align: center;
   align-items: center;
+  background-color: #f3f4f8;
+  color: white;
+  width: 49.6%;
+  height: 67px;
+  color: #000000;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 600;
+  border-radius: 16px;
 }
 
 .buttonFalse {
@@ -163,6 +172,16 @@
   justify-content: center;
   text-align: center;
   align-items: center;
+  background-color: #f3f4f8;
+  color: white;
+  width: 49.6%;
+  height: 67px;
+
+  color: #000000;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 600;
+  border-radius: 16px;
 }
 
 .quizRestart {
@@ -191,30 +210,7 @@ margin-bottom: 20px;
   margin-top: 20px;
 }
 
-.correct {
-  background-color: #f3f4f8;
-  color: white;
-  width: 49.6%;
-  height: 67px;
-  color: #000000;
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 600;
-  border-radius: 16px;
-}
 
-.incorrect {
-  background-color: #f3f4f8;
-  color: white;
-  width: 49.6%;
-  height: 67px;
-
-  color: #000000;
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 600;
-  border-radius: 16px;
-}
 
 @media (max-width: 601px) {
   .quiz-details {
@@ -266,11 +262,11 @@ margin-bottom: 20px;
     padding: 10px;
   }
 
-  .correct {
+  .buttonCorrect {
     font-size: 14px;
   }
   
-  .incorrect {
+  .buttonFalse {
     font-size: 14px;
   }
 }
@@ -324,11 +320,11 @@ margin-bottom: 20px;
     width: auto;
   }
 
-  .correct {
+  .buttonCorrect {
     font-size: 14px;
   }
   
-  .incorrect {
+  .buttonFalse {
     font-size: 14px;
   }
 }

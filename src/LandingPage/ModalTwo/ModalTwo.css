@@ -1,13 +1,13 @@
 .modaln {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-
-  display: flex;
   align-items: center;
+  background: #00000080;
+  bottom: 0;
+  display: flex;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
 }
 
 .modal-contentn {

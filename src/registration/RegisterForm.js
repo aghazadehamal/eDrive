@@ -1,45 +1,47 @@
-import React from 'react';
-import { useFormik } from 'formik';
-import * as Yup from 'yup'; 
-import axios from 'axios';
-import './RegistrationForm.css'; // İlgili CSS stil dosyası
-
-
-
-
+import React from "react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import axios from "axios";
+import "./RegistrationForm.css";
 
 const validationSchema = Yup.object({
-  name: Yup.string().required('İsim zorunludur'),
-  email: Yup.string().email('Geçersiz e-mail adresi').required('E-mail zorunludur'),
-  password: Yup.string().min(6, 'Parola en az 6 karakter olmalıdır').required('Parola zorunludur'),
-  phone: Yup.string().matches(/^[0-9]+$/, 'Geçersiz telefon numarası').required('Telefon numarası zorunludur'),
+  name: Yup.string().required("ad vacibdir"),
+  email: Yup.string().email("yanlış e-mail adresi").required("E-mail vacibdir"),
+  password: Yup.string()
+    .min(6, "Şifrə en az 6 hərfdən olmalıdır")
+    .required("Şifrə vacibdir"),
+  phone: Yup.string()
+    .matches(/^[0-9]+$/, "yanlış telefon nömrəsi")
+    .required("Telefon nömrəsi vacibdir"),
 });
 
 function RegisterForm() {
   const formik = useFormik({
     initialValues: {
-      name: '',
-      email: '',
-      password: '',
-      phone: '',
+      name: "",
+      email: "",
+      password: "",
+      phone: "",
     },
     validationSchema,
     onSubmit: async (values) => {
       try {
-        const response = await axios.post('YOUR_BACKEND_ENDPOINT', values);
+        const response = await axios.post("YOUR_BACKEND_ENDPOINT", values);
         console.log(response.data);
-        
-        alert('Kayıt başarılı! Kısa zamanda sizinle iletişime geçilecek.');
+
+        alert("Qeydiyyat uğurlu! Qısa zamanda sizinlə əlaqə saxlanılacaq.");
       } catch (error) {
-        console.error('Form gönderilirken hata oluştu', error);
-      
-        alert('Kayıt sırasında bir hata oluştu. Lütfen tekrar deneyin.');
+        console.error("Form gönderilirken xəta yarandı", error);
+
+        alert(
+          "Qeydiyyat zamanı bir xəta yarandı. Zəhmət olmasa təkrar yoxlayın."
+        );
       }
     },
   });
 
   return (
-    <form style={{height: "1000px"}}  onSubmit={formik.handleSubmit}>
+    <form style={{ height: "1000px" }} onSubmit={formik.handleSubmit}>
       <input
         type="text"
         name="name"
@@ -47,8 +49,10 @@ function RegisterForm() {
         value={formik.values.name}
         onBlur={formik.handleBlur}
       />
-      {formik.touched.name && formik.errors.name ? <div>{formik.errors.name}</div> : null}
-      
+      {formik.touched.name && formik.errors.name ? (
+        <div>{formik.errors.name}</div>
+      ) : null}
+
       <input
         type="email"
         name="email"
@@ -56,7 +60,9 @@ function RegisterForm() {
         value={formik.values.email}
         onBlur={formik.handleBlur}
       />
-      {formik.touched.email && formik.errors.email ? <div>{formik.errors.email}</div> : null}
+      {formik.touched.email && formik.errors.email ? (
+        <div>{formik.errors.email}</div>
+      ) : null}
 
       <input
         type="password"
@@ -65,7 +71,9 @@ function RegisterForm() {
         value={formik.values.password}
         onBlur={formik.handleBlur}
       />
-      {formik.touched.password && formik.errors.password ? <div>{formik.errors.password}</div> : null}
+      {formik.touched.password && formik.errors.password ? (
+        <div>{formik.errors.password}</div>
+      ) : null}
 
       <input
         type="text"
@@ -74,9 +82,11 @@ function RegisterForm() {
         value={formik.values.phone}
         onBlur={formik.handleBlur}
       />
-      {formik.touched.phone && formik.errors.phone ? <div>{formik.errors.phone}</div> : null}
+      {formik.touched.phone && formik.errors.phone ? (
+        <div>{formik.errors.phone}</div>
+      ) : null}
 
-      <button type="submit">Kayıt Ol</button>
+      <button type="submit">Qeydiyyat Ol</button>
     </form>
   );
 }

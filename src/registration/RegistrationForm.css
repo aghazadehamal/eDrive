@@ -1,105 +1,89 @@
-/* RegistrationForm.css */
 .registration form {
-  
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    color: white;
-    max-width: 456px;
-    height: 704px;
-   
-    padding: 40px;
-    margin: auto;
-  
-    text-align: start;
-    border: 1px solid #BCBCC3;
-  }
-  
-  .registration  input[type="text"],
-  .registration  input[type="email"],
-  .registration  input[type="password"] {
- 
-   
-    display: block;
-  
-    width: 100%;
-    padding: 10px;
-  
-    font-size: 16px;
-    border-radius: 12px;
-    border: 1px solid #BCBCC3;
-   color: #110f0f;
-    height: 54px;
-    margin-bottom: 10px;
-    margin-top: 5px;
-   
-    
-  }
-  
-  .registration  input::placeholder {
-   color: #6E6E81;
-  }
-  .registration p {
-    color: #1F203F;
-  }
-  
-  .registration  button[type="submit"] {
-  background-color: #50BB27;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    display: block;
-    margin: 20px auto;
-    transition: background-color 0.3s;
-    width: 384px;
-    height: 54px;
-    line-height: 30px;
-    
-  }
-  
- button[type="submit"]:hover {
-  background-color: #3C951B;
-  }
-  
-  /* Başlık için ek stil */
-  .registration h1 {
-    text-align: center;
-    color: #fff;
-    margin-bottom: 30px;
-  }
-  
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  max-width: 456px;
+  height: 704px;
 
+  padding: 40px;
+  margin: auto;
 
+  text-align: start;
+  border: 1px solid #bcbcc3;
+}
 
+.registration input[type="text"],
+.registration input[type="email"],
+.registration input[type="password"] {
+  display: block;
 
+  width: 100%;
+  padding: 10px;
 
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid #bcbcc3;
+  color: #110f0f;
+  height: 54px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
 
- /* Modalın genel arka planını belirleyen stil */
+.registration input::placeholder {
+  color: #6e6e81;
+}
+.registration p {
+  color: #1f203f;
+}
+
+.registration button[type="submit"] {
+  background-color: #50bb27;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  transition: background-color 0.3s;
+  width: 384px;
+  height: 54px;
+  line-height: 30px;
+}
+
+button[type="submit"]:hover {
+  background-color: #3c951b;
+}
+
+.registration h1 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4); /* Yarı saydam arka plan */
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Diğer içeriklerin önünde olmalı */
+  z-index: 1000;
 }
 
-/* Modal içeriğini stilize eden CSS */
 .modal-content {
   background: white;
-    padding: 2em;
-    border-radius: 24px;
-   width: 552px;
-   height: 459px;
-    text-align: center;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2em;
+  border-radius: 24px;
+  width: 552px;
+  height: 459px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .modal-content span {
@@ -110,64 +94,56 @@
   margin-top: 10px;
 }
 
-/* Başarılı işlem ikonunu stilize eden CSS */
 .success-icon {
-  color: #4BB543;
+  color: #4bb543;
   font-size: 8rem;
   height: 160px;
 }
 
-/* Başlık stilini belirleyen CSS */
 .modal-title {
-  font-size: 1.5rem; /* Başlık font boyutu */
-  color: #333; /* Başlık rengi */
-  margin: 0.5rem 0; /* Üst ve alt boşluk */
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0.5rem 0;
 }
 
-/* Mesaj metnini stilize eden CSS */
 .modal-message {
   font-size: 18px;
-   line-height: 27px;
-    color: #666;
-   
-    text-align: center;
-    margin-top: 15px;
+  line-height: 27px;
+  color: #666;
+
+  text-align: center;
+  margin-top: 15px;
 }
 
-/* Düğme stilini belirleyen CSS */
 .modal-button {
-  background-color: #4BB543;
-    color: white;
-    border: none;
-    padding: 10px 20px;
- font-size: 20px;
- line-height: 30px;
-    border-radius: 5px;
-    cursor: pointer;
-    outline: none;
-    width: 488px;
-    height: 54px;
-    margin-top: 30px;
+  background-color: #4bb543;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  line-height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  width: 488px;
+  height: 54px;
+  margin-top: 30px;
 }
 
-/* 'Daxil ol' link stilini belirleyen CSS */
 .link-text {
   display: block;
   margin-top: 1.5rem;
-  color: #000; /* Link rengi */
-  text-decoration: none; /* Alt çizgi kaldır */
+  color: #000;
+  text-decoration: none;
   font-size: 1rem;
 }
-
-
-
 
 .account-check {
   margin-top: 42px;
   margin-left: 90px;
   height: 40px;
   width: 384px;
-  color: #1F203F;
+  color: #1f203f;
 }
 
 .login-link {
@@ -176,22 +152,13 @@
   text-decoration: none;
 }
 
-
-
-
-
-
-
-
-/* Mevcut stil kurallarınız */
-
-/* Mobil cihazlar için stil */
 @media (max-width: 768px) {
-  .registration form, .modal-content {
-    max-width: 90%; /* Form ve modal genişliğini ekranın %90'ına ayarla */
-    padding: 20px; /* Daha az padding */
-    margin-top: 10%; /* Üst marjı azalt */
-    height: auto; /* Yüksekliği içeriğe göre ayarla */
+  .registration form,
+  .modal-content {
+    max-width: 90%;
+    padding: 20px;
+    margin-top: 10%;
+    height: auto;
   }
 
   .registration input[type="text"],
@@ -199,29 +166,30 @@
   .registration input[type="password"],
   .registration button[type="submit"],
   .modal-button {
-    width: 100%; /* Genişliği %100'e ayarla, padding ve border dikkate alınarak */
-    margin: 10px 0; /* Daha sıkı bir düzen için azaltılmış marj */
+    width: 100%;
+    margin: 10px 0;
   }
 
   .modal-content {
-    padding: 1em; /* Modal için daha az padding */
-    width: auto; /* Modal genişliğini otomatik ayarla */
+    padding: 1em;
+    width: auto;
   }
 
-  .modal-button, .registration button[type="submit"] {
-    padding: 12px; /* Daha rahat tıklanabilirlik için */
+  .modal-button,
+  .registration button[type="submit"] {
+    padding: 12px;
   }
 
   .success-icon {
-    font-size: 6rem; /* İkon boyutunu azalt */
+    font-size: 6rem;
   }
 }
 
-/* Tablet cihazlar için stil */
 @media (min-width: 769px) and (max-width: 1024px) {
-  .registration form, .modal-content {
-    max-width: 80%; /* Tabletler için form ve modal genişliğini ayarla */
-    padding: 30px; /* Tabletler için daha fazla padding */
+  .registration form,
+  .modal-content {
+    max-width: 80%;
+    padding: 30px;
   }
 
   .registration input[type="text"],
@@ -229,34 +197,31 @@
   .registration input[type="password"],
   .registration button[type="submit"],
   .modal-button {
-    margin: 15px 0; /* Tabletler için inputlar ve butonlar arası marj */
+    margin: 15px 0;
   }
 
   .modal-content {
-    width: 75%; /* Tablet genişliğine uygun modal genişliği */
+    width: 75%;
   }
 
-  .modal-button, .registration button[type="submit"] {
-    padding: 15px 20px; /* Tabletler için buton padding'ini artır */
+  .modal-button,
+  .registration button[type="submit"] {
+    padding: 15px 20px;
   }
 
   .success-icon {
-    font-size: 7rem; /* Tablet için ikon boyutunu ayarla */
+    font-size: 7rem;
   }
 }
-
-
-
-
 
 @media (max-width: 768px) {
   .account-check {
     margin-top: 20px;
-    margin-left: 20px; /* Mobil cihazlarda kenarlardan boşluk azaltılacak */
-    width: auto; /* Genişlik otomatik olarak ayarlanacak */
+    margin-left: 20px;
+    width: auto;
   }
 
   .login-link {
-    margin-left: 5px; /* Mobil cihazlarda metinler arası boşluk azaltılacak */
+    margin-left: 5px;
   }
 }

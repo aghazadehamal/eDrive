@@ -1,5 +1,3 @@
-/* Mevcut stil kurallarınız */
-
 .learn-driving-container {
   display: flex;
   flex-direction: column;
@@ -17,7 +15,6 @@
   align-items: center;
   padding: 20px;
   margin-top: 90px;
-  /* Varsayılan olarak içerikler yatay olarak sıralanır */
 }
 
 .learn-driving-info {
@@ -34,7 +31,6 @@
   text-align: left;
 }
 
-
 .info-item {
   border-radius: 20px;
   padding: 12px;
@@ -43,7 +39,7 @@
   gap: 10px;
   width: 360px;
   height: 105px;
-  border: 1px solid #BCBCC3;
+  border: 1px solid #bcbcc3;
 }
 
 .info-item img.info-icon {
@@ -78,64 +74,62 @@
   font-weight: 500;
 }
 
-/* Responsive Tasarım için Medya Sorguları */
-
 @media (max-width: 768px) {
   .learn-driving-info {
-    grid-template-columns: 1fr; /* Tüm bilgi kartlarını dikey sıralamak için */
-    width: auto; /* Konteynerin genişliğini ekran boyutuna göre ayarlamak için */
-    padding: 20px; /* İç padding'i koruyarak daha fazla alan sağlamak için */
+    grid-template-columns: 1fr;
+    width: auto;
+    padding: 20px;
   }
 
   .info-item {
-    width: auto; /* Öğe genişliğini esnek yapmak için */
-    height: auto; /* İçerik miktarına bağlı olarak yüksekliği ayarlamak için */
+    width: auto;
+    height: auto;
   }
 
   .learn-driving-header p,
   .learn-driving-two {
-    width: 90%; /* Başlık ve içerik genişliğini ekran boyutuna göre ayarlamak için */
+    width: 90%;
   }
 
   .learn-driving-two span {
-    font-size: 24px; /* Küçük ekranlarda başlık font boyutunu azaltmak için */
-    line-height: 36px; /* Satır yüksekliğini ayarlamak için */
+    font-size: 24px;
+    line-height: 36px;
   }
 
   .learn-driving-two p {
-    font-size: 14px; /* Küçük ekranlarda paragraf font boyutunu azaltmak için */
-    line-height: 21px; /* Satır yüksekliğini ayarlamak için */
+    font-size: 14px;
+    line-height: 21px;
   }
 
   .learn-driving-content {
-    flex-direction: column; /* İçerikleri dikey olarak sırala */
+    flex-direction: column;
   }
-  
+
   .learn-driving-instructor img {
-    order: 2; /* Eğer belirli bir item'ı en alta almak istiyorsak */
-    width: 100%; /* Mobil görünümde resmin genişliğini ayarla */
-    height: auto; /* Yüksekliği orantılı olarak ayarla */
-    margin-top: 20px; /* Üstteki içerikle arasında boşluk bırak */
+    order: 2;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
     display: none;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .learn-driving-info {
-    grid-template-columns: repeat(2, 1fr); /* Tablet boyutlarında 2 sütunlu düzen */
-    width: 90%; /* Konteyner genişliğini ekran boyutuna göre ayarlamak için */
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
   }
 
   .learn-driving-header p,
   .learn-driving-two {
-    width: 80%; /* Tablet boyutlarında genişlik ayarlaması */
+    width: 80%;
   }
 
   .learn-driving-two span {
-    font-size: 28px; /* Tablet boyutlarında başlık font boyutunu ayarlamak için */
+    font-size: 28px;
   }
 
   .learn-driving-two p {
-    font-size: 15px; /* Tablet boyutlarında paragraf font boyutunu ayarlamak için */
+    font-size: 15px;
   }
 }

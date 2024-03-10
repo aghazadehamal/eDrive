@@ -36,11 +36,7 @@ function LoginForm() {
   return (
     <div className="login">
       <Link to="/">
-        <img
-          src="/edurive.svg"
-          alt="Edurive Logo"
-          className="login-logo"
-        />
+        <img src="/edurive.svg" alt="Edurive Logo" className="login-logo" />
       </Link>
       <form onSubmit={handleSubmit}>
         <h1 className="login-title">Daxil ol</h1>
@@ -62,20 +58,15 @@ function LoginForm() {
           placeholder="Şifrənizi əlavə edin"
           required
         />
-        <Link style={{textDecoration: "none"}} to="/Parol">
-        <span className="forgot-password">
-          Şifrəmi unutdum
-        </span> 
+        <Link style={{ textDecoration: "none" }} to="/Parol">
+          <span className="forgot-password">Şifrəmi unutdum</span>
         </Link>
-       
+
         <button type="submit">Daxil ol</button>
 
         <div className="registration-reminder">
           <span style={{ color: "#1F203F" }}>Hesabınız yoxdur?</span>
-          <Link
-            to="/RegistrationForm"
-            className="registration-link"
-          >
+          <Link to="/RegistrationForm" className="registration-link">
             Qeydiyyatdan keçin
           </Link>
         </div>

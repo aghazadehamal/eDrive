@@ -1,33 +1,32 @@
 .progress-bar-container {
-    display: flex;
-    align-items: center;
-    font-family: Arial, sans-serif;
-  }
-  
-  .progress-text {
-    margin-right: 10px;
-    color: #333;
-  }
-  
-  .progress-bar {
-    position: relative;
-    height: 20px;
-    width: 100%;
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  .progress-bar-filler {
-    background-color: #4CAF50;
-    height: 100%;
-    border-radius: inherit;
-    transition: width 0.5s ease-in-out;
-  }
-  
-  .progress-icon {
-    margin-left: 10px;
-    width: 30px; /* İkon boyutunu ayarlayabilirsiniz */
-    height: 30px; /* İkon boyutunu ayarlayabilirsiniz */
-  }
-  
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.progress-text {
+  margin-right: 10px;
+  color: #333;
+}
+
+.progress-bar {
+  position: relative;
+  height: 20px;
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar-filler {
+  background-color: #4caf50;
+  height: 100%;
+  border-radius: inherit;
+  transition: width 0.5s ease-in-out;
+}
+
+.progress-icon {
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+}

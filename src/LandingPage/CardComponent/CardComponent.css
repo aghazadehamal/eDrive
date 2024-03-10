@@ -1,36 +1,33 @@
-/* CardComponent.css */
-
 .info-card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: #FFFFFF; /* Beyaz arka plan */
-    border-radius: 10px; /* Yuvarlak köşeler */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge */
-    margin: 10px; /* Etrafındaki boşluk */
-    padding: 20px; /* İçerik ve kenarlar arasındaki boşluk */
-    max-width: 500px; /* Maksimum genişlik */
-  }
-  
-  .info-icon {
-    margin-right: 20px; /* İkon ve metin arasındaki boşluk */
-  }
-  
-  .info-icon img {
-    width: 50px; /* İkon genişliği */
-    height: auto; /* İkon yüksekliği otomatik ayarlanacak */
-  }
-  
-  .info-content h3 {
-    margin: 0;
-    margin-bottom: 5px; /* Başlık ile açıklama metni arasındaki boşluk */
-    color: #000000; /* Başlık metni rengi */
-    font-size: 16px; /* Başlık metni boyutu */
-  }
-  
-  .info-content p {
-    margin: 0;
-    color: #555555; /* Açıklama metni rengi */
-    font-size: 14px; /* Açıklama metni boyutu */
-  }
-  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  max-width: 500px;
+}
+
+.info-icon {
+  margin-right: 20px;
+}
+
+.info-icon img {
+  width: 50px;
+  height: auto;
+}
+
+.info-content h3 {
+  margin: 0;
+  margin-bottom: 5px;
+  color: #000000;
+  font-size: 16px;
+}
+
+.info-content p {
+  margin: 0;
+  color: #555555;
+  font-size: 14px;
+}

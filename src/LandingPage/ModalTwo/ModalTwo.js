@@ -1,5 +1,5 @@
 import React from 'react';
-import './ModalTwo.css'; // VideoCard CSS dosyası
+import './ModalTwo.css'; 
 
 const ModalTwo = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;

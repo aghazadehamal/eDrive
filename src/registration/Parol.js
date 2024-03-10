@@ -34,19 +34,17 @@ function Parol() {
   };
 
   return (
-    <div style={{height: "auto"}} className="login">
+    <div style={{ height: "auto" }} className="login">
       <Link to="/">
-        <img
-          src="/edurive.svg"
-          alt="Edurive Logo"
-          className="login-logo"
-        />
+        <img src="/edurive.svg" alt="Edurive Logo" className="login-logo" />
       </Link>
       <form onSubmit={handleSubmit}>
         <h1 className="login-title">Şifrənin yenilənməsi</h1>
         <div class="loginContainer">
-  <span className="loginSpan">Qeydiyyatdan keçdiyiniz e-mailinizi daxil edin</span>
-</div>
+          <span className="loginSpan">
+            Qeydiyyatdan keçdiyiniz e-mailinizi daxil edin
+          </span>
+        </div>
         <p>E-mail</p>
         <input
           type="email"
@@ -56,13 +54,10 @@ function Parol() {
           placeholder="E-mailinizi əlavə edin"
           required
         />
-       
-      <Link to="/ParolTwo" style={{textDecoration: "none"}}>
-      <button type="submit">Göndər</button>
-      </Link>
-       
 
-       
+        <Link to="/ParolTwo" style={{ textDecoration: "none" }}>
+          <button type="submit">Göndər</button>
+        </Link>
       </form>
     </div>
   );

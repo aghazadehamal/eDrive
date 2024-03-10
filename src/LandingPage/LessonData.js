@@ -16,27 +16,8 @@ const LessonData = () => {
   const [animateOut, setAnimateOut] = useState(false);
   const [selectedQuiz, setSelectedQuiz] = useState(null);
   const resetToInitialState = () => {
-  // Örnek olarak, lessons'ı boş bir diziye sıfırlayabilirsiniz.
-  // Gerçek uygulamanızda, sayfanın ilk yüklendiğinde hangi state'lerin
-  // kullanıldığını ve bu state'lerin başlangıç değerlerini bilmeniz gerekecek.
-  // setLessons([]);
-  // setSelectedSubject(null);
-  // setOpenLessonId(null);
-  // setPlayVideo(false);
-  // setCurrentLessonIndex(null);
-  // setTotalLessons(0);
-  // setShowLessons(false);
-  // setAnimateOut(false);
-  setSelectedQuiz(null);
-  
-  // Eğer sayfanın ilk yüklendiğinde veri çekme işlemi yapıyorsanız,
-  // bu işlemi tekrar tetiklemek için ilgili fonksiyonu da burada çağırabilirsiniz.
-  // Örneğin:
-  // fetchLessonData(); // Sayfanın veri çekme fonksiyonunu çağır
-};
-
-  
-
+    setSelectedQuiz(null);
+  };
 
   const handleCloseClick = () => {
     document.querySelector(".lessonList").classList.add("hide");
@@ -223,8 +204,6 @@ const LessonData = () => {
                   )}
                 </div>
 
-               
-
                 {openLessonId === lesson.id && (
                   <div
                     style={{
@@ -233,45 +212,48 @@ const LessonData = () => {
                       justifyContent: "space-between",
                     }}
                   >
-                   {lesson.subjectResponse.map((subject) => (
-  <div className="subjectContainer" key={subject.id}>
-    <img
-      onClick={() => {
-        setSelectedSubject(subject); // Seçili konuyu güncelle
-        setSelectedQuiz(null);  // Aktif quiz'i sıfırla
-        setPlayVideo(false); // Opsiyonel: Eğer video oynatılıyorsa, oynatmayı durdur
-      }}
-      src="videoimage.jpeg"
-      alt="Thumbnail"
-      className="smallThumbnail"
-    />
-    <div>
-      <span
-        className="subjectItem"
-        onClick={() => {
-          setSelectedSubject(subject); // Seçili konuyu güncelle
-          setSelectedQuiz(null);  // Aktif quiz'i sıfırla
-          setPlayVideo(false); // Opsiyonel: Eğer video oynatılıyorsa, oynatmayı durdur
-        }}
-      >
-        {subject.subjectName}
-      </span>
-    </div>
-  </div>
-))}
-
+                    {lesson.subjectResponse.map((subject) => (
+                      <div className="subjectContainer" key={subject.id}>
+                        <img
+                          onClick={() => {
+                            setSelectedSubject(subject);
+                            setSelectedQuiz(null);
+                            setPlayVideo(false);
+                          }}
+                          src="videoimage.jpeg"
+                          alt="Thumbnail"
+                          className="smallThumbnail"
+                        />
+                        <div>
+                          <span
+                            className="subjectItem"
+                            onClick={() => {
+                              setSelectedSubject(subject);
+                              setSelectedQuiz(null);
+                              setPlayVideo(false);
+                            }}
+                          >
+                            {subject.subjectName}
+                          </span>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                  
                 )}
-                 {openLessonId === lesson.id && (
-    <>
-       {lesson.quizResponse && (
-          <div className="quizNameContainer" onClick={() => setSelectedQuiz(lesson.quizResponse)}>
-            <span className="quizName">{lesson.quizResponse.quizName}</span>
-          </div>
-        )}
-    </>
-  )}
+                {openLessonId === lesson.id && (
+                  <>
+                    {lesson.quizResponse && (
+                      <div
+                        className="quizNameContainer"
+                        onClick={() => setSelectedQuiz(lesson.quizResponse)}
+                      >
+                        <span className="quizName">
+                          {lesson.quizResponse.quizName}
+                        </span>
+                      </div>
+                    )}
+                  </>
+                )}
               </div>
             ))}
           </div>
@@ -281,114 +263,115 @@ const LessonData = () => {
             <>
               <div className="ContainerHomeKabinet">
                 <div className="lessonNameTextHome">
-                <span
-  style={{ color: "#1F203F", cursor: "pointer"  }}
-  onClick={() => resetToInitialState()}
->
-  Əsas səhifə
-</span>
+                  <span
+                    style={{ color: "#1F203F", cursor: "pointer" }}
+                    onClick={() => resetToInitialState()}
+                  >
+                    Əsas səhifə
+                  </span>
 
                   <img
                     src={`${process.env.PUBLIC_URL}/icons/left.svg`}
                     alt="left"
                   />
-                  <span onClick={() => resetToInitialState()} style={{ color: "#1F203F", cursor: "pointer" }}>Kabinetim</span>
+                  <span
+                    onClick={() => resetToInitialState()}
+                    style={{ color: "#1F203F", cursor: "pointer" }}
+                  >
+                    Kabinetim
+                  </span>
                   <img
                     src={`${process.env.PUBLIC_URL}/icons/left.svg`}
                     alt="left"
                   />
-                  <span onClick={() => resetToInitialState()} style={{ color: "#6E6E81", cursor: "pointer"  }}>
+                  <span
+                    onClick={() => resetToInitialState()}
+                    style={{ color: "#6E6E81", cursor: "pointer" }}
+                  >
                     Əsas sürücülük anlayışları
                   </span>
-                 
                 </div>
 
                 <img
-                      style={{ marginTop: "10px", cursor: "pointer" }}
-                      onClick={toggleLessons}
-                      src={`${process.env.PUBLIC_URL}/icons/Cabinet.svg`}
-                      alt="Cabinet"
-                    />
-               
+                  style={{ marginTop: "10px", cursor: "pointer" }}
+                  onClick={toggleLessons}
+                  src={`${process.env.PUBLIC_URL}/icons/Cabinet.svg`}
+                  alt="Cabinet"
+                />
               </div>
 
               <div className="detailsContainer">
-  {/* Quiz seçiliyse sadece QuizDetails'i göster, değilse videoDetails içeriğini göster */}
-  {selectedQuiz ? (
-    // Quiz seçili ise, sadece QuizDetails bileşenini göster
-    <QuizDetails quiz={selectedQuiz} />
-  ) : (
-    // Quiz seçili değilse, video ve ilgili detayları göster
-    <div className="videoDetails" onClick={handlePlayVideo}>
-       <div className="containerPaginationLessonNameText">
-        <span className="lessonNameText">
-            {selectedSubject.subjectName}
-          </span>
+                {selectedQuiz ? (
+                  <QuizDetails quiz={selectedQuiz} />
+                ) : (
+                  <div className="videoDetails" onClick={handlePlayVideo}>
+                    <div className="containerPaginationLessonNameText">
+                      <span className="lessonNameText">
+                        {selectedSubject.subjectName}
+                      </span>
 
-                <div className="containerPaginationLogo">
-                  <Pagination
-                    total={5}
-                    itemsPerPage={1}
-                    onPageChange={handlePageChange}
-                  />
-                 
-                </div>
+                      <div className="containerPaginationLogo">
+                        <Pagination
+                          total={5}
+                          itemsPerPage={1}
+                          onPageChange={handlePageChange}
+                        />
+                      </div>
+                    </div>
+                    {!playVideo && (
+                      <>
+                        <img
+                          src={"videoimage.jpeg"}
+                          alt="Thumbnail"
+                          className="video-thumbnailTwo"
+                        />
+                        <div className="video-overlayn">
+                          <img
+                            style={{ width: "111px", height: "111px" }}
+                            src={
+                              process.env.PUBLIC_URL + "/icons/iconVideo.svg"
+                            }
+                            alt="Play"
+                            className="play-icon"
+                          />
+                        </div>
+                      </>
+                    )}
+                    {playVideo && (
+                      <video key={selectedSubject.id} controls>
+                        <source
+                          src={selectedSubject.videoResponse.url.replace(
+                            / /g,
+                            "%20"
+                          )}
+                          type="video/mp4"
+                        />
+                        Your browser does not support the video tag.
+                      </video>
+                    )}
+                    <span
+                      style={{
+                        fontSize: "28px",
+                        lineHeight: "42px",
+                        fontWeight: "600",
+                        color: "#1F203F",
+                        display: "block",
+                        textAlign: "left",
+                        width: "100%",
+                        margin: "auto",
+                        marginTop: "20px",
+                      }}
+                    >
+                      Burada sizin reklamınız ola bilərdi
+                    </span>
+                    <p className="lessonText">
+                      {selectedSubject.videoResponse.title}
+                    </p>
+                  </div>
+                )}
               </div>
-      {!playVideo && (
-        <>
-       
-          
-          <img
-            src={"videoimage.jpeg"}
-            alt="Thumbnail"
-            className="video-thumbnailTwo"
-          />
-          <div className="video-overlayn">
-            <img
-              style={{ width: "111px", height: "111px" }}
-              src={process.env.PUBLIC_URL + "/icons/iconVideo.svg"}
-              alt="Play"
-              className="play-icon"
-            />
-          </div>
-        </>
-      )}
-      {playVideo && (
-        <video key={selectedSubject.id} controls>
-          <source
-            src={selectedSubject.videoResponse.url.replace(/ /g, "%20")}
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-      )}
-      <span
-        style={{
-          fontSize: "28px",
-          lineHeight: "42px",
-          fontWeight: "600",
-          color: "#1F203F",
-          display: "block",
-          textAlign: "left",
-          width: "100%",
-          margin: "auto",
-          marginTop: "20px",
-        }}
-      >
-        Burada sizin reklamınız ola bilərdi
-      </span>
-      <p className="lessonText">
-        {selectedSubject.videoResponse.title}
-      </p>
-    </div>
-  )}
-</div>
-
-             
             </>
           )}
-
-
         </div>
       </div>
     </div>

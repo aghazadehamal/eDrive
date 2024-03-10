@@ -1,153 +1,132 @@
 .footer {
-    background-color: #1F203F;
-    color: white;
-    padding: 20px 0;
-    font-size: 14px;
-    margin-top: 40px;
-    height: 426px;
-  }
-  
-  .footer-nav .nav-list {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-    margin-top: 62px;
-    margin-right: 44px;
-    
-    
-  }
-  
-  .footer-nav .nav-list li {
-    display: inline;
-    margin: 0 10px;
-  }
-  
-  .footer-nav .nav-list li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    margin-left: 30px;
-  }
-  
-  .footer-nav .nav-list li a:hover {
-    color: #f1c40f;
-  }
-  
-  .footer-content {
-    text-align: center;
-    margin-top: 40px;
-    display: flex;
+  background-color: #1f203f;
+  color: white;
+  padding: 20px 0;
+  font-size: 14px;
+  margin-top: 40px;
+  height: 426px;
+}
+
+.footer-nav .nav-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin-top: 62px;
+  margin-right: 44px;
+}
+
+.footer-nav .nav-list li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer-nav .nav-list li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-left: 30px;
+}
+
+.footer-nav .nav-list li a:hover {
+  color: #f1c40f;
+}
+
+.footer-content {
+  text-align: center;
+  margin-top: 40px;
+  display: flex;
   justify-content: space-between;
-   
-  }
-  
-  .social-media-icons {
-  
-    margin-right: 156px;
-    font-size: 20px;
-    width: 120px;
-    height: 24px;
-    gap: "13px"
-  }
-  
-  .social-media-icons a {
-    margin: 0 5px;
-    color: white;
-    transition: color 0.3s ease;
-  }
-  
-  .social-media-icons a:hover {
-    color: #f1c40f;
-  }
-  
-  .icon-facebook, .icon-instagram, .icon-linkedin {
-    /* Burada sosyal medya simgeleri için stil tanımlamaları yapılacak */
-  }
-  
+}
 
-  .footer p {
-    width: 316px;
-    color: #fff;
-  }
+.social-media-icons {
+  margin-right: 156px;
+  font-size: 20px;
+  width: 120px;
+  height: 24px;
+  gap: "13px";
+}
 
+.social-media-icons a {
+  margin: 0 5px;
+  color: white;
+  transition: color 0.3s ease;
+}
 
-  .footer-divider {
-    border-top: 2px solid #000; /* Siyah renkli ve 2 piksel kalınlığında çizgi */
-    width: 77%;
-    height: 1px; /* Tam genişlik */
+.social-media-icons a:hover {
+  color: #f1c40f;
+}
 
-  
-  margin: 20px auto; 
+.icon-facebook,
+.icon-instagram,
+.icon-linkedin {
+}
+
+.footer p {
+  width: 316px;
+  color: #fff;
+}
+
+.footer-divider {
+  border-top: 2px solid #000;
+  width: 77%;
+  height: 1px;
+
+  margin: 20px auto;
   margin-top: 90px;
-  }
-  
-  /* ... diğer stil tanımları ... */
-  
-  .footerLogo {
-    width: 221px;
-    height: 52px;
-    margin-top: 45px;
-  }
+}
 
-  .footer-content p {
-    margin-left: 170px;
-    font-size: 14px;
-    line-height: 21px;
-    width: 477px;
-    height: 42px;
-    text-align: start;
-  }
+.footerLogo {
+  width: 221px;
+  height: 52px;
+  margin-top: 45px;
+}
 
-
-
-
-
-
-  /* Mevcut CSS kodunuz */
+.footer-content p {
+  margin-left: 170px;
+  font-size: 14px;
+  line-height: 21px;
+  width: 477px;
+  height: 42px;
+  text-align: start;
+}
 
 @media (max-width: 768px) {
   .footer {
-    height: auto; /* Mobil cihazlarda footer'ın yüksekliğini içeriğe göre ayarla */
+    height: auto;
   }
 
   .footer-nav .nav-list {
-    margin-right: 0; /* Mobil cihazlarda sağ marjı kaldır */
+    margin-right: 0;
     display: grid;
-  
   }
 
   .footer-nav .nav-list li a {
-    margin-left: 10px; /* Mobil cihazlarda linkler arası mesafeyi azalt */
-   
+    margin-left: 10px;
   }
 
-  .footer-nav .nav-list li  {
-    margin-top: 10px; /* Mobil cihazlarda linkler arası mesafeyi azalt */
-   
+  .footer-nav .nav-list li {
+    margin-top: 10px;
   }
 
   .footer-content {
-    flex-direction: column; /* Mobil cihazlarda içeriği dikey olarak sırala */
-    justify-content: center; /* İçeriği merkeze al */
+    flex-direction: column;
+    justify-content: center;
   }
 
   .social-media-icons {
-    margin: 20px 0; /* Sosyal medya ikonlarının üst ve altındaki boşluğu artır */
-    justify-content: center; /* İkonları merkeze al */
-    width: auto; /* İkonların genişliğini içeriğe göre ayarla */
+    margin: 20px 0;
+    justify-content: center;
+    width: auto;
   }
 
-  /* .footer-divider {
-    width: 90%; 
-  } */
-
-  .footer-content p, .footer p {
-    width: auto; /* Paragrafların genişliğini içeriğe göre ayarla */
-    text-align: center; /* Metni merkeze al */
-    margin-left: 0; /* Sol marjı sıfırla */
+  .footer-content p,
+  .footer p {
+    width: auto;
+    text-align: center;
+    margin-left: 0;
   }
 
   .footerLogo {
-    margin-top: 20px; /* Logo için üst boşluğu azalt */
+    margin-top: 20px;
   }
 }

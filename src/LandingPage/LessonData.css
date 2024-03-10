@@ -1,33 +1,25 @@
-/* LessonData.css */
 .lessonsContainer {
-  
-  
   width: 100%;
   margin: auto;
-  
 
-height: 110vh;
+  height: 110vh;
 }
 
 .lessonList {
-  width: 307px; /* Width değeri "Hug" olarak belirtilmiş ancak burada 300px olarak verilmiş */
-  height: auto; /* Height değeri "Hug" olarak belirtilmiş, otomatik yükseklik için auto kullanabiliriz */
-  padding: 12px 2px; /* Sırasıyla üst-alt ve sağ-sol padding değerleri */
-  background-color: #FFFFFF; /* Arka plan rengi beyaz */
-  border: 0px solid; /* Sıfır genişlikli katı bir sınır */
-  box-shadow: 0px -6px 26.6px rgba(0, 0, 0, 0.07); /* Gölge efekti */
-
+  width: 307px;
+  height: auto;
+  padding: 12px 2px;
+  background-color: #ffffff;
+  border: 0px solid;
+  box-shadow: 0px -6px 26.6px rgba(0, 0, 0, 0.07);
 }
 
 .lessonItem {
   padding: 8px;
   margin-bottom: 5px;
-border-top: 1px solid #F3F4F8;
+  border-top: 1px solid #f3f4f8;
   border-radius: 4px;
- 
 }
-
-
 
 .lessonText {
   margin: auto;
@@ -50,19 +42,16 @@ border-top: 1px solid #F3F4F8;
   margin-top: 8px;
 }
 
-/* LessonData.css */
 .subjectContainer {
   width: 145px;
   height: 103px;
   border-radius: 8px;
-  /* Eğer içerik merkezlenmeliyse */
-  /* display: flex; */
-  align-items: center; /* Dikey olarak ortalar */
-  /* margin-left: 8px; */
+
+  align-items: center;
+
   text-align: left;
-  flex: 1 1 48%; /* Her bir eleman genişliğini %48 yap, böylece her satırda 2 eleman olur */
-  margin-bottom: 20px; /* Alt elemanlar arasında boşluk bırak */
-  
+  flex: 1 1 48%;
+  margin-bottom: 20px;
 }
 
 .subjectItem {
@@ -70,15 +59,15 @@ border-top: 1px solid #F3F4F8;
   line-height: 21px;
   width: 145px;
   height: 21px;
-  cursor: pointer; /* Fare imlecini tıklanabilir olarak değiştirir */
-  /* Eğer metni kesmek isterseniz */
+  cursor: pointer;
+
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; /* Uzun metni "..." ile kısaltır */
+  text-overflow: ellipsis;
   cursor: pointer;
   text-align: left;
-  /* margin-left: 10px; */
-  color: #1F203F;
+
+  color: #1f203f;
   display: block;
 }
 
@@ -102,20 +91,20 @@ border-top: 1px solid #F3F4F8;
 }
 
 .lessonNameText {
-  text-align: left; /* Metni sola hizala */
-  display: block; /* span'ı blok seviyesinde bir eleman yap */
-  width: 100%; /* Ebeveyn konteynerin tam genişliğini al */
+  text-align: left;
+  display: block;
+  width: 100%;
   margin: auto;
   font-size: 28px;
   line-height: 42px;
   font-weight: 600;
-  color: #1F203F;
+  color: #1f203f;
   margin-top: 10px;
 }
 
 .lessonNameTextHome {
-  display: flex; /* Elemanları yatay olarak hizala */
-  align-items: center; /* Elemanları dikey olarak ortala */
+  display: flex;
+  align-items: center;
   text-align: left;
   width: 100%;
   margin: auto;
@@ -128,27 +117,24 @@ border-top: 1px solid #F3F4F8;
   display: flex;
 }
 
-
 .lessonNameTextKabinet {
-  text-align: left; /* Metni sola hizala */
-  display: block; /* span'ı blok seviyesinde bir eleman yap */
-  width: 100%; /* Ebeveyn konteynerin tam genişliğini al */
+  text-align: left;
+  display: block;
+  width: 100%;
   margin: auto;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  color: #1F203F;
+  color: #1f203f;
   width: 48px;
   height: 21px;
 }
 
 .video-thumbnailTwo {
-  display: block; /* Blok seviyesinde göster */
+  display: block;
 
-  
-
-  width: 100%; /* Kapsayıcının genişliğine göre ayarla */
-  height: 624px; /* Yüksekliği orantılı yap */
+  width: 100%;
+  height: 624px;
   border-radius: 24px;
   margin-top: 18px;
   cursor: pointer;
@@ -158,56 +144,45 @@ border-top: 1px solid #F3F4F8;
   position: absolute;
   top: 50%;
   left: 50%;
-  right: 0; /* Sağdan boşluk bırakma */
-  bottom: 0; /* Alttan boşluk bırakma */
+  right: 0;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
   transform: translate(-50%, -50%);
- 
 }
 
 .videoDetails video {
-  width: 100%; /* Kapsayıcının genişliğine göre ayarla */
- height: auto; /* Yüksekliği orantılı yap */
-  object-fit: contain; /* Videoyu kırpma, tamamını göster */
+  width: 100%;
+  height: auto;
+  object-fit: contain;
   border-radius: 24px;
   margin-top: 18px;
   cursor: pointer;
 }
 
 .videoDetails {
-  position: relative; /* Bu, .video-overlayn için bir konumlandırma bağlamı oluşturur */
-
+  position: relative;
 }
-
-
-.detailsContainer {
-
-}
-
-
-
 
 .logoutLink {
   padding: 10px 15px;
   margin-top: 10px;
   font-size: 14px;
-  background-color: #dc3545; 
-  color: white; /* Yazı rengi */
-  text-decoration: none; /* Alt çizgisi kaldır */
-  border-radius: 5px; /* Kenar yuvarlaklığı */
-  transition: background-color 0.2s; /* Arka plan rengi geçişi */
+  background-color: #dc3545;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.2s;
 }
 
 .logoutLink:hover {
-  background-color: #bd2130; /* Koyu kırmızı hover rengi */
+  background-color: #bd2130;
 }
 
 .quizName {
-  cursor: pointer; /* İmleci el simgesine dönüştür */
- 
+  cursor: pointer;
 }
 
 .quizNameContainer {
@@ -239,47 +214,43 @@ border-top: 1px solid #F3F4F8;
 .lessonList {
   position: absolute;
   top: 0;
-  right: 0; /* Menüyü sağ tarafta başlat */
+  right: 0;
   height: auto;
   animation-fill-mode: forwards;
   z-index: 2;
-  display: none; /* Başlangıçta gizli */
+  display: none;
 }
 
 .lessonList.show {
   display: block;
-  animation: slideInFromRight 0.5s ease-in-out forwards; /* Sağdan sola açılma animasyonu */
+  animation: slideInFromRight 0.5s ease-in-out forwards;
 }
 
 .lessonList.hide {
-  animation: slideOutToRight 0.5s ease-in-out forwards; /* Soldan sağa kapanma animasyonu */
+  animation: slideOutToRight 0.5s ease-in-out forwards;
 }
 
 .lessonListCloseButton {
-  cursor: pointer; /* İmleci el simgesine dönüştür */
+  cursor: pointer;
 }
 
-
-
 .smallThumbnail {
-  width: 141px; /* Genişliği 50 piksel olarak ayarla */
-  height: 80px; /* Yüksekliği orantılı olarak ayarla */
+  width: 141px;
+  height: 80px;
   border-radius: 8px;
   margin-left: 5px;
   cursor: pointer;
 }
 
-
 .currentLessonDisplay {
-text-align: left;
-margin-top: 15px;
-margin-left: 10px;
+  text-align: left;
+  margin-top: 15px;
+  margin-left: 10px;
 }
 
 .containerPaginationLogo {
   display: flex;
 }
-
 
 .containerPaginationLessonNameText {
   display: flex;
@@ -287,102 +258,57 @@ margin-left: 10px;
   margin: auto;
 }
 
-
-
-
-
-
-
-/* Mobil cihazlar için küçük ekranlar (genellikle 600px'e kadar) */
 @media (max-width: 600px) {
   .lessonNameText {
-    font-size: 20px; /* Mobil cihazlarda daha küçük font boyutu */
-    line-height: 30px; /* Mobil cihazlarda daha dar satır yüksekliği */
-    margin-top: 5px; /* Daha az üst boşluk */
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 5px;
   }
   .containerPaginationLessonNameText {
-    display: block; /* Flex özelliğini kaldır ve blok seviyesinde bir düzen kullan */
+    display: block;
   }
   .containerPaginationLogo {
     justify-content: space-around;
   }
   .video-thumbnailTwo {
-    display: block; /* Blok seviyesinde göster */
-    width: 100%; /* Kapsayıcının genişliğine göre ayarla */
-    height: auto; /* Yüksekliği orantılı yap */
-   
+    display: block;
+    width: 100%;
+    height: auto;
   }
   .videoDetails video {
-    width: 100%; /* Kapsayıcının genişliğine göre ayarla */
-   height: auto; /* Yüksekliği orantılı yap */
+    width: 100%;
+    height: auto;
   }
 
   .lessonNameTextHome {
-   
-  
     font-size: 9px;
-  
+  }
+
+  .video-overlayn {
+    top: 38%;
   }
 }
-
-
-
-
-
 
 @media (min-width: 601px) and (max-width: 900px) {
-  /* .lessonNameText {
-    font-size: 24px; 
-    line-height: 36px; 
-    margin-top: 8px; 
-  }
-  .containerPaginationLessonNameText {
-    display: block; 
-  }
-  .containerPaginationLogo {
-    justify-content: space-around;
-  } */
   .video-thumbnailTwo {
-    display: block; /* Blok seviyesinde göster */
-    width: 100%; /* Kapsayıcının genişliğine göre ayarla */
-    height: auto; /* Yüksekliği orantılı yap */
-   
+    display: block;
+    width: 100%;
+    height: auto;
   }
   .videoDetails video {
-    width: 100%; /* Kapsayıcının genişliğine göre ayarla */
-   height: auto; /* Yüksekliği orantılı yap */
+    width: 100%;
+    height: auto;
   }
 }
-
 
 @media (min-width: 1701px) {
-  /* .lessonNameText {
-    font-size: 28px; 
-    line-height: 42px; 
-    margin-top: 10px;
-  }
-  .containerPaginationLessonNameText {
-    display: block; 
-  }
-  .containerPaginationLogo {
-    justify-content: space-around;
-  } */
   .video-thumbnailTwo {
-    display: block; /* Blok seviyesinde göster */
-    width: 100%; /* Kapsayıcının genişliğine göre ayarla */
-    height: auto; /* Yüksekliği orantılı yap */
-   
+    display: block;
+    width: 100%;
+    height: auto;
   }
   .videoDetails video {
-    width: 100%; /* Kapsayıcının genişliğine göre ayarla */
-   height: auto; /* Yüksekliği orantılı yap */
+    width: 100%;
+    height: auto;
   }
 }
-
-
-
-
-
-
-
-

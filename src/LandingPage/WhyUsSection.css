@@ -1,59 +1,48 @@
-/* WhyUsSection.css - Sınıf isimleri güncellendi */
 .uniqueWhyUsSection {
-    text-align: center;
-    padding: 20px;
-    /* background-color: #f9f9f9;  */
-    margin-top: 90px;
-  }
-  
-  .uniqueCardsContainer {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Kartların yan yana sığmaması durumunda alt satıra geçmesi */
-    margin-top: 30px;
-  }
-  
-  
-  
-  /* Diğer gereken stil tanımlamaları */
-  .uniqueWhyUsSection h2,h3,p {
-    color: black;
-  }
+  text-align: center;
+  padding: 20px;
 
+  margin-top: 90px;
+}
 
+.uniqueCardsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
 
-  /* FeatureCard.css */
-/* FeatureCard.css */
+.uniqueWhyUsSection h2,
+h3,
+p {
+  color: black;
+}
 
 .uniqueFeatureCard {
-    background-color: white;
-    border-radius: 18px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    /* max-width: 300px; */
-    margin: 10px;
-    width: 360px;
-    height: 228px;
-    border: 1px solid #BCBCC3
+  background-color: white;
+  border-radius: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
 
+  margin: 10px;
+  width: 360px;
+  height: 228px;
+  border: 1px solid #bcbcc3;
+}
 
-  }
-  
-  .uniqueIcon {
-    font-size: 3rem; /* İkonun boyutunu ayarlayın */
-    margin-bottom: 10px;
-  }
-  
-  .uniqueTitle {
-   font-size: 24px;
+.uniqueIcon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.uniqueTitle {
+  font-size: 24px;
   line-height: 36px;
-  }
-  
-  .uniqueDescription {
-   font-size: 18px;
-    color: #666; /* Açıklamanın rengini ayarlayın */
-    line-height: 27px;
-  }
-  
-  
+}
+
+.uniqueDescription {
+  font-size: 18px;
+  color: #666;
+  line-height: 27px;
+}

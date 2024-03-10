@@ -44,8 +44,6 @@
   display: grid;
 }
 
-
-
 .option-label {
   display: flex;
   align-items: center;
@@ -93,17 +91,14 @@
 
 .option.correct {
   background-color: #bef0a6;
-  width: 97%;
 }
 
 .option.incorrect {
   background-color: #ffcdd2;
-  width: 97%;
 }
 
 .option.selected {
   background-color: #f3f4f8;
-  width: 97%;
 }
 
 .button {
@@ -216,14 +211,7 @@
   text-align: center;
 }
 
-
-
-
-
-
-
-
-@media (max-width: 600px) {
+@media (max-width: 601px) {
   .quiz-details {
     margin: 10px 0;
   }
@@ -234,53 +222,100 @@
     padding: 10px;
   }
 
-  .textQuizName, .question h4 {
+  .textQuizName,
+  .question h4 {
     margin-left: 10px;
     padding: 10px;
   }
 
   .submit-button {
-    width: auto; /* Ekran genişliğine göre boyutlandır */
-    margin: 20px auto; /* Merkeze al */
-    font-size: 18px; /* Daha küçük ekranda yazı boyutunu azalt */
+    width: auto;
+    margin: 20px auto;
+    font-size: 18px;
   }
 
   .option {
     margin-bottom: 8px;
-    padding: 10px; /* Mobil cihazlar için padding */
+    padding: 10px;
     margin-left: 0px;
     margin-top: 20px;
     text-align: left;
   }
 
   .option-label {
-    font-size: 14px; /* Mobil cihazlarda yazı boyutunu azalt */
+    font-size: 14px;
   }
-
-
 
   .custom-radio {
-    margin-right: 8px; /* Mobil cihazlar için sağ marjını azalt */
+    margin-right: 8px;
     height: auto;
-  width: auto;
+    width: auto;
   }
 
-  .containertCorrect, .correct, .incorrect {
-    width: auto; /* Ekran genişliğine göre otomatik boyutlandırma */
-    height: auto; /* İçerik yüksekliğine göre otomatik ayarlama */
-    font-size: 16px; /* Mobil cihazlar için yazı boyutunu azalt */
+  .containertCorrect,
+  .correct,
+  .incorrect {
+    width: auto;
+    height: auto;
+    font-size: 16px;
   }
 
   .quizRestart {
-    width: auto; /* Ekran genişliğine uygun hale getir */
-    padding: 10px; /* Düğme üzerinde daha fazla yer sağla */
+    width: auto;
+    padding: 10px;
   }
 }
 
+@media (min-width: 601px) and (max-width: 1024px) {
+  .quiz-details {
+    margin: 20px auto;
+    max-width: 90%;
+  }
 
+  .question {
+    margin-bottom: 20px;
+    border-radius: 12px;
+    padding: 15px;
+  }
 
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
- 
+  .textQuizName,
+  .question h4 {
+    margin-left: 15px;
+    padding: 15px;
+  }
 
- 
+  .submit-button {
+    width: auto;
+    margin: 20px auto;
+    font-size: 18px;
+  }
+
+  .option {
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .option-label {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  .custom-radio {
+    margin-right: 10px;
+  }
+
+  .containertCorrect,
+  .correct,
+  .incorrect {
+    width: auto;
+    font-size: 18px;
+  }
+
+  .quizRestart {
+    padding: 15px 20px;
+    width: auto;
+  }
 }

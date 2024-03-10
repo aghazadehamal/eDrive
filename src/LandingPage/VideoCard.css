@@ -1,88 +1,77 @@
 .uniqueVideoCard {
-    /* Önceki stillerinizi buraya ekleyin */
-    position: relative;
-    cursor: pointer; /* Tıklanabilir olduğunu göstermek için */
-    overflow: hidden; /* Kenarlık dışına taşan içeriği kes */
-  
-  }
-  
-  .video-thumbnail {
-    width: 100%;
-    height: auto; /* Resim boyutunu koruyarak genişlet */
-    display: block; /* Blok seviyesinde göster */
-    width: 308px;
-  }
-  
-  .video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
- 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1; /* Diğer içeriklerin üzerinde görünmesini sağlar */
-  }
-  
-  .play-icon::before {
-    /* Oynatma ikonu için içerik ekleyin */
-    content: '▶'; /* Basit bir oynatma ikonu */
-    font-size: 50px; /* İkon boyutu */
-    color: white; /* İkon rengi */
-  }
-  
-  .video-overlay i {
-    font-size: 50px;
-    color: #50BB27; /* İkonun dış çerçevesi yeşil */
-    position: relative;
-  }
-  
-  .video-overlay i::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30px; /* Beyaz dairenin boyutunu ayarlayın */
-    height: 30px; /* Beyaz dairenin boyutunu ayarlayın */
-    background-color: white;
-    border-radius: 50%;
-    z-index: -1;
-  }
-  
- 
-  .uniqueVideoCard {
-    margin: 0 10px;
-    background: #ccc;
-    padding: 20px;
-    width: 300px;  
-    height: 200px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-bottom: 20px; 
-    border-radius: 16px;
-  }
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
 
-  .uniqueVideoCards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 90px;
+.video-thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+  width: 308px;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.play-icon::before {
+  content: "▶";
+  font-size: 50px;
+  color: white;
+}
+
+.video-overlay i {
+  font-size: 50px;
+  color: #50bb27;
+  position: relative;
+}
+
+.video-overlay i::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.uniqueVideoCard {
+  margin: 0 10px;
+  background: #ccc;
+  padding: 20px;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 16px;
+}
+
+.uniqueVideoCards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 90px;
+}
+
+@media (max-width: 768px) {
+  .videoCardWrapper p {
+    margin-bottom: 20px;
   }
-
-
-
-
-  @media (max-width: 768px) {
-    .videoCardWrapper p{
-   margin-bottom: 20px;
-  
-    }
-  }
-  
-
-  
+}

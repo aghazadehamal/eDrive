@@ -1,12 +1,17 @@
-// PricingCard.js
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-
-function PricingCard({ title, price, features, discountLabel, discountRate, buttonText }) {
+function PricingCard({
+  title,
+  price,
+  features,
+  discountLabel,
+  discountRate,
+  buttonText,
+}) {
   const hasDiscount = discountLabel && discountRate;
   return (
-    <div className={`card ${hasDiscount ? 'card--featured' : ''}`}>
+    <div className={`card ${hasDiscount ? "card--featured" : ""}`}>
       {hasDiscount && (
         <div className="card__discount">
           {discountLabel}
@@ -21,9 +26,8 @@ function PricingCard({ title, price, features, discountLabel, discountRate, butt
         ))}
       </ul>
       <Link to="/Home">
-      <button className="card__button">{buttonText}</button>
+        <button className="card__button">{buttonText}</button>
       </Link>
-    
     </div>
   );
 }

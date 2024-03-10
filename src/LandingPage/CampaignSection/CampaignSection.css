@@ -1,15 +1,13 @@
-
-
 .uniqueCampaignSection {
   text-align: center;
   margin: 20px;
   margin-top: 90px;
-  color: #1F203F;
+  color: #1f203f;
 }
 
 .uniqueCampaignButton {
   padding: 10px 20px;
-  background-color: #50BB27;
+  background-color: #50bb27;
   color: white;
   border: none;
   cursor: pointer;
@@ -21,7 +19,7 @@
 }
 
 .uniqueCampaignButton:hover {
-  background-color: #3C951B;
+  background-color: #3c951b;
 }
 
 .uniqueCountdown {
@@ -47,52 +45,51 @@
   color: black;
   line-height: 96px;
   font-weight: 700;
-  color: #1F203F;
+  color: #1f203f;
 }
-
 
 @media (max-width: 768px) {
   .uniqueCampaignSection p {
-    font-size: 32px; /* Mobil cihazlarda daha küçük font boyutu */
-    width: 90%; /* Genişliği ekran boyutuna göre ayarlama */
-    line-height: 48px; /* Daha küçük ekranlar için satır yüksekliğini azaltma */
+    font-size: 32px;
+    width: 90%;
+    line-height: 48px;
   }
 
   .uniqueCampaignButton {
-    width: 80%; /* Düğmeyi ekran genişliğine göre ayarlama */
-    padding: 10px; /* Padding'i azaltma */
-    font-size: 16px; /* Font boyutunu azaltma */
-    margin-top: 10px; /* Üst marjını azaltma */
-    height: auto; /* Yüksekliği içeriğe göre ayarlama */
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    height: auto;
   }
 
   .uniqueCountdown {
-    flex-direction: column; /* Elemanları dikey olarak hizalama */
+    flex-direction: column;
   }
 
   .uniqueTime {
-    margin: 10px 0; /* Zaman blokları arasında dikey marj ekleme */
+    margin: 10px 0;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .uniqueCampaignSection p {
-    font-size: 48px; /* Tablet cihazlar için font boyutunu ayarlama */
-    width: 80%; /* Genişliği ekran boyutuna göre ayarlama */
-    line-height: 72px; /* Satır yüksekliğini ayarlama */
+    font-size: 48px;
+    width: 80%;
+    line-height: 72px;
   }
 
   .uniqueCampaignButton {
-    width: 70%; /* Düğmeyi ekran genişliğine göre ayarlama */
-    padding: 10px 15px; /* Padding'i azaltma */
-    font-size: 18px; /* Font boyutunu azaltma */
+    width: 70%;
+    padding: 10px 15px;
+    font-size: 18px;
   }
 
   .uniqueCountdown {
-    flex-direction: row; /* Elemanları yatay olarak hizalama */
+    flex-direction: row;
   }
 
   .uniqueTime {
-    margin: 0 5px; /* Zaman blokları arasında yatay marj azaltma */
+    margin: 0 5px;
   }
 }

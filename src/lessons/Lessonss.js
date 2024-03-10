@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactPlayer from "react-player";
-// import { Link } from 'react-router-dom';
+
 import { useEffect } from "react";
 import Quiz from "../FirstPage/Quiz";
 import UserProfile from "../UserProfile/UserProfile";
@@ -11,13 +11,12 @@ import Modal from "./Modal";
 import { useLocation } from "react-router-dom";
 import DataFetcher from "../LandingPage/LessonData";
 
-
 const Lessonss = () => {
   const [activeModule, setActiveModule] = useState(null);
   const [activeLesson, setActiveLesson] = useState(null);
   const [activeQuiz, setActiveQuiz] = useState(false);
   const [activeLessonIndex, setActiveLessonIndex] = useState(0);
-  const [showModal, setShowModal] = useState(false); 
+  const [showModal, setShowModal] = useState(false);
 
   const location = useLocation();
 
@@ -37,13 +36,11 @@ const Lessonss = () => {
   };
 
   useEffect(() => {
-    // Sayfa yüklendiğinde URL'deki sorgu parametrelerini kontrol eder
     const queryParams = new URLSearchParams(location.search);
-    if (queryParams.get('showModal') === 'true') {
-      setShowModal(true); // Modalı göster
+    if (queryParams.get("showModal") === "true") {
+      setShowModal(true);
     }
 
-    // Modül ve dersin başlangıç durumunu ayarlar
     const firstModuleKey = Object.keys(modules)[0];
     setActiveModule(firstModuleKey);
     setActiveLesson(modules[firstModuleKey][0]);
@@ -53,20 +50,17 @@ const Lessonss = () => {
   const handleModuleClick = (module) => {
     if (module !== activeModule) {
       setActiveModule(module);
-      // Yeni modül seçildiğinde, o modülün ilk dersini aktif ders olarak ayarlayın.
+
       setActiveLesson(modules[module][0]);
       setActiveQuiz(false);
-      setActiveLessonIndex(0); // İlk dersin index'ini ayarlayın
+      setActiveLessonIndex(0);
     }
   };
-  
 
   const handleLessonClick = (lesson) => {
     setActiveLesson(lesson);
     setActiveQuiz(false);
   };
-  
-  
 
   const handleQuizClick = () => {
     setActiveQuiz(true);
@@ -76,7 +70,6 @@ const Lessonss = () => {
   return (
     <div className="container">
       <div className="moduleList">
-   
         <Link to="/">
           <img
             src="/edurive.svg"
@@ -147,14 +140,16 @@ const Lessonss = () => {
               </div>
               <div>
                 <UserProfile className="userProfileLink" />
-                <Link onClick={()=> localStorage.clear()} to="/" className="logoutLink">
+                <Link
+                  onClick={() => localStorage.clear()}
+                  to="/"
+                  className="logoutLink"
+                >
                   Çıxış
                 </Link>
               </div>
             </div>
 
-           
-     
             <ReactPlayer
               style={{ marginTop: "20px" }}
               url={lessonContents[activeLesson]?.videoUrl}
@@ -163,16 +158,14 @@ const Lessonss = () => {
               height="auto"
             />
 
-<div className="lessonText">
-        {lessonContents[activeLesson]?.text}
-      </div>
+            <div className="lessonText">
+              {lessonContents[activeLesson]?.text}
+            </div>
           </div>
         )}
         {activeQuiz && <Quiz />}
       </div>
-      {showModal && (
-        <Modal onClose={() => setShowModal(false)} />
-      )}
+      {showModal && <Modal onClose={() => setShowModal(false)} />}
     </div>
   );
 };

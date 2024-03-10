@@ -33,7 +33,6 @@ const FAQItem = ({ question, answer }) => {
 };
 
 const FAQSectionTwo = () => {
-
   const [showContactInfo, setShowContactInfo] = useState(false);
   return (
     <div id="courses" className="uniqueFaqSection">

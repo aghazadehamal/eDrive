@@ -1,6 +1,5 @@
-import React from 'react';
-import cardData from './CardData';
-
+import React from "react";
+import cardData from "./CardData";
 
 const Card = ({ image, title, videosCount, author }) => {
   return (
@@ -16,7 +15,7 @@ const Card = ({ image, title, videosCount, author }) => {
 const CardList = ({ cards }) => {
   return (
     <div className="card-list">
-      {cards.map(card => (
+      {cards.map((card) => (
         <Card key={card.id} {...card} />
       ))}
     </div>

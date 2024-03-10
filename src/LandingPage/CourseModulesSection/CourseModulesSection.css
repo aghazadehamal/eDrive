@@ -1,116 +1,91 @@
-/* LearnDrivingSection.css - Sınıf isimleri güncellendi */
 .customCourseModulesSection {
-    padding: 20px;
-    /* background-color: #f0f2f5; */
-    border-radius: 8px;
-    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
-    margin: 20px auto;
-    max-width: 1128px;
-    text-align: center;
-      margin-top: 90px;
-  }
-  
-  .customAccordion {
-    margin: 10px 0;
-    /* border: 1px solid #ddd; */
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  
-  .customAccordionHeader {
-    cursor: pointer;
-    padding: 15px 20px;
-    background-color: #F3F4F8;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    line-height: 30px;
-    font-size: 20px;
-    font-weight: 500;
-    border-radius: 12px;
-    height: 80px;
-  }
-  
-  .customAccordionContent {
-    padding: 15px 20px;
-    background-color: #ffffff;
-    border-top: 1px solid #ddd;
-  }
+  padding: 20px;
 
-  /* CourseModulesSection.css içerisinde */
-.customAccordionContent p {
-  text-align: left; /* Paragrafı sola hizalar */
-  margin: 0; /* Varsayılan kenar boşluklarını kaldırır, gerekiyorsa ayarlayabilirsiniz */
+  border-radius: 8px;
+
+  margin: 20px auto;
+  max-width: 1128px;
+  text-align: center;
+  margin-top: 90px;
 }
 
-  
-  .customRegisterButton {
-    display: block;
-    width: 363px;
-    height: 54px;
-    padding: 10px 0;
-    background-color: #50BB27;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-  
-    border-radius: 12px;
-    line-height: 30px;
-  }
+.customAccordion {
+  margin: 10px 0;
 
-  .customRegisterButton:hover {
-    background-color: #3C951B;
-  }
-  
- 
-  .customOpen .customAccordionContent {
+  border-radius: 4px;
+  overflow: hidden;
+}
 
-  }
+.customAccordionHeader {
+  cursor: pointer;
+  padding: 15px 20px;
+  background-color: #f3f4f8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 12px;
+  height: 80px;
+}
 
+.customAccordionContent {
+  padding: 15px 20px;
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+}
 
-  .customCourseModulesSection  span {
-    color: black;
-  }
-  
+.customAccordionContent p {
+  text-align: left;
+  margin: 0;
+}
 
+.customRegisterButton {
+  display: block;
+  width: 363px;
+  height: 54px;
+  padding: 10px 0;
+  background-color: #50bb27;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
 
-  .customOpen {
-    background-color: #50BB27 !important; 
-  }
+  border-radius: 12px;
+  line-height: 30px;
+}
 
-  .customOpen .customAccordionHeader {
-    background-color: #50BB27; 
-  }
-  
+.customRegisterButton:hover {
+  background-color: #3c951b;
+}
 
-  .customAccordion:hover {
-    background-color: #50BB27; 
-  }
+.customCourseModulesSection span {
+  color: black;
+}
 
-  .customAccordionHeader:hover {
-    background-color: #50BB27;
-  }
+.customOpen {
+  background-color: #50bb27 !important;
+}
 
-  
-  /* .customAccordion.customOpen:hover {
-    background-color: darkgreen; 
-  }
-  
-  .customAccordion:not(.customOpen):hover {
-    background-color: lightgreen; 
-  } */
-  
+.customOpen .customAccordionHeader {
+  background-color: #50bb27;
+}
 
+.customAccordion:hover {
+  background-color: #50bb27;
+}
 
+.customAccordionHeader:hover {
+  background-color: #50bb27;
+}
 
 .spanFirst {
   font-size: 40px;
   font-weight: 700;
   line-height: 60px;
-  
 }
 
 .customRegisterButtonDiv {
@@ -119,50 +94,45 @@
   align-items: center;
   display: flex;
 }
-  
-  
-  /* Mevcut stil kurallarınız */
 
 @media (max-width: 768px) {
   .customCourseModulesSection {
-    padding: 10px; /* Mobil cihazlarda padding'i azalt */
-    margin: 10px auto; /* Üst ve alt marjı azalt */
-    margin-top: 50px; /* Üst marjı azalt */
+    padding: 10px;
+    margin: 10px auto;
+    margin-top: 50px;
   }
 
   .customAccordionHeader {
-    padding: 10px 15px; /* Mobil cihazlarda padding'i azalt */
-    font-size: 18px; /* Mobil cihazlarda font boyutunu azalt */
-    line-height: 25px; /* Mobil cihazlarda satır yüksekliğini azalt */
-    height: auto; /* Sabit yüksekliği kaldır ve içeriğe göre ayarla */
+    padding: 10px 15px;
+    font-size: 18px;
+    line-height: 25px;
+    height: auto;
     text-align: left;
   }
 
   .customRegisterButton {
-    width: auto; /* Butonun genişliğini ekranın genişliğine göre ayarla */
-    margin: 20px 10px; /* Üstten marj ekleyip, yan marjları azalt */
-    padding: 10px; /* Padding'i azalt */
-    font-size: 18px; /* Font boyutunu azalt */
+    width: auto;
+    margin: 20px 10px;
+    padding: 10px;
+    font-size: 18px;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .customCourseModulesSection {
-    /* Tabletler için özel stil kuralları */
     padding: 15px;
-    margin-top: 70px; /* Üst marjı ayarla */
+    margin-top: 70px;
   }
 
   .customAccordionHeader {
-    /* Tabletler için özel stil kuralları */
     padding: 12px 18px;
     font-size: 19px;
     line-height: 28px;
   }
 
   .customRegisterButton {
-    width: 80%; /* Tablet genişliğine göre buton genişliğini ayarla */
-    margin: 20px auto; /* Butonu merkeze al */
+    width: 80%;
+    margin: 20px auto;
     font-size: 19px;
   }
 }

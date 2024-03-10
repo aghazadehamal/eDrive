@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function CommentSection() {
-  const [comment, setComment] = useState('');
+  const [comment, setComment] = useState("");
   const [list, setList] = useState([]);
 
   const handleCommentChange = (event) => {
@@ -9,8 +9,8 @@ function CommentSection() {
   };
 
   const handleCommentSubmit = () => {
-    console.log('Comment gönderildi: ', comment);
-    setComment(''); 
+    console.log("Comment gönderildi: ", comment);
+    setComment("");
     setList([...list, comment]);
   };
 
@@ -19,24 +19,24 @@ function CommentSection() {
   };
 
   const handleDeleteAllComments = () => {
-    setList([]); 
+    setList([]);
   };
 
   return (
-    <div style={{ margin: '20px' }}>
+    <div style={{ margin: "20px" }}>
       {list.map((item, index) => (
-        <div key={index} style={{ marginBottom: '10px' }}>
+        <div key={index} style={{ marginBottom: "10px" }}>
           <p>{item}</p>
           <button
             onClick={() => handleDeleteComment(index)}
             style={{
-              padding: '5px 10px',
-              marginRight: '10px',
-              color: 'white',
-              backgroundColor: 'red',
-              border: 'none',
-              borderRadius: '4px',
-              cursor: 'pointer'
+              padding: "5px 10px",
+              marginRight: "10px",
+              color: "white",
+              backgroundColor: "red",
+              border: "none",
+              borderRadius: "4px",
+              cursor: "pointer",
             }}
           >
             Sil
@@ -48,24 +48,24 @@ function CommentSection() {
         value={comment}
         onChange={handleCommentChange}
         style={{
-          width: '100%',
-          padding: '10px',
-          margin: '10px 0',
-          borderRadius: '4px',
-          border: '1px solid #ddd'
+          width: "100%",
+          padding: "10px",
+          margin: "10px 0",
+          borderRadius: "4px",
+          border: "1px solid #ddd",
         }}
         placeholder="Fikrinizi buraya yazın..."
       />
       <button
         onClick={handleCommentSubmit}
         style={{
-          padding: '10px 20px',
-          color: 'white',
-          backgroundColor: '#007bff',
-          border: 'none',
-          borderRadius: '4px',
-          cursor: 'pointer',
-          marginRight: '10px'
+          padding: "10px 20px",
+          color: "white",
+          backgroundColor: "#007bff",
+          border: "none",
+          borderRadius: "4px",
+          cursor: "pointer",
+          marginRight: "10px",
         }}
       >
         Fikir bildir
@@ -73,15 +73,15 @@ function CommentSection() {
       <button
         onClick={handleDeleteAllComments}
         style={{
-          padding: '10px 20px',
-          color: 'white',
-          backgroundColor: 'red',
-          border: 'none',
-          borderRadius: '4px',
-          cursor: 'pointer'
+          padding: "10px 20px",
+          color: "white",
+          backgroundColor: "red",
+          border: "none",
+          borderRadius: "4px",
+          cursor: "pointer",
         }}
       >
-        Hamısımı  Sil
+        Hamısımı Sil
       </button>
     </div>
   );

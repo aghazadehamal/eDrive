@@ -36,23 +36,14 @@ function ParolTwo() {
   return (
     <div className="login">
       <Link to="/">
-        <img
-          src="/edurive.svg"
-          alt="Edurive Logo"
-          className="login-logo"
-        />
+        <img src="/edurive.svg" alt="Edurive Logo" className="login-logo" />
       </Link>
       <form onSubmit={handleSubmit}>
-     
         <h1 className="login-title">Şifrənin yenilənməsi</h1>
         <div class="loginContainer">
-  <span className="loginSpan">Yeni şifrə yaradın</span>
-</div>
+          <span className="loginSpan">Yeni şifrə yaradın</span>
+        </div>
 
-
-      
-      
-        
         <p>Yeni şifrə</p>
         <input
           type="password"
@@ -71,10 +62,8 @@ function ParolTwo() {
           placeholder="Şifrənizi əlavə edin"
           required
         />
-       
-        <button type="submit">Təsdiq et</button>
 
-        
+        <button type="submit">Təsdiq et</button>
       </form>
     </div>
   );

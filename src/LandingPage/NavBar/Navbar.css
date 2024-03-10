@@ -1,19 +1,16 @@
-/* Genel stil kuralları - mevcut kurallarınız */
-
 .customNavbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
   background-color: #fff;
-  /* Responsivlik için max-width kullanımı ve width'i %100 yapma */
   max-width: 1200px;
   width: 100%;
   margin: auto;
 }
 
-.customLogo, .customNavbar img {
-  /* Logo ve navbar resmi için maksimum genişlik ayarlama */
+.customLogo,
+.customNavbar img {
   max-width: 100%;
   height: auto;
 }
@@ -36,7 +33,7 @@
 }
 
 .customLogin {
-  color: #50BB27;
+  color: #50bb27;
   border-radius: 8px;
   height: 40px;
   font-size: 16px;
@@ -44,7 +41,7 @@
 }
 
 .customRegister {
-  background-color: #50BB27;
+  background-color: #50bb27;
   color: white;
   border-radius: 12px;
   width: 158px;
@@ -52,10 +49,9 @@
 }
 
 .customRegister:hover {
-  background-color: #3C951B;
+  background-color: #3c951b;
 }
 
-/* Mobil cihazlar için medya sorgusu */
 @media (max-width: 768px) {
   .customNavbar {
     flex-direction: column;
@@ -70,28 +66,29 @@
     flex-direction: column;
   }
 
-  .customLogo, .customNavbar img {
-    max-width: 80%; /* Logonun ve resmin ekran genişliğine göre ayarlanması */
+  .customLogo,
+  .customNavbar img {
+    max-width: 80%;
   }
 
   .customNav {
-   margin-top: 10px;
-   display: contents;
+    margin-top: 10px;
+    display: contents;
   }
 }
 
-/* Tablet cihazlar için medya sorgusu */
 @media (min-width: 769px) and (max-width: 1024px) {
   .customNavbar {
-    /* Tablet boyutları için hafif ayarlamalar */
     padding: 15px;
   }
 
-  .customNavLink, .customBtn {
+  .customNavLink,
+  .customBtn {
     margin: 15px 10px;
   }
 
-  .customLogo, .customNavbar img {
+  .customLogo,
+  .customNavbar img {
     max-width: 90%;
   }
 
@@ -102,5 +99,5 @@
 
   .customNav {
     margin-top: 10px;
-   }
+  }
 }

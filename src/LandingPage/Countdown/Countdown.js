@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import './Countdown.css'; // Stil dosyası için
+import React, { useState, useEffect } from "react";
+import "./Countdown.css";
 
 const Countdown = ({ targetDate }) => {
   const calculateTimeLeft = () => {
@@ -31,7 +31,7 @@ const Countdown = ({ targetDate }) => {
 
   const timeComponents = [];
 
-  Object.keys(timeLeft).forEach(interval => {
+  Object.keys(timeLeft).forEach((interval) => {
     if (!timeLeft[interval]) {
       return;
     }

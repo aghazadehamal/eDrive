@@ -1,21 +1,20 @@
 import React from 'react';
-import './WhyUsSection.css'; // İlgili CSS stil dosyası
+import './WhyUsSection.css'; 
 
 
 
-// Tek bir kart için komponent
-// Tek bir kart için komponent
+
 const FeatureCard = ({ Icon, title, description }) => {
   return (
     <div className="uniqueFeatureCard">
-      <div className="uniqueIcon">{Icon}</div> {/* React elementini doğrudan kullan */}
+      <div className="uniqueIcon">{Icon}</div> 
       <span className="uniqueTitle">{title}</span>
       <p className="uniqueDescription">{description}</p>
     </div>
   );
 };
 
-// "Neden Biz?" bölümü için ana komponent
+
 const WhyUsSection = () => {
 return (
   <div id="why-us"  className="uniqueWhyUsSection">

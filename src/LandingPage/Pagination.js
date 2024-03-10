@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import './Pagination.css';
 
-const Pagination = ({ total, itemsPerPage, onPageChange }) => { // Burada props olarak onPageChange fonksiyonunu alıyoruz
+const Pagination = ({ total, itemsPerPage, onPageChange }) => { 
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(total / itemsPerPage);
 
   const nextPage = () => {
     setCurrentPage((prev) => {
       const nextPage = prev < totalPages ? prev + 1 : prev;
-      onPageChange(nextPage); // Sayfa değişikliğini bildir
+      onPageChange(nextPage); 
       return nextPage;
     });
   };
@@ -16,7 +16,7 @@ const Pagination = ({ total, itemsPerPage, onPageChange }) => { // Burada props 
   const prevPage = () => {
     setCurrentPage((prev) => {
       const prevPage = prev > 1 ? prev - 1 : prev;
-      onPageChange(prevPage); // Sayfa değişikliğini bildir
+      onPageChange(prevPage);
       return prevPage;
     });
   };

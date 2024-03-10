@@ -156,6 +156,11 @@ margin-left: 5px;
  
 }
 
+.playIconImage {
+  width: 111px;
+  height: 111px;
+}
+
 
 
 .videoDetails video {
@@ -288,7 +293,10 @@ margin-left: 5px;
   .lessonNameTextHome {
     font-size: 9px;
   }
-
+.playIconImage {
+  width: 60px;
+  height: 60px;
+}
   
 }
 

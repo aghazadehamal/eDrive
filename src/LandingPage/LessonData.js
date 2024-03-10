@@ -327,10 +327,10 @@ const LessonData = () => {
     />
     <div className="video-overlayn">
       <img
-        style={{ width: "111px", height: "111px" }}
+        
         src={process.env.PUBLIC_URL + "/icons/iconVideo.svg"}
         alt="Play"
-        className="play-icon"
+        className="playIconImage"
       />
     </div>
   </div>

@@ -1,6 +1,6 @@
 /* QuizDetails genel stil ayarları */
 .quiz-details {
-    padding: 20px;
+   
    
     margin: 20px 0;
     
@@ -130,9 +130,10 @@
 
 
 .option.selected {
-  background-color: gray; /* Gri arka plan */
+  background-color: #F3F4F8; /* Gri arka plan */
   width: 1055px;
 }
+
 
 
 

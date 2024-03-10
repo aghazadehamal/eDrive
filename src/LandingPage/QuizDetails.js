@@ -9,14 +9,15 @@ function QuizDetails({ quiz }) {
   const [detailedResults, setDetailedResults] = useState({ correctAnswers: [], incorrectAnswers: [] });
 
   const getOptionClass = (option, correctOptionId, selectedOptionId) => {
-    if (option.id === correctOptionId) {
-      return "option correct"; // Doğru cevap için yeşil arka plan
-    } else if (option.id === selectedOptionId) {
-      return "option incorrect"; // Seçilen fakat yanlış cevap için kırmızı arka plan
+    if (option.id === selectedOptionId) {
+        return "option selected"; // Seçilen seçenek için gri arka plan
+    } else if (option.id === correctOptionId) {
+        return "option correct"; // Doğru cevap için yeşil arka plan
     } else {
-      return "option"; // Diğer seçenekler için varsayılan stil
+        return "option"; // Diğer seçenekler için varsayılan stil
     }
-  };
+};
+
 
   const handleOptionClick = (questionId, optionId) => {
     setSelectedOptions({ ...selectedOptions, [questionId]: optionId });
@@ -173,22 +174,23 @@ function QuizDetails({ quiz }) {
     <div key={question.id} className="question">
       <h4>{question.text}</h4>
       <div>
-        {question.optionResponses.map(option => (
-          <div key={option.id} className="option">
-            <label className="option-label">
-              <input
-                type="radio"
-                name={question.id}
-                value={option.id}
-                checked={selectedOptions[question.id] === option.id}
-                onChange={() => handleOptionClick(question.id, option.id)}
-                className="option-input"
-              />
-              <span className="custom-radio"></span> {/* Custom radio button styling */}
-              {option.optionText}
-            </label>
-          </div>
-        ))}
+      {question.optionResponses.map(option => (
+  <div key={option.id} className={getOptionClass(option, question.correctOptionId, selectedOptions[question.id])}>
+    <label className="option-label">
+      <input
+        type="radio"
+        name={question.id}
+        value={option.id}
+        checked={selectedOptions[question.id] === option.id}
+        onChange={() => handleOptionClick(question.id, option.id)}
+        className="option-input"
+      />
+      <span className="custom-radio"></span> {/* Custom radio button styling */}
+      {option.optionText}
+    </label>
+  </div>
+))}
+
       </div>
     </div>
   ))}

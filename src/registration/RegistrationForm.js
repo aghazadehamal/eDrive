@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./RegistrationForm.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 function RegistrationForm() {
   const [formData, setFormData] = useState({
@@ -14,11 +16,12 @@ function RegistrationForm() {
 
   // const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
+  // const [error, setError] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+const navigate = useNavigate(); // Bu satırı ekleyin
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -30,13 +33,13 @@ function RegistrationForm() {
         formData
       );
       console.log(response.data);
-      // Başarılı kayıt sonrası alert
-      alert('Kayıt işlemi başarılı!');
+      alert('Qeydiyyat uğurla başa çatdı');
       setIsLoading(false);
+      
+      navigate("/loginForm"); // Kayıt başarılıysa bu satırı ekleyin
     } catch (err) {
-      setError("Qeydiyyat zamanı bir xəta yarandı. Zəhmət olmasa yenidən cəhd edin.");
-      // Hata oluştuğunda alert
-      alert('Kayıt işlemi sırasında bir hata oluştu. Lütfen tekrar deneyin.');
+      // setError("Qeydiyyat zamanı bir xəta yarandı. Zəhmət olmasa yenidən cəhd edin.");
+      alert("Qeydiyyat zamanı bir xəta yarandı. Zəhmət olmasa yenidən cəhd edin.");
       setIsLoading(false);
       console.error(err);
     }
@@ -124,7 +127,7 @@ function RegistrationForm() {
               .
             </div>
           </div>
-          {error && <p className="error">{error}</p>}
+          {/* {error && <p className="error">{error}</p>} */}
         </form>
         {/* {isSubmitted && (
           <div className="modal-overlay">

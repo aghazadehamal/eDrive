@@ -104,7 +104,7 @@ const LessonData = () => {
   };
 
   return (
-    <div style={{ width: "75%", margin: "auto", height: "140vh" }}>
+    <div style={{ width: "75%", margin: "auto" }}>
       <div className="imageLogo">
         <Link to="/">
           <img

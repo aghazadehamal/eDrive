@@ -22,18 +22,20 @@ return (
     <div className="uniqueCardsContainer">
       <FeatureCard
         Icon={<img src={process.env.PUBLIC_URL + '/niyeThree.svg'} alt="Clock Icon" />}
-        title="Münasib qiymət"
-        description="Kurslarımızın qiyməti hər bir yaşayış qrupu üçün münasibdir."
+        title="Geniş izah"
+        description="Video materiallarla geniş izah və hər mövzu üçün testlərlə praktika"
       />
      <FeatureCard
         Icon={<img src={process.env.PUBLIC_URL + '/niyeTwo.svg'} alt="Clock Icon" />}
-        title="Münasib qiymət"
-        description="Kurslarımızın qiyməti hər bir yaşayış qrupu üçün münasibdir."
+        title="Online tədris"
+        description="Edurive ilə məkanda əyani formada
+        iştiraka ehtiyacınız olmayacaq."
       />
        <FeatureCard
         Icon={<img src={process.env.PUBLIC_URL + '/niyeOne.svg'} alt="Clock Icon" />}
         title="Münasib qiymət"
-        description="Kurslarımızın qiyməti hər bir yaşayış qrupu üçün münasibdir."
+        description="Kursumuzun qiyməti hər bir yaşayış
+        qrupu üçün münasibdir."
       />
     </div>
   </div>

@@ -298,7 +298,7 @@ margin-bottom: 20px;
 
   .submit-button {
     width: 100%;
-    max-width: 300px; /* İstediğiniz maksimum genişlik */
+    max-width: 300px; 
   }
 
   .quizRefresh {

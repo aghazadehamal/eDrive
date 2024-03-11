@@ -24,6 +24,8 @@ function Videos() {
       url: "/v1.MOV",
       description: "Giriş Videosu 1",
       thumbnail: "thumb1.jpeg",
+     
+      
     },
     {
       url: "/v2.MOV",

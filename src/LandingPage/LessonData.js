@@ -269,9 +269,9 @@ const LessonData = () => {
                         width: "20px",
                         height: "20px",
                         marginRight: "8px",
-                        position: 'absolute', // İkonu mutlak konumlandır
-                        top: '5px', // Üstten mesafe
-                        left: '10px', // Sağdan mesafe
+                        position: 'absolute', 
+                        top: '5px', 
+                        left: '10px', 
                       }}
                     />
                     <div>

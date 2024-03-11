@@ -309,17 +309,18 @@ const LessonData = () => {
                   <img src={`${process.env.PUBLIC_URL}/left.svg`} alt="left" />
                   <span
                     onClick={() => resetToInitialState()}
-                    style={{ color: "#6E6E81", cursor: "pointer" }}
+                    style={{ color: "#1F203F", cursor: "pointer" }}
                   >
                     {selectedLessonName}
                   </span>
                   <img src={`${process.env.PUBLIC_URL}/left.svg`} alt="left" />
                   <span
-                    onClick={() => resetToInitialState()}
-                    style={{ color: "#1F203F", cursor: "pointer" }}
-                  >
-                    {selectedSubjectName}
-                  </span>
+  onClick={() => resetToInitialState()}
+  style={{ color: "#6E6E81", cursor: "pointer" }}
+>
+  {selectedQuiz ? selectedQuiz.quizName : selectedSubjectName}
+</span>
+
                 </div>
 
                 <img

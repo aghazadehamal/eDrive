@@ -36,10 +36,32 @@
   text-align: center;
   color: white;
   border: white;
-  margin-left: 21px;
+  
   font-size: 20px;
   line-height: 30px;
   cursor: pointer;
+}
+
+.quizButtons {
+  display: flex;
+
+}
+
+.quizRefresh {
+  background-color: white;
+  color: #50BB27;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  border: white;
+  margin-left: 20px;
+  cursor: pointer;
+  
+
+}
+
+.RestartVideoContainer {
+  text-align: left;
 }
 
 .containerQuizButton {
@@ -186,15 +208,18 @@
 
 .quizRestart {
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 20px;
+  line-height: 30px;
   color: #fff;
   background-color: #50bb27;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-top: 10px;
-  width: 300px;
+  width: 185px;
+  height: 54px;
+ 
 }
 
 .containertCorrect {
@@ -269,6 +294,17 @@ margin-bottom: 20px;
   
   .buttonFalse {
     font-size: 14px;
+  }
+
+  .submit-button {
+    width: 100%;
+    max-width: 300px; /* İstediğiniz maksimum genişlik */
+  }
+
+  .quizRefresh {
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 10px;
   }
 }
 

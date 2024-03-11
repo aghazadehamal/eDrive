@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./QuizDetails.css";
 
 function QuizDetails({ quiz }) {
@@ -126,7 +127,7 @@ function QuizDetails({ quiz }) {
                         {selectedOptionId === option.id &&
                           (option.id === correctOptionId ? (
                             <img
-                              src={`${process.env.PUBLIC_URL}/icons/truedone.svg`}
+                              src={`${process.env.PUBLIC_URL}/truedone.svg`}
                               alt="truedone"
                               style={{
                                 width: "24px",
@@ -136,7 +137,7 @@ function QuizDetails({ quiz }) {
                             />
                           ) : (
                             <img
-                              src={`${process.env.PUBLIC_URL}/icons/false.svg`}
+                              src={`${process.env.PUBLIC_URL}/false.svg`}
                               alt="Incorrect"
                               style={{
                                 width: "24px",
@@ -153,11 +154,18 @@ function QuizDetails({ quiz }) {
               })}
             </ul>
             {showResults && (
-              <div>
-                <button className="quizRestart" onClick={handleResetQuiz}>
-                  Təkrar test et
-                </button>
-              </div>
+              <div className="RestartVideoContainer">
+                
+              <button className="quizRestart" onClick={handleResetQuiz}>
+              Video izaha keç
+              </button>
+              <Link style={{textDecoration: "none"}}>
+              <button className="quizRefresh" onClick={handleResetQuiz}>
+             
+              Təkrar test et
+              </button>
+              </Link>
+            </div>
             )}
           </div>
         )}
@@ -186,7 +194,7 @@ function QuizDetails({ quiz }) {
                         {selectedOptionId === option.id &&
                           selectedOptionId !== correctOptionId && (
                             <img
-                              src={`${process.env.PUBLIC_URL}/icons/false.svg`}
+                              src={`${process.env.PUBLIC_URL}/false.svg`}
                               alt="Incorrect"
                               style={{
                                 width: "24px",
@@ -198,7 +206,7 @@ function QuizDetails({ quiz }) {
 
                         {option.id === correctOptionId && (
                           <img
-                            src={`${process.env.PUBLIC_URL}/icons/truedone.svg`}
+                            src={`${process.env.PUBLIC_URL}/truedone.svg`}
                             alt="truedone"
                             style={{
                               width: "24px",
@@ -216,10 +224,17 @@ function QuizDetails({ quiz }) {
             </ul>
 
             {showResults && (
-              <div>
+              <div className="RestartVideoContainer">
+                
                 <button className="quizRestart" onClick={handleResetQuiz}>
-                  Təkrar test et
+                Video izaha keç
                 </button>
+                <Link style={{textDecoration: "none"}}>
+                <button className="quizRefresh" onClick={handleResetQuiz}>
+               
+                Təkrar test et
+                </button>
+                </Link>
               </div>
             )}
           </div>
@@ -264,9 +279,16 @@ function QuizDetails({ quiz }) {
         ))}
       </div>
 
-      <button className="submit-button" onClick={handleSubmit}>
+<div className="quizButtons">
+<button className="submit-button" onClick={handleSubmit}>
         Testi tamamla
       </button>
+      <button className="quizRefresh" onClick={handleResetQuiz}>
+                  Cavabları sıfırla
+                </button>
+
+</div>
+     
     </div>
   );
 }

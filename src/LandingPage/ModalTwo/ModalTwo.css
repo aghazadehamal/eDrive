@@ -8,6 +8,32 @@
   position: fixed;
   right: 0;
   top: 0;
+  z-index: 1050;
+}
+
+.disable-pointer {
+  pointer-events: none;
+}
+
+.modaln,
+.modaln * {
+  pointer-events: auto;
+  z-index: 1051;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000000a0;
+  z-index: 1040;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
 }
 
 .modal-contentn {
@@ -53,7 +79,6 @@
   width: 100%;
   height: 100%;
 }
-
 .aaa video {
   width: 100%;
   height: auto;

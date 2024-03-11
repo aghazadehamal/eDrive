@@ -15,8 +15,8 @@ const LessonData = () => {
   const [showLessons, setShowLessons] = useState(false);
   const [animateOut, setAnimateOut] = useState(false);
   const [selectedQuiz, setSelectedQuiz] = useState(null);
-  const [selectedLessonName, setSelectedLessonName] = useState('');
-  const [selectedSubjectName, setSelectedSubjectName] = useState('');
+  const [selectedLessonName, setSelectedLessonName] = useState("");
+  const [selectedSubjectName, setSelectedSubjectName] = useState("");
 
   const resetToInitialState = () => {
     setSelectedQuiz(null);
@@ -88,47 +88,39 @@ const LessonData = () => {
   const toggleLesson = (lessonId) => {
     const index = lessons.findIndex((lesson) => lesson.id === lessonId);
     if (currentLessonIndex === index) {
-        setOpenLessonId(null);
-        setCurrentLessonIndex(null);
-        setSelectedLessonName(''); // Reset metni
-        setSelectedSubjectName(''); // İlk değeri resetle
+      setOpenLessonId(null);
+      setCurrentLessonIndex(null);
+      setSelectedLessonName("");
+      setSelectedSubjectName("");
     } else {
-        setOpenLessonId(lessonId);
-        setCurrentLessonIndex(index);
-        setSelectedLessonName(lessons[index].lessonName); // Güncel ders adıyla metni güncelle
-        // İlk konunun adını ayarla, konular mevcutsa
-        const firstSubjectName = lessons[index].subjectResponse.length > 0
-            ? lessons[index].subjectResponse[0].subjectName
-            : ''; // Varsayılan bir değer veya uygun bir mesaj
-        setSelectedSubjectName(firstSubjectName);
+      setOpenLessonId(lessonId);
+      setCurrentLessonIndex(index);
+      setSelectedLessonName(lessons[index].lessonName);
+
+      const firstSubjectName =
+        lessons[index].subjectResponse.length > 0
+          ? lessons[index].subjectResponse[0].subjectName
+          : "";
+      setSelectedSubjectName(firstSubjectName);
     }
-};
+  };
 
+  useEffect(() => {
+    if (selectedSubject) {
+      setSelectedSubjectName(selectedSubject.subjectName);
+    } else {
+      setSelectedSubjectName("");
+    }
+  }, [selectedSubject]);
 
-useEffect(() => {
-  if (selectedSubject) {
-    setSelectedSubjectName(selectedSubject.subjectName);
-  } else {
-    setSelectedSubjectName(''); // selectedSubject yoksa varsayılan bir değere dön
-  }
-}, [selectedSubject]);
-
-
-
-useEffect(() => {
-  // openLessonId'ye göre seçili dersi bul
-  const selectedLesson = lessons.find(lesson => lesson.id === openLessonId);
-  if (selectedLesson) {
-    // Eğer bir ders seçildiyse, seçilen dersin adını güncelle
-    setSelectedLessonName(selectedLesson.lessonName);
-  } else {
-    // Eğer bir ders seçilmediyse, varsayılan bir değere dön
-    setSelectedLessonName('Əsas sürücülük anlayışları');
-  }
-}, [openLessonId, lessons]); // Bağımlılıklar olarak openLessonId ve lessons'i kullan
-
-
-
+  useEffect(() => {
+    const selectedLesson = lessons.find((lesson) => lesson.id === openLessonId);
+    if (selectedLesson) {
+      setSelectedLessonName(selectedLesson.lessonName);
+    } else {
+      setSelectedLessonName("Əsas sürücülük anlayışları");
+    }
+  }, [openLessonId, lessons]);
 
   const handlePageChange = (newPage) => {
     const currentLesson = lessons.find((lesson) => lesson.id === openLessonId);
@@ -307,37 +299,27 @@ useEffect(() => {
                     Əsas səhifə
                   </span>
 
-                  <img
-                    src={`${process.env.PUBLIC_URL}/left.svg`}
-                    alt="left"
-                  />
+                  <img src={`${process.env.PUBLIC_URL}/left.svg`} alt="left" />
                   <span
                     onClick={() => resetToInitialState()}
                     style={{ color: "#1F203F", cursor: "pointer" }}
                   >
                     Kabinetim
                   </span>
-                  <img
-                    src={`${process.env.PUBLIC_URL}/left.svg`}
-                    alt="left"
-                  />
-                 <span
-  onClick={() => resetToInitialState()}
-  style={{ color: "#6E6E81", cursor: "pointer" }}
->
-  {selectedLessonName}
-</span>
-<img
-                    src={`${process.env.PUBLIC_URL}/left.svg`}
-                    alt="left"
-                  />
-<span
+                  <img src={`${process.env.PUBLIC_URL}/left.svg`} alt="left" />
+                  <span
+                    onClick={() => resetToInitialState()}
+                    style={{ color: "#6E6E81", cursor: "pointer" }}
+                  >
+                    {selectedLessonName}
+                  </span>
+                  <img src={`${process.env.PUBLIC_URL}/left.svg`} alt="left" />
+                  <span
                     onClick={() => resetToInitialState()}
                     style={{ color: "#1F203F", cursor: "pointer" }}
                   >
-                   {selectedSubjectName}
+                    {selectedSubjectName}
                   </span>
-
                 </div>
 
                 <img
@@ -367,22 +349,21 @@ useEffect(() => {
                       </div>
                     </div>
                     {!playVideo && (
-  <div className="video-container">
-    <img
-      src={"videoimage.jpeg"}
-      alt="Thumbnail"
-      className="video-thumbnailTwo"
-    />
-    <div className="video-overlayn">
-      <img
-        
-        src={process.env.PUBLIC_URL + "/iconVideo.svg"}
-        alt="Play"
-        className="playIconImage"
-      />
-    </div>
-  </div>
-)}
+                      <div className="video-container">
+                        <img
+                          src={"videoimage.jpeg"}
+                          alt="Thumbnail"
+                          className="video-thumbnailTwo"
+                        />
+                        <div className="video-overlayn">
+                          <img
+                            src={process.env.PUBLIC_URL + "/iconVideo.svg"}
+                            alt="Play"
+                            className="playIconImage"
+                          />
+                        </div>
+                      </div>
+                    )}
 
                     {playVideo && (
                       <video key={selectedSubject.id} controls>

@@ -10,11 +10,13 @@ function Videos() {
   const openModal = (url) => {
     setSelectedVideoUrl(url);
     setIsModalOpen(true);
+    document.body.classList.add("no-scroll");
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedVideoUrl("");
+    document.body.classList.remove("no-scroll");
   };
 
   const videoList = [
@@ -36,7 +38,7 @@ function Videos() {
   ];
 
   return (
-    <div className="uniqueVideoCards">
+    <div className={`uniqueVideoCards ${isModalOpen ? "disable-pointer" : ""}`}>
       {isModalOpen && (
         <ModalTwo isOpen={isModalOpen} onClose={closeModal}>
           <ReactPlayer
@@ -44,6 +46,7 @@ function Videos() {
             url={selectedVideoUrl}
             playing={true}
             controls={true}
+            download={false}
           />
         </ModalTwo>
       )}

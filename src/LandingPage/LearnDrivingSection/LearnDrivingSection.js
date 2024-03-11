@@ -20,7 +20,7 @@ const LearnDrivingSection = () => {
           <InfoItem
             Icon={
               <img
-                src={process.env.PUBLIC_URL + "/icons/clockTwo.svg"}
+                src={process.env.PUBLIC_URL + "/clockTwo.svg"}
                 alt="Clock Icon"
               />
             }
@@ -30,7 +30,7 @@ const LearnDrivingSection = () => {
           <InfoItem
             Icon={
               <img
-                src={process.env.PUBLIC_URL + "/icons/clockTwo.svg"}
+                src={process.env.PUBLIC_URL + "/clockTwo.svg"}
                 alt="Clock Icon"
               />
             }
@@ -40,7 +40,7 @@ const LearnDrivingSection = () => {
           <InfoItem
             Icon={
               <img
-                src={process.env.PUBLIC_URL + "/icons/clockTwo.svg"}
+                src={process.env.PUBLIC_URL + "/clockTwo.svg"}
                 alt="Clock Icon"
               />
             }
@@ -50,7 +50,7 @@ const LearnDrivingSection = () => {
           <InfoItem
             Icon={
               <img
-                src={process.env.PUBLIC_URL + "/icons/clockTwo.svg"}
+                src={process.env.PUBLIC_URL + "/clockTwo.svg"}
                 alt="Clock Icon"
               />
             }
@@ -60,7 +60,7 @@ const LearnDrivingSection = () => {
       </div>
 
       <div className="learn-driving-instructor">
-        <img src="/mentor.svg" alt="Eğitmen" />
+        <img src="/Mentor.svg" alt="Eğitmen" />
       </div>
     </div>
   );

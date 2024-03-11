@@ -73,21 +73,21 @@ const FooterTwo = () => {
         <div className="social-media-icons">
           <a href="https://facebook.com">
             <img
-              src={process.env.PUBLIC_URL + "/icons/Facebook.png"}
+              src={process.env.PUBLIC_URL + "/Facebook.png"}
               alt="Facebook"
               className="socialIcon"
             />
           </a>
           <a href="https://instagram.com">
             <img
-              src={process.env.PUBLIC_URL + "/icons/Instagram.png"}
+              src={process.env.PUBLIC_URL + "/Instagram.png"}
               alt="Instagram"
               className="socialIcon"
             />
           </a>
           <a href="https://linkedin.com">
             <img
-              src={process.env.PUBLIC_URL + "/icons/Linkedin.png"}
+              src={process.env.PUBLIC_URL + "/Linkedin.png"}
               alt="LinkedIn"
               className="socialIcon"
             />

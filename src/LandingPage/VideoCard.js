@@ -14,7 +14,7 @@ const VideoCard = ({ url, thumbnail, onVideoSelect, isSelected }) => {
           />
           <div className="video-overlay">
             <img
-              src={process.env.PUBLIC_URL + "/icons/iconVideo.svg"}
+              src={process.env.PUBLIC_URL + "/iconVideo.svg"}
               alt="Play"
               className="play-icon"
             />

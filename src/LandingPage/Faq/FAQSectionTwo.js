@@ -15,13 +15,13 @@ const FAQItem = ({ question, answer }) => {
 
         {isOpen ? (
           <img
-            src={process.env.PUBLIC_URL + "/icons/yuxari.svg"}
+            src={process.env.PUBLIC_URL + "/yuxari.svg"}
             alt="Yukarı"
             className="uniqueFaqIcon"
           />
         ) : (
           <img
-            src={process.env.PUBLIC_URL + "/icons/asagi.svg"}
+            src={process.env.PUBLIC_URL + "/asagi.svg"}
             alt="Aşağı"
             className="uniqueFaqIcon"
           />

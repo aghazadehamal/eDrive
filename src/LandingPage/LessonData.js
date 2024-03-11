@@ -15,6 +15,9 @@ const LessonData = () => {
   const [showLessons, setShowLessons] = useState(false);
   const [animateOut, setAnimateOut] = useState(false);
   const [selectedQuiz, setSelectedQuiz] = useState(null);
+  const [selectedLessonName, setSelectedLessonName] = useState('');
+  const [selectedSubjectName, setSelectedSubjectName] = useState('');
+
   const resetToInitialState = () => {
     setSelectedQuiz(null);
   };
@@ -85,13 +88,47 @@ const LessonData = () => {
   const toggleLesson = (lessonId) => {
     const index = lessons.findIndex((lesson) => lesson.id === lessonId);
     if (currentLessonIndex === index) {
-      setOpenLessonId(null);
-      setCurrentLessonIndex(null);
+        setOpenLessonId(null);
+        setCurrentLessonIndex(null);
+        setSelectedLessonName(''); // Reset metni
+        setSelectedSubjectName(''); // İlk değeri resetle
     } else {
-      setOpenLessonId(lessonId);
-      setCurrentLessonIndex(index);
+        setOpenLessonId(lessonId);
+        setCurrentLessonIndex(index);
+        setSelectedLessonName(lessons[index].lessonName); // Güncel ders adıyla metni güncelle
+        // İlk konunun adını ayarla, konular mevcutsa
+        const firstSubjectName = lessons[index].subjectResponse.length > 0
+            ? lessons[index].subjectResponse[0].subjectName
+            : ''; // Varsayılan bir değer veya uygun bir mesaj
+        setSelectedSubjectName(firstSubjectName);
     }
-  };
+};
+
+
+useEffect(() => {
+  if (selectedSubject) {
+    setSelectedSubjectName(selectedSubject.subjectName);
+  } else {
+    setSelectedSubjectName(''); // selectedSubject yoksa varsayılan bir değere dön
+  }
+}, [selectedSubject]);
+
+
+
+useEffect(() => {
+  // openLessonId'ye göre seçili dersi bul
+  const selectedLesson = lessons.find(lesson => lesson.id === openLessonId);
+  if (selectedLesson) {
+    // Eğer bir ders seçildiyse, seçilen dersin adını güncelle
+    setSelectedLessonName(selectedLesson.lessonName);
+  } else {
+    // Eğer bir ders seçilmediyse, varsayılan bir değere dön
+    setSelectedLessonName('Əsas sürücülük anlayışları');
+  }
+}, [openLessonId, lessons]); // Bağımlılıklar olarak openLessonId ve lessons'i kullan
+
+
+
 
   const handlePageChange = (newPage) => {
     const currentLesson = lessons.find((lesson) => lesson.id === openLessonId);
@@ -116,7 +153,7 @@ const LessonData = () => {
 
         <Link to="/profileCard">
           <img
-            src={`${process.env.PUBLIC_URL}/icons/Avatar.svg`}
+            src={`${process.env.PUBLIC_URL}/Avatar.svg`}
             alt="Clock Icon"
             style={{ width: "48px", height: "48px" }}
           />
@@ -146,7 +183,7 @@ const LessonData = () => {
             <img
               className="lessonListCloseButton"
               onClick={handleCloseClick}
-              src={`${process.env.PUBLIC_URL}/icons/CabinetX.svg`}
+              src={`${process.env.PUBLIC_URL}/CabinetX.svg`}
               alt="CabinetX"
             />
           </div>
@@ -170,7 +207,7 @@ const LessonData = () => {
                 {Array.from({ length: currentLessonIndex + 1 }).map(
                   (_, index) => (
                     <img
-                      src={`${process.env.PUBLIC_URL}/icons/tamam.svg`}
+                      src={`${process.env.PUBLIC_URL}/tamam.svg`}
                       alt="tamam"
                     />
                   )
@@ -193,12 +230,12 @@ const LessonData = () => {
                   </span>
                   {openLessonId === lesson.id ? (
                     <img
-                      src={process.env.PUBLIC_URL + "/icons/asagi.svg"}
+                      src={process.env.PUBLIC_URL + "/asagi.svg"}
                       alt="Aşağı"
                     />
                   ) : (
                     <img
-                      src={process.env.PUBLIC_URL + "/icons/yuxari.svg"}
+                      src={process.env.PUBLIC_URL + "/yuxari.svg"}
                       alt="Yukarı"
                     />
                   )}
@@ -258,7 +295,7 @@ const LessonData = () => {
             ))}
           </div>
         </div>
-        <div className="detailsContainer">
+        <div className="detailsContainerBig">
           {selectedSubject && (
             <>
               <div className="ContainerHomeKabinet">
@@ -271,7 +308,7 @@ const LessonData = () => {
                   </span>
 
                   <img
-                    src={`${process.env.PUBLIC_URL}/icons/left.svg`}
+                    src={`${process.env.PUBLIC_URL}/left.svg`}
                     alt="left"
                   />
                   <span
@@ -281,26 +318,37 @@ const LessonData = () => {
                     Kabinetim
                   </span>
                   <img
-                    src={`${process.env.PUBLIC_URL}/icons/left.svg`}
+                    src={`${process.env.PUBLIC_URL}/left.svg`}
                     alt="left"
                   />
-                  <span
+                 <span
+  onClick={() => resetToInitialState()}
+  style={{ color: "#6E6E81", cursor: "pointer" }}
+>
+  {selectedLessonName}
+</span>
+<img
+                    src={`${process.env.PUBLIC_URL}/left.svg`}
+                    alt="left"
+                  />
+<span
                     onClick={() => resetToInitialState()}
-                    style={{ color: "#6E6E81", cursor: "pointer" }}
+                    style={{ color: "#1F203F", cursor: "pointer" }}
                   >
-                    Əsas sürücülük anlayışları
+                   {selectedSubjectName}
                   </span>
+
                 </div>
 
                 <img
                   style={{ marginTop: "10px", cursor: "pointer" }}
                   onClick={toggleLessons}
-                  src={`${process.env.PUBLIC_URL}/icons/Cabinet.svg`}
+                  src={`${process.env.PUBLIC_URL}/Cabinet.svg`}
                   alt="Cabinet"
                 />
               </div>
 
-              <div className="detailsContainer">
+              <div className="detailsContainerSmall">
                 {selectedQuiz ? (
                   <QuizDetails quiz={selectedQuiz} />
                 ) : (
@@ -328,7 +376,7 @@ const LessonData = () => {
     <div className="video-overlayn">
       <img
         
-        src={process.env.PUBLIC_URL + "/icons/iconVideo.svg"}
+        src={process.env.PUBLIC_URL + "/iconVideo.svg"}
         alt="Play"
         className="playIconImage"
       />

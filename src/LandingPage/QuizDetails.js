@@ -126,7 +126,7 @@ function QuizDetails({ quiz }) {
                         {selectedOptionId === option.id &&
                           (option.id === correctOptionId ? (
                             <img
-                              src={`${process.env.PUBLIC_URL}/icons/truedone.svg`}
+                              src={`${process.env.PUBLIC_URL}/truedone.svg`}
                               alt="truedone"
                               style={{
                                 width: "24px",
@@ -136,7 +136,7 @@ function QuizDetails({ quiz }) {
                             />
                           ) : (
                             <img
-                              src={`${process.env.PUBLIC_URL}/icons/false.svg`}
+                              src={`${process.env.PUBLIC_URL}/false.svg`}
                               alt="Incorrect"
                               style={{
                                 width: "24px",
@@ -186,7 +186,7 @@ function QuizDetails({ quiz }) {
                         {selectedOptionId === option.id &&
                           selectedOptionId !== correctOptionId && (
                             <img
-                              src={`${process.env.PUBLIC_URL}/icons/false.svg`}
+                              src={`${process.env.PUBLIC_URL}/false.svg`}
                               alt="Incorrect"
                               style={{
                                 width: "24px",
@@ -198,7 +198,7 @@ function QuizDetails({ quiz }) {
 
                         {option.id === correctOptionId && (
                           <img
-                            src={`${process.env.PUBLIC_URL}/icons/truedone.svg`}
+                            src={`${process.env.PUBLIC_URL}/truedone.svg`}
                             alt="truedone"
                             style={{
                               width: "24px",

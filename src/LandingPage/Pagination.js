@@ -26,10 +26,10 @@ const Pagination = ({ total, itemsPerPage, onPageChange }) => {
       <span className="pagination-text">Dərs {currentPage}/{totalPages}</span>
       <div className="pagination-buttons">
         <button onClick={prevPage} disabled={currentPage === 1} className="pagination-button">
-          <img src={`${process.env.PUBLIC_URL}/icons/sol.svg`} alt="sol" />
+          <img src={`${process.env.PUBLIC_URL}/sol.svg`} alt="sol" />
         </button>
         <button onClick={nextPage} disabled={currentPage === totalPages} className="pagination-button">
-          <img src={`${process.env.PUBLIC_URL}/icons/sag.svg`} alt="sag" />
+          <img src={`${process.env.PUBLIC_URL}/sag.svg`} alt="sag" />
         </button>
       </div>
     </div>

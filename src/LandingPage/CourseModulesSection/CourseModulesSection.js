@@ -17,11 +17,11 @@ const Accordion = ({ moduleTitle, children }) => {
 
         {isOpen ? (
           <img
-            src={process.env.PUBLIC_URL + "/icons/yuxari.svg"}
+            src={process.env.PUBLIC_URL + "/yuxari.svg"}
             alt="Yukarı"
           />
         ) : (
-          <img src={process.env.PUBLIC_URL + "/icons/asagi.svg"} alt="Aşağı" />
+          <img src={process.env.PUBLIC_URL + "/asagi.svg"} alt="Aşağı" />
         )}
       </div>
       {isOpen && <div className="customAccordionContent">{children}</div>}
@@ -38,7 +38,7 @@ const CourseModulesSection = () => {
           <div className="video-counts">
             <div style={{ display: "flex", alignItems: "center" }}>
               <img
-                src={`${process.env.PUBLIC_URL}/icons/clock.svg`}
+                src={`${process.env.PUBLIC_URL}/clock.svg`}
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
@@ -52,7 +52,7 @@ const CourseModulesSection = () => {
               }}
             >
               <img
-                src={`${process.env.PUBLIC_URL}/icons/video.svg`}
+                src={`${process.env.PUBLIC_URL}/video.svg`}
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
@@ -66,7 +66,7 @@ const CourseModulesSection = () => {
               }}
             >
               <img
-                src={`${process.env.PUBLIC_URL}/icons/test.svg`}
+                src={`${process.env.PUBLIC_URL}/test.svg`}
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
@@ -83,7 +83,7 @@ const CourseModulesSection = () => {
           <div className="video-counts">
             <div style={{ display: "flex", alignItems: "center" }}>
               <img
-                src={`${process.env.PUBLIC_URL}/icons/clock.svg`}
+                src={`${process.env.PUBLIC_URL}/clock.svg`}
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
@@ -97,7 +97,7 @@ const CourseModulesSection = () => {
               }}
             >
               <img
-                src={`${process.env.PUBLIC_URL}/icons/video.svg`}
+                src={`${process.env.PUBLIC_URL}/video.svg`}
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
@@ -111,7 +111,7 @@ const CourseModulesSection = () => {
               }}
             >
               <img
-                src={`${process.env.PUBLIC_URL}/icons/test.svg`}
+                src={`${process.env.PUBLIC_URL}/test.svg`}
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
@@ -127,7 +127,7 @@ const CourseModulesSection = () => {
           <div className="video-counts">
             <div style={{ display: "flex", alignItems: "center" }}>
               <img
-                src={`${process.env.PUBLIC_URL}/icons/clock.svg`}
+                src={`${process.env.PUBLIC_URL}/clock.svg`}
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
@@ -141,7 +141,7 @@ const CourseModulesSection = () => {
               }}
             >
               <img
-                src={`${process.env.PUBLIC_URL}/icons/video.svg`}
+                src={`${process.env.PUBLIC_URL}/video.svg`}
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
@@ -155,7 +155,7 @@ const CourseModulesSection = () => {
               }}
             >
               <img
-                src={`${process.env.PUBLIC_URL}/icons/test.svg`}
+                src={`${process.env.PUBLIC_URL}/test.svg`}
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
@@ -171,7 +171,7 @@ const CourseModulesSection = () => {
           <div className="video-counts">
             <div style={{ display: "flex", alignItems: "center" }}>
               <img
-                src={`${process.env.PUBLIC_URL}/icons/clock.svg`}
+                src={`${process.env.PUBLIC_URL}/clock.svg`}
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
@@ -185,7 +185,7 @@ const CourseModulesSection = () => {
               }}
             >
               <img
-                src={`${process.env.PUBLIC_URL}/icons/video.svg`}
+                src={`${process.env.PUBLIC_URL}/video.svg`}
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
@@ -199,7 +199,7 @@ const CourseModulesSection = () => {
               }}
             >
               <img
-                src={`${process.env.PUBLIC_URL}/icons/test.svg`}
+                src={`${process.env.PUBLIC_URL}/test.svg`}
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
@@ -215,7 +215,7 @@ const CourseModulesSection = () => {
           <div className="video-counts">
             <div style={{ display: "flex", alignItems: "center" }}>
               <img
-                src={`${process.env.PUBLIC_URL}/icons/clock.svg`}
+                src={`${process.env.PUBLIC_URL}/clock.svg`}
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
@@ -229,7 +229,7 @@ const CourseModulesSection = () => {
               }}
             >
               <img
-                src={`${process.env.PUBLIC_URL}/icons/video.svg`}
+                src={`${process.env.PUBLIC_URL}/video.svg`}
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
@@ -243,7 +243,7 @@ const CourseModulesSection = () => {
               }}
             >
               <img
-                src={`${process.env.PUBLIC_URL}/icons/test.svg`}
+                src={`${process.env.PUBLIC_URL}/test.svg`}
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />

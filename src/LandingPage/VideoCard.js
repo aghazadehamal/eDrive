@@ -4,7 +4,8 @@ import "./VideoCard.css";
 
 const VideoCard = ({ url, thumbnail, onVideoSelect, isSelected }) => {
   return (
-    <div className="uniqueVideoCard" onClick={() => onVideoSelect(url)}>
+    <div>
+  <div className="uniqueVideoCard" onClick={() => onVideoSelect(url)}>
       {!isSelected && (
         <>
           <img
@@ -18,7 +19,9 @@ const VideoCard = ({ url, thumbnail, onVideoSelect, isSelected }) => {
               alt="Play"
               className="play-icon"
             />
+            
           </div>
+          
         </>
       )}
       {isSelected && (
@@ -31,7 +34,13 @@ const VideoCard = ({ url, thumbnail, onVideoSelect, isSelected }) => {
           height="100%"
         />
       )}
+     
     </div>
+
+    <div className="loginVideoText">Giriş videosu</div>
+
+    </div>
+  
   );
 };
 

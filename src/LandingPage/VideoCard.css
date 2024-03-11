@@ -70,6 +70,13 @@
   margin-top: 90px;
 }
 
+.loginVideoText {
+  font-size: 24px;
+  line-height: 36px;
+  color: #1F203F;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 768px) {
   .videoCardWrapper p {
     margin-bottom: 20px;

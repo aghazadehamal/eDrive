@@ -19,3 +19,23 @@ body {
     height: auto !important;
   }
 }
+
+
+/* Tüm inputlar için varsayılan arka plan rengini beyaz yap */
+input {
+  background-color: white !important;
+}
+
+/* WebKit tabanlı tarayıcılar için autofill durumunda arka plan rengini beyaz yap */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+input:focus {
+  outline: none;
+}
+

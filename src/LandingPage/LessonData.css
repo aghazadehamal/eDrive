@@ -111,10 +111,12 @@ margin-left: 5px;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+  
 }
 
 .ContainerHomeKabinet {
   display: flex;
+  margin-top: 15px;
 }
 
 .lessonNameTextKabinet {
@@ -291,7 +293,7 @@ margin-left: 5px;
   }
 
   .lessonNameTextHome {
-    font-size: 9px;
+   
   }
 .playIconImage {
   width: 60px;

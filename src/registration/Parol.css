@@ -1,6 +1,6 @@
 .login form {
   border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
   color: white;
   max-width: 456px;
   height: auto;
@@ -16,7 +16,7 @@
 .login input[type="email"],
 .login input[type="password"] {
   display: block;
-
+background-color: white;
   width: 100%;
   padding: 10px;
   margin: 20px 0;
@@ -62,7 +62,7 @@
 
 .login-title {
   text-align: center;
-  color: black;
+  color: #1F203F;
   margin-bottom: 30px;
 }
 

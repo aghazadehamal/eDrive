@@ -409,7 +409,7 @@ useEffect(() => {
                         marginTop: "20px",
                       }}
                     >
-                      Burada sizin reklamınız ola bilərdi
+                      Dərsin mövzusu
                     </span>
                     <p className="lessonText">
                       {selectedSubject.videoResponse.title}

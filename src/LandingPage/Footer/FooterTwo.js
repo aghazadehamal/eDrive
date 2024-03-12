@@ -85,13 +85,13 @@ const FooterTwo = () => {
               className="socialIcon"
             />
           </a>
-          {/* <a href="https://linkedin.com">
+          <a href="https://linkedin.com">
             <img
-              src={process.env.PUBLIC_URL + "/Linkedin.png"}
+              src={process.env.PUBLIC_URL + "/lnkdn.png"}
               alt="LinkedIn"
               className="socialIcon"
             />
-          </a> */}
+          </a>
         </div>
       </div>
     </footer>

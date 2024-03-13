@@ -4,7 +4,6 @@ import "./RegistrationForm.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-
 function RegistrationForm() {
   const [formData, setFormData] = useState({
     name: "",
@@ -21,30 +20,47 @@ function RegistrationForm() {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-const navigate = useNavigate(); // Bu satırı ekleyin
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (formData.password.length < 8) {
+      alert("Şifrə ən az 8 simvol uzunluğunda olmalıdır.");
+      return;
+    }
+
+    const phoneRegex = /^\d{9}$/;
+    if (!phoneRegex.test(formData.phoneNumber)) {
+      alert("Telefon nömrəsi düzgün formatda deyil. Nümunə: 992224455");
+      return;
+    }
+
     setIsLoading(true);
-    // setError("");
     try {
       const response = await axios.post(
         "https://edurive.onrender.com/auth/registration",
         formData
       );
       console.log(response.data);
-      alert('Qeydiyyat uğurla başa çatdı');
+      alert("Qeydiyyat uğurla tamamlandı! Giriş edə bilərsiniz.");
       setIsLoading(false);
-      
-      navigate("/loginForm"); // Kayıt başarılıysa bu satırı ekleyin
-    } catch (err) {
-      // setError("Qeydiyyat zamanı bir xəta yarandı. Zəhmət olmasa yenidən cəhd edin.");
-      alert("Qeydiyyat zamanı bir xəta yarandı. Zəhmət olmasa yenidən cəhd edin.");
+
+      navigate("/loginForm");
+    } catch (error) {
       setIsLoading(false);
-      console.error(err);
+
+      if (error.response && error.response.status === 409) {
+        alert(
+          "Bu e-poçt ünvanı ilə artıq bir qeydiyyat yaradılmışdır. Zəhmət olmasa, daxil olun və ya başqa bir e-poçt ünvanı istifadə edin."
+        );
+      } else {
+        alert(
+          "Qeydiyyat zamanı bir xəta baş verdi. Zəhmət olmasa, daha sonra yenidən cəhd edin."
+        );
+      }
     }
   };
-  
 
   return (
     <div className="registration" style={{ textAlign: "center" }}>

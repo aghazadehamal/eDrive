@@ -221,14 +221,13 @@ const LessonData = () => {
                     {lesson.lessonName || "Unnamed Lesson"}
                   </span>
                   <img
-                              src={`${process.env.PUBLIC_URL}/truedone.svg`}
-                              alt="truedone"
-                              style={{
-                                width: "20px",
-                                height: "20px",
-                               
-                              }}
-                            />
+                    src={`${process.env.PUBLIC_URL}/truedone.svg`}
+                    alt="truedone"
+                    style={{
+                      width: "20px",
+                      height: "20px",
+                    }}
+                  />
                   {openLessonId === lesson.id ? (
                     <img
                       src={process.env.PUBLIC_URL + "/asagi.svg"}
@@ -251,43 +250,46 @@ const LessonData = () => {
                     }}
                   >
                     {lesson.subjectResponse.map((subject) => (
-                    <div className="subjectContainer" key={subject.id} style={{ position: 'relative' }}>
-                    <img
-                      onClick={() => {
-                        setSelectedSubject(subject);
-                        setSelectedQuiz(null);
-                        setPlayVideo(false);
-                      }}
-                      src="videoimage.jpeg"
-                      alt="Thumbnail"
-                      className="smallThumbnail"
-                    />
-                    <img
-                      src={`${process.env.PUBLIC_URL}/truedone.svg`}
-                      alt="truedone"
-                      style={{
-                        width: "20px",
-                        height: "20px",
-                        marginRight: "8px",
-                        position: 'absolute', 
-                        top: '5px', 
-                        left: '10px', 
-                      }}
-                    />
-                    <div>
-                      <span
-                        className="subjectItem"
-                        onClick={() => {
-                          setSelectedSubject(subject);
-                          setSelectedQuiz(null);
-                          setPlayVideo(false);
-                        }}
+                      <div
+                        className="subjectContainer"
+                        key={subject.id}
+                        style={{ position: "relative" }}
                       >
-                        {subject.subjectName}
-                      </span>
-                    </div>
-                  </div>
-                  
+                        <img
+                          onClick={() => {
+                            setSelectedSubject(subject);
+                            setSelectedQuiz(null);
+                            setPlayVideo(false);
+                          }}
+                          src="videoimage.jpeg"
+                          alt="Thumbnail"
+                          className="smallThumbnail"
+                        />
+                        <img
+                          src={`${process.env.PUBLIC_URL}/truedone.svg`}
+                          alt="truedone"
+                          style={{
+                            width: "20px",
+                            height: "20px",
+                            marginRight: "8px",
+                            position: "absolute",
+                            top: "5px",
+                            left: "10px",
+                          }}
+                        />
+                        <div>
+                          <span
+                            className="subjectItem"
+                            onClick={() => {
+                              setSelectedSubject(subject);
+                              setSelectedQuiz(null);
+                              setPlayVideo(false);
+                            }}
+                          >
+                            {subject.subjectName}
+                          </span>
+                        </div>
+                      </div>
                     ))}
                   </div>
                 )}
@@ -337,12 +339,11 @@ const LessonData = () => {
                   </span>
                   <img src={`${process.env.PUBLIC_URL}/left.svg`} alt="left" />
                   <span
-  // onClick={() => resetToInitialState()}
-  style={{ color: "#6E6E81", cursor: "pointer" }}
->
-  {selectedQuiz ? selectedQuiz.quizName : selectedSubjectName}
-</span>
-
+                    // onClick={() => resetToInitialState()}
+                    style={{ color: "#6E6E81", cursor: "pointer" }}
+                  >
+                    {selectedQuiz ? selectedQuiz.quizName : selectedSubjectName}
+                  </span>
                 </div>
 
                 <img

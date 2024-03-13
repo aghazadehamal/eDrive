@@ -49,7 +49,7 @@ function App() {
               path="/admin"
               element={<ProtectedRoute component={User} />}
             />
-            <Route path="loginFormAdmin" element={<LoginFormAdmin />} />
+            <Route path="/loginFormAdmin" element={<LoginFormAdmin />} />
 
             <Route
               path="/lessonData"

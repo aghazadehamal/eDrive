@@ -26,10 +26,20 @@ function LoginForm() {
         localStorage.setItem("userToken", response.data.accessToken);
         navigate("/lessonData?showModal=true");
       } else {
-        console.error("Login failed, no token received.");
+        console.error("Giriş uğursuz, token alınamadı.");
       }
     } catch (error) {
-      console.error("An error occurred during login:", error);
+      console.error("Giriş zamanı bir xəta baş verdi:", error);
+
+      if (error.response && error.response.status === 401) {
+        alert("E-poçt ünvanı və ya şifrə yanlışdır.");
+      } else if (error.response && error.response.status === 403) {
+        alert("Yanlış mail və ya şifrə");
+      } else {
+        alert(
+          "Bir xəta baş verdi. Zəhmət olmasa daha sonra yenidən cəhd edin."
+        );
+      }
     }
   };
 

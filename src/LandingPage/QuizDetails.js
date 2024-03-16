@@ -155,10 +155,12 @@ function QuizDetails({ quiz }) {
             </ul>
             {showResults && (
               <div className="RestartVideoContainer">
+
+                <Link to="/VideoQuiz"  style={{textDecoration: "none"}} className="quizRestart"  >
+                Video izaha keç
+                </Link>
                 
-              <button className="quizRestart" onClick={handleResetQuiz}>
-              Video izaha keç
-              </button>
+             
               <Link style={{textDecoration: "none"}}>
               <button className="quizRefresh" onClick={handleResetQuiz}>
              
@@ -226,9 +228,9 @@ function QuizDetails({ quiz }) {
             {showResults && (
               <div className="RestartVideoContainer">
                 
-                <button className="quizRestart" onClick={handleResetQuiz}>
+                <Link to="/VideoQuiz" style={{textDecoration: "none"}} className="quizRestart"  >
                 Video izaha keç
-                </button>
+                </Link>
                 <Link style={{textDecoration: "none"}}>
                 <button className="quizRefresh" onClick={handleResetQuiz}>
                

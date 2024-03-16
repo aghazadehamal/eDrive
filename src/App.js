@@ -21,6 +21,7 @@ import LessonData from "./LandingPage/LessonData";
 import UserListTwo from "./LandingPage/UserListTwo";
 import Parol from "./registration/Parol";
 import ParolTwo from "./registration/ParolTwo";
+import VideoQuiz from './LandingPage/VideoQuiz';
 
 function App() {
   return (
@@ -56,8 +57,10 @@ function App() {
               element={<ProtectedRoute component={LessonData} />}
             />
             <Route path="/UserListTwo" element={<UserListTwo />} />
+
             <Route path="/Parol" element={<Parol />} />
             <Route path="/ParolTwo" element={<ParolTwo />} />
+            <Route path="/VideoQuiz" element={<VideoQuiz />} />
           </Routes>
         </div>
       </Router>

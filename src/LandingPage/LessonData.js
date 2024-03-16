@@ -123,14 +123,21 @@ const LessonData = () => {
   }, [openLessonId, lessons]);
 
   const handlePageChange = (newPage) => {
-    const currentLesson = lessons.find((lesson) => lesson.id === openLessonId);
-    if (currentLesson && currentLesson.subjectResponse.length > 0) {
-      const newSelectedSubjectIndex = newPage - 1;
-      setSelectedSubject(
-        currentLesson.subjectResponse[newSelectedSubjectIndex]
-      );
+    // Yeni seçilen sayfaya karşılık gelen konu (subject) bulunur
+    const currentLesson = lessons[currentLessonIndex]; // Şu anki dersin indexi kullanılarak ders bulunur
+    if (currentLesson && currentLesson.subjectResponse.length >= newPage) {
+      const newSelectedSubject = currentLesson.subjectResponse[newPage - 1];
+      if (newSelectedSubject.videoResponse.locked) {
+        alert('Bu dərs kilidlidir ve erişilemez.'); // Erişim engellenir ve kullanıcı bilgilendirilir
+        // İsteğe bağlı olarak ek aksiyonlar alınabilir (örneğin, sayfa değişikliğini iptal etmek)
+      } else {
+        // Kilidli değilse, yeni seçili konuyu ayarla
+        setSelectedSubject(newSelectedSubject);
+      }
     }
   };
+  
+  
 
  
 

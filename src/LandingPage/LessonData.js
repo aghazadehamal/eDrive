@@ -141,7 +141,7 @@ const subjectClickHandler = (subject) => {
     setPlayVideo(false);
   } else {
   
-    alert('Bu dersin içeriği kilitlidir ve erişim sağlanamaz.');
+    alert('Bu dərs kilidlidir.');
   }
 };
 

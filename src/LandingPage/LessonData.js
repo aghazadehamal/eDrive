@@ -128,7 +128,7 @@ const LessonData = () => {
     if (currentLesson && currentLesson.subjectResponse.length >= newPage) {
       const newSelectedSubject = currentLesson.subjectResponse[newPage - 1];
       if (newSelectedSubject.videoResponse.locked) {
-        alert('Bu dərs kilidlidir ve erişilemez.'); // Erişim engellenir ve kullanıcı bilgilendirilir
+        alert('Bu dərs kilidlidir.'); // Erişim engellenir ve kullanıcı bilgilendirilir
         // İsteğe bağlı olarak ek aksiyonlar alınabilir (örneğin, sayfa değişikliğini iptal etmek)
       } else {
         // Kilidli değilse, yeni seçili konuyu ayarla

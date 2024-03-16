@@ -48,7 +48,7 @@ function VideoQuiz() {
           <p>{video.requiresPaid ? 'This content requires payment.' : 'This content is free.'}</p>
         </div>
       ) : (
-        <p style={{color: "black"}}>Loading video...</p>
+        <p style={{color: "black"}}>Video yüklənir...</p>
       )}
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import { Link } from 'react-router-dom';
 function VideoQuiz() {
   const [video, setVideo] = useState(null);
 
@@ -34,6 +34,13 @@ function VideoQuiz() {
 
   return (
     <div>
+      <Link to="/lessonData">
+          <img
+            src="/edurive.svg"
+            alt="Novademy Logo"
+            style={{ maxWidth: "250px", marginTop: "50px" }}
+          />
+        </Link>
       {video ? (
         <div style={{marginTop: "50px"}} >
          

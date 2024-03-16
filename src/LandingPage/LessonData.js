@@ -267,37 +267,50 @@ const subjectClickHandler = (subject) => {
                     }}
                   >
                     {lesson.subjectResponse.map((subject) => (
-                     <div
-                     className="subjectContainer"
-                     key={subject.id}
-                     style={{ position: "relative", cursor: "pointer" }} 
-                     onClick={() => subjectClickHandler(subject)} 
-                   >
-                     <img
-                       src="videoimage.jpeg"
-                       alt="Thumbnail"
-                       className="smallThumbnail"
-                     />
-                     <img
-                       src={`${process.env.PUBLIC_URL}/truedone.svg`}
-                       alt="truedone"
-                       style={{
-                         width: "20px",
-                         height: "20px",
-                         marginRight: "8px",
-                         position: "absolute",
-                         top: "5px",
-                         left: "10px",
-                       }}
-                     />
-                     <div>
-                       <span className="subjectItem">
-                         {subject.subjectName}
-                       </span>
-                     </div>
-                   </div>
-                   
-                    ))}
+  <div
+    className="subjectContainer"
+    key={subject.id}
+    style={{ position: "relative", cursor: "pointer" }} 
+    onClick={() => subjectClickHandler(subject)} 
+  >
+    <img
+      src="videoimage.jpeg"
+      alt="Thumbnail"
+      className="smallThumbnail"
+    />
+    {subject.videoResponse.locked ? (
+      <img
+        src={`${process.env.PUBLIC_URL}/truedone.svg`}
+        alt="Correct"
+        style={{
+          width: "20px",
+          height: "20px",
+          position: "absolute",
+          top: "5px",
+          left: "10px",
+        }}
+      />
+    ) : (
+      <img
+        src={`${process.env.PUBLIC_URL}/false.svg`}
+        alt="Incorrect"
+        style={{
+          width: "20px",
+          height: "20px",
+          position: "absolute",
+          top: "5px",
+          left: "10px",
+        }}
+      />
+    )}
+    <div>
+      <span className="subjectItem">
+        {subject.subjectName}
+      </span>
+    </div>
+  </div>
+))}
+
                   </div>
                 )}
                 {openLessonId === lesson.id && (

@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import LoginFormAdmin from "../../components/LoginFormAdmin";
 
 function Navbar() {
   const scrollToSection = (event, sectionId) => {
@@ -18,6 +19,7 @@ function Navbar() {
         alt="Novademy Logo"
         style={{ maxWidth: "250px" }}
       />
+      
       <nav className="customNav">
         <a
           href="#why-us"
@@ -47,6 +49,13 @@ function Navbar() {
         </Link>
         <Link to="/RegistrationForm">
           <button className="customBtn customRegister">Qeydiyyatdan keç</button>
+        </Link>
+        <Link to="/loginFormAdmin">
+          <img
+            src={`${process.env.PUBLIC_URL}/Avatar.svg`}
+            alt="Clock Icon"
+            style={{ width: "43px", height: "38px", marginLeft: "5px" }}
+          />
         </Link>
       </div>
     </div>

@@ -132,6 +132,23 @@ const LessonData = () => {
     }
   };
 
+ 
+
+const subjectClickHandler = (subject) => {
+  if (!subject.videoResponse.locked) {
+    setSelectedSubject(subject);
+    setSelectedQuiz(null);
+    setPlayVideo(false);
+  } else {
+  
+    alert('Bu dersin içeriği kilitlidir ve erişim sağlanamaz.');
+  }
+};
+
+
+
+
+
   return (
     <div style={{ width: "75%", margin: "auto" }}>
       <div className="imageLogo">
@@ -250,46 +267,36 @@ const LessonData = () => {
                     }}
                   >
                     {lesson.subjectResponse.map((subject) => (
-                      <div
-                        className="subjectContainer"
-                        key={subject.id}
-                        style={{ position: "relative" }}
-                      >
-                        <img
-                          onClick={() => {
-                            setSelectedSubject(subject);
-                            setSelectedQuiz(null);
-                            setPlayVideo(false);
-                          }}
-                          src="videoimage.jpeg"
-                          alt="Thumbnail"
-                          className="smallThumbnail"
-                        />
-                        <img
-                          src={`${process.env.PUBLIC_URL}/truedone.svg`}
-                          alt="truedone"
-                          style={{
-                            width: "20px",
-                            height: "20px",
-                            marginRight: "8px",
-                            position: "absolute",
-                            top: "5px",
-                            left: "10px",
-                          }}
-                        />
-                        <div>
-                          <span
-                            className="subjectItem"
-                            onClick={() => {
-                              setSelectedSubject(subject);
-                              setSelectedQuiz(null);
-                              setPlayVideo(false);
-                            }}
-                          >
-                            {subject.subjectName}
-                          </span>
-                        </div>
-                      </div>
+                     <div
+                     className="subjectContainer"
+                     key={subject.id}
+                     style={{ position: "relative", cursor: "pointer" }} 
+                     onClick={() => subjectClickHandler(subject)} 
+                   >
+                     <img
+                       src="videoimage.jpeg"
+                       alt="Thumbnail"
+                       className="smallThumbnail"
+                     />
+                     <img
+                       src={`${process.env.PUBLIC_URL}/truedone.svg`}
+                       alt="truedone"
+                       style={{
+                         width: "20px",
+                         height: "20px",
+                         marginRight: "8px",
+                         position: "absolute",
+                         top: "5px",
+                         left: "10px",
+                       }}
+                     />
+                     <div>
+                       <span className="subjectItem">
+                         {subject.subjectName}
+                       </span>
+                     </div>
+                   </div>
+                   
                     ))}
                   </div>
                 )}

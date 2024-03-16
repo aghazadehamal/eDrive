@@ -1,4 +1,4 @@
-/* UserListTwo.css için güncellenmiş CSS tasarımı */
+
 
 .user-list-container {
   max-width: 800px;
@@ -40,10 +40,10 @@ h2 {
 }
 
 .UserButton {
-  display: block; /* Butonları alt alta getirir */
-  width: 100%; /* Butonun genişliğini li elementinin genişliğine uydurur */
+  display: block; 
+  width: 100%; 
   padding: 14px;
-  margin-bottom: 10px; /* Butonlar arasında boşluk bırakır */
+  margin-bottom: 10px; 
   background-color: #50BB27;
   font-size: 14px;
   color: white;
@@ -59,11 +59,11 @@ h2 {
 
 
 .user-name {
-  display: block; /* Her ismi yeni bir satırda gösterir */
-  font-size: 18px; /* Yazı tipi boyutu */
-  font-weight: bold; /* Yazı tipi kalınlığı */
-  color: white; /* Yazı tipi rengi */
-  margin-bottom: 10px; /* Alt elemanlardan boşluk */
-  background-color: rgb(52, 52, 44);
+  display: block; 
+  font-size: 18px; 
+  font-weight: bold; 
+  color: white; 
+  margin-bottom: 10px; 
+ background-color: #50BB27;
   padding: 10px;
 }

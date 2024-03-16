@@ -280,7 +280,7 @@ const subjectClickHandler = (subject) => {
     />
     {subject.videoResponse.locked ? (
       <img
-        src={`${process.env.PUBLIC_URL}/truedone.svg`}
+        src={`${process.env.PUBLIC_URL}/false.svg`}
         alt="Correct"
         style={{
           width: "20px",
@@ -292,7 +292,7 @@ const subjectClickHandler = (subject) => {
       />
     ) : (
       <img
-        src={`${process.env.PUBLIC_URL}/false.svg`}
+        src={`${process.env.PUBLIC_URL}/truedone.svg`}
         alt="Incorrect"
         style={{
           width: "20px",

@@ -8,10 +8,10 @@ const VideoCard = ({ url, thumbnail, onVideoSelect, isSelected }) => {
         {!isSelected && (
           <>
             <img
-              src={"videoimage.jpeg"}
-              alt="Thumbnail"
-              className="video-thumbnail"
-            />
+            src={thumbnail} // Her video için farklı bir thumbnail gösteriliyor
+            alt="Video Thumbnail"
+            className="video-thumbnail"
+          />
             <div className="video-overlay">
               <img
                 src={process.env.PUBLIC_URL + "/iconVideo.svg"}

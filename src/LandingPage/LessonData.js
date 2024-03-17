@@ -227,7 +227,7 @@ const subjectClickHandler = (subject, key) => {
       <div
     className={`lessonList ${showLessons ? "show" : ""}`}
     style={{ display: showLessons ? "block" : "none" }}
-    ref={lessonListRef} // Buraya ref'i ekleyin
+    ref={lessonListRef} 
   >
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <span

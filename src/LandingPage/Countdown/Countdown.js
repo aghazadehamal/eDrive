@@ -37,9 +37,11 @@ const Countdown = ({ targetDate }) => {
     }
 
     timeComponents.push(
+     
       <div className="countdown-component" key={interval}>
-        <div className="time">{timeLeft[interval]}</div>
-        <div className="time-label">{interval}</div>
+      
+        <span className="time">{timeLeft[interval]}</span>
+        <span className="time-label">{interval}</span>
       </div>
     );
   });

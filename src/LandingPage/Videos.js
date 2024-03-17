@@ -23,17 +23,18 @@ function Videos() {
     {
       url: "/v1.MOV",
       description: "Giriş Videosu 1",
-      thumbnail: "thumb1.jpeg",
+      thumbnail: "esasanlayislarthree.jpeg",
+      
     },
     {
       url: "/v2.MOV",
       description: "Giriş Videosu 2",
-      thumbnail: "thumb2.jpeg",
+      thumbnail: "esasanlayislartwo.jpeg",
     },
     {
       url: "/v3.MOV",
       description: "Giriş Videosu 3",
-      thumbnail: "thumb3.jpeg",
+      thumbnail: "esasanlayislar.jpeg",
     },
   ];
 

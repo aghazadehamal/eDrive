@@ -525,16 +525,20 @@ const subjectClickHandler = (subject, key) => {
                     )}
 
                     {playVideo && (
-                      <video key={selectedSubject.id} controls>
-                        <source
-                          src={selectedSubject.videoResponse.url.replace(
-                            / /g,
-                            "%20"
-                          )}
-                          type="video/mp4"
-                        />
-                        Your browser does not support the video tag.
-                      </video>
+                    <video
+                    key={selectedSubject.id}
+                    controls
+                    controlsList="nodownload"
+                    onContextMenu={(e) => e.preventDefault()}
+                  >
+                    <source
+                      src={selectedSubject.videoResponse.url.replace(/ /g, "%20")}
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                  
+                   
                     )}
                     <span
                       style={{

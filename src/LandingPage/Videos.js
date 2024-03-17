@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import VideoCard from "./VideoCard";
 import ModalTwo from "./ModalTwo/ModalTwo";
-import ReactPlayer from "react-player";
+
 
 function Videos() {
   const [selectedVideoUrl, setSelectedVideoUrl] = useState("");
@@ -24,8 +24,6 @@ function Videos() {
       url: "/v1.MOV",
       description: "Giriş Videosu 1",
       thumbnail: "thumb1.jpeg",
-     
-      
     },
     {
       url: "/v2.MOV",
@@ -43,13 +41,17 @@ function Videos() {
     <div className={`uniqueVideoCards ${isModalOpen ? "disable-pointer" : ""}`}>
       {isModalOpen && (
         <ModalTwo isOpen={isModalOpen} onClose={closeModal}>
-          <ReactPlayer
-            className="react-player"
-            url={selectedVideoUrl}
-            playing={true}
-            controls={true}
-            download={false}
-          />
+         
+          <video
+            className="videoWithHeight"
+            src={selectedVideoUrl}
+            controls
+            controlsList="nodownload"
+            onContextMenu={(e) => e.preventDefault()}
+            autoPlay
+          >
+            Your browser does not support the video tag.
+          </video>
         </ModalTwo>
       )}
 

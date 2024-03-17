@@ -384,7 +384,7 @@ const subjectClickHandler = (subject, key) => {
                     onClick={() => {
                       
                       if (!isPaid && key !== 0) {
-                        alert('Bu quiz kilididir. Lütfen ödeme yapınız.');
+                        alert('Bu quiz kilididir.');
                       } else {
                        
                         setSelectedQuiz(lesson.quizResponse);

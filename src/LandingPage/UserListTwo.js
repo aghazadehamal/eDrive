@@ -67,7 +67,7 @@ function UserListTwo() {
         {users.map((user) => (
           <li key={user.id}>
             <span className="user-name">{user.name} {user.surname}</span>
-            {/* Tüm kullanıcılara tek bir "İcazə Ver" butonu ile erişim veriyoruz */}
+      
             <button
               className="UserButton"
               onClick={() => giveAccessToUser(user.id)}

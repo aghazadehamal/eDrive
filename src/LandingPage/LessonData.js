@@ -20,27 +20,27 @@ const LessonData = () => {
   const [selectedSubjectName, setSelectedSubjectName] = useState("");
 
   const [showModal, setShowModal] = useState(false); 
-  const lessonListRef = useRef(null); // Ref'i oluşturuyoruz
+  const lessonListRef = useRef(null); 
   const [isPaid, setIsPaid] = useState(false)
 
 
   useEffect(() => {
     const fetchLessonData = async () => {
       try {
-        // İlk API çağrısı
+       
         const lessonsResponse = await axios.get("https://edurive.onrender.com/v1/lesson/");
         const lessonsData = lessonsResponse.data;
   
-        // Veri yüklendikten sonra, en az bir video kilidinin kapalı olup olmadığını kontrol et
+        
         const anyVideoLocked = lessonsData.some(lesson =>
           lesson.subjectResponse.some(subject => subject.videoResponse.locked)
         );
   
-        // Eğer en az bir video kilidiliyse, modalı göster
+       
         setShowModal(anyVideoLocked);
         const userId = localStorage.getItem('userId')
   
-        // İkinci API çağrısı, kullanıcıya özel ders verilerini çekmek için
+     
         const userLessonsResponse = await axios.get(`https://edurive.onrender.com/v1/user/${userId}`);
         const userLessonsData = userLessonsResponse.data.paid;
         setIsPaid(userLessonsData)
@@ -58,17 +58,17 @@ const LessonData = () => {
   };
 
   useEffect(() => {
-    // Dış tıklama fonksiyonu
+ 
     function handleClickOutside(event) {
       if (lessonListRef.current && !lessonListRef.current.contains(event.target)) {
-        setShowLessons(false); // Eğer dışarıya tıklandıysa, lesson list'i kapat
+        setShowLessons(false); 
       }
     }
 
-    // Event listener'ı ekliyoruz
+  
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      // Component unmount olduğunda event listener'ı kaldır
+     
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [showLessons]); 

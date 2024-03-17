@@ -412,12 +412,12 @@ const subjectClickHandler = (subject, key) => {
             <>
               <div className="ContainerHomeKabinet">
                 <div className="lessonNameTextHome">
-                  <span
-                    style={{ color: "#1F203F", cursor: "pointer" }}
-                    onClick={() => resetToInitialState()}
+                  <Link to="/firstPageTwo"
+                    style={{ color: "#1F203F", cursor: "pointer", textDecoration: "none" }}
+                   
                   >
                     Əsas səhifə
-                  </span>
+                  </Link>
 
                   <img src={`${process.env.PUBLIC_URL}/left.svg`} alt="left" />
                   <span

@@ -45,8 +45,8 @@ function RegistrationForm() {
       console.log(response.data);
       alert("Qeydiyyat uğurla tamamlandı! Giriş edə bilərsiniz.");
       setIsLoading(false);
-
-      navigate("/loginForm");
+      localStorage.setItem("userId", response.data.id);
+      navigate("/lessonData");
     } catch (error) {
       setIsLoading(false);
 

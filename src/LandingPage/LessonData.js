@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "./LessonData.css";
 import { Link } from "react-router-dom";
 import Pagination from "./Pagination";
 import QuizDetails from "./QuizDetails";
+import CustomModal from "../lessons/Modal";
 
 const LessonData = () => {
   const [lessons, setLessons] = useState([]);
@@ -17,6 +18,60 @@ const LessonData = () => {
   const [selectedQuiz, setSelectedQuiz] = useState(null);
   const [selectedLessonName, setSelectedLessonName] = useState("");
   const [selectedSubjectName, setSelectedSubjectName] = useState("");
+
+  const [showModal, setShowModal] = useState(false); 
+  const lessonListRef = useRef(null); // Ref'i oluşturuyoruz
+  const [isPaid, setIsPaid] = useState(false)
+
+
+  useEffect(() => {
+    const fetchLessonData = async () => {
+      try {
+        // İlk API çağrısı
+        const lessonsResponse = await axios.get("https://edurive.onrender.com/v1/lesson/");
+        const lessonsData = lessonsResponse.data;
+  
+        // Veri yüklendikten sonra, en az bir video kilidinin kapalı olup olmadığını kontrol et
+        const anyVideoLocked = lessonsData.some(lesson =>
+          lesson.subjectResponse.some(subject => subject.videoResponse.locked)
+        );
+  
+        // Eğer en az bir video kilidiliyse, modalı göster
+        setShowModal(anyVideoLocked);
+        const userId = localStorage.getItem('userId')
+  
+        // İkinci API çağrısı, kullanıcıya özel ders verilerini çekmek için
+        const userLessonsResponse = await axios.get(`https://edurive.onrender.com/v1/user/${userId}`);
+        const userLessonsData = userLessonsResponse.data.paid;
+        setIsPaid(userLessonsData)
+      } catch (error) {
+        console.error("Error fetching lessons:", error);
+      }
+    };
+  
+    fetchLessonData();
+  }, []);
+  
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  useEffect(() => {
+    // Dış tıklama fonksiyonu
+    function handleClickOutside(event) {
+      if (lessonListRef.current && !lessonListRef.current.contains(event.target)) {
+        setShowLessons(false); // Eğer dışarıya tıklandıysa, lesson list'i kapat
+      }
+    }
+
+    // Event listener'ı ekliyoruz
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      // Component unmount olduğunda event listener'ı kaldır
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showLessons]); 
 
   const resetToInitialState = () => {
     setSelectedQuiz(null);
@@ -123,31 +178,23 @@ const LessonData = () => {
   }, [openLessonId, lessons]);
 
   const handlePageChange = (newPage) => {
-    // Yeni seçilen sayfaya karşılık gelen konu (subject) bulunur
-    const currentLesson = lessons[currentLessonIndex]; // Şu anki dersin indexi kullanılarak ders bulunur
-    if (currentLesson && currentLesson.subjectResponse.length >= newPage) {
-      const newSelectedSubject = currentLesson.subjectResponse[newPage - 1];
-      if (newSelectedSubject.videoResponse.locked) {
-        alert('Bu dərs kilidlidir.'); // Erişim engellenir ve kullanıcı bilgilendirilir
-        // İsteğe bağlı olarak ek aksiyonlar alınabilir (örneğin, sayfa değişikliğini iptal etmek)
-      } else {
-        // Kilidli değilse, yeni seçili konuyu ayarla
-        setSelectedSubject(newSelectedSubject);
-      }
+    const currentLesson = lessons.find((lesson) => lesson.id === openLessonId);
+    if (currentLesson && currentLesson.subjectResponse.length > 0) {
+      const newSelectedSubjectIndex = newPage - 1;
+      setSelectedSubject(
+        currentLesson.subjectResponse[newSelectedSubjectIndex]
+      );
     }
   };
-  
-  
 
  
 
-const subjectClickHandler = (subject) => {
-  if (!subject.videoResponse.locked) {
+const subjectClickHandler = (subject, key) => {
+  if (isPaid || key===0) {
     setSelectedSubject(subject);
     setSelectedQuiz(null);
     setPlayVideo(false);
   } else {
-  
     alert('Bu dərs kilidlidir.');
   }
 };
@@ -159,7 +206,7 @@ const subjectClickHandler = (subject) => {
   return (
     <div style={{ width: "75%", margin: "auto" }}>
       <div className="imageLogo">
-        <Link to="/">
+        <Link to="/firstPageTwo">
           <img
             src="/edurive.svg"
             alt="Novademy Logo"
@@ -177,10 +224,11 @@ const subjectClickHandler = (subject) => {
       </div>
 
       <div className="lessonsContainer">
-        <div
-          className={`lessonList ${showLessons ? "show" : ""}`}
-          style={{ display: showLessons ? "block" : "none" }}
-        >
+      <div
+    className={`lessonList ${showLessons ? "show" : ""}`}
+    style={{ display: showLessons ? "block" : "none" }}
+    ref={lessonListRef} // Buraya ref'i ekleyin
+  >
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <span
               style={{
@@ -233,7 +281,7 @@ const subjectClickHandler = (subject) => {
           </div>
 
           <div style={{ marginTop: "15px" }}>
-            {lessons.map((lesson) => (
+            {lessons.map((lesson, key) => (
               <div key={lesson.id}>
                 <div
                   className={`lessonItem ${
@@ -244,14 +292,25 @@ const subjectClickHandler = (subject) => {
                   <span className="lessonItemText">
                     {lesson.lessonName || "Unnamed Lesson"}
                   </span>
-                  <img
-                    src={`${process.env.PUBLIC_URL}/truedone.svg`}
-                    alt="truedone"
-                    style={{
-                      width: "20px",
-                      height: "20px",
-                    }}
-                  />
+                  {isPaid || key === 0 ?  (
+      <img
+        src={`${process.env.PUBLIC_URL}/truedone.svg`}
+        alt="Correct"
+        style={{
+          width: "20px",
+          height: "20px",
+        }}
+      />
+    ) : (
+      <img
+        src={`${process.env.PUBLIC_URL}/false.svg`}
+        alt="Incorrect"
+        style={{
+          width: "20px",
+          height: "20px",
+        }}
+      />
+    )}
                   {openLessonId === lesson.id ? (
                     <img
                       src={process.env.PUBLIC_URL + "/asagi.svg"}
@@ -278,16 +337,16 @@ const subjectClickHandler = (subject) => {
     className="subjectContainer"
     key={subject.id}
     style={{ position: "relative", cursor: "pointer" }} 
-    onClick={() => subjectClickHandler(subject)} 
+    onClick={() => subjectClickHandler(subject, key)} 
   >
     <img
       src="videoimage.jpeg"
       alt="Thumbnail"
       className="smallThumbnail"
     />
-    {subject.videoResponse.locked ? (
+    {isPaid || key === 0 ?  (
       <img
-        src={`${process.env.PUBLIC_URL}/false.svg`}
+        src={`${process.env.PUBLIC_URL}/truedone.svg`}
         alt="Correct"
         style={{
           width: "20px",
@@ -299,7 +358,7 @@ const subjectClickHandler = (subject) => {
       />
     ) : (
       <img
-        src={`${process.env.PUBLIC_URL}/truedone.svg`}
+        src={`${process.env.PUBLIC_URL}/false.svg`}
         alt="Incorrect"
         style={{
           width: "20px",
@@ -453,6 +512,7 @@ const subjectClickHandler = (subject) => {
           )}
         </div>
       </div>
+      {showModal && <CustomModal onClose={handleCloseModal} />}
     </div>
   );
 };

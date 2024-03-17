@@ -37,7 +37,7 @@ function UserListTwo() {
   const giveAccessToUser = async (userId, videoId) => { 
     try {
       const response = await fetch(
-        `https://edurive.onrender.com/v1/access/${userId}/${videoId}`, 
+        `https://edurive.onrender.com/v1/access/${userId}`, 
         {
           method: "POST",
           headers: {
@@ -66,32 +66,14 @@ function UserListTwo() {
       <ul className="user-list">
         {users.map((user) => (
           <li key={user.id}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <span className="user-name">{user.name} {user.surname}</span>
-              <button onClick={() => toggleUserVisibility(user.id)}>
-                {visibleUsers[user.id] ? (
-                  <img style={{cursor: "pointer"}} src={process.env.PUBLIC_URL + "/asagi.svg"} alt="Aşağı" />
-                ) : (
-                  <img style={{cursor: "pointer"}}  src={process.env.PUBLIC_URL + "/yuxari.svg"} alt="Yukarı" />
-                )}
-              </button>
-            </div>
-            {visibleUsers[user.id] && (
-              <div>
-                {lessons.map((lesson) =>
-                  lesson.subjectResponse.map((subject) => (
-                    <div key={subject.id}>
-                      <button
-                        className="UserButton"
-                        onClick={() => giveAccessToUser(user.id, subject.videoResponse.id)}
-                      >
-                        {subject.videoResponse.title} İcazə Ver
-                      </button>
-                    </div>
-                  ))
-                )}
-              </div>
-            )}
+            <span className="user-name">{user.name} {user.surname}</span>
+            {/* Tüm kullanıcılara tek bir "İcazə Ver" butonu ile erişim veriyoruz */}
+            <button
+              className="UserButton"
+              onClick={() => giveAccessToUser(user.id)}
+            >
+              İcazə Ver
+            </button>
           </li>
         ))}
       </ul>

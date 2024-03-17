@@ -22,8 +22,8 @@ function ParolTwo() {
         "https://edurive.onrender.com/auth/login",
         formData
       );
-      if (response.data.accessToken) {
-        localStorage.setItem("userToken", response.data.accessToken);
+      if (response.data.tokenResponse.accessToken) {
+        localStorage.setItem("userToken", response.data.tokenResponse.accessToken);
         navigate("/lessonData?showModal=true");
       } else {
         console.error("Login failed, no token received.");

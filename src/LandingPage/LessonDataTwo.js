@@ -21,54 +21,46 @@ const LessonData = () => {
 
   const [showModal, setShowModal] = useState(false); 
   const lessonListRef = useRef(null); 
-  const [isPaid, setIsPaid] = useState(false)
 
 
   useEffect(() => {
     const fetchLessonData = async () => {
       try {
+      
+        const response = await axios.get("https://edurive.onrender.com/v1/lesson/");
+        const lessonsData = response.data;
+
        
-        const lessonsResponse = await axios.get("https://edurive.onrender.com/v1/lesson/");
-        const lessonsData = lessonsResponse.data;
-  
-        
         const anyVideoLocked = lessonsData.some(lesson =>
           lesson.subjectResponse.some(subject => subject.videoResponse.locked)
         );
-  
+
        
         setShowModal(anyVideoLocked);
-        const userId = localStorage.getItem('userId')
-  
-     
-        const userLessonsResponse = await axios.get(`https://edurive.onrender.com/v1/user/${userId}`);
-        const userLessonsData = userLessonsResponse.data.paid;
-        setIsPaid(userLessonsData)
       } catch (error) {
         console.error("Error fetching lessons:", error);
       }
     };
-  
+
     fetchLessonData();
   }, []);
-  
 
   const handleCloseModal = () => {
     setShowModal(false);
   };
 
   useEffect(() => {
- 
+   
     function handleClickOutside(event) {
       if (lessonListRef.current && !lessonListRef.current.contains(event.target)) {
         setShowLessons(false); 
       }
     }
 
-  
+   
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
-     
+      
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [showLessons]); 
@@ -189,12 +181,13 @@ const LessonData = () => {
 
  
 
-const subjectClickHandler = (subject, key) => {
-  if (isPaid || key===0) {
+const subjectClickHandler = (subject) => {
+  if (!subject.videoResponse.locked) {
     setSelectedSubject(subject);
     setSelectedQuiz(null);
     setPlayVideo(false);
   } else {
+  
     alert('Bu dərs kilidlidir.');
   }
 };
@@ -206,7 +199,7 @@ const subjectClickHandler = (subject, key) => {
   return (
     <div style={{ width: "75%", margin: "auto" }}>
       <div className="imageLogo">
-        <Link to="/firstPageTwo">
+        <Link to="/">
           <img
             src="/edurive.svg"
             alt="Novademy Logo"
@@ -227,7 +220,7 @@ const subjectClickHandler = (subject, key) => {
       <div
     className={`lessonList ${showLessons ? "show" : ""}`}
     style={{ display: showLessons ? "block" : "none" }}
-    ref={lessonListRef} // Buraya ref'i ekleyin
+    ref={lessonListRef} 
   >
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <span
@@ -281,7 +274,7 @@ const subjectClickHandler = (subject, key) => {
           </div>
 
           <div style={{ marginTop: "15px" }}>
-            {lessons.map((lesson, key) => (
+            {lessons.map((lesson) => (
               <div key={lesson.id}>
                 <div
                   className={`lessonItem ${
@@ -292,25 +285,14 @@ const subjectClickHandler = (subject, key) => {
                   <span className="lessonItemText">
                     {lesson.lessonName || "Unnamed Lesson"}
                   </span>
-                  {isPaid || key === 0 ?  (
-      <img
-        src={`${process.env.PUBLIC_URL}/truedone.svg`}
-        alt="Correct"
-        style={{
-          width: "20px",
-          height: "20px",
-        }}
-      />
-    ) : (
-      <img
-        src={`${process.env.PUBLIC_URL}/false.svg`}
-        alt="Incorrect"
-        style={{
-          width: "20px",
-          height: "20px",
-        }}
-      />
-    )}
+                  <img
+                    src={`${process.env.PUBLIC_URL}/truedone.svg`}
+                    alt="truedone"
+                    style={{
+                      width: "20px",
+                      height: "20px",
+                    }}
+                  />
                   {openLessonId === lesson.id ? (
                     <img
                       src={process.env.PUBLIC_URL + "/asagi.svg"}
@@ -337,16 +319,16 @@ const subjectClickHandler = (subject, key) => {
     className="subjectContainer"
     key={subject.id}
     style={{ position: "relative", cursor: "pointer" }} 
-    onClick={() => subjectClickHandler(subject, key)} 
+    onClick={() => subjectClickHandler(subject)} 
   >
     <img
       src="videoimage.jpeg"
       alt="Thumbnail"
       className="smallThumbnail"
     />
-    {isPaid || key === 0 ?  (
+    {subject.videoResponse.locked ? (
       <img
-        src={`${process.env.PUBLIC_URL}/truedone.svg`}
+        src={`${process.env.PUBLIC_URL}/false.svg`}
         alt="Correct"
         style={{
           width: "20px",
@@ -358,7 +340,7 @@ const subjectClickHandler = (subject, key) => {
       />
     ) : (
       <img
-        src={`${process.env.PUBLIC_URL}/false.svg`}
+        src={`${process.env.PUBLIC_URL}/truedone.svg`}
         alt="Incorrect"
         style={{
           width: "20px",
@@ -382,24 +364,14 @@ const subjectClickHandler = (subject, key) => {
                 {openLessonId === lesson.id && (
                   <>
                     {lesson.quizResponse && (
-                    <div
-                    className="quizNameContainer"
-                    onClick={() => {
-                      
-                      if (!isPaid && key !== 0) {
-                        alert('Bu quiz kilididir. Lütfen ödeme yapınız.');
-                      } else {
-                       
-                        setSelectedQuiz(lesson.quizResponse);
-                      }
-                    }}
-                  >
-                    <span className="quizName">
-                      {lesson.quizResponse.quizName}
-                    </span>
-                  </div>
-                  
-                   
+                      <div
+                        className="quizNameContainer"
+                        onClick={() => setSelectedQuiz(lesson.quizResponse)}
+                      >
+                        <span className="quizName">
+                          {lesson.quizResponse.quizName}
+                        </span>
+                      </div>
                     )}
                   </>
                 )}
@@ -412,12 +384,12 @@ const subjectClickHandler = (subject, key) => {
             <>
               <div className="ContainerHomeKabinet">
                 <div className="lessonNameTextHome">
-                  <Link to="/firstPageTwo"
-                    style={{ color: "#1F203F", cursor: "pointer", textDecoration: "none" }}
-                   
+                  <span
+                    style={{ color: "#1F203F", cursor: "pointer" }}
+                    onClick={() => resetToInitialState()}
                   >
                     Əsas səhifə
-                  </Link>
+                  </span>
 
                   <img src={`${process.env.PUBLIC_URL}/left.svg`} alt="left" />
                   <span

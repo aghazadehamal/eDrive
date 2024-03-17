@@ -34,7 +34,7 @@ function UserListTwo() {
     }));
   };
 
-  const giveAccessToUser = async (userId, videoId) => { 
+  const giveAccessToUser = async (userId) => {
     try {
       const response = await fetch(
         `https://edurive.onrender.com/v1/access/${userId}`, 
@@ -48,6 +48,9 @@ function UserListTwo() {
   
       if (response.ok) {
         alert("İcazə verildi");
+        setUsers(users.map(user => 
+          user.id === userId ? {...user, paid: true} : user
+        ));
       } else {
         alert("İcazə verilərkən xəta yarandı");
       }
@@ -55,6 +58,7 @@ function UserListTwo() {
       console.error("Hata:", error);
     }
   };
+  
   
 
   return (
@@ -64,19 +68,25 @@ function UserListTwo() {
       </Link>
       <h2 style={{ marginTop: "30px" }}>İstifadəçi siyahısı</h2>
       <ul className="user-list">
-        {users.map((user) => (
-          <li key={user.id}>
-            <span className="user-name">{user.name} {user.surname}</span>
-      
-            <button
-              className="UserButton"
-              onClick={() => giveAccessToUser(user.id)}
-            >
-              İcazə Ver
-            </button>
-          </li>
-        ))}
-      </ul>
+  {users.map((user) => (
+    <li key={user.id}>
+      <span className="user-name">{user.name} {user.surname}</span>
+      {user.paid ? (
+        <button style={{backgroundColor: "red"}} className="UserButton granted" disabled>
+          İcazə Verildi
+        </button>
+      ) : (
+        <button
+          className="UserButton"
+          onClick={() => giveAccessToUser(user.id)}
+        >
+          İcazə Ver
+        </button>
+      )}
+    </li>
+  ))}
+</ul>
+
     </div>
   
   );

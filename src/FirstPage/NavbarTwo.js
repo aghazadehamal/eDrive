@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 
 
 function NavbarTwo() {
@@ -41,6 +41,10 @@ function NavbarTwo() {
         >
           Mentor haqqında
         </a>
+
+        <Link to="/lessonData"  style={{textDecoration: "none"}} className="quizRestart"  >
+                Kabinetim
+                </Link>
       </nav>
      
     </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import './UserProfile.css';
-
+import { Link } from 'react-router-dom';
 
 class UserProfile extends React.Component {
   render() {
@@ -37,7 +37,9 @@ class UserProfile extends React.Component {
         </div>
       </div>
 
-
+      <Link onClick={() => localStorage.clear()} to="/" className="logoutLink">
+        Çıxış
+      </Link>
       </div>
    
     );

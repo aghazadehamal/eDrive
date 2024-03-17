@@ -382,14 +382,24 @@ const subjectClickHandler = (subject, key) => {
                 {openLessonId === lesson.id && (
                   <>
                     {lesson.quizResponse && (
-                      <div
-                        className="quizNameContainer"
-                        onClick={() => setSelectedQuiz(lesson.quizResponse)}
-                      >
-                        <span className="quizName">
-                          {lesson.quizResponse.quizName}
-                        </span>
-                      </div>
+                    <div
+                    className="quizNameContainer"
+                    onClick={() => {
+                      // Eğer ödeme yapılmamışsa ve bu ilk quiz değilse, uyarı göster
+                      if (!isPaid && key !== 0) {
+                        alert('Bu quiz kilididir. Lütfen ödeme yapınız.');
+                      } else {
+                        // Aksi takdirde, yani ödeme yapılmışsa veya bu ilk quiz ise, quiz'i seç
+                        setSelectedQuiz(lesson.quizResponse);
+                      }
+                    }}
+                  >
+                    <span className="quizName">
+                      {lesson.quizResponse.quizName}
+                    </span>
+                  </div>
+                  
+                   
                     )}
                   </>
                 )}

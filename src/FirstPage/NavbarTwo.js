@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import "./NavbarTwo.css";
 
 function NavbarTwo() {
   const scrollToSection = (event, sectionId) => {
@@ -12,6 +12,7 @@ function NavbarTwo() {
   };
 
   return (
+  
     <div className="customNavbar">
       <img
         src="/edurive.svg"
@@ -41,12 +42,12 @@ function NavbarTwo() {
         >
           Mentor haqqında
         </a>
-
-        <Link to="/lessonData"  style={{textDecoration: "none"}} className="quizRestart"  >
+      </nav>
+      <div className="customButtons">
+      <Link to="/lessonData"  style={{textDecoration: "none"}} className="quizRestart"  >
                 Kabinetim
                 </Link>
-      </nav>
-     
+      </div>
     </div>
   );
 }

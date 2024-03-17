@@ -12,7 +12,7 @@ import LearnDrivingSection from "../LandingPage/LearnDrivingSection/LearnDriving
 
 function FirstPage() {
   return (
-    <div>
+    <div className="firstPageDiv">
       <Navbar />
       <CampaignSection />
       <Videos />

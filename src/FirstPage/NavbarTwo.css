@@ -1,0 +1,104 @@
+.customNavbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+  }
+  
+  .customLogo,
+  .customNavbar img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .customNavLink {
+    margin: 30px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .customButtons {
+    display: flex;
+  }
+  
+  .customBtn {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .customLogin {
+    color: #50bb27;
+    border-radius: 8px;
+    height: 40px;
+    font-size: 16px;
+    background-color: white;
+  }
+  
+  .customRegister {
+    background-color: #50bb27;
+    color: white;
+    border-radius: 12px;
+    width: 158px;
+    height: 40px;
+  }
+  
+  .customRegister:hover {
+    background-color: #3c951b;
+  }
+  
+  @media (max-width: 768px) {
+    .customNavbar {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .customNavLink {
+      margin: 10px;
+    }
+  
+    .customButtons {
+      flex-direction: column;
+    }
+  
+    .customLogo,
+    .customNavbar img {
+      max-width: 80%;
+    }
+  
+    .customNav {
+      margin-top: 10px;
+      display: contents;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .customNavbar {
+      padding: 15px;
+    }
+  
+    .customNavLink,
+    .customBtn {
+      margin: 15px 10px;
+    }
+  
+    .customLogo,
+    .customNavbar img {
+      max-width: 90%;
+    }
+  
+    .customNavbar {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .customNav {
+      margin-top: 10px;
+    }
+  }
+  

@@ -303,8 +303,8 @@ const subjectClickHandler = (subject, key) => {
       />
     ) : (
       <img
-        src={`${process.env.PUBLIC_URL}/false.svg`}
-        alt="Incorrect"
+        src={`${process.env.PUBLIC_URL}/lock.svg`}
+        alt="lock"
         style={{
           width: "20px",
           height: "20px",
@@ -358,8 +358,8 @@ const subjectClickHandler = (subject, key) => {
       />
     ) : (
       <img
-        src={`${process.env.PUBLIC_URL}/false.svg`}
-        alt="Incorrect"
+        src={`${process.env.PUBLIC_URL}/lock.svg`}
+        alt="lock"
         style={{
           width: "20px",
           height: "20px",
@@ -376,10 +376,7 @@ const subjectClickHandler = (subject, key) => {
     </div>
   </div>
 ))}
-
-                  </div>
-                )}
-                {openLessonId === lesson.id && (
+ {openLessonId === lesson.id && (
                   <>
                     {lesson.quizResponse && (
                     <div
@@ -394,15 +391,57 @@ const subjectClickHandler = (subject, key) => {
                       }
                     }}
                   >
-                    <span className="quizName">
+
+                    <div className="containerScreenQuiz">
+                    <img
+      src="screenquiz.png"
+      alt="Thumbnail"
+      className="screenQuiz"
+    />
+
+{isPaid || key === 0 ?  (
+      <img
+        src={`${process.env.PUBLIC_URL}/truedone.svg`}
+        alt="Correct"
+        style={{
+          width: "20px",
+          height: "20px",
+          position: "absolute",
+          top: "5px",
+          left: "10px",
+        }}
+      />
+    ) : (
+      <img
+        src={`${process.env.PUBLIC_URL}/lock.svg`}
+        alt="lock"
+        style={{
+          width: "20px",
+          height: "20px",
+          position: "absolute",
+          top: "5px",
+          left: "10px",
+        }}
+      />
+    )}
+                    <h5 className="quizName">
+                   
+
                       {lesson.quizResponse.quizName}
-                    </span>
+                    </h5>
+
+                    </div>
+                   
                   </div>
                   
                    
                     )}
                   </>
                 )}
+
+                  </div>
+                )}
+               
               </div>
             ))}
           </div>

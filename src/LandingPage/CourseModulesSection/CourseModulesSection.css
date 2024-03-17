@@ -39,6 +39,7 @@
 .customAccordionContent p {
   text-align: left;
   margin: 0;
+  color: black;
 }
 
 .customRegisterButton {

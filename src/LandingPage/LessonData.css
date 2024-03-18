@@ -182,6 +182,11 @@ margin-left: 5px;
   height: 111px;
 }
 
+.cabinetIcon {
+ 
+  cursor: pointer;
+}
+
 
 
 .videoDetails video {
@@ -195,6 +200,11 @@ margin-left: 5px;
 
 .videoDetails {
   position: relative;
+}
+
+.imageLogoSecondImage {
+  width: 48px;
+  height: 48px;
 }
 
 .logoutLink {
@@ -240,6 +250,7 @@ margin-left: 5px;
     transform: translateX(100%);
     opacity: 0;
   }
+ 
 }
 
 
@@ -296,15 +307,24 @@ margin-left: 5px;
 
 @media (max-width: 600px) {
   .lessonNameText {
-    font-size: 20px;
+    font-size: 14px;
     line-height: 30px;
     margin-top: 5px;
+  }
+
+  .imageLogoFirstImage {
+    width: 160px;
+  }
+  .imageLogoSecondImage {
+    width: 30px;
+    height: 30px;
   }
   .containerPaginationLessonNameText {
     display: block;
   }
   .containerPaginationLogo {
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    text-align: left;
   }
   .video-thumbnailTwo {
     display: block;
@@ -316,13 +336,30 @@ margin-left: 5px;
     height: auto;
   }
 
-  .lessonNameTextHome {
+  /* .lessonNameTextHome {
     font-size: 9px;
    
-  }
+  } */
 .playIconImage {
   width: 60px;
   height: 60px;
+}
+
+.displayOne {
+  display: none;
+}
+.displayTwo {
+  display: none;
+}
+.displayThree {
+  display: none;
+}
+.displayFour {
+  display: none;
+}
+
+.cabinetIcon {
+  margin-top: 0px;
 }
   
 }
@@ -337,6 +374,29 @@ margin-left: 5px;
     width: 100%;
     height: auto;
   }
+
+  
+}
+
+@media (min-width: 600px) and (max-width: 1212px) {
+  .displayOne {
+    display: none;
+  }
+  .displayTwo {
+    display: none;
+  }
+  .displayThree {
+    display: none;
+  }
+  .displayFour {
+    display: none;
+  }
+  
+  .cabinetIcon {
+    margin-top: 0px;
+  }
+
+  
 }
 
 @media (min-width: 1701px) {

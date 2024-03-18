@@ -108,6 +108,10 @@
   .uniqueTime {
     margin: 10px 0;
   }
+  
+  .uniqueCampaignSectionpTwo {
+    width: 80%;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {

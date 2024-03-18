@@ -207,7 +207,7 @@ const subjectClickHandler = (subject, key) => {
     <div style={{ width: "75%", margin: "auto" }}>
       <div className="imageLogo">
         <Link to="/firstPageTwo">
-          <img
+          <img className="imageLogoFirstImage"
             src="/edurive.svg"
             alt="Novademy Logo"
             style={{ maxWidth: "250px" }}
@@ -215,10 +215,10 @@ const subjectClickHandler = (subject, key) => {
         </Link>
 
         <Link to="/profileCard">
-          <img
+          <img className="imageLogoSecondImage"
             src={`${process.env.PUBLIC_URL}/Avatar.svg`}
             alt="Clock Icon"
-            style={{ width: "48px", height: "48px" }}
+           
           />
         </Link>
       </div>
@@ -465,15 +465,15 @@ const subjectClickHandler = (subject, key) => {
                   >
                     Kabinetim
                   </span>
-                  <img src={`${process.env.PUBLIC_URL}/left.svg`} alt="left" />
-                  <span
+                  <img className="displayOne" src={`${process.env.PUBLIC_URL}/left.svg`} alt="left" />
+                  <span className="displayTwo"
                     onClick={() => resetToInitialState()}
                     style={{ color: "#1F203F", cursor: "pointer" }}
                   >
                     {selectedLessonName}
                   </span>
-                  <img src={`${process.env.PUBLIC_URL}/left.svg`} alt="left" />
-                  <span
+                  <img className="displayThree" src={`${process.env.PUBLIC_URL}/left.svg`} alt="left" />
+                  <span className="displayFour"
                     // onClick={() => resetToInitialState()}
                     style={{ color: "#6E6E81", cursor: "pointer" }}
                   >
@@ -481,8 +481,8 @@ const subjectClickHandler = (subject, key) => {
                   </span>
                 </div>
 
-                <img
-                  style={{ marginTop: "10px", cursor: "pointer" }}
+                <img className="cabinetIcon"
+                  
                   onClick={toggleLessons}
                   src={`${process.env.PUBLIC_URL}/Cabinet.svg`}
                   alt="Cabinet"

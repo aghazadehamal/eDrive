@@ -22,7 +22,10 @@
 }
 
 .customButtons {
-  display: flex;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
 }
 
 .customBtn {
@@ -75,6 +78,9 @@
     margin-top: 10px;
     display: contents;
   }
+  .avatarAdmin {
+    margin-top: 10px;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -100,4 +106,5 @@
   .customNav {
     margin-top: 10px;
   }
+  
 }

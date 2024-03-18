@@ -89,6 +89,8 @@
       margin-top: 10px;
       display: contents;
     }
+
+    
   }
   
   @media (min-width: 769px) and (max-width: 1024px) {
@@ -112,6 +114,10 @@
     }
   
     .customNav {
+      margin-top: 10px;
+    }
+
+    .customButtons {
       margin-top: 10px;
     }
   }

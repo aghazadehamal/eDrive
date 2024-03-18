@@ -51,7 +51,7 @@ function Navbar() {
           <button className="customBtn customRegister">Qeydiyyatdan keç</button>
         </Link>
         <Link to="/loginFormAdmin">
-          <img
+          <img className="avatarAdmin"
             src={`${process.env.PUBLIC_URL}/Avatar.svg`}
             alt="Clock Icon"
             style={{ width: "43px", height: "38px", marginLeft: "5px" }}

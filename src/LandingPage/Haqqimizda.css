@@ -166,6 +166,13 @@
     }
   }
 
+  @media (max-width: 420px) {
+    .learn-haqqimizda-content {
+      height: 700px;
+  }
+    
+  }
+
   @media (min-width: 769px) and (max-width: 1140px) {
     .haqqimizda-instructor img {
       

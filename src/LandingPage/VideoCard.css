@@ -89,4 +89,9 @@
   .videoCardWrapper p {
     margin-bottom: 20px;
   }
+  
+  .videoWithHeight {
+    width: 100%;
+    height: auto;
+  }
 }

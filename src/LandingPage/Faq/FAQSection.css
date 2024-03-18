@@ -38,6 +38,7 @@
 
 .uniqueFaqItem.uniqueOpen .uniqueFaqAnswer {
   display: block;
+ 
 }
 
 .uniqueFaqContact {
@@ -79,11 +80,15 @@
 
 .uniqueFaqItemOpen {
   background-color: #e8f5e9;
+  border: solid #BCBCC3;
+    border-radius: 16px;
 }
 
 .uniqueFaqQuestion {
   cursor: pointer;
 }
+
+
 
 .uniqueFaqQuestion:hover,
 .uniqueFaqItemOpen .uniqueFaqQuestion {

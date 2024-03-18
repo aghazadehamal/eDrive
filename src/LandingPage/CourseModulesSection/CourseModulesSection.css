@@ -16,6 +16,8 @@
   overflow: hidden;
 }
 
+
+
 .customAccordionHeader {
   cursor: pointer;
   padding: 15px 20px;
@@ -69,15 +71,17 @@
 
 .customOpen {
   background-color: #50bb27 !important;
+  border-radius: 16px;
+  border: solid #BCBCC3;
 }
 
 .customOpen .customAccordionHeader {
   background-color: #50bb27;
 }
 
-.customAccordion:hover {
+/* .customAccordion:hover {
   background-color: #50bb27;
-}
+} */
 
 .customAccordionHeader:hover {
   background-color: #50bb27;

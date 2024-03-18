@@ -53,9 +53,9 @@ const FooterTwo = () => {
           </li>
           <li>
             <a
-              href="#courses"
+              href="#faq"
               className="customNavLink"
-              onClick={(e) => scrollToSection(e, "courses")}
+              onClick={(e) => scrollToSection(e, "faq")}
             >
               FAQ
             </a>

@@ -9,6 +9,7 @@ import Videos from "../LandingPage/Videos";
 import WhyUsSection from "../LandingPage/WhyUsSection";
 
 import LearnDrivingSection from "../LandingPage/LearnDrivingSection/LearnDrivingSection";
+import Haqqimizda from "../LandingPage/Haqqimizda";
 
 function FirstPage() {
   return (
@@ -17,6 +18,7 @@ function FirstPage() {
       <CampaignSection />
       <Videos />
       <WhyUsSection />
+      <Haqqimizda/>
       <CourseModulesSection />
       <LearnDrivingSection />
 

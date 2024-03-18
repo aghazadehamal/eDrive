@@ -35,7 +35,7 @@ const FAQItem = ({ question, answer }) => {
 const FAQSectionTwo = () => {
   const [showContactInfo, setShowContactInfo] = useState(false);
   return (
-    <div id="courses" className="uniqueFaqSection">
+    <div id="faq" className="uniqueFaqSection">
       <span className="spanFirst">FAQ</span>
 
       <div style={{ marginTop: "40px" }}>

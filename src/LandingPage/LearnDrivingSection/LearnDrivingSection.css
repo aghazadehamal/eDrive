@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   background: #fff;
+
 }
 
 .learn-driving-header {
@@ -12,34 +13,66 @@
 .learn-driving-content {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   padding: 20px;
   margin-top: 90px;
+  height: 737px;
+  background-color: #1F203F;
 }
 
 .learn-driving-info {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr); */
   gap: 24px;
   padding: 20px 0;
-  width: 744px;
+  width: 544px;
   height: 234px;
   border-radius: 24px;
 }
 
+.learn-driving-instructor {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* İçerikleri dikey olarak en alta hizalar */
+  height: 100%; /* Gerekirse konteynerin yüksekliğini ayarlayın */
+}
+
+
+.teacherPhoto {
+  width: 552px;
+  height: 597px;
+  margin-bottom: 20px; /* Aşağıdan 20px boşluk */
+}
+
+
+.info-item p:first-of-type {
+  /* İlk p etiketine uygulanacak stiller */
+  
+font-weight: 700;
+font-size: 20px;
+line-height: 30px;
+}
+
+
 .learn-driving-three {
   text-align: left;
+  width: 486px;
 }
 
 .info-item {
-  border-radius: 20px;
-  padding: 12px;
+  /* border-radius: 20px; */
+ 
   display: flex;
   align-items: center;
   gap: 10px;
-  width: 360px;
+  width: 455px;
   height: 105px;
-  border: 1px solid #bcbcc3;
+  text-align: left;
+  /* border: 1px solid #bcbcc3; */
+}
+
+.containerİnfoİtem {
+  margin-left: 10px;
 }
 
 .info-item img.info-icon {
@@ -52,9 +85,10 @@
 }
 
 .learn-driving-two {
-  width: 744px;
+  width: 544px;
   height: 385px;
   border-radius: 16px;
+  margin-top: 50px;
 }
 
 .learn-driving-two span,
@@ -78,7 +112,7 @@
   .learn-driving-info {
     grid-template-columns: 1fr;
     width: auto;
-    padding: 20px;
+   
   }
 
   .info-item {
@@ -101,9 +135,13 @@
     line-height: 21px;
   }
 
-  .learn-driving-content {
-    flex-direction: column;
+  .learn-driving-three {
+   width: 100%;
   }
+
+  /* .learn-driving-content {
+    flex-direction: column;
+  } */
 
   .learn-driving-instructor img {
     order: 2;
@@ -132,4 +170,11 @@
   .learn-driving-two p {
     font-size: 15px;
   }
+
+  .teacherPhoto {
+    width: 352px;
+    height: 397px;
+    margin-bottom: 20px; /* Aşağıdan 20px boşluk */
+  }
+  
 }

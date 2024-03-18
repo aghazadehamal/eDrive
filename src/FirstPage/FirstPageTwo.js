@@ -10,6 +10,7 @@ import WhyUsSection from "../LandingPage/WhyUsSection";
 
 import LearnDrivingSection from "../LandingPage/LearnDrivingSection/LearnDrivingSection";
 import NavbarTwo from "./NavbarTwo";
+import Haqqimizda from "../LandingPage/Haqqimizda";
 
 function FirstPageTwo() {
   return (
@@ -18,6 +19,7 @@ function FirstPageTwo() {
       <CampaignSection />
       <Videos />
       <WhyUsSection />
+      <Haqqimizda/>
       <CourseModulesSection />
       <LearnDrivingSection />
 

@@ -7,7 +7,7 @@ const Haqqimizda = () => {
    <div style={{backgroundColor: "#1F203F"}}>
      <div id="courses" className="learn-haqqimizda-content">
      <div className="haqqimizda-instructor">
-        <img className="haqqimizdaphoto" src="/haqqimizdaphoto.jpeg" alt="haqqimizdaphoto" />
+        <img className="haqqimizdaphoto" src="/haqqimizdaphototwo.jpeg" alt="haqqimizdaphototwo" />
       </div>
       <div className="learn-haqqimizda-two">
         <div className="learn-haqqimizda-three">

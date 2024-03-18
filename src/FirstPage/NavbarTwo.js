@@ -44,7 +44,7 @@ function NavbarTwo() {
         </a>
       </nav>
       <div className="customButtons">
-      <Link to="/lessonData"  style={{textDecoration: "none"}} className="quizRestart"  >
+      <Link to="/lessonData"  style={{textDecoration: "none"}} className="kabinetim"  >
                 Kabinetim
                 </Link>
       </div>

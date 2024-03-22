@@ -7,6 +7,10 @@
   height: 426px;
 }
 
+.customNavLink:hover {
+  color: #50BB27;
+}
+
 .footer-nav .nav-list {
   list-style: none;
   padding: 0;
@@ -28,7 +32,7 @@
 }
 
 .footer-nav .nav-list li a:hover {
-  color: #f1c40f;
+  color: #50BB27
 }
 
 .footer-content {

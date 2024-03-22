@@ -27,23 +27,27 @@ const LessonData = () => {
   useEffect(() => {
     const fetchLessonData = async () => {
       try {
-       
         const lessonsResponse = await axios.get("https://edurive.onrender.com/v1/lesson/");
         const lessonsData = lessonsResponse.data;
   
-        
-        const anyVideoLocked = lessonsData.some(lesson =>
-          lesson.subjectResponse.some(subject => subject.videoResponse.locked)
+        const userId = localStorage.getItem('userId');
+        const userLessonsResponse = await axios.get(`https://edurive.onrender.com/v1/user/${userId}`);
+        const userPaidStatus = userLessonsResponse.data.paid;
+  
+        // Ödeme durumuna göre modalın gösterilip gösterilmeyeceğini belirleme
+        const anyVideoRequiresPaid = lessonsData.some(lesson =>
+          lesson.subjectResponse.some(subject => subject.videoResponse.requiresPaid)
         );
   
-       
-        setShowModal(anyVideoLocked);
-        const userId = localStorage.getItem('userId')
+        // Modalı sadece ilk ziyarette göstermek için kontrol
+        const showModalOnceKey = 'showModalOnce';
+        const hasModalBeenShown = localStorage.getItem(showModalOnceKey);
   
-     
-        const userLessonsResponse = await axios.get(`https://edurive.onrender.com/v1/user/${userId}`);
-        const userLessonsData = userLessonsResponse.data.paid;
-        setIsPaid(userLessonsData)
+        if (!hasModalBeenShown && !userPaidStatus && anyVideoRequiresPaid) {
+          setShowModal(true);
+          // Modal gösterildi olarak işaretle
+          localStorage.setItem(showModalOnceKey, 'true');
+        }
       } catch (error) {
         console.error("Error fetching lessons:", error);
       }
@@ -51,6 +55,10 @@ const LessonData = () => {
   
     fetchLessonData();
   }, []);
+  
+  
+  
+  
   
 
   const handleCloseModal = () => {
@@ -205,6 +213,7 @@ const subjectClickHandler = (subject, key) => {
 
   return (
     <div style={{ width: "75%", margin: "auto" }}>
+      
       <div className="imageLogo">
         <Link to="/firstPageTwo">
           <img className="imageLogoFirstImage"
@@ -214,7 +223,7 @@ const subjectClickHandler = (subject, key) => {
           />
         </Link>
 
-        <Link to="/profileCard">
+        <Link to="/userDetails">
           <img className="imageLogoSecondImage"
             src={`${process.env.PUBLIC_URL}/Avatar.svg`}
             alt="Clock Icon"
@@ -224,9 +233,10 @@ const subjectClickHandler = (subject, key) => {
       </div>
 
       <div className="lessonsContainer">
+      {showLessons && <div className="overlay" onClick={() => setShowLessons(false)}></div>}
       <div
     className={`lessonList ${showLessons ? "show" : ""}`}
-    style={{ display: showLessons ? "block" : "none" }}
+    style={{ display: showLessons ? "block" : "none", zIndex: "101" }}
     ref={lessonListRef} 
   >
           <div style={{ display: "flex", justifyContent: "space-between" }}>

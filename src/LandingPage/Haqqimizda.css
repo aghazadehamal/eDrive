@@ -50,7 +50,6 @@
   
   
   .info-item p:first-of-type {
-    /* İlk p etiketine uygulanacak stiller */
     
   font-weight: 700;
   font-size: 20px;
@@ -203,7 +202,7 @@
     .teacherPhoto {
       width: 352px;
       height: 397px;
-      margin-bottom: 20px; /* Aşağıdan 20px boşluk */
+      margin-bottom: 20px; 
     }
     
   }

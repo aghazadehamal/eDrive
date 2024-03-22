@@ -23,6 +23,7 @@ import Parol from "./registration/Parol";
 import ParolTwo from "./registration/ParolTwo";
 import VideoQuiz from './LandingPage/VideoQuiz';
 import FirstPageTwo from './FirstPage/FirstPageTwo';
+import UserDetails from './LandingPage/UserDetails';
 
 function App() {
   return (
@@ -63,6 +64,7 @@ function App() {
             <Route path="/ParolTwo" element={<ParolTwo />} />
             <Route path="/VideoQuiz" element={<VideoQuiz />} />
             <Route path="/firstPageTwo" element={<FirstPageTwo />} />
+            <Route path="/userDetails" element={<UserDetails />} />
           </Routes>
         </div>
       </Router>

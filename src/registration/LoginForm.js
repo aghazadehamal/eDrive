@@ -22,11 +22,19 @@ function LoginForm() {
         "https://edurive.onrender.com/auth/login",
         formData
       );
-      if (response.data.tokenResponse.accessToken) {
-        localStorage.setItem("userToken", response.data.tokenResponse.accessToken);
-        localStorage.setItem("userId", response.data.userResponse.id);
-        navigate("/lessonData?showModal=true");
-      } else {
+     if (response.data.tokenResponse.accessToken) {
+  localStorage.setItem("userToken", response.data.tokenResponse.accessToken);
+  localStorage.setItem("userId", response.data.userResponse.id);
+  localStorage.setItem("userEmail", response.data.userResponse.gmail);
+  localStorage.setItem("userId", response.data.userResponse.id.toString());
+  localStorage.setItem("userName", response.data.userResponse.name);
+  localStorage.setItem("userSurname", response.data.userResponse.surname);
+  localStorage.setItem("userPaid", response.data.userResponse.paid.toString());
+  localStorage.setItem("userPhone", response.data.userResponse.phoneNumber);
+  
+  navigate("/lessonData?showModal=true");
+}
+else {
         console.error("Giriş uğursuz, token alınamadı.");
       }
     } catch (error) {

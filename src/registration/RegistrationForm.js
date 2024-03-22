@@ -13,7 +13,7 @@ function RegistrationForm() {
     phoneNumber: "",
   });
 
-  // const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   // const [error, setError] = useState("");
 
@@ -43,10 +43,12 @@ function RegistrationForm() {
         formData
       );
       console.log(response.data);
-      alert("Qeydiyyat uğurla tamamlandı! Giriş edə bilərsiniz.");
+      // alert("Qeydiyyat uğurla tamamlandı! Giriş edə bilərsiniz.");
+      setIsSubmitted(true); 
       setIsLoading(false);
       localStorage.setItem("userId", response.data.id);
-      navigate("/lessonData");
+      localStorage.setItem("userToken", response.data.id);
+
     } catch (error) {
       setIsLoading(false);
 
@@ -145,16 +147,16 @@ function RegistrationForm() {
           </div>
           {/* {error && <p className="error">{error}</p>} */}
         </form>
-        {/* {isSubmitted && (
+        {isSubmitted && (
           <div className="modal-overlay">
             <div className="modal-content">
-              <div className="success-icon">✓</div>
+            <div> <img src={process.env.PUBLIC_URL + '/success.svg'} alt="Clock Icon"/></div>
               <span className="modal-title">Müraciətiniz qeydə alındı</span>
               <p className="modal-message">
-                Siz hələ hazırda saytın free versiyasına yönləndirilirsiniz.
+                Siz hal hazırda saytın free versiyasına yönləndirilirsiniz.
                 Qeydiyyatınız təsdiqləndikdən sonra limitlər aradan qaldırılacaq
               </p>
-              <Link to="/lessonss">
+              <Link to="/lessonData">
                 <button
                   className="modal-button"
                   onClick={() => setIsSubmitted(false)}
@@ -164,7 +166,7 @@ function RegistrationForm() {
               </Link>
             </div>
           </div>
-        )} */}
+        )}
       </div>
     </div>
   );

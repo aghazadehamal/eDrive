@@ -8,7 +8,7 @@ const VideoCard = ({ url, thumbnail, onVideoSelect, isSelected }) => {
         {!isSelected && (
           <>
             <img
-            src={thumbnail} // Her video için farklı bir thumbnail gösteriliyor
+            src={thumbnail} 
             alt="Video Thumbnail"
             className="video-thumbnail"
           />

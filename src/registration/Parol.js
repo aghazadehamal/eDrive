@@ -5,11 +5,11 @@ import "./Parol.css";
 
 function Parol() {
   const [formData, setFormData] = useState({
-    gmail: "",
-    password: "",
+    email: "",
+    
   });
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,16 +18,10 @@ function Parol() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        "https://edurive.onrender.com/auth/login",
-        formData
+      const response = await axios.put(
+        `https://edurive.onrender.com/auth/forgot-password?email=${formData.email}`,
       );
-      if (response.data.tokenResponse.accessToken) {
-        localStorage.setItem("userToken", response.data.tokenResponse.accessToken);
-        navigate("/lessonData?showModal=true");
-      } else {
-        console.error("Login failed, no token received.");
-      }
+    
     } catch (error) {
       console.error("An error occurred during login:", error);
     }
@@ -48,16 +42,16 @@ function Parol() {
         <p>E-mail</p>
         <input
           type="email"
-          name="gmail"
-          value={formData.gmail}
+          name="email"
+          value={formData.email}
           onChange={handleChange}
           placeholder="E-mailinizi əlavə edin"
           required
         />
 
-        <Link to="/ParolTwo" style={{ textDecoration: "none" }}>
+        {/* <Link to="/ParolTwo" style={{ textDecoration: "none" }}> */}
           <button type="submit">Göndər</button>
-        </Link>
+        {/* </Link> */}
       </form>
     </div>
   );

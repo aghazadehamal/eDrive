@@ -61,7 +61,7 @@ function App() {
             <Route path="/UserListTwo" element={<UserListTwo />} />
 
             <Route path="/Parol" element={<Parol />} />
-            <Route path="/ParolTwo" element={<ParolTwo />} />
+            <Route path="/ChangePassword" element={<ParolTwo />} />
             <Route path="/VideoQuiz" element={<VideoQuiz />} />
             <Route path="/firstPageTwo" element={<FirstPageTwo />} />
             <Route path="/userDetails" element={<UserDetails />} />

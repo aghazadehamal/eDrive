@@ -23,7 +23,6 @@ const LessonData = () => {
   const lessonListRef = useRef(null); 
   const [isPaid, setIsPaid] = useState(false)
 
-
   useEffect(() => {
     const fetchLessonData = async () => {
       try {
@@ -34,12 +33,15 @@ const LessonData = () => {
         const userLessonsResponse = await axios.get(`https://edurive.onrender.com/v1/user/${userId}`);
         const userPaidStatus = userLessonsResponse.data.paid;
   
-        // Ödeme durumuna göre modalın gösterilip gösterilmeyeceğini belirleme
+        // Kullanıcının ödeme durumunu state'e ayarlama
+        setIsPaid(userPaidStatus);
+  
+        // Ödeme durumuna ve ders videolarının erişim gereksinimlerine göre modalın gösterilip gösterilmeyeceğini belirleme
         const anyVideoRequiresPaid = lessonsData.some(lesson =>
           lesson.subjectResponse.some(subject => subject.videoResponse.requiresPaid)
         );
   
-        // Modalı sadece ilk ziyarette göstermek için kontrol
+        // Modalı sadece ilk ziyarette ve gerektiğinde göstermek için kontrol
         const showModalOnceKey = 'showModalOnce';
         const hasModalBeenShown = localStorage.getItem(showModalOnceKey);
   
@@ -55,6 +57,9 @@ const LessonData = () => {
   
     fetchLessonData();
   }, []);
+  
+  
+  
   
   
   

@@ -39,3 +39,13 @@ input:focus {
   outline: none;
 }
 
+
+
+
+.loadingText {
+  color: #000; /* Siyah metin rengi */
+  text-align: center; /* Metni ortalar */
+  font-size: 20px; /* Yazı tipi boyutu */
+  font-family: 'Arial', sans-serif; /* Yazı tipi */
+  margin-top: 20px; /* Üstten boşluk */
+}

@@ -5,11 +5,11 @@ import "./ParolTwo.css";
 
 function ParolTwo() {
   const [formData, setFormData] = useState({
-    gmail: "",
-    password: "",
+    email: "",
+    newPassword: "",
   });
 
-  const navigate = useNavigate();
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,16 +18,12 @@ function ParolTwo() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        "https://edurive.onrender.com/auth/login",
-        formData
+      const response = await axios.put(
+        `https://edurive.onrender.com/auth/ChangePassword?email=${formData.email}`,
+        {newPassword:formData.newPassword}
       );
-      if (response.data.tokenResponse.accessToken) {
-        localStorage.setItem("userToken", response.data.tokenResponse.accessToken);
-        navigate("/lessonData?showModal=true");
-      } else {
-        console.error("Login failed, no token received.");
-      }
+
+     
     } catch (error) {
       console.error("An error occurred during login:", error);
     }
@@ -47,8 +43,8 @@ function ParolTwo() {
         <p>Yeni şifrə</p>
         <input
           type="password"
-          name="password"
-          value={formData.password}
+          name="newPassword"
+          value={formData.newPassword}
           onChange={handleChange}
           placeholder="Şifrənizi əlavə edin"
           required
@@ -56,8 +52,8 @@ function ParolTwo() {
         <p>Şifrənizi təsdiq edin</p>
         <input
           type="password"
-          name="password"
-          value={formData.password}
+          name="confirmPassword"
+          value={formData.confirmPassword}
           onChange={handleChange}
           placeholder="Şifrənizi əlavə edin"
           required

@@ -33,21 +33,20 @@ const LessonData = () => {
         const userLessonsResponse = await axios.get(`https://edurive.onrender.com/v1/user/${userId}`);
         const userPaidStatus = userLessonsResponse.data.paid;
   
-        // Kullanıcının ödeme durumunu state'e ayarlama
+       
         setIsPaid(userPaidStatus);
   
-        // Ödeme durumuna ve ders videolarının erişim gereksinimlerine göre modalın gösterilip gösterilmeyeceğini belirleme
         const anyVideoRequiresPaid = lessonsData.some(lesson =>
           lesson.subjectResponse.some(subject => subject.videoResponse.requiresPaid)
         );
   
-        // Modalı sadece ilk ziyarette ve gerektiğinde göstermek için kontrol
+       
         const showModalOnceKey = 'showModalOnce';
         const hasModalBeenShown = localStorage.getItem(showModalOnceKey);
   
         if (!hasModalBeenShown && !userPaidStatus && anyVideoRequiresPaid) {
           setShowModal(true);
-          // Modal gösterildi olarak işaretle
+         
           localStorage.setItem(showModalOnceKey, 'true');
         }
       } catch (error) {

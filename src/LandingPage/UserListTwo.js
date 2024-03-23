@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 
 function UserListTwo() {
   const [users, setUsers] = useState([]);
-  const [lessons, setLessons] = useState([]); // Dersler için state
+  const [lessons, setLessons] = useState([]); 
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     fetch("https://edurive.onrender.com/v1/lesson/")
       .then((response) => response.json())
-      .then((data) => setLessons(data)) // Derslerin ayarlanması
+      .then((data) => setLessons(data)) 
       .catch((error) => console.error("Hata:", error));
 
     fetch("https://edurive.onrender.com/v1/user/")
@@ -26,7 +26,7 @@ function UserListTwo() {
     setSearchTerm(event.target.value);
   };
 
-  const giveAccessToUser = async (userId) => { // Erişim verme fonksiyonu
+  const giveAccessToUser = async (userId) => { 
     try {
       const response = await fetch(`https://edurive.onrender.com/v1/access/${userId}`, {
         method: "POST",

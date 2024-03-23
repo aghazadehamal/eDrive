@@ -60,7 +60,7 @@ h2 {
 }
 
 .granted {
-  background-color: #28a745 !important; /* İcazə Verildi butonunun rengi */
+  background-color: #28a745 !important; 
 }
 
 .granted:hover {
@@ -69,7 +69,7 @@ h2 {
 
 
 .UserButton:disabled {
-  cursor: not-allowed; /* veya cursor: default; */
-  background-color: #cccccc; /* Erişim izni verildiğinde butonun arka plan rengi */
-  /* Diğer stil özellikleri */
+  cursor: not-allowed; 
+  background-color: #cccccc; 
+ 
 }

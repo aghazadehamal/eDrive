@@ -11,7 +11,7 @@ function VideoQuiz() {
           throw new Error('Data could not be fetched!');
         } else {
           const data = await response.json();
-          // Verileri döngüye alıp, aradığımız videoyu buluyoruz.
+         
           const foundVideo = data.find(lesson => 
             lesson.subjectResponse.some(subject => 
               subject.videoResponse.id === 10

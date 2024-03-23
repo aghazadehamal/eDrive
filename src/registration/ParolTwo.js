@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 import "./ParolTwo.css";
 
 function ParolTwo() {
@@ -9,7 +9,7 @@ function ParolTwo() {
     newPassword: "",
   });
 
-
+  const params= useLocation()
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -19,7 +19,7 @@ function ParolTwo() {
     e.preventDefault();
     try {
       const response = await axios.put(
-        `https://edurive.onrender.com/auth/ChangePassword?email=${formData.email}`,
+        `https://edurive.onrender.com/auth/set-password${params?.search}`,
         {newPassword:formData.newPassword}
       );
 

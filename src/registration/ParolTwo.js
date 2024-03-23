@@ -19,7 +19,7 @@ function ParolTwo() {
     e.preventDefault();
     try {
       const response = await axios.put(
-        `https://edurive.onrender.com/auth/set-password${params?.search}`,
+        `https://edurive.onrender.com/auth/ChangePassword${params?.search}`,
         {newPassword:formData.newPassword}
       );
 

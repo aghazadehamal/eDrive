@@ -76,12 +76,12 @@ function RegistrationForm() {
 };
 
 const sendRequestEveryTenSecondsForThreeMinutes = () => {
-  let count = 0; // İstek sayısını takip etmek için bir sayaç
-  const maxRequests = 18; // Toplam yapılacak istek sayısı (3 dakika boyunca her 10 saniyede bir)
+  let count = 0; 
+  const maxRequests = 18; 
 
   const intervalId = setInterval(async () => {
     if (count >= maxRequests) {
-      clearInterval(intervalId); // Maksimum istek sayısına ulaştığında interval'ı durdur
+      clearInterval(intervalId); 
       console.log("Tamamlandı: Toplam 3 dakika boyunca her 10 saniyede bir istek yapıldı.");
       return;
     }
@@ -96,11 +96,11 @@ const sendRequestEveryTenSecondsForThreeMinutes = () => {
       
     } catch (error) {
       console.error('Istek hatası:', error);
-      // Hata durumunda yapılacak işlemler
+    
     }
 
-    count++; // Her istekten sonra sayacı artır
-  }, 10000); // 10 saniye = 10000 milisaniye
+    count++; 
+  }, 10000); 
 };
 
   return (
@@ -115,7 +115,7 @@ const sendRequestEveryTenSecondsForThreeMinutes = () => {
       <div className="form-container">
         <form onSubmit={handleSubmit}>
           <h1 style={{ color: "black" }}>Qeydiyyat</h1>
-          {/* Form inputları */}
+       
           <div>
             <p>Ad</p>
             <input

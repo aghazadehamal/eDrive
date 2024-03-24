@@ -42,7 +42,7 @@ function LoginForm() {
             errorMessage = "Yanlış e-poçt və ya şifrə.";
             break;
           case 400:
-            errorMessage = error.response.data.errorMessage === 'User is not active ' ? 'Zəhmət olmasa mailinizə göndərilən link vasitəsi ilə hesabınızı təsdiqləyin.' : "Yanlış sorğu."
+            errorMessage = error.response.data.errorMessage === 'User is not active ' ? 'Zəhmət olmasa mailinizə göndərilən link vasitəsi ilə hesabınızı təsdiqləyin.' : "Yanlış şifrə."
             break;
           case 404:
             errorMessage = error.response.data.errorMessage?.includes('User not found with email') && "Bu e-poçt ilə istifadəçi tapılmadı.";

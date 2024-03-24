@@ -22,35 +22,38 @@ function LoginForm() {
         "https://edurive.onrender.com/auth/login",
         formData
       );
-     if (response.data.tokenResponse.accessToken) {
-  localStorage.setItem("userToken", response.data.tokenResponse.accessToken);
-  localStorage.setItem("userId", response.data.userResponse.id);
-  localStorage.setItem("userEmail", response.data.userResponse.gmail);
-  localStorage.setItem("userId", response.data.userResponse.id.toString());
-  localStorage.setItem("userName", response.data.userResponse.name);
-  localStorage.setItem("userSurname", response.data.userResponse.surname);
-  localStorage.setItem("userPaid", response.data.userResponse.paid.toString());
-  localStorage.setItem("userPhone", response.data.userResponse.phoneNumber);
-  
-  navigate("/lessonData?showModal=true");
-}
-else {
+      if (response.data.tokenResponse.accessToken) {
+        localStorage.setItem("userToken", response.data.tokenResponse.accessToken);
+        localStorage.setItem("userId", response.data.userResponse.id);
+        
+        navigate("/lessonData?showModal=true");
+      } else {
         console.error("Giriş uğursuz, token alınamadı.");
       }
     } catch (error) {
       console.error("Giriş zamanı bir xəta baş verdi:", error);
-
-      if (error.response && error.response.status === 401) {
-        alert("E-poçt ünvanı və ya şifrə yanlışdır.");
-      } else if (error.response && error.response.status === 403) {
-        alert("Yanlış mail və ya şifrə");
-      } else {
-        alert(
-          "Bir xəta baş verdi. Zəhmət olmasa daha sonra yenidən cəhd edin."
-        );
+      let errorMessage = "Bir xəta baş verdi. Zəhmət olmasa daha sonra yenidən cəhd edin.";
+      if (error.response) {
+        switch (error.response.status) {
+          case 401:
+            errorMessage = "E-poçt ünvanı və ya şifrə yanlışdır.";
+            break;
+          case 403:
+            errorMessage = "Yanlış e-poçt və ya şifrə.";
+            break;
+          case 400:
+            errorMessage = error.response.data.errorMessage === 'User is not active ' ? 'Zəhmət olmasa mailinizə göndərilən link vasitəsi ilə hesabınızı təsdiqləyin.' : "Yanlış sorğu."
+            break;
+          case 404:
+            errorMessage = error.response.data.errorMessage?.includes('User not found with email') && "Bu e-poçt ilə istifadəçi tapılmadı.";
+            break;
+          
+        }
       }
+      alert(errorMessage);
     }
   };
+  
 
   return (
     <div className="login">

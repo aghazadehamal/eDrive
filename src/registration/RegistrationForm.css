@@ -130,6 +130,26 @@ button[type="submit"]:hover {
   margin-top: 30px;
 }
 
+.close-button {
+  float: right;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.close-button:hover {
+  background-color: #f44336; 
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
 .link-text {
   display: block;
   margin-top: 1.5rem;
@@ -212,6 +232,14 @@ button[type="submit"]:hover {
   .success-icon {
     font-size: 7rem;
   }
+
+  .registration form {
+    
+    max-width: 456px;
+    height: 790px;
+  
+  
+  }
 }
 
 @media (max-width: 768px) {
@@ -224,4 +252,6 @@ button[type="submit"]:hover {
   .login-link {
     margin-left: 5px;
   }
+
+  
 }

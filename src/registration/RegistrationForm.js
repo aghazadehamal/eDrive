@@ -199,23 +199,24 @@ const sendRequestEveryTenSecondsForThreeMinutes = () => {
           {/* {error && <p className="error">{error}</p>} */}
         </form>
         {isSubmitted && (
-          <div className="modal-overlay">
-            <div className="modal-content">
-            <div> <img src={process.env.PUBLIC_URL + '/success.svg'} alt="Clock Icon"/></div>
-              <span className="modal-title">Müraciətiniz qeydə alındı</span>
-              <p className="modal-message">
-               
-                Mailinizə giriş edib təsdiq etdiktən sonra saytın free versiyasına yönləndiriləcəksiniz.
-              </p>
-             
-               
-                 
-                <AutoStartCountdown/>
-                  
-             
-             
-            </div>
-          </div>
+        <div className="modal-overlay" >
+        <div className="modal-content">
+         <button
+  onClick={() => setIsSubmitted(false)}
+  className="close-button"
+>
+  X
+</button>
+
+          <div><img src={process.env.PUBLIC_URL + '/success.svg'} alt="Success"/></div>
+          <span className="modal-title">Müraciətiniz qeydə alındı</span>
+          <p className="modal-message">
+            Mailinizə giriş edib təsdiq etdiktən sonra saytın free versiyasına yönləndiriləcəksiniz.
+          </p>
+          <AutoStartCountdown/>
+        </div>
+      </div>
+      
         )}
       </div>
     </div>

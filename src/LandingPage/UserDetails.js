@@ -39,9 +39,7 @@ function UserDetails() {
       <p><span className="highlight">Ad:</span> {userData?.name}</p>
       <p><span className="highlight">Soyad:</span> {userData?.surname}</p>
       <p><span className="highlight">Mail:</span> {userData?.gmail}</p>
-      {/* <p><span className="highlight">ID:</span> {userId}</p> */}
      
-      {/* <p><span className="highlight">Ödeme Yapıldı mı:</span> {userPaid}</p> */}
       <p><span className="highlight">Telefon nömrəsi:</span> {userData?.phoneNumber}</p>
 
       <Link onClick={() => localStorage.clear()} to="/" className="logoutLink">

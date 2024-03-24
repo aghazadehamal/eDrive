@@ -1,32 +1,40 @@
 import React, { useState, useEffect } from "react";
 import "./UserListTwo.css";
 import { Link } from "react-router-dom";
+import { Puff } from "react-loader-spinner";
 
 function UserListTwo() {
   const [users, setUsers] = useState([]);
   const [lessons, setLessons] = useState([]); 
   const [searchTerm, setSearchTerm] = useState("");
+  const [isLoading, setIsLoading] = useState(false); 
 
   useEffect(() => {
-    fetch("https://edurive.onrender.com/v1/lesson/")
-      .then((response) => response.json())
-      .then((data) => setLessons(data)) 
-      .catch((error) => console.error("Hata:", error));
-
-    fetch("https://edurive.onrender.com/v1/user/")
-      .then((response) => response.json())
-      .then((data) => {
-        const filteredUsers = data.filter(user => user.id > 28); 
-        setUsers(filteredUsers);
-      })
-      .catch((error) => console.error("Hata:", error));
+    setIsLoading(true); 
+    Promise.all([
+      fetch("https://edurive.onrender.com/v1/lesson/").then((response) => response.json()),
+      fetch("https://edurive.onrender.com/v1/user/").then((response) => response.json())
+    ])
+    .then(([lessonData, userData]) => {
+      setLessons(lessonData);
+      const filteredUsers = userData.filter(user => user.id > 28);
+      setUsers(filteredUsers);
+    })
+    .catch((error) => {
+      console.error("Hata:", error);
+    })
+    .finally(() => {
+      setIsLoading(false); 
+    });
   }, []);
+  
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
   const giveAccessToUser = async (userId) => { 
+    
     try {
       const response = await fetch(`https://edurive.onrender.com/v1/access/${userId}`, {
         method: "POST",
@@ -46,6 +54,8 @@ function UserListTwo() {
     } catch (error) {
       console.error("Hata:", error);
     }
+
+   
   };
 
   const filteredUsers = users.filter(user =>
@@ -53,6 +63,13 @@ function UserListTwo() {
   );
 
   return (
+    <div>
+ {isLoading ? (
+        <div className="loader-container">
+          <Puff color="#50bb27" height={100} width={100} />
+        </div>
+      ) : (
+  
     <div className="user-list-container">
     <Link to="/">
         <img src="/edurive.svg" alt="Edurive Logo" className="login-logo" />
@@ -84,6 +101,8 @@ function UserListTwo() {
           </li>
         ))}
       </ul>
+    </div>
+     )}
     </div>
   );
 }

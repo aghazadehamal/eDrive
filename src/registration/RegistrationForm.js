@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./RegistrationForm.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import CountdownButton from "../LandingPage/AutoStartCountdown";
+import AutoStartCountdown from "../LandingPage/AutoStartCountdown";
 
 function RegistrationForm() {
   const [formData, setFormData] = useState({
@@ -56,15 +58,7 @@ function RegistrationForm() {
       localStorage.setItem("userToken", response.data.id);
 
   
-      await axios.post('https://edurive.onrender.com/v1/verify/activated', { email: formData.gmail })
-        .then(response => {
-          console.log('OTP sent successfully', response);
-        
-        })
-        .catch(error => {
-          console.error('Error sending OTP', error);
-         
-        });
+      sendRequestEveryTenSecondsForThreeMinutes()
 
     } catch (error) {
       setIsLoading(false);
@@ -81,6 +75,33 @@ function RegistrationForm() {
     }
 };
 
+const sendRequestEveryTenSecondsForThreeMinutes = () => {
+  let count = 0; // İstek sayısını takip etmek için bir sayaç
+  const maxRequests = 18; // Toplam yapılacak istek sayısı (3 dakika boyunca her 10 saniyede bir)
+
+  const intervalId = setInterval(async () => {
+    if (count >= maxRequests) {
+      clearInterval(intervalId); // Maksimum istek sayısına ulaştığında interval'ı durdur
+      console.log("Tamamlandı: Toplam 3 dakika boyunca her 10 saniyede bir istek yapıldı.");
+      return;
+    }
+
+    try {
+      const response = await axios.get(`https://edurive.onrender.com/v1/verify/activated?gmail=${formData.gmail}`);
+      if(response.data){
+        clearInterval(intervalId); 
+        navigate('/lessonData');
+        return; 
+      }
+      
+    } catch (error) {
+      console.error('Istek hatası:', error);
+      // Hata durumunda yapılacak işlemler
+    }
+
+    count++; // Her istekten sonra sayacı artır
+  }, 10000); // 10 saniye = 10000 milisaniye
+};
 
   return (
     <div className="registration" style={{ textAlign: "center" }}>
@@ -183,17 +204,16 @@ function RegistrationForm() {
             <div> <img src={process.env.PUBLIC_URL + '/success.svg'} alt="Clock Icon"/></div>
               <span className="modal-title">Müraciətiniz qeydə alındı</span>
               <p className="modal-message">
-                Siz hal hazırda saytın free versiyasına yönləndirilirsiniz.
-                Qeydiyyatınız təsdiqləndikdən sonra limitlər aradan qaldırılacaq
+               
+                Mailinizə giriş edib təsdiq etdiktən sonra saytın free versiyasına yönləndiriləcəksiniz.
               </p>
-              <Link to="/lessonData">
-                <button
-                  className="modal-button"
-                  onClick={() => setIsSubmitted(false)}
-                >
-                  Davam et
-                </button>
-              </Link>
+             
+               
+                 
+                <AutoStartCountdown/>
+                  
+             
+             
             </div>
           </div>
         )}

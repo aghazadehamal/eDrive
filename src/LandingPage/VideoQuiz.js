@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Puff } from 'react-loader-spinner'; 
+import './VideoQuiz.css'; 
+
 function VideoQuiz() {
   const [video, setVideo] = useState(null);
 
@@ -44,12 +47,14 @@ function VideoQuiz() {
       {video ? (
         <div style={{marginTop: "50px"}} >
          
-          <video style={{borderRadius: "22px"}} src={video.url} controls />
+          <video className='quizVideo' style={{borderRadius: "22px"}} src={video.url} controls />
           <p>{video.requiresPaid ? 'This content requires payment.' : 'This content is free.'}</p>
         </div>
       ) : (
-        <p className="loadingText">Video yüklənir...</p>
-
+      
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}>
+          <Puff color="#50bb27" height={100} width={100} />
+        </div>
       )}
     </div>
   );

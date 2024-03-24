@@ -75,6 +75,10 @@ button[type="submit"]:hover {
   z-index: 1000;
 }
 
+.modal-overlay img {
+ margin-left: 43px;
+}
+
 .modal-content {
   background: white;
   padding: 2em;

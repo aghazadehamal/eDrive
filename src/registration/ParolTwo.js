@@ -7,6 +7,7 @@ function ParolTwo() {
   const [formData, setFormData] = useState({
     email: "",
     newPassword: "",
+    confirmPassword: "", 
   });
 
   const params= useLocation()
@@ -17,6 +18,13 @@ function ParolTwo() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (formData.newPassword !== formData.confirmPassword) {
+      alert("Daxil edilən şifrələr fərqlidir.");
+      return; 
+    }
+
+
     try {
       const response = await axios.put(
         `https://edurive.onrender.com/auth/ChangePassword${params?.search}&newPassword=${formData.newPassword}`

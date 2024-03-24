@@ -10,6 +10,7 @@ function RegistrationForm() {
     surname: "",
     gmail: "",
     password: "",
+    confirmPassword: "", 
     phoneNumber: "",
   });
 
@@ -43,7 +44,7 @@ function RegistrationForm() {
 
     setIsLoading(true);
     try {
-      // Kullanıcı kayıt isteğini gönderme
+    
       const response = await axios.post(
         "https://edurive.onrender.com/auth/registration",
         formData
@@ -54,15 +55,15 @@ function RegistrationForm() {
       localStorage.setItem("userId", response.data.id);
       localStorage.setItem("userToken", response.data.id);
 
-      // OTP kodunu göndermek için yeni eklenen kısım
+  
       await axios.post('https://edurive.onrender.com/v1/verify/activated', { email: formData.gmail })
         .then(response => {
           console.log('OTP sent successfully', response);
-          // Başarılı OTP gönderimi sonrası yapılacak işlemler
+        
         })
         .catch(error => {
           console.error('Error sending OTP', error);
-          // OTP gönderimi sırasında oluşan hataların işlenmesi
+         
         });
 
     } catch (error) {

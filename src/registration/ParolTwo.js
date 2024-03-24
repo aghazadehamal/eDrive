@@ -22,9 +22,12 @@ function ParolTwo() {
         `https://edurive.onrender.com/auth/ChangePassword${params?.search}&newPassword=${formData.newPassword}`
       );
 
+      alert("Şifrəniz uğurla dəyişdirildi.");
+
      
     } catch (error) {
       console.error("An error occurred during login:", error);
+      alert("Bir xəta baş verdi. Zəhmət olmasa, yenidən cəhd edin.");
     }
   };
 

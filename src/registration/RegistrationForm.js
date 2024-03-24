@@ -38,16 +38,27 @@ function RegistrationForm() {
 
     setIsLoading(true);
     try {
+      // Kullanıcı kayıt isteğini gönderme
       const response = await axios.post(
         "https://edurive.onrender.com/auth/registration",
         formData
       );
       console.log(response.data);
-      // alert("Qeydiyyat uğurla tamamlandı! Giriş edə bilərsiniz.");
       setIsSubmitted(true); 
       setIsLoading(false);
       localStorage.setItem("userId", response.data.id);
       localStorage.setItem("userToken", response.data.id);
+
+      // OTP kodunu göndermek için yeni eklenen kısım
+      await axios.post('https://edurive.onrender.com/v1/verify/activated', { email: formData.gmail })
+        .then(response => {
+          console.log('OTP sent successfully', response);
+          // Başarılı OTP gönderimi sonrası yapılacak işlemler
+        })
+        .catch(error => {
+          console.error('Error sending OTP', error);
+          // OTP gönderimi sırasında oluşan hataların işlenmesi
+        });
 
     } catch (error) {
       setIsLoading(false);
@@ -58,11 +69,12 @@ function RegistrationForm() {
         );
       } else {
         alert(
-          "Qeydiyyat zamanı bir xəta baş verdi. Zəhmət olmasa, daha sonra yenidən cəhd edin."
+         "Qeydiyyat zamanı bir xəta baş verdi. Zəhmət olmasa, daha sonra yenidən cəhd edin."
         );
       }
     }
-  };
+};
+
 
   return (
     <div className="registration" style={{ textAlign: "center" }}>

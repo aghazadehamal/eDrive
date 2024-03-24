@@ -21,9 +21,15 @@ function Parol() {
       const response = await axios.put(
         `https://edurive.onrender.com/auth/forgot-password?email=${formData.email}`,
       );
+
+      alert("Mesajınız uğurla göndərildi.");
+
     
     } catch (error) {
       console.error("An error occurred during login:", error);
+
+      alert("Bir xəta baş verdi. Zəhmət olmasa, yenidən cəhd edin.");
+
     }
   };
 

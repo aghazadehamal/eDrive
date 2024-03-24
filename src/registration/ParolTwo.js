@@ -10,6 +10,9 @@ function ParolTwo() {
     confirmPassword: "", 
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+
+
   const params= useLocation();
   const navigate = useNavigate();
 
@@ -19,6 +22,7 @@ function ParolTwo() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true); 
 
     if (formData.newPassword !== formData.confirmPassword) {
       alert("Daxil edilən şifrələr fərqlidir.");
@@ -39,6 +43,10 @@ function ParolTwo() {
     } catch (error) {
       console.error("An error occurred during login:", error);
       alert("Bir xəta baş verdi. Zəhmət olmasa, yenidən cəhd edin.");
+    }
+
+    finally {
+      setIsLoading(false); 
     }
   };
 
@@ -72,7 +80,9 @@ function ParolTwo() {
           required
         />
 
-        <button type="submit">Təsdiq et</button>
+<button type="submit" disabled={isLoading}>
+            {isLoading ? <div className="loader"></div> : 'Təsdiq et'}
+          </button>
       </form>
     </div>
   );

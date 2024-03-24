@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import Pagination from "./Pagination";
 import QuizDetails from "./QuizDetails";
 import CustomModal from "../lessons/Modal";
+import { Puff } from 'react-loader-spinner';
+
 
 const LessonData = () => {
   const [lessons, setLessons] = useState([]);
@@ -18,6 +20,7 @@ const LessonData = () => {
   const [selectedQuiz, setSelectedQuiz] = useState(null);
   const [selectedLessonName, setSelectedLessonName] = useState("");
   const [selectedSubjectName, setSelectedSubjectName] = useState("");
+  const [isLoading, setIsLoading] = useState(false); 
 
   const [showModal, setShowModal] = useState(false); 
   const lessonListRef = useRef(null); 
@@ -25,6 +28,7 @@ const LessonData = () => {
 
   useEffect(() => {
     const fetchLessonData = async () => {
+      setIsLoading(true);
       try {
         const lessonsResponse = await axios.get("https://edurive.onrender.com/v1/lesson/");
         const lessonsData = lessonsResponse.data;
@@ -33,8 +37,23 @@ const LessonData = () => {
         const userLessonsResponse = await axios.get(`https://edurive.onrender.com/v1/user/${userId}`);
         const userPaidStatus = userLessonsResponse.data.paid;
   
-       
+        setLessons(lessonsData)
         setIsPaid(userPaidStatus);
+        setTotalLessons(lessonsData.length);
+
+        if (lessonsData.length > 0) {
+          const firstLesson = lessonsData[0];
+          setOpenLessonId(firstLesson.id);
+          setCurrentLessonIndex(0);
+
+          if (
+            firstLesson.subjectResponse &&
+            firstLesson.subjectResponse.length > 0
+          ) {
+            setSelectedSubject(firstLesson.subjectResponse[0]);
+          }
+    
+      }
   
         const anyVideoRequiresPaid = lessonsData.some(lesson =>
           lesson.subjectResponse.some(subject => subject.videoResponse.requiresPaid)
@@ -51,6 +70,9 @@ const LessonData = () => {
         }
       } catch (error) {
         console.error("Error fetching lessons:", error);
+      }
+      finally {
+        setIsLoading(false); 
       }
     };
   
@@ -103,36 +125,6 @@ const LessonData = () => {
   const handlePlayVideo = () => {
     setPlayVideo(true);
   };
-
-  useEffect(() => {
-    const fetchLessonData = async () => {
-      try {
-        const response = await axios.get(
-          "https://edurive.onrender.com/v1/lesson/"
-        );
-        const lessonsData = response.data;
-        setLessons(lessonsData);
-        setTotalLessons(lessonsData.length);
-
-        if (lessonsData.length > 0) {
-          const firstLesson = lessonsData[0];
-          setOpenLessonId(firstLesson.id);
-          setCurrentLessonIndex(0);
-
-          if (
-            firstLesson.subjectResponse &&
-            firstLesson.subjectResponse.length > 0
-          ) {
-            setSelectedSubject(firstLesson.subjectResponse[0]);
-          }
-        }
-      } catch (error) {
-        console.error("Error fetching lessons:", error);
-      }
-    };
-
-    fetchLessonData();
-  }, []);
 
   useEffect(() => {
     let timer;
@@ -216,6 +208,15 @@ const subjectClickHandler = (subject, key) => {
 
 
   return (
+
+    <div>
+     {isLoading ? (
+        <div className="loader-container">
+          <Puff color="#50bb27" height={100} width={100} />
+        </div>
+      ) : (
+   
+    
     <div style={{ width: "75%", margin: "auto" }}>
       
       <div className="imageLogo">
@@ -580,6 +581,8 @@ const subjectClickHandler = (subject, key) => {
         </div>
       </div>
       {showModal && <CustomModal onClose={handleCloseModal} />}
+    </div>
+    )}
     </div>
   );
 };

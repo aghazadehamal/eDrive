@@ -8,6 +8,7 @@ function Parol() {
     email: "",
     
   });
+  const [isLoading, setIsLoading] = useState(false); 
 
   // const navigate = useNavigate();
 
@@ -17,6 +18,7 @@ function Parol() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true); 
     try {
       const response = await axios.put(
         `https://edurive.onrender.com/auth/forgot-password?email=${formData.email}`,
@@ -30,6 +32,9 @@ function Parol() {
 
       alert("Bir xəta baş verdi. Zəhmət olmasa, yenidən cəhd edin.");
 
+    }
+    finally {
+      setIsLoading(false); 
     }
   };
 
@@ -56,7 +61,9 @@ function Parol() {
         />
 
         {/* <Link to="/ParolTwo" style={{ textDecoration: "none" }}> */}
-          <button type="submit">Göndər</button>
+        <button type="submit" disabled={isLoading}>
+            {isLoading ? <div className="loader"></div> : 'Göndər'}
+          </button>
         {/* </Link> */}
       </form>
     </div>

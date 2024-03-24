@@ -184,9 +184,13 @@ const sendRequestEveryTenSecondsForThreeMinutes = () => {
             />
           </div>
           <div>
-            <button type="submit" disabled={isLoading}>
-              Təsdiq et
-            </button>
+          <button type="submit" disabled={isLoading} >
+    {isLoading ? (
+      <div className="loader"></div> 
+    ) : (
+      'Təsdiq et' 
+    )}
+  </button>
 
             <div className=" account-check">
               <span>Hesabınız var?</span>

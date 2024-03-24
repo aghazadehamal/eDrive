@@ -9,6 +9,8 @@ function LoginForm() {
     password: "",
   });
 
+  const [isLoading, setIsLoading] = useState(false); 
+
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -17,6 +19,8 @@ function LoginForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    setIsLoading(true); 
     try {
       const response = await axios.post(
         "https://edurive.onrender.com/auth/login",
@@ -52,6 +56,10 @@ function LoginForm() {
       }
       alert(errorMessage);
     }
+
+    finally {
+      setIsLoading(false); 
+    }
   };
   
 
@@ -84,7 +92,11 @@ function LoginForm() {
           <span className="forgot-password">Şifrəmi unutdum</span>
         </Link>
 
-        <button type="submit">Daxil ol</button>
+        <button type="submit" disabled={isLoading}> {isLoading ? (
+    <div className="loader"></div> 
+  ) : (
+    'Daxil ol' 
+  )}</button>
 
         <div className="registration-reminder">
           <span style={{ color: "#1F203F" }}>Hesabınız yoxdur?</span>

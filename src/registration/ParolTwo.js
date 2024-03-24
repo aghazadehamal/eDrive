@@ -10,7 +10,8 @@ function ParolTwo() {
     confirmPassword: "", 
   });
 
-  const params= useLocation()
+  const params= useLocation();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -31,6 +32,8 @@ function ParolTwo() {
       );
 
       alert("Şifrəniz uğurla dəyişdirildi.");
+
+      navigate("/LoginForm"); 
 
      
     } catch (error) {

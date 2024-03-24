@@ -30,6 +30,11 @@ function RegistrationForm() {
       return;
     }
 
+    if (formData.password !== formData.confirmPassword) {
+      alert("Daxil edilən şifrələr fərqlidir.");
+      return;
+    }
+
     const phoneRegex = /^\d{9}$/;
     if (!phoneRegex.test(formData.phoneNumber)) {
       alert("Telefon nömrəsi düzgün formatda deyil. Nümunə: 992224455");
@@ -130,6 +135,18 @@ function RegistrationForm() {
               value={formData.password}
               onChange={handleChange}
               placeholder="Şifrənizi əlavə edin"
+              required
+            />
+          </div>
+
+          <div>
+            <p>Şifrəni Təkrarlayın</p>
+            <input
+              type="password"
+              name="confirmPassword"
+              value={formData.confirmPassword}
+              onChange={handleChange}
+              placeholder="Şifrənizi təkrar əlavə edin"
               required
             />
           </div>

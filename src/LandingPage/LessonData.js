@@ -298,16 +298,15 @@ const subjectClickHandler = (subject, key) => {
           <div style={{ marginTop: "15px" }}>
             {lessons.map((lesson, key) => (
               <div key={lesson.id}>
-                <div
-                  className={`lessonItem ${
-                    openLessonId === lesson.id ? "active" : ""
-                  }`}
-                  onClick={() => toggleLesson(lesson.id)}
-                >
-                  <span className="lessonItemText">
-                    {lesson.lessonName || "Unnamed Lesson"}
-                  </span>
-                  {isPaid || key === 0 ?  (
+               <div
+  className={`lessonItem ${openLessonId === lesson.id ? "active" : ""}`}
+  onClick={() => toggleLesson(lesson.id)}
+>
+  <span className="lessonItemText">
+    {lesson.lessonName || "Unnamed Lesson"}
+  </span>
+  <div style={{display: 'flex', alignItems: 'center'}}> 
+    {isPaid || key === 0 ? (
       <img
         src={`${process.env.PUBLIC_URL}/truedone.svg`}
         alt="Correct"
@@ -326,18 +325,20 @@ const subjectClickHandler = (subject, key) => {
         }}
       />
     )}
-                  {openLessonId === lesson.id ? (
-                    <img
-                      src={process.env.PUBLIC_URL + "/asagi.svg"}
-                      alt="Aşağı"
-                    />
-                  ) : (
-                    <img
-                      src={process.env.PUBLIC_URL + "/yuxari.svg"}
-                      alt="Yukarı"
-                    />
-                  )}
-                </div>
+    {openLessonId === lesson.id ? (
+      <img
+        src={process.env.PUBLIC_URL + "/asagi.svg"}
+        alt="Aşağı"
+      />
+    ) : (
+      <img
+        src={process.env.PUBLIC_URL + "/yuxari.svg"}
+        alt="Yukarı"
+      />
+    )}
+  </div>
+</div>
+
 
                 {openLessonId === lesson.id && (
                   <div

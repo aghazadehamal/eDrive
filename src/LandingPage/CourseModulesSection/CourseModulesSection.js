@@ -104,7 +104,7 @@ sürücülük vəsiqəsini almağa hazırlaşan şəxslər üçün bu vacibdir.
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
-              <span>4 video</span>
+              <span>5 video</span>
             </div>
             <div
               style={{
@@ -152,7 +152,7 @@ Bir qayda olaraq, hər hansı şəxsin nəql
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
-              <span>6 video</span>
+              <span>5 video</span>
             </div>
             <div
               style={{
@@ -195,7 +195,7 @@ Bir qayda olaraq, hər hansı şəxsin nəql
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
-              <span>4 video</span>
+              <span>5 video</span>
             </div>
             <div
               style={{

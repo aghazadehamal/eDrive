@@ -42,7 +42,7 @@ const CourseModulesSection = () => {
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
-              <span>1 saat 20 dəq</span>
+              <span>1 saat 10 dəq</span>
             </div>
             <div
               style={{
@@ -56,7 +56,7 @@ const CourseModulesSection = () => {
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
-              <span>4 video</span>
+              <span>5 video</span>
             </div>
             <div
               style={{
@@ -74,8 +74,11 @@ const CourseModulesSection = () => {
             </div>
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique...
+          Sürücülər, sürücü olmaq istəyən şəxslər və yol hərəkətinin digər iştirakçıları, yol
+hərəkəti haqqında əsas anlayışları- yol hərəkəti qaydaları, yol nişanları, nişanlanma
+xətləri və s. kimi məlumatları bilməli, öyrənməli və tətbiq etməlidir. Kompleks şəkildə
+geniş material toplusunu özündə cəmləşdirərək yol hərəkəti qaydalarını öyrənən və
+sürücülük vəsiqəsini almağa hazırlaşan şəxslər üçün bu vacibdir.
           </p>
         </Accordion>
 
@@ -87,7 +90,7 @@ const CourseModulesSection = () => {
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
-              <span>1 saat 20 dəq</span>
+              <span>1 saat 30 dəq</span>
             </div>
             <div
               style={{
@@ -119,8 +122,12 @@ const CourseModulesSection = () => {
             </div>
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique...
+          Sürücülük vəsiqəsi - hər hansı şəxsin nəqliyyat vasitələrini idarə etmək
+hüququnu təsdiq edən sənəddir. Vəsiqənin iki növü var: motosiklet, avtomobil,
+tramvay və trolleybusları idarə etmək üçün; traktor və digər mexaniki nəqliyyat vasitələrini idarə
+etmək üçün. Xarici dövlətlərin səlahiyyətli orqanları tərəfindən verilmiş və etibarlıq müddəti bitməmiş
+sürücülük vəsiqələri ölkəmizdə etibarlıdır.
+Bir qayda olaraq, hər hansı şəxsin nəql
           </p>
         </Accordion>
         <Accordion moduleTitle="Piyadaların vəzifələri">
@@ -131,7 +138,7 @@ const CourseModulesSection = () => {
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
-              <span>1 saat 20 dəq</span>
+              <span>1 saat 35 dəq</span>
             </div>
             <div
               style={{
@@ -145,7 +152,7 @@ const CourseModulesSection = () => {
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
-              <span>4 video</span>
+              <span>6 video</span>
             </div>
             <div
               style={{
@@ -163,8 +170,7 @@ const CourseModulesSection = () => {
             </div>
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique...
+          Səki ilə, piyada zolağı ilə, yol çiyinləri ilə, bunlar olmadıqda isə velosipedçilərin hərəkətini çətinləşdirməmək şərti ilə velosiped yolu ilə hərəkət etməli və ya ayırıcı zolağı olan yollarda hərəkət hissəsinin xarici kənarı ilə getməlidir (iri əşyalar daşıyan və ya aparan piyadaların, habelə mühərriksiz əlil arabalarında gedən şəxslərin səki və ya yol qırağı ilə hərəkəti başqa piyadalar üçün maneə yaratdıqda, onlar yolun hərəkət hissəsinin kənarı ilə gedə bilərlər);
           </p>
         </Accordion>
         <Accordion moduleTitle="Dayanma və durma ">
@@ -175,7 +181,7 @@ const CourseModulesSection = () => {
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
-              <span>1 saat 20 dəq</span>
+              <span>1 saat 40 dəq</span>
             </div>
             <div
               style={{
@@ -207,8 +213,11 @@ const CourseModulesSection = () => {
             </div>
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique...
+          Nəqliyyat vasitəsinin onun üçün xüsusi ayrılmış müvafiq qaydada işarələnmiş yerdə durması
+parklama adlanır. Ölkəmizin müxtəlif ərazilərində müşahidə kameraları dayanma və durma,
+parklanma qaydalarını pozan sürücülərin qeydə alınması prosesini fasiləsiz rejimdə həyata
+keçirir. Məqsəd nizam-intizamın yaradılması, rahat və təhlükəsiz hərəkətin, həmçinin ictimai
+nəqliyyatın fasiləsiz hərəkətinin təmin olunmasıdır.
           </p>
         </Accordion>
         <Accordion moduleTitle="Dəmiryolu Keçidləri, Piyada Keçidləri və Sürücülük Təlimləri">
@@ -219,7 +228,7 @@ const CourseModulesSection = () => {
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
-              <span>1 saat 20 dəq</span>
+              <span>1 saat 15 dəq</span>
             </div>
             <div
               style={{
@@ -233,7 +242,7 @@ const CourseModulesSection = () => {
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
-              <span>4 video</span>
+              <span>5 video</span>
             </div>
             <div
               style={{
@@ -251,8 +260,12 @@ const CourseModulesSection = () => {
             </div>
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique...
+          Bundan başqa şlaqbaumu özbaşına açmaq, qeyri-nəqliyyat vəziyyətində olan kənd təsərrüfatı,
+yol, inşaat və s. nəqliyyat vastələrini dəmiryol keçidindən keçirmək, dəmiryol stansiyası rəisinin icazəsi
+olmadan, sürəti saatda 8 kilometrdən aşağı olan nəqliyyat vasitələrinin, habelə traktora qoşulan yük
+kirşəsinin hərəkəti qadağandır. Keçiddən hərəkət qadağan olunan hallarda sürücü stop-xəttin, uyğun
+nişanın və ya işıqforun yanında, bunlar olmazsa, şlaqbauma azı 5 metr qalmış, şlaqbaum olmadıqda
+isə birinci relsə azı 10 metr qalmış dayanmalıdır. 
           </p>
         </Accordion>
       </div>

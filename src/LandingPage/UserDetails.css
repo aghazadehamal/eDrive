@@ -8,6 +8,13 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
+  .loaderUser-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 29vh; 
+  }
+
   .user-details h1 {
     color: #2c3e50;
     font-size: 28px;
@@ -16,6 +23,8 @@
     font-weight: 600;
     margin-top: 30px;
   }
+
+
   
   .user-details p {
     color: #34495e;

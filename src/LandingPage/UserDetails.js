@@ -3,15 +3,16 @@ import './UserDetails.css';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from "axios";
-
+import { Puff } from 'react-loader-spinner';
 function UserDetails() {
 
-  const [userData, setUserData] = useState()
+  const [userData, setUserData] = useState();
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const fetchLessonData = async () => {
       try {
-  
+        setIsLoading(true);
   
         const userId = localStorage.getItem('userId');
         const userLessonsResponse = await axios.get(`https://edurive.onrender.com/v1/user/${userId}`);
@@ -20,6 +21,9 @@ function UserDetails() {
       } catch (error) {
         console.error("Error fetching lessons:", error);
       }
+      finally {
+        setIsLoading(false); 
+      }
     };
   
     fetchLessonData();
@@ -27,6 +31,7 @@ function UserDetails() {
 
   return (
     <div className="user-details">
+ 
        <Link to="/lessonData">
           <img className="imageLogoFirstImage"
             src="/edurive.svg"
@@ -35,16 +40,24 @@ function UserDetails() {
           />
         </Link>
       <h1>İstifadəçi məlumatları</h1>
+      {isLoading ? (
+        <div className="loaderUser-container">
+          <Puff color="#50bb27" height={100} width={100} />
+        </div>
+      ) : (
+      <>
 
       <p><span className="highlight">Ad:</span> {userData?.name}</p>
       <p><span className="highlight">Soyad:</span> {userData?.surname}</p>
       <p><span className="highlight">Mail:</span> {userData?.gmail}</p>
      
       <p><span className="highlight">Telefon nömrəsi:</span> {userData?.phoneNumber}</p>
-
+      </>
+      )}
       <Link onClick={() => localStorage.clear()} to="/" className="logoutLink">
         Çıxış
       </Link>
+      
     </div>
   );
 }

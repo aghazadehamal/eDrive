@@ -92,20 +92,21 @@ const LessonData = () => {
   };
 
   useEffect(() => {
- 
     function handleClickOutside(event) {
       if (lessonListRef.current && !lessonListRef.current.contains(event.target)) {
-        setShowLessons(false); 
+       
+        if (!showModal) {
+          setShowLessons(false);
+        }
       }
     }
-
   
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
-     
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [showLessons]); 
+  }, [showLessons, showModal]); 
+  
 
   const resetToInitialState = () => {
     setSelectedQuiz(null);
@@ -199,7 +200,7 @@ const subjectClickHandler = (subject, key) => {
     setSelectedQuiz(null);
     setPlayVideo(false);
   } else {
-    alert('Bu dərs kilidlidir.');
+    setShowModal(true)
   }
 };
 
@@ -400,7 +401,7 @@ const subjectClickHandler = (subject, key) => {
                     onClick={() => {
                       
                       if (!isPaid && key !== 0) {
-                        alert('Bu quiz kilididir.');
+                        setShowModal(true);
                       } else {
                        
                         setSelectedQuiz(lesson.quizResponse);

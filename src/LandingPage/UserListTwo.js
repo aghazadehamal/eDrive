@@ -18,8 +18,10 @@ function UserListTwo() {
     .then(([lessonData, userData]) => {
       setLessons(lessonData);
       const filteredUsers = userData.filter(user => user.id > 28);
-      setUsers(filteredUsers);
+      const sortedUsers = filteredUsers.sort((a, b) => b.id - a.id); 
+      setUsers(sortedUsers); 
     })
+    
     .catch((error) => {
       console.error("Hata:", error);
     })

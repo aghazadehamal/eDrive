@@ -28,8 +28,8 @@ function RegistrationForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (formData.password.length < 8) {
-      alert("Şifrə ən az 8 simvol uzunluğunda olmalıdır.");
+    if (formData.password.length < 8 || formData.password.length > 20) {
+      alert("Şifre en az 8 ve en fazla 20 simvol uzunluğunda olmalıdır.");
       return;
     }
 
@@ -40,7 +40,7 @@ function RegistrationForm() {
 
     const phoneRegex = /^\d{9}$/;
     if (!phoneRegex.test(formData.phoneNumber)) {
-      alert("Telefon nömrəsi düzgün formatda deyil. Nümunə: 992224455");
+      alert("Telefon nömrəsi düzgün formatda deyil. Nümunə: 997660042");
       return;
     }
 
@@ -123,7 +123,7 @@ const sendRequestEveryTenSecondsForThreeMinutes = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder="Adınızı əlavə edin"
+              placeholder="Amal"
               required
             />
           </div>
@@ -134,7 +134,7 @@ const sendRequestEveryTenSecondsForThreeMinutes = () => {
               name="surname"
               value={formData.surname}
               onChange={handleChange}
-              placeholder="Soyadınızı əlavə edin"
+              placeholder="Ağazadə"
               required
             />
           </div>
@@ -179,7 +179,7 @@ const sendRequestEveryTenSecondsForThreeMinutes = () => {
               name="phoneNumber"
               value={formData.phoneNumber}
               onChange={handleChange}
-              placeholder="Telefon nömrənizi əlavə edin"
+              placeholder="997660042"
               required
             />
           </div>

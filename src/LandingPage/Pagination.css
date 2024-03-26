@@ -40,9 +40,9 @@
   cursor: default;
 }
 
-.pagination-buttons button:not(:disabled):hover {
+/* .pagination-buttons button:not(:disabled):hover {
   background-color: #e0e0e0;
-}
+} */
 
 .pagination-button img {
   width: 30px;

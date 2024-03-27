@@ -205,6 +205,7 @@ const subjectClickHandler = (subject, key) => {
     setSelectedSubject(subject);
     setSelectedQuiz(null);
     setPlayVideo(false);
+    setShowLessons(false);
   } else {
     setShowModalTwo(true)
   }
@@ -408,9 +409,11 @@ const subjectClickHandler = (subject, key) => {
                       
                       if (!isPaid && key !== 0) {
                         setShowModalTwo(true);
+                        
                       } else {
                        
                         setSelectedQuiz(lesson.quizResponse);
+                        setShowLessons(false);
                       }
                     }}
                   >

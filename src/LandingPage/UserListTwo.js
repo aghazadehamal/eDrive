@@ -60,6 +60,30 @@ function UserListTwo() {
    
   };
 
+  const revokeAccessFromUser = async (userId) => {
+    try {
+      const response = await fetch(`https://edurive.onrender.com/v1/access/${userId}`, {
+        method: "PUT", 
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ paid: false }), 
+      });
+  
+      if (response.ok) {
+        alert("İcazə geri alındı");
+        setUsers(users.map(user => 
+          user.id === userId ? { ...user, paid: false } : user
+        ));
+      } else {
+        alert("Bir xəta yarandı");
+      }
+    } catch (error) {
+      console.error("Hata:", error);
+    }
+  };
+  
+
   const filteredUsers = users.filter(user =>
     `${user.name} ${user.surname}`.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -84,25 +108,28 @@ function UserListTwo() {
         onChange={handleSearchChange}
         style={{ margin: "20px 0", padding: "10px", width: "100%", boxSizing: "border-box" }}
       />
-      <ul className="user-list">
-        {filteredUsers.map(user => (
-          <li key={user.id}>
-            <span className="user-name">{user.name} {user.surname}</span>
-            {user.paid ? (
-              <button style={{ backgroundColor: "red" }} className="UserButton granted" disabled>
-                İcazə Verildi
-              </button>
-            ) : (
-              <button
-                className="UserButton"
-                onClick={() => giveAccessToUser(user.id)}
-              >
-                İcazə Ver
-              </button>
-            )}
-          </li>
-        ))}
-      </ul>
+   <ul className="user-list">
+  {filteredUsers.map(user => (
+    <li key={user.id}>
+      <span className="user-name">{user.name} {user.surname}</span>
+      {user.paid ? (
+        <>
+          <button style={{ backgroundColor: "red" }} className="UserButton" onClick={() => revokeAccessFromUser(user.id)}>
+            İcazəni geri al
+          </button>
+        </>
+      ) : (
+        <>
+          <button className="UserButton" onClick={() => giveAccessToUser(user.id)}>
+            İcazə Ver
+          </button>
+        </>
+      )}
+    </li>
+  ))}
+</ul>
+
+
     </div>
      )}
     </div>

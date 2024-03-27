@@ -6,6 +6,7 @@ import Pagination from "./Pagination";
 import QuizDetails from "./QuizDetails";
 import CustomModal from "../lessons/Modal";
 import { Puff } from 'react-loader-spinner';
+import ShowModalTwo from "./ShowModalTwo";
 
 
 const LessonData = () => {
@@ -23,6 +24,7 @@ const LessonData = () => {
   const [isLoading, setIsLoading] = useState(false); 
 
   const [showModal, setShowModal] = useState(false); 
+  const [showModalTwo, setShowModalTwo] = useState(false); 
   const lessonListRef = useRef(null); 
   const [isPaid, setIsPaid] = useState(false)
 
@@ -91,11 +93,15 @@ const LessonData = () => {
     setShowModal(false);
   };
 
+  const handleCloseModalTwo = () => {
+    setShowModalTwo(false);
+  };
+
   useEffect(() => {
     function handleClickOutside(event) {
       if (lessonListRef.current && !lessonListRef.current.contains(event.target)) {
        
-        if (!showModal) {
+        if (!showModalTwo) {
           setShowLessons(false);
         }
       }
@@ -105,7 +111,7 @@ const LessonData = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [showLessons, showModal]); 
+  }, [showLessons, showModalTwo]); 
   
 
   const resetToInitialState = () => {
@@ -200,7 +206,7 @@ const subjectClickHandler = (subject, key) => {
     setSelectedQuiz(null);
     setPlayVideo(false);
   } else {
-    setShowModal(true)
+    setShowModalTwo(true)
   }
 };
 
@@ -401,7 +407,7 @@ const subjectClickHandler = (subject, key) => {
                     onClick={() => {
                       
                       if (!isPaid && key !== 0) {
-                        setShowModal(true);
+                        setShowModalTwo(true);
                       } else {
                        
                         setSelectedQuiz(lesson.quizResponse);
@@ -583,6 +589,7 @@ const subjectClickHandler = (subject, key) => {
         </div>
       </div>
       {showModal && <CustomModal onClose={handleCloseModal} />}
+      {showModalTwo && <ShowModalTwo onClose={handleCloseModalTwo} />}
     </div>
     )}
     </div>

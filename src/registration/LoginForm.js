@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import "./LoginForm.css";
@@ -12,6 +12,14 @@ function LoginForm() {
   const [isLoading, setIsLoading] = useState(false); 
 
   const navigate = useNavigate();
+
+  useEffect(()=>{
+    const showModalOnceKey = 'showModalOnce';
+        const hasModalBeenShown = localStorage.getItem(showModalOnceKey);
+        if(hasModalBeenShown){
+          localStorage.removeItem(showModalOnceKey);
+        }
+  }, [])
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

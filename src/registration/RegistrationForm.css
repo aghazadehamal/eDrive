@@ -202,7 +202,7 @@ button[type="submit"]:hover {
 .phone-prefix {
   padding: 10px;
   font-size: 16px;
-  border-radius: 12px 0 0 12px; /* Sol taraf yuvarlak */
+  border-radius: 12px 0 0 12px; 
   border: 1px solid #bcbcc3;
   color: #110f0f;
   height: 54px;

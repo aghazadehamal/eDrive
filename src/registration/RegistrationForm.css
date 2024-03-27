@@ -192,6 +192,41 @@ button[type="submit"]:hover {
   color: green;
   text-decoration: none;
 }
+.phone-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.phone-prefix {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 12px 0 0 12px; /* Sol taraf yuvarlak */
+  border: 1px solid #bcbcc3;
+  color: #110f0f;
+  height: 54px;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.phone-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+ 
+  border: 1px solid #bcbcc3;
+  color: #110f0f;
+  height: 54px;
+  border-left: none !important; 
+      border-bottom-left-radius: 0 !important;
+      border-top-left-radius: 0 !important;
+}
+
 
 @media (max-width: 768px) {
   .registration form,
@@ -209,6 +244,10 @@ button[type="submit"]:hover {
   .modal-button {
     width: 100%;
     margin: 10px 0;
+  }
+  .phone-prefix {
+   
+    margin-top: 10px;
   }
 
   .modal-content {
@@ -239,6 +278,10 @@ button[type="submit"]:hover {
   .registration button[type="submit"],
   .modal-button {
     margin: 15px 0;
+  }
+  .phone-prefix {
+   
+    margin-top: 15px;
   }
 
   .modal-content {

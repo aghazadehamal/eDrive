@@ -173,16 +173,21 @@ const sendRequestEveryTenSecondsForThreeMinutes = () => {
             />
           </div>
           <div>
-            <p>Telefon nömrə</p>
-            <input
-              type="text"
-              name="phoneNumber"
-              value={formData.phoneNumber}
-              onChange={handleChange}
-              placeholder="997660042"
-              required
-            />
-          </div>
+  <p>Telefon nömrə</p>
+  <div className="phone-container">
+    <div className="phone-prefix">(+994)</div>
+    <input
+      className="phone-input"
+      type="text"
+      name="phoneNumber"
+      value={formData.phoneNumber}
+      onChange={handleChange}
+      placeholder="997660042"
+      required
+    />
+  </div>
+</div>
+
           <div>
           <button type="submit" disabled={isLoading} >
     {isLoading ? (

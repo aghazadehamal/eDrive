@@ -16,7 +16,7 @@
 }
 
 .uniqueFaqQuestion {
-  cursor: pointer;
+  
   padding: 15px 20px;
   background-color: #f3f4f8;
   display: flex;
@@ -27,6 +27,8 @@
   font-weight: 700;
   border-radius: 12px;
   height: 80px;
+  cursor: pointer;
+  color: #1F203F;
 }
 
 .uniqueFaqAnswer {
@@ -79,22 +81,25 @@
 }
 
 .uniqueFaqItemOpen {
-  background-color: #e8f5e9;
+  background-color: #50bb27;
   border: solid #BCBCC3;
     border-radius: 16px;
-}
 
-.uniqueFaqQuestion {
-  cursor: pointer;
 }
 
 
 
-.uniqueFaqQuestion:hover,
+
+
+
 .uniqueFaqItemOpen .uniqueFaqQuestion {
   background-color: #50bb27;
   color: white;
 }
+
+/* .uniqueFaqQuestion:hover {
+  background-color: #50bb27;
+} */
 
 .uniqueFaqSection h2,
 div {

@@ -6,15 +6,19 @@ import { Link } from "react-router-dom";
 const Accordion = ({ moduleTitle, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const titleStyle = {
+    fontSize: "20px",
+    lineHeight: "30px",
+    fontWeight: "700",
+    color: isOpen ? "white" : "#1F203F", 
+  };
+
   return (
     <div className={`customAccordion ${isOpen ? "customOpen" : ""}`}>
       <div className="customAccordionHeader" onClick={() => setIsOpen(!isOpen)}>
-        <span
-          style={{ fontSize: "20px", lineHeight: "30px", fontWeight: "700" }}
-        >
+        <span style={titleStyle}>
           {moduleTitle}
         </span>
-
         {isOpen ? (
           <img
             src={process.env.PUBLIC_URL + "/yuxari.svg"}

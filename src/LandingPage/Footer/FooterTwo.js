@@ -71,21 +71,21 @@ const FooterTwo = () => {
           hazırlaşdıran startup'ıq.
         </p>
         <div className="social-media-icons">
-          <a href="https://facebook.com">
+          <a href="https://facebook.com" target={"_blank"}>
             <img
               src={process.env.PUBLIC_URL + "/Facebook.png"}
               alt="Facebook"
               className="socialIcon"
             />
           </a>
-          <a href="https://instagram.com">
+          <a href="https://instagram.com" target={"_blank"}>
             <img
               src={process.env.PUBLIC_URL + "/Instagram.png"}
               alt="Instagram"
               className="socialIcon"
             />
           </a>
-          <a href="https://linkedin.com">
+          <a  href="https://linkedin.com" target={"_blank"}>
             <img
               src={process.env.PUBLIC_URL + "/lnkdn.png"}
               alt="LinkedIn"

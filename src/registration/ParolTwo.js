@@ -26,6 +26,8 @@ function ParolTwo() {
     e.preventDefault();
     setIsLoading(true); 
 
+    
+
     if (formData.newPassword !== formData.confirmPassword) {
       alert("Daxil edilən şifrələr fərqlidir.");
       return; 

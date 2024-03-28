@@ -25,6 +25,7 @@ import VideoQuiz from './LandingPage/VideoQuiz';
 import FirstPageTwo from './FirstPage/FirstPageTwo';
 import UserDetails from './LandingPage/UserDetails';
 import VerifyModal from "./LandingPage/VerifyModal";
+import PasswordModalTwo from "./LandingPage/PasswordModalTwo";
 
 function App() {
   return (
@@ -67,6 +68,7 @@ function App() {
             <Route path="/firstPageTwo" element={<FirstPageTwo />} />
             <Route path="/userDetails" element={<UserDetails />} />
             <Route path="/verifyModal" element={<VerifyModal />} />
+            <Route path="/passwordModalTwo" element={<PasswordModalTwo />} />
           </Routes>
         </div>
       </Router>

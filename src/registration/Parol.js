@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import "./Parol.css";
+import PasswordModal from "../LandingPage/PasswordModal";
 
 function Parol() {
   const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ function Parol() {
     
   });
   const [isLoading, setIsLoading] = useState(false); 
+  const [isModalVisible, setIsModalVisible] = useState(false); 
 
   // const navigate = useNavigate();
 
@@ -24,7 +26,7 @@ function Parol() {
         `https://edurive.onrender.com/auth/forgot-password?email=${formData.email}`,
       );
 
-      alert("Mesajınız uğurla göndərildi.");
+      setIsModalVisible(true); 
 
     
     } catch (error) {
@@ -36,6 +38,10 @@ function Parol() {
     finally {
       setIsLoading(false); 
     }
+  };
+
+  const handleCloseModal = () => {
+    setIsModalVisible(false); 
   };
 
   return (
@@ -66,6 +72,7 @@ function Parol() {
           </button>
         {/* </Link> */}
       </form>
+      {isModalVisible && <PasswordModal onClose={handleCloseModal} />} 
     </div>
   );
 }

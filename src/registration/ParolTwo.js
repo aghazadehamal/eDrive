@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 import "./ParolTwo.css";
+import PasswordModalTwo from "../LandingPage/PasswordModalTwo";
 
 function ParolTwo() {
   const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ function ParolTwo() {
   });
 
   const [isLoading, setIsLoading] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(false); 
 
 
   const params= useLocation();
@@ -35,9 +37,12 @@ function ParolTwo() {
         `https://edurive.onrender.com/auth/ChangePassword${params?.search}&newPassword=${formData.newPassword}`
       );
 
-      alert("Şifrəniz uğurla dəyişdirildi.");
+      setIsModalVisible(true); 
 
-      navigate("/LoginForm"); 
+      
+      setTimeout(() => {
+        navigate("/LoginForm");
+      }, 3000);
 
      
     } catch (error) {
@@ -84,6 +89,7 @@ function ParolTwo() {
             {isLoading ? <div className="loader"></div> : 'Təsdiq et'}
           </button>
       </form>
+      {isModalVisible && <PasswordModalTwo/>} 
     </div>
   );
 }

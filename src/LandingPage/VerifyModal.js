@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-
+import './VerifyModal.css'; 
 
 const VerifyModal = ({ onClose }) => {
     return (
       <div className="custom-modal-overlay">
-        <div className="custom-modal-content">
+        <div className="custom-modal-contentt">
           <div> <img src={process.env.PUBLIC_URL + '/success.svg'} alt="Clock Icon"/></div>
           <span className="custom-modal-title">Qeydiyyatınız uğurla başa çatdı</span>
           <p className="custom-modal-text">Hal-hazırda saytın giriş bölməsinə yönləndirilirsiniz</p>

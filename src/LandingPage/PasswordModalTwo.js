@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import './PasswordModalTwo.css';
 
-const PasswordModal = ({ onClose }) => {
+const PasswordModalTwo = ({ onClose }) => {
     return (
       <div className="custom-modal-overlay">
         <div className="custom-modal-contenttt">
@@ -13,4 +13,4 @@ const PasswordModal = ({ onClose }) => {
       </div>
     );
 };
-export default PasswordModal;
+export default PasswordModalTwo;

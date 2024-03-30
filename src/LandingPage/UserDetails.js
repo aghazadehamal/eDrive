@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from "axios";
 import { Puff } from 'react-loader-spinner';
+import EditModal from './EditModal';
 function UserDetails() {
 
   const [userData, setUserData] = useState({
@@ -14,7 +15,8 @@ function UserDetails() {
     phoneNumber: ""
   });
   
-  
+  const [isEditSuccessful, setIsEditSuccessful] = useState(false);
+
   const [isLoading, setIsLoading] = useState(false);
 
 
@@ -24,13 +26,18 @@ function UserDetails() {
   
     try {
       const response = await axios.put(url, userData);
-      console.log('Kullanıcı bilgileri başarıyla güncellendi', response.data);
-      // Burada kullanıcıya başarılı bir güncelleme yapıldığına dair geri bildirim sağlayabilirsiniz.
+      console.log('Məlumatlar uğurla dəyişdirildi', response.data);
+      setIsEditSuccessful(true); // Düzenleme başarılı olduğunda modalı göster
+
+      setTimeout(() => {
+        setIsEditSuccessful(false);
+      }, 1000);
     } catch (error) {
-      console.error('Kullanıcı bilgileri güncellenirken bir hata oluştu', error);
-      // Hata durumunda kullanıcıya hata mesajı gösterebilirsiniz.
+      console.error('İstifadəçi məlumatları yenilənərkən bir xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.', error);
+      alert('İstifadəçi məlumatları yenilənərkən bir xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.'); // Xəta durumunda istifadəçiyə xəbərdarlıq mesajı göstər
     }
   };
+  
   
 
   useEffect(() => {
@@ -222,6 +229,7 @@ function UserDetails() {
       
     </div>
 
+    {isEditSuccessful && <EditModal />}
     </div>
 )}
     </div>

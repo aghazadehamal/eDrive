@@ -31,7 +31,7 @@ function UserDetails() {
 
       setTimeout(() => {
         setIsEditSuccessful(false);
-      }, 1000);
+      }, 2000);
     } catch (error) {
       console.error('İstifadəçi məlumatları yenilənərkən bir xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.', error);
       alert('İstifadəçi məlumatları yenilənərkən bir xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.'); // Xəta durumunda istifadəçiyə xəbərdarlıq mesajı göstər

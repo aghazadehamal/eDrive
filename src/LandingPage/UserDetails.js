@@ -102,7 +102,7 @@ function UserDetails() {
   {userInitials.toUpperCase()}
 </div>
 
-      <p>
+      <p className='NameSurnameP'>
         <span className="user-namee">{userData?.name}</span>
         {' '} {/* Boşluk bırak */}
         <span className="user-surnamee">{userData?.surname}</span>

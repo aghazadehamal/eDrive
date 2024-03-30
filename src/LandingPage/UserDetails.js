@@ -170,13 +170,15 @@ function UserDetails() {
 <div className="user-info-row">
   <label htmlFor="password">Şifre:</label>
   <div className="input-icon-container">
-    <input 
-      id="password" 
-      name="password" 
-      type="password" // Şifreyi gizler
-      value={userData?.password || ''} 
-      onChange={handleInputChange}
-    />
+  <input
+  id="password"
+  name="password"
+  type="password"
+  class="password-inputt" // Bu sınıfı ekledik
+  value={userData?.password || ''}
+  onChange={handleInputChange}
+/>
+
     <img
       src={`${process.env.PUBLIC_URL}/editicon.svg`}
       className="input-icon"

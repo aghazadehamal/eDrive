@@ -225,7 +225,7 @@ const subjectClickHandler = (subject, key) => {
       ) : (
    
     
-    <div style={{ width: "75%", margin: "auto" }}>
+    <div className="lessonDataDiv">
       
       <div className="imageLogo">
         <Link to="/firstPageTwo">
@@ -551,6 +551,7 @@ const subjectClickHandler = (subject, key) => {
                     )}
 
                     {playVideo && (
+                      <div className="video-container">
                     <video
                     key={selectedSubject.id}
                     controls
@@ -564,7 +565,7 @@ const subjectClickHandler = (subject, key) => {
                     Your browser does not support the video tag.
                   </video>
                   
-                   
+                  </div>
                     )}
                     <span
                       style={{

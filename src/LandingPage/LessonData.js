@@ -26,7 +26,16 @@ const LessonData = () => {
   const [showModal, setShowModal] = useState(false); 
   const [showModalTwo, setShowModalTwo] = useState(false); 
   const lessonListRef = useRef(null); 
-  const [isPaid, setIsPaid] = useState(false)
+  const [isPaid, setIsPaid] = useState(false);
+  const [userData, setUserData] = useState({
+    name: "",
+    surname: "",
+  
+  });
+
+   const userInitials = `${userData.name.charAt(0)}${userData.surname.charAt(0)}`;
+
+   
 
   useEffect(() => {
     const fetchLessonData = async () => {
@@ -212,7 +221,25 @@ const subjectClickHandler = (subject, key) => {
 };
 
 
+useEffect(() => {
+  const fetchLessonData = async () => {
+    try {
+      setIsLoading(true);
 
+      const userId = localStorage.getItem('userId');
+      const userLessonsResponse = await axios.get(`https://edurive.onrender.com/v1/user/${userId}`);
+      setUserData(userLessonsResponse.data)
+
+    } catch (error) {
+      console.error("Error fetching lessons:", error);
+    }
+    finally {
+      setIsLoading(false); 
+    }
+  };
+
+  fetchLessonData();
+}, []);
 
 
   return (
@@ -237,11 +264,9 @@ const subjectClickHandler = (subject, key) => {
         </Link>
 
         <Link to="/userDetails">
-          <img className="imageLogoSecondImage"
-            src={`${process.env.PUBLIC_URL}/Avatar.svg`}
-            alt="Clock Icon"
-           
-          />
+        <div className="initialss-circle">
+  {userInitials.toUpperCase()}
+</div>
         </Link>
       </div>
 

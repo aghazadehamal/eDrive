@@ -90,13 +90,7 @@ function UserDetails() {
 <div className="user-details">
   
 
-      {/* <Link to="/lessonData">
-        <img className="imageLogoFirstImage"
-          src="/edurive.svg"
-          alt="Novademy Logo"
-          style={{ maxWidth: "250px" }}
-        />
-      </Link> */}
+     
       <h1>Hesabım</h1>
       <div className="initials-circle">
   {userInitials.toUpperCase()}

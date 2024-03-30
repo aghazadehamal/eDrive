@@ -56,3 +56,8 @@ input.password-inputt:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0px 1000px #F3F4F8 inset !important;
   box-shadow: 0 0 0px 1000px #F3F4F8 inset !important;
 }
+
+
+a {
+  text-decoration: none;
+}

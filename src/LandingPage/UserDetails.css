@@ -39,7 +39,7 @@
     display: flex;
     justify-content: center; /* içeriği yatay olarak ortala */
     align-items: center; /* içeriği dikey olarak ortala */
-    font-size: 18px; /* metin boyutu, isteğe bağlı */
+  
     font-size: 64px;
     line-height: 96px;
     color: #50BB27;
@@ -228,11 +228,7 @@ color: #1F203F;
 
 
 /* Logo ve başlık için stil tanımlamaları */
-.imageLogoFirstImage {
-  display: block;
-  margin-bottom: 30px;
-  max-width: 250px;
-}
+
 
 
   

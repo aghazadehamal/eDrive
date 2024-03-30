@@ -30,6 +30,8 @@
   }
 
 
+
+
   
   .user-details p {
     color: #34495e;
@@ -228,4 +230,24 @@ color: #1F203F;
   position: absolute;
   right: 10px;
   cursor: pointer; /* İkon üzerine gelindiğinde imleç şeklini değiştir */
+}
+
+
+.button-container {
+  text-align: left; /* İçerikleri sola hizala */
+}
+
+.save-button {
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Yeşil arka plan rengi */
+  color: white; /* Beyaz metin rengi */
+  border: none; /* Kenarlıkları kaldır */
+  border-radius: 5px; /* Hafif yuvarlak köşeler */
+  cursor: pointer; /* İmleç, üzerine gelindiğinde el şeklini alır */
+  transition: background-color 0.3s; /* Arka plan rengi geçiş efekti */
+  margin-bottom: 20px;
+}
+
+.save-button:hover {
+  background-color: #45a049; /* Butona hover yapıldığında daha koyu yeşil */
 }

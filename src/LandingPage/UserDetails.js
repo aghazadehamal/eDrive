@@ -7,11 +7,13 @@ import { Puff } from 'react-loader-spinner';
 function UserDetails() {
 
   const [userData, setUserData] = useState({
-    UserName: "",
+    name: "",
     surname: "",
     gmail: "",
+    password: "",
     phoneNumber: ""
   });
+  
   
   const [isLoading, setIsLoading] = useState(false);
 
@@ -153,6 +155,25 @@ function UserDetails() {
   </div>
 </div>
 
+<div className="user-info-row">
+  <label htmlFor="password">Şifre:</label>
+  <div className="input-icon-container">
+    <input 
+      id="password" 
+      name="password" 
+      type="password" // Şifreyi gizler
+      value={userData?.password || ''} 
+      onChange={handleInputChange}
+    />
+    <img
+      src={`${process.env.PUBLIC_URL}/editicon.svg`}
+      className="input-icon"
+      alt="editicon"
+    />
+  </div>
+</div>
+
+
           
 <div className="user-info-row">
   <label htmlFor="phoneNumber">Telefon:</label>
@@ -171,7 +192,11 @@ function UserDetails() {
   </div>
 </div>
 
-<button style={{backgroundColor: "green", color: "white", padding: "10px", border: "none"}} onClick={updateUserDetails}>Yadda saxla</button>
+<div className="button-container">
+  <button className="save-button" onClick={updateUserDetails}>Yadda saxla</button>
+</div>
+
+
 
         </div>
       

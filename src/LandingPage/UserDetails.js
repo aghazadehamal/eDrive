@@ -14,6 +14,8 @@ function UserDetails() {
     password: "",
     phoneNumber: ""
   });
+
+  const userInitials = `${userData.name.charAt(0)}${userData.surname.charAt(0)}`;
   
   const [isEditSuccessful, setIsEditSuccessful] = useState(false);
 
@@ -96,6 +98,9 @@ function UserDetails() {
         />
       </Link> */}
       <h1>Hesabım</h1>
+      <div className="initials-circle">
+  {userInitials.toUpperCase()}
+</div>
 
       <p>
         <span className="user-namee">{userData?.name}</span>

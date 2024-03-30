@@ -6,8 +6,30 @@ import axios from "axios";
 import { Puff } from 'react-loader-spinner';
 function UserDetails() {
 
-  const [userData, setUserData] = useState();
+  const [userData, setUserData] = useState({
+    UserName: "",
+    surname: "",
+    gmail: "",
+    phoneNumber: ""
+  });
+  
   const [isLoading, setIsLoading] = useState(false);
+
+
+  const updateUserDetails = async () => {
+    const userId = localStorage.getItem('userId');
+    const url = `https://edurive.onrender.com/v1/user/${userId}`;
+  
+    try {
+      const response = await axios.put(url, userData);
+      console.log('Kullanıcı bilgileri başarıyla güncellendi', response.data);
+      // Burada kullanıcıya başarılı bir güncelleme yapıldığına dair geri bildirim sağlayabilirsiniz.
+    } catch (error) {
+      console.error('Kullanıcı bilgileri güncellenirken bir hata oluştu', error);
+      // Hata durumunda kullanıcıya hata mesajı gösterebilirsiniz.
+    }
+  };
+  
 
   useEffect(() => {
     const fetchLessonData = async () => {
@@ -29,36 +51,156 @@ function UserDetails() {
     fetchLessonData();
   }, []);
 
+    const handleInputChange = (e) => {
+    
+    const { name, value } = e.target;
+    setUserData({ ...userData, [name]: value });
+  };
+
   return (
-    <div className="user-details">
- 
-       <Link to="/lessonData">
-          <img className="imageLogoFirstImage"
-            src="/edurive.svg"
-            alt="Novademy Logo"
-            style={{ maxWidth: "250px" }}
-          />
-        </Link>
-      <h1>İstifadəçi məlumatları</h1>
-      {isLoading ? (
+    <div className='userDetailBackgroundBlackDiv' >
+       {isLoading ? (
         <div className="loaderUser-container">
           <Puff color="#50bb27" height={100} width={100} />
         </div>
       ) : (
-      <>
 
-      <p><span className="highlight">Ad:</span> {userData?.name}</p>
-      <p><span className="highlight">Soyad:</span> {userData?.surname}</p>
-      <p><span className="highlight">Mail:</span> {userData?.gmail}</p>
+<div className='userDetailBackgrounWhitedDiv'>
+ <div className="icon-container">
+  <Link to="/lessonData">
+  <img
+    src={`${process.env.PUBLIC_URL}/iconx.svg`}
+    alt="iconx"
+  />
+  </Link>
+ 
+</div>
+
+<div className="user-details">
+  
+
+      {/* <Link to="/lessonData">
+        <img className="imageLogoFirstImage"
+          src="/edurive.svg"
+          alt="Novademy Logo"
+          style={{ maxWidth: "250px" }}
+        />
+      </Link> */}
+      <h1>Hesabım</h1>
+
+      <p>
+        <span className="user-namee">{userData?.name}</span>
+        {' '} {/* Boşluk bırak */}
+        <span className="user-surnamee">{userData?.surname}</span>
+      </p>
+      <p className='EmailP'>
+      <span className="user-email">{userData?.gmail}</span>
+      </p>
+      
      
-      <p><span className="highlight">Telefon nömrəsi:</span> {userData?.phoneNumber}</p>
-      </>
-      )}
-      <Link onClick={() => localStorage.clear()} to="/" className="logoutLink">
-        Çıxış
-      </Link>
+        <div className="user-info">
+        <div className="user-info-row">
+  <label htmlFor="name">Ad:</label>
+  <div className="input-icon-container">
+    <input 
+      id="name" 
+      name="name" 
+      value={userData?.name || ''} 
+      onChange={handleInputChange}
+    />
+    <img
+      src={`${process.env.PUBLIC_URL}/editicon.svg`}
+      className="input-icon"
+      alt="editicon"
+    />
+  </div>
+</div>
+
+          
+<div className="user-info-row">
+  <label htmlFor="surname">Soyad:</label>
+  <div className="input-icon-container">
+    <input 
+      id="surname" 
+      name="surname" 
+      value={userData?.surname || ''} 
+      onChange={handleInputChange}
+    />
+    <img
+      src={`${process.env.PUBLIC_URL}/editicon.svg`}
+      className="input-icon"
+      alt="editicon"
+    />
+  </div>
+</div>
+
+
+<div className="user-info-row">
+  <label htmlFor="gmail">E-mail:</label>
+  <div className="input-icon-container">
+    <input 
+      id="gmail" 
+      name="gmail" 
+      type="gmail"
+      value={userData?.gmail || ''} 
+      onChange={handleInputChange}
+    />
+    <img
+      src={`${process.env.PUBLIC_URL}/editicon.svg`}
+      className="input-icon"
+      alt="editicon"
+    />
+  </div>
+</div>
+
+          
+<div className="user-info-row">
+  <label htmlFor="phoneNumber">Telefon:</label>
+  <div className="input-icon-container">
+    <input 
+      id="phoneNumber" 
+      name="phoneNumber" 
+      value={userData?.phoneNumber || ''} 
+      onChange={handleInputChange}
+    />
+    <img
+      src={`${process.env.PUBLIC_URL}/editicon.svg`}
+      className="input-icon"
+      alt="editicon"
+    />
+  </div>
+</div>
+
+<button style={{backgroundColor: "green", color: "white", padding: "10px", border: "none"}} onClick={updateUserDetails}>Yadda saxla</button>
+
+        </div>
+      
+
+
+<p className='LogOutContainer'>
+<Link onClick={() => localStorage.clear()} to="/" className="logoutLink">
+
+<img
+        src={`${process.env.PUBLIC_URL}/signout.svg`}
+        alt="signout"
+       
+      />
+<span>Çıxış et</span>
+
+
+</Link>
+
+</p>
+
+
+     
       
     </div>
+
+    </div>
+)}
+    </div>
+   
   );
 }
 

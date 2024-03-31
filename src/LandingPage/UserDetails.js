@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './UserDetails.css'; 
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+
 import axios from "axios";
 import { Puff } from 'react-loader-spinner';
 import EditModal from './EditModal';
@@ -12,6 +12,7 @@ function UserDetails() {
     surname: "",
     gmail: "",
     password: "",
+    confirmPassword: "", 
     phoneNumber: ""
   });
 
@@ -20,13 +21,40 @@ function UserDetails() {
   const [isEditSuccessful, setIsEditSuccessful] = useState(false);
 
   const [isLoading, setIsLoading] = useState(false);
+  const [modalLoading, setModalLoading] = useState(false);
+  const nameRef = useRef(null);
+const surnameRef = useRef(null);
+const emailRef = useRef(null);
+const passwordRef = useRef(null);
+const confirmPasswordRef = useRef(null);
+const phoneNumberRef = useRef(null);
 
 
   const updateUserDetails = async () => {
+   
+
+    if (userData.password.length < 8 || userData.password.length > 20) {
+      alert("Şifre en az 8 ve en fazla 20 simvol uzunluğunda olmalıdır.");
+      return;
+    }
+
+    if (userData.password !== userData.confirmPassword) {
+      alert("Daxil edilən şifrələr fərqlidir.");
+      return;
+    }
+
+    const phoneRegex = /^\d{9}$/;
+    if (!phoneRegex.test(userData.phoneNumber)) {
+      alert("Telefon nömrəsi düzgün formatda deyil. Nümunə: 997660042");
+      return;
+    }
+
     const userId = localStorage.getItem('userId');
     const url = `https://edurive.onrender.com/v1/user/${userId}`;
   
+    
     try {
+      setModalLoading(true);
       const response = await axios.put(url, userData);
       console.log('Məlumatlar uğurla dəyişdirildi', response.data);
       setIsEditSuccessful(true); // Düzenleme başarılı olduğunda modalı göster
@@ -34,10 +62,15 @@ function UserDetails() {
       setTimeout(() => {
         setIsEditSuccessful(false);
       }, 2000);
+      setModalLoading(false);
     } catch (error) {
+      
       console.error('İstifadəçi məlumatları yenilənərkən bir xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.', error);
-      alert('İstifadəçi məlumatları yenilənərkən bir xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.'); // Xəta durumunda istifadəçiyə xəbərdarlıq mesajı göstər
+      alert('İstifadəçi məlumatları yenilənərkən bir xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.'); // Xəta durumunda 
+ setModalLoading(false);
+      
     }
+   
   };
   
   
@@ -115,12 +148,15 @@ function UserDetails() {
       name="name" 
       value={userData?.name || ''} 
       onChange={handleInputChange}
+      ref={nameRef} 
     />
-    <img
-      src={`${process.env.PUBLIC_URL}/editicon.svg`}
-      className="input-icon"
-      alt="editicon"
-    />
+   <img
+    src={`${process.env.PUBLIC_URL}/editicon.svg`}
+    className="input-icon"
+    alt="editicon"
+    onClick={() => nameRef.current && nameRef.current.focus()} // İkon tıklandığında input'a odaklan
+  />
+
   </div>
 </div>
 
@@ -133,12 +169,15 @@ function UserDetails() {
       name="surname" 
       value={userData?.surname || ''} 
       onChange={handleInputChange}
+      ref={surnameRef} 
     />
     <img
-      src={`${process.env.PUBLIC_URL}/editicon.svg`}
-      className="input-icon"
-      alt="editicon"
-    />
+    src={`${process.env.PUBLIC_URL}/editicon.svg`}
+    className="input-icon"
+    alt="editicon"
+    onClick={() => surnameRef.current && surnameRef.current.focus()} // İkon tıklandığında input'a odaklan
+  />
+
   </div>
 </div>
 
@@ -152,17 +191,20 @@ function UserDetails() {
       type="gmail"
       value={userData?.gmail || ''} 
       onChange={handleInputChange}
+      ref={emailRef} 
     />
-    <img
-      src={`${process.env.PUBLIC_URL}/editicon.svg`}
-      className="input-icon"
-      alt="editicon"
-    />
+   <img
+    src={`${process.env.PUBLIC_URL}/editicon.svg`}
+    className="input-icon"
+    alt="editicon"
+    onClick={() => emailRef.current && emailRef.current.focus()} // İkon tıklandığında input'a odaklan
+  />
+
   </div>
 </div>
 
 <div className="user-info-row">
-  <label htmlFor="password">Şifre:</label>
+  <label htmlFor="password">Şifrə:</label>
   <div className="input-icon-container">
   <input
   id="password"
@@ -171,37 +213,74 @@ function UserDetails() {
   class="password-inputt" // Bu sınıfı ekledik
   value={userData?.password || ''}
   onChange={handleInputChange}
+  ref={passwordRef} 
 />
 
-    <img
-      src={`${process.env.PUBLIC_URL}/editicon.svg`}
-      className="input-icon"
-      alt="editicon"
-    />
+<img
+    src={`${process.env.PUBLIC_URL}/editicon.svg`}
+    className="input-icon"
+    alt="editicon"
+    onClick={() => passwordRef.current && passwordRef.current.focus()} // İkon tıklandığında input'a odaklan
+  />
+
+  </div>
+</div>
+
+<div className="user-info-row">
+  <label htmlFor="password">Şifrəni təkrarlayın:</label>
+  <div className="input-icon-container">
+  <input
+  id="password"
+  name="confirmPassword"
+  type="password"
+  class="password-inputt" // Bu sınıfı ekledik
+  value={userData?.confirmPassword || ''}
+  onChange={handleInputChange}
+  ref={confirmPasswordRef} 
+/>
+
+<img
+    src={`${process.env.PUBLIC_URL}/editicon.svg`}
+    className="input-icon"
+    alt="editicon"
+    onClick={() => confirmPasswordRef.current && confirmPasswordRef.current.focus()} // İkon tıklandığında input'a odaklan
+  />
+
   </div>
 </div>
 
 
           
 <div className="user-info-row">
-  <label htmlFor="phoneNumber">Telefon:</label>
+  <label htmlFor="phoneNumber">Telefon nömrəsi:</label>
   <div className="input-icon-container">
     <input 
       id="phoneNumber" 
       name="phoneNumber" 
       value={userData?.phoneNumber || ''} 
       onChange={handleInputChange}
+      ref={phoneNumberRef} 
     />
     <img
-      src={`${process.env.PUBLIC_URL}/editicon.svg`}
-      className="input-icon"
-      alt="editicon"
-    />
+    src={`${process.env.PUBLIC_URL}/editicon.svg`}
+    className="input-icon"
+    alt="editicon"
+    onClick={() => phoneNumberRef.current && phoneNumberRef.current.focus()} // İkon tıklandığında input'a odaklan
+  />
+
   </div>
 </div>
 
 <div className="button-container">
-  <button className="save-button" onClick={updateUserDetails}>Yadda saxla</button>
+  
+
+  <button type="submit" disabled={isLoading} className="save-button" onClick={updateUserDetails} >
+    {modalLoading ? (
+      <div className="loader"></div> 
+    ) : (
+      'Yadda saxla' 
+    )}
+  </button>
 </div>
 
 

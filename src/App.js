@@ -26,6 +26,7 @@ import FirstPageTwo from './FirstPage/FirstPageTwo';
 import UserDetails from './LandingPage/UserDetails';
 import VerifyModal from "./LandingPage/VerifyModal";
 import PasswordModalTwo from "./LandingPage/PasswordModalTwo";
+import PasswordModal from "./LandingPage/PasswordModal";
 
 function App() {
   return (
@@ -60,15 +61,16 @@ function App() {
               path="/lessonData"
               element={<ProtectedRoute component={LessonData} />}
             />
-            <Route path="/UserListTwo" element={<UserListTwo />} />
+            <Route path="/UserListTwo" element={<ProtectedRoute component={UserListTwo} />}/>
 
-            <Route path="/Parol" element={<Parol />} />
-            <Route path="/ChangePassword" element={<ParolTwo />} />
-            <Route path="/VideoQuiz" element={<VideoQuiz />} />
+            <Route path="/Parol" element={<ProtectedRoute component={Parol} />}/>
+            <Route path="/ChangePassword" element={<ProtectedRoute component={ParolTwo} />} />
+            <Route path="/VideoQuiz" element={<ProtectedRoute component={VideoQuiz} />} />
             <Route path="/firstPageTwo" element={<FirstPageTwo />} />
-            <Route path="/userDetails" element={<UserDetails />} />
+            <Route path="/userDetails" element={<ProtectedRoute component={UserDetails} />} />
             <Route path="/verifyModal" element={<VerifyModal />} />
-            <Route path="/passwordModalTwo" element={<PasswordModalTwo />} />
+            <Route path="/passwordModalTwo" element={<ProtectedRoute component={PasswordModalTwo} />} />
+            <Route path="/passwordModal" element={<ProtectedRoute component={PasswordModal} />} />
           </Routes>
         </div>
       </Router>

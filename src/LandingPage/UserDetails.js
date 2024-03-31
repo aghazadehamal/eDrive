@@ -57,7 +57,7 @@ const phoneNumberRef = useRef(null);
       setModalLoading(true);
       const response = await axios.put(url, userData);
       console.log('Məlumatlar uğurla dəyişdirildi', response.data);
-      setIsEditSuccessful(true); // Düzenleme başarılı olduğunda modalı göster
+      setIsEditSuccessful(true); 
 
       setTimeout(() => {
         setIsEditSuccessful(false);
@@ -66,7 +66,7 @@ const phoneNumberRef = useRef(null);
     } catch (error) {
       
       console.error('İstifadəçi məlumatları yenilənərkən bir xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.', error);
-      alert('İstifadəçi məlumatları yenilənərkən bir xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.'); // Xəta durumunda 
+      alert('İstifadəçi məlumatları yenilənərkən bir xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.');
  setModalLoading(false);
       
     }
@@ -154,7 +154,7 @@ const phoneNumberRef = useRef(null);
     src={`${process.env.PUBLIC_URL}/editicon.svg`}
     className="input-icon"
     alt="editicon"
-    onClick={() => nameRef.current && nameRef.current.focus()} // İkon tıklandığında input'a odaklan
+    onClick={() => nameRef.current && nameRef.current.focus()} 
   />
 
   </div>
@@ -175,7 +175,7 @@ const phoneNumberRef = useRef(null);
     src={`${process.env.PUBLIC_URL}/editicon.svg`}
     className="input-icon"
     alt="editicon"
-    onClick={() => surnameRef.current && surnameRef.current.focus()} // İkon tıklandığında input'a odaklan
+    onClick={() => surnameRef.current && surnameRef.current.focus()} 
   />
 
   </div>
@@ -197,7 +197,7 @@ const phoneNumberRef = useRef(null);
     src={`${process.env.PUBLIC_URL}/editicon.svg`}
     className="input-icon"
     alt="editicon"
-    onClick={() => emailRef.current && emailRef.current.focus()} // İkon tıklandığında input'a odaklan
+    onClick={() => emailRef.current && emailRef.current.focus()} 
   />
 
   </div>
@@ -210,7 +210,7 @@ const phoneNumberRef = useRef(null);
   id="password"
   name="password"
   type="password"
-  class="password-inputt" // Bu sınıfı ekledik
+  class="password-inputt" 
   value={userData?.password || ''}
   onChange={handleInputChange}
   ref={passwordRef} 
@@ -220,7 +220,7 @@ const phoneNumberRef = useRef(null);
     src={`${process.env.PUBLIC_URL}/editicon.svg`}
     className="input-icon"
     alt="editicon"
-    onClick={() => passwordRef.current && passwordRef.current.focus()} // İkon tıklandığında input'a odaklan
+    onClick={() => passwordRef.current && passwordRef.current.focus()} 
   />
 
   </div>
@@ -233,7 +233,7 @@ const phoneNumberRef = useRef(null);
   id="password"
   name="confirmPassword"
   type="password"
-  class="password-inputt" // Bu sınıfı ekledik
+  class="password-inputt" 
   value={userData?.confirmPassword || ''}
   onChange={handleInputChange}
   ref={confirmPasswordRef} 
@@ -243,7 +243,7 @@ const phoneNumberRef = useRef(null);
     src={`${process.env.PUBLIC_URL}/editicon.svg`}
     className="input-icon"
     alt="editicon"
-    onClick={() => confirmPasswordRef.current && confirmPasswordRef.current.focus()} // İkon tıklandığında input'a odaklan
+    onClick={() => confirmPasswordRef.current && confirmPasswordRef.current.focus()} 
   />
 
   </div>
@@ -265,7 +265,7 @@ const phoneNumberRef = useRef(null);
     src={`${process.env.PUBLIC_URL}/editicon.svg`}
     className="input-icon"
     alt="editicon"
-    onClick={() => phoneNumberRef.current && phoneNumberRef.current.focus()} // İkon tıklandığında input'a odaklan
+    onClick={() => phoneNumberRef.current && phoneNumberRef.current.focus()} 
   />
 
   </div>

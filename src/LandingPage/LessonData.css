@@ -13,20 +13,20 @@
 }
 
 .initialss-circle {
-  width: 48px; /* veya istediğiniz boyut */
-  height: 48px; /* genişlik ile aynı olmalı ki yuvarlak olsun */
-  border-radius: 200px; /* yuvarlaklık */
-  background-color: #DDF7D0; /* arka plan rengi, isteğe bağlı */
-  color: white; /* metin rengi, isteğe bağlı */
+  width: 48px; 
+  height: 48px; 
+  border-radius: 200px; 
+  background-color: #DDF7D0; 
+  color: white; 
   display: flex;
   gap: 10px;
-  justify-content: center; /* içeriği yatay olarak ortala */
-  align-items: center; /* içeriği dikey olarak ortala */
+  justify-content: center; 
+  align-items: center;
 
   font-size: 24px;
   line-height: 32px;
   color: #50BB27;
-  font-weight: bold; /* metin kalınlığı, isteğe bağlı */
+  font-weight: bold;
 }
 
 .lessonDataDiv {
@@ -405,8 +405,8 @@ margin-left: 5px;
 }
 
 .initialss-circle {
-  width: 30px; /* veya istediğiniz boyut */
-  height: 30px; /* genişlik ile aynı olmalı ki yuvarlak olsun */
+  width: 30px;
+  height: 30px; 
 
 
   font-size: 14px;

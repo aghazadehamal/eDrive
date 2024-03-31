@@ -224,7 +224,7 @@ const subjectClickHandler = (subject, key) => {
 useEffect(() => {
   const fetchLessonData = async () => {
     try {
-      setIsLoading(true);
+      // setIsLoading(true);
 
       const userId = localStorage.getItem('userId');
       const userLessonsResponse = await axios.get(`https://edurive.onrender.com/v1/user/${userId}`);
@@ -233,9 +233,9 @@ useEffect(() => {
     } catch (error) {
       console.error("Error fetching lessons:", error);
     }
-    finally {
-      setIsLoading(false); 
-    }
+    // finally {
+    //   setIsLoading(false); 
+    // }
   };
 
   fetchLessonData();

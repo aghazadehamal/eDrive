@@ -1,7 +1,7 @@
 import React from "react";
 import "./VideoCard.css";
 
-const VideoCard = ({ url, thumbnail, onVideoSelect, isSelected }) => {
+const VideoCard = ({ url, thumbnail, duration, onVideoSelect, isSelected }) => {
   return (
     <div>
       <div className="uniqueVideoCard" onClick={() => onVideoSelect(url)}>
@@ -14,11 +14,12 @@ const VideoCard = ({ url, thumbnail, onVideoSelect, isSelected }) => {
           />
             <div className="video-overlay">
               <img
-                src={process.env.PUBLIC_URL + "/iconVideo.svg"}
-                alt="Play"
+                src={process.env.PUBLIC_URL + "/playicontwo.svg"}
+                alt="playicontwo"
                 className="play-icon"
               />
             </div>
+            <span className="uniqueVideoCard-span">{duration}</span> 
           </>
         )}
         {isSelected && (

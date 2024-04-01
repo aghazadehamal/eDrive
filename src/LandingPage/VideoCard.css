@@ -85,6 +85,23 @@
   margin-bottom: 10px;
 }
 
+.uniqueVideoCard-span {
+  position: absolute;
+  left: 14px;
+  border-radius: 8px;
+  padding: 4px 8px 4px 8px;
+  gap: 10px;
+  top: 14px;
+  color: white;
+  background-color: #0C0C17;
+ width: 52px;
+ height: 29px;
+  opacity: 60%;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
 @media (max-width: 768px) {
   .videoCardWrapper p {
     margin-bottom: 20px;

@@ -5,7 +5,7 @@ const ShowModalTwo = ({ onClose }) => {
       <div className="custom-modal-overlay">
         <div className="custom-modal-content">
           <div> <img style={{width:"160px", height: "160px"}} src={process.env.PUBLIC_URL + '/lock.svg'} alt="Clock Icon"/></div>
-          <span className="custom-modal-title">Siz hal hazırda saytın free versiyasını görürsüz.</span>
+          <span className="custom-modal-title">Siz hazırda saytın ödənişsiz versiyasından istifadə edirsiniz.</span>
           <p className="custom-modal-text">Ödənişiniz təsdiqləndikdən sonra limitlər aradan qaldırılacaq</p>
           <button className="custom-modal-button" onClick={onClose}>Davam et</button>
         </div>

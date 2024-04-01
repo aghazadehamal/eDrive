@@ -14,13 +14,23 @@ function Navbar() {
 
   return (
     <div className="customNavbar">
+    
       <img
         src="/edurive.svg"
         alt="Novademy Logo"
         style={{ maxWidth: "250px" }}
       />
+     
+     
       
       <nav className="customNav">
+      <a
+          href="#why-us"
+          className="customNavLink"
+          onClick={(e) => scrollToSection(e, "why-us")}
+        >
+          Biz kimik?
+        </a>
         <a
           href="#why-us"
           className="customNavLink"
@@ -50,7 +60,7 @@ function Navbar() {
         <Link to="/RegistrationForm">
           <button className="customBtn customRegister">Qeydiyyatdan keç</button>
         </Link>
-        <Link to="/loginFormAdmin">
+        <Link style={{display: "none"}} to="/loginFormAdmin">
           <img className="avatarAdmin"
             src={`${process.env.PUBLIC_URL}/Avatar.svg`}
             alt="Clock Icon"

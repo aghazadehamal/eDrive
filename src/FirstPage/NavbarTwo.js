@@ -21,6 +21,13 @@ function NavbarTwo() {
       />
       
       <nav className="customNav">
+      <a
+          href="#why-us"
+          className="customNavLink"
+          onClick={(e) => scrollToSection(e, "why-us")}
+        >
+          Biz kimik?
+        </a>
         <a
           href="#why-us"
           className="customNavLink"
@@ -44,8 +51,8 @@ function NavbarTwo() {
         </a>
       </nav>
       <div className="customButtons">
-      <Link to="/lessonData"  style={{textDecoration: "none"}} className="kabinetim"  >
-                Kabinetim
+      <Link to="/lessonData"   style={{textDecoration: "none"}} className="kabinetim"  >
+                Kabinet
                 </Link>
       </div>
     </div>

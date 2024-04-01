@@ -11,16 +11,18 @@ import WhyUsSection from "../LandingPage/WhyUsSection";
 import LearnDrivingSection from "../LandingPage/LearnDrivingSection/LearnDrivingSection";
 import NavbarTwo from "./NavbarTwo";
 import Haqqimizda from "../LandingPage/Haqqimizda";
+import CampaignSectionTwo from './CampaignSectionTwo';
+import CourseModulesSectionTwo from './CourseModulesSectionTwo';
 
 function FirstPageTwo() {
   return (
     <div>
       <NavbarTwo/>
-      <CampaignSection />
+      <CampaignSectionTwo />
       <Videos />
       <WhyUsSection />
       <Haqqimizda/>
-      <CourseModulesSection />
+      <CourseModulesSectionTwo />
       <LearnDrivingSection />
 
       <FAQSectionTwo />

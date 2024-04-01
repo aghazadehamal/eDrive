@@ -8,7 +8,7 @@ const LearnDrivingSection = () => {
      <div id="mentor" className="learn-driving-content">
       <div className="learn-driving-two">
         <div className="learn-driving-three">
-        <p style={{ color: "#50BB27", marginBottom: "20px" }}> Mentor haqqında </p> 
+        <p style={{ color: "#50BB27", marginBottom: "7px" }}> Mentor haqqında </p> 
           <span style={{color: "white"}}>Sürücülük təlimini  <span style={{ color: "#50BB27" }}> peşəkar </span>  <span style={{ color: "#50BB27" }}>  instruktorlar </span>   tərəfindən öyrən</span>
           <p style={{color: "white", marginTop: "20px"}}>
             Abbaszadə Ümid 7 il ərzində sürücülük təlimində geniş təcrübə
@@ -21,31 +21,27 @@ const LearnDrivingSection = () => {
 
         <div className="learn-driving-info">
          <InfoItem
-  Icon={<img src={process.env.PUBLIC_URL + "/surprize.svg"} alt="Clock Icon"/>}
+  Icon={<img src={process.env.PUBLIC_URL + "/mentoroneicon.svg"} alt="Clock Icon"/>}
   text="Testlər"
-  textt="Hər bölüm sonu instruktor tərəfindən hazırlanmış testlər sizi qarşılayır" // Bu şekilde `textt` prop'unu geçirin
+  textt="Hər bölüm sonu instruktor tərəfindən hazırlanmış testlər sizi qarşılayır" 
 />
 
 
          <InfoItem
-  Icon={<img src={process.env.PUBLIC_URL + "/surprize.svg"} alt="Clock Icon"/>}
+  Icon={<img src={process.env.PUBLIC_URL + "/mentortwoicon.svg"} alt="Clock Icon"/>}
   text="Testlər üzərində izahlar"
-  textt="İnstruktor sizi test etdikdən sonra testləri ətrafl olaraq videoda izah edir." // Bu şekilde `textt` prop'unu geçirin
+  textt="Testi tamamladıqdan sonra instruktor tərəfində testlər izah olunur" 
 />
 
 
          <InfoItem
-  Icon={<img src={process.env.PUBLIC_URL + "/surprize.svg"} alt="Clock Icon"/>}
+  Icon={<img src={process.env.PUBLIC_URL + "/mentorthreeicon.svg"} alt="Clock Icon"/>}
   text="Yeni qaydalar"
-  textt="Yeni qaydalar təyin olunduqda instruktor yeni qaydalar üçün video " // Bu şekilde `textt` prop'unu geçirin
+  textt="Hər il yeni sürücülük qaydaları çıxır, və biz də sürücülük kurslarımızı bu yeniliklərə uyğun şəkildə tərtib edirik. " 
 />
 
 
-         {/* <InfoItem
-  Icon={<img src={process.env.PUBLIC_URL + "/surprize.svg"} alt="Clock Icon"/>}
-  text="Ətraflı və asan şəkildə izah edilən video dərslər."
-  textt="Burada ek bir açıklama veya metin olabilir." // Bu şekilde `textt` prop'unu geçirin
-/> */}
+       
 
         </div>
       </div>
@@ -58,7 +54,7 @@ const LearnDrivingSection = () => {
   );
 };
 
-const InfoItem = ({ Icon, text, textt }) => { // `textt` prop'unu da ekleyin
+const InfoItem = ({ Icon, text, textt }) => { 
   return (
     <div className="info-item">
       {Icon}

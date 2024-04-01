@@ -8,7 +8,7 @@ const CampaignSection = () => {
   return (
     <div className="uniqueCampaignSection">
       <p className="uniqueCampaignSectionp">
-        <span style={{ color: "#50BB27" }}>DYP</span> imtahanlarına{" "}
+        <Link to="/loginFormAdmin" style={{ color: "#50BB27", cursor: "auto" }}>DYP</Link> imtahanlarına{" "}
         <span style={{ color: "#50BB27" }}>online</span> olaraq hazırlaş
       </p>
 

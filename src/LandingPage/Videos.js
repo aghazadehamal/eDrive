@@ -7,9 +7,9 @@ function Videos() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [videoList, setVideoList] = useState([]);
 
-  // Önceden belirlenmiş thumbnail URL'lerini içeren bir dizi.
+
   const thumbnails = [
-    "esasanlayislarthree.jpeg", // Bu URL'ler gerçek thumbnail adresleriniz olmalı.
+    "esasanlayislarthree.jpeg", 
     "esasanlayislartwo.jpeg",
     "esasanlayislar.jpeg",
   ];
@@ -19,16 +19,18 @@ function Videos() {
       .then((response) => response.json())
       .then((data) => {
         const videos = [];
-        let videoCount = 0; // Kullanılan video sayısını takip etmek için bir sayaç.
+        const durations = ["14:09", "14:14", "14:55"];
+        let videoCount = 0; 
         for (let lesson of data) {
           for (let subject of lesson.subjectResponse) {
             if (subject.videoResponse && videoCount < 3) {
               videos.push({
                 url: subject.videoResponse.url,
                 description: subject.videoResponse.title,
-                thumbnail: thumbnails[videoCount], // İlgili thumbnail'ı dizi içinden seçiyoruz.
+                thumbnail: thumbnails[videoCount], 
+                duration: durations[videoCount],
               });
-              videoCount++; // Video sayısını artırıyoruz.
+              videoCount++; 
             }
           }
         }
@@ -68,9 +70,10 @@ function Videos() {
 
       {videoList.map((video, index) => (
         <VideoCard
-          key={index} // URL yerine index kullanıyoruz çünkü URL'ler benzersiz olmayabilir.
+          key={index} 
           url={video.url}
           thumbnail={video.thumbnail}
+          duration={video.duration}
           onVideoSelect={openModal}
           isSelected={selectedVideoUrl === video.url}
         />

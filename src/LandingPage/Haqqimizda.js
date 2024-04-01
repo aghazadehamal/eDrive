@@ -11,7 +11,7 @@ const Haqqimizda = () => {
       </div>
       <div className="learn-haqqimizda-two">
         <div className="learn-haqqimizda-three">
-        <p style={{ color: "#50BB27", marginBottom: "20px" }}> Kursumuz haqqında</p> 
+        <p style={{ color: "#50BB27", marginBottom: "7px", marginTop: "5px" }}> Kursumuz haqqında</p> 
           <span style={{color: "white"}}>Biz <span style={{ color: "#50BB27" }}> sürücülük </span> imtahanlarından keçmək üçün sizə təlim keçəcək   <span style={{ color: "#50BB27" }}>  online </span>   sürücülük platformuyuq</span>
           <p style={{color: "white", marginTop: "20px"}}>
           Bizim kursumuz, sürücülüyü tədris etmək və güvənli sürücüləri yetişdirmək məqsədilə sizin ayağınıza gəlib. Həmçinin, daha təcrübəli sürücülərə, yenilənmiş qaydalar, yeni nəqliyyat texnologiyaları və sürücülük mənəviyyatı haqqında ətraflı məlumatlar verilir.
@@ -20,26 +20,31 @@ const Haqqimizda = () => {
 
         <div className="learn-haqqimizda-info">
          <InfoItem
-  Icon={<img src={process.env.PUBLIC_URL + "/gift.svg"} alt="Clock Icon"/>}
-  text="Testlər üzərində izahlar"
+  Icon={<img src={process.env.PUBLIC_URL + "/haqqtesticon.svg"} alt="haqqtesticon"/>}
+  text="Testlərlə praktika"
   
 />
 
 
-         <InfoItem
-  Icon={<img src={process.env.PUBLIC_URL + "/gift.svg"} alt="Clock Icon"/>}
-  text="Testlər üzərində izahlar"
-/>
-
-
-         <InfoItem
-  Icon={<img src={process.env.PUBLIC_URL + "/gift.svg"} alt="Clock Icon"/>}
-  text="Testlər üzərində izahlar"
-/>
 
 <InfoItem
   Icon={<img src={process.env.PUBLIC_URL + "/gift.svg"} alt="Clock Icon"/>}
+  text="Peşəkar instruktor"
+/>
+
+
+
+         <InfoItem
+  Icon={<img src={process.env.PUBLIC_URL + "/haqqplayicon.svg"} alt="haqqplayicon"/>}
   text="Testlər üzərində izahlar"
+/>
+
+
+     
+
+<InfoItem
+  Icon={<img src={process.env.PUBLIC_URL + "/haqqvideoicon.svg"} alt="haqqvideoicon"/>}
+  text="Online tədris"
 />
 
 

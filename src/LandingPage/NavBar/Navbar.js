@@ -25,9 +25,9 @@ function Navbar() {
       
       <nav className="customNav">
       <a
-          href="#why-us"
+         href="#courses"
           className="customNavLink"
-          onClick={(e) => scrollToSection(e, "why-us")}
+          onClick={(e) => scrollToSection(e, "courses")}
         >
           Biz kimik?
         </a>

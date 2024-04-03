@@ -2,8 +2,12 @@ import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import LoginFormAdmin from "../../components/LoginFormAdmin";
+import { SiScrollreveal } from "react-icons/si";
+import { useState } from "react";
+import NavNavBar from '../NavNavBar';
 
 function Navbar() {
+  const [showAssideLeft, setShowAssideLeft] = useState(false);
   const scrollToSection = (event, sectionId) => {
     event.preventDefault();
     const section = document.getElementById(sectionId);
@@ -11,12 +15,21 @@ function Navbar() {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+  const toggleAssideLeftVisibility = () => {
+    setShowAssideLeft((prev) => !prev);
+  };
 
   return (
     <div className="customNavbar">
     
-      <img
+      <img className="logoNavBar"
         src="/edurive.svg"
+        alt="Novademy Logo"
+       
+      />
+
+<img className="favlogologo"
+        src="/favlogologo.png"
         alt="Novademy Logo"
        
       />
@@ -67,7 +80,15 @@ function Navbar() {
             style={{ width: "43px", height: "38px", marginLeft: "5px" }}
           />
         </Link>
+        <button
+          className="ToggleButton"
+          
+          onClick={toggleAssideLeftVisibility}
+        >
+          <SiScrollreveal />
+        </button>
       </div>
+      {showAssideLeft && <NavNavBar  className="w-1/4" />}
     </div>
   );
 }

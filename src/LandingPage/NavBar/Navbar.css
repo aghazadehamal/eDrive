@@ -11,7 +11,7 @@
 
 
 
-.customNavbar img  {
+.logoNavBar {
   width: 184px;
   height: 43px;
 }
@@ -52,14 +52,23 @@
   height: 40px;
 }
 
+.ToggleButton {
+  width: 50px;
+  height: 50px;
+  border: none;
+  color: #50BB27;
+  font-size: 33px;
+  cursor: pointer;
+  background-color: white;
+}
+
 .customRegister:hover {
   background-color: #3c951b;
 }
 
 @media (max-width: 768px) {
   .customNavbar {
-    flex-direction: column;
-    padding: 20px;
+  
   }
 
   .customNavLink {
@@ -67,20 +76,25 @@
   }
 
   .customButtons {
-    flex-direction: column;
+   
   }
 
-  .customLogo,
-  .customNavbar img {
-    max-width: 80%;
-  }
+ 
 
   .customNav {
-    margin-top: 10px;
-    display: contents;
+   
+    display: none;
   }
   .avatarAdmin {
     margin-top: 10px;
+  }
+  .logoNavBar {
+    display: none;
+  }
+
+  .favlogologo  {
+  width: 50px;
+  height: 50px;
   }
 }
 
@@ -94,10 +108,7 @@
     margin: 15px 10px;
   }
 
-  .customLogo,
-  .customNavbar img {
-    max-width: 90%;
-  }
+ 
 
   .customNavbar {
     flex-direction: column;
@@ -107,5 +118,23 @@
   .customNav {
     margin-top: 10px;
   }
-  
+  .ToggleButton {
+    display: none;
+  }
+  .favlogologo  {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px){
+ 
+  .ToggleButton {
+    display: none;
+  }
+
+  .favlogologo  {
+    display: none;
+  }
+
+ 
 }

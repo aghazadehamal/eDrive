@@ -10,7 +10,7 @@
   }
   
  
-  .customNavbar img {
+  .logoNavBar {
   width: 184px;
  height: 43px;
   }
@@ -69,8 +69,7 @@
   
   @media (max-width: 768px) {
     .customNavbar {
-      flex-direction: column;
-      padding: 20px;
+    
     }
   
     .customNavLink {
@@ -78,18 +77,12 @@
     }
   
     .customButtons {
-      flex-direction: column;
+    
     }
   
-    .customLogo,
-    .customNavbar img {
-      max-width: 80%;
-    }
   
-    .customNav {
-      margin-top: 10px;
-      display: contents;
-    }
+  
+   
 
     
   }
@@ -104,10 +97,7 @@
       margin: 15px 10px;
     }
   
-    .customLogo,
-    .customNavbar img {
-      max-width: 90%;
-    }
+   
   
     .customNavbar {
       flex-direction: column;

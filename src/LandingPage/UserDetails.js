@@ -131,7 +131,7 @@ const phoneNumberRef = useRef(null);
 
       <p className='NameSurnameP'>
         <span className="user-namee">{userData?.name}</span>
-        {' '} {/* Boşluk bırak */}
+        {' '} 
         <span className="user-surnamee">{userData?.surname}</span>
       </p>
       <p className='EmailP'>

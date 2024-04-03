@@ -9,10 +9,10 @@
     margin: auto;
   }
   
-  .customLogo,
+ 
   .customNavbar img {
-    max-width: 100%;
-    height: auto;
+  width: 184px;
+ height: 43px;
   }
   
   .customNavLink {

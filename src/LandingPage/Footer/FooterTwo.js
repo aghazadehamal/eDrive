@@ -10,9 +10,16 @@ const FooterTwo = () => {
     }
   };
 
+  // const handleSubmit = () => {
+    
+
+  //   window.scrollTo(0, 0);
+  // };
+
   return (
     <footer className="footer">
-      <img src="/logoimage.svg" alt="Novademy Logo" className="footerLogo" />
+      <img  src="/logoimage.svg" alt="Novademy Logo" className="footerLogo" />
+      {/* style={{cursor: "pointer"}} onClick={handleSubmit} */}
       <nav className="footer-nav">
         <ul className="nav-list">
           <li>

@@ -18,7 +18,7 @@ function Navbar() {
       <img
         src="/edurive.svg"
         alt="Novademy Logo"
-        style={{ maxWidth: "250px" }}
+       
       />
      
      

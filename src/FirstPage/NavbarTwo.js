@@ -17,7 +17,7 @@ function NavbarTwo() {
       <img
         src="/edurive.svg"
         alt="Novademy Logo"
-        style={{ maxWidth: "250px" }}
+        
       />
       
       <nav className="customNav">

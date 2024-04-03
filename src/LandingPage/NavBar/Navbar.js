@@ -30,8 +30,8 @@ function Navbar() {
       />
 
 <img className="favlogologo"
-        src="/favlogologo.png"
-        alt="Novademy Logo"
+        src="/logovariant.svg"
+        alt="logovariant"
        
       />
      

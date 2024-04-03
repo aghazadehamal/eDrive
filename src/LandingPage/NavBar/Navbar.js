@@ -20,6 +20,7 @@ function Navbar() {
   };
 
   return (
+    <>
     <div className="customNavbar">
     
       <img className="logoNavBar"
@@ -82,14 +83,15 @@ function Navbar() {
         </Link>
         <button
           className="ToggleButton"
-          
           onClick={toggleAssideLeftVisibility}
         >
-          <SiScrollreveal />
+        <img src={`${process.env.PUBLIC_URL}/menu.svg`} alt="menu" />
         </button>
       </div>
-      {showAssideLeft && <NavNavBar  className="w-1/4" />}
+     
     </div>
+    {showAssideLeft && <NavNavBar className="w-1/4" />}
+    </>
   );
 }
 

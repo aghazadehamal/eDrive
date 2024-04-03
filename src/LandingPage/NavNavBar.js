@@ -5,7 +5,7 @@ function NavNavBar() {
 
 
     return ( 
- <nav className="customNav">
+ <nav className="customNavnav">
       <a
          href="#courses"
           className="customNavLink"

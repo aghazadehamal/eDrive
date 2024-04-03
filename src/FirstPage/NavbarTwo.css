@@ -68,18 +68,18 @@
   }
   
   @media (max-width: 768px) {
-    .customNavbar {
-    
-    }
+   
   
     .customNavLink {
       margin: 10px;
     }
   
-    .customButtons {
     
-    }
   
+    .customNavnav {
+      font-size: 12px;
+      margin-top: 17px;
+    }
   
   
    

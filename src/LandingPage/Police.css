@@ -1,0 +1,17 @@
+.car {
+    width: 250px; 
+    height: 150px; 
+
+    animation: driveRight 5s linear infinite; 
+  }
+  
+  @keyframes driveRight {
+    from {
+      transform: translateX(-100vw);
+    }
+    to {
+      transform: translateX(100vw);
+    }
+  }
+  
+  

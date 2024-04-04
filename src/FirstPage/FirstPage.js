@@ -10,11 +10,13 @@ import WhyUsSection from "../LandingPage/WhyUsSection";
 
 import LearnDrivingSection from "../LandingPage/LearnDrivingSection/LearnDrivingSection";
 import Haqqimizda from "../LandingPage/Haqqimizda";
+import Police from "../LandingPage/Police";
 
 function FirstPage() {
   return (
     <div className="firstPageDiv">
       <Navbar />
+      {/* <Police/> */}
       <CampaignSection />
       <Videos />
       <WhyUsSection />

@@ -33,20 +33,20 @@
 .learn-driving-instructor {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* İçerikleri dikey olarak en alta hizalar */
-  height: 100%; /* Gerekirse konteynerin yüksekliğini ayarlayın */
+  justify-content: flex-end; 
+  height: 100%; 
 }
 
 
 .teacherPhoto {
   width: 552px;
   height: 597px;
-  margin-bottom: 20px; /* Aşağıdan 20px boşluk */
+  margin-bottom: 20px; 
 }
 
 
 .info-item p:first-of-type {
-  /* İlk p etiketine uygulanacak stiller */
+
   
 font-weight: 700;
 font-size: 20px;
@@ -174,7 +174,7 @@ line-height: 30px;
   .teacherPhoto {
     width: 352px;
     height: 397px;
-    margin-bottom: 20px; /* Aşağıdan 20px boşluk */
+    margin-bottom: 20px; 
   }
   
 }

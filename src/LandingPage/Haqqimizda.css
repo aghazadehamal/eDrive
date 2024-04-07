@@ -5,6 +5,10 @@
     background: #fff;
   
   }
+
+  .haqqimizda-instructorResponsiv {
+    display: none;
+  }
   
   .learn-haqqimizda-header {
     text-align: center;
@@ -120,6 +124,17 @@
       width: auto;
      
     }
+
+    .haqqimizda-instructorResponsiv {
+     display: contents;
+    }
+
+    .haqqimizda-instructorResponsiv img {
+     width: 85%;
+     height: auto;
+     margin-top: 0;
+     margin-bottom: 30px;
+     }
   
     .info-item {
       width: auto;

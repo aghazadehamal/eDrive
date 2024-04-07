@@ -6,6 +6,11 @@
 
 }
 
+.containerData {
+  display: flex;
+  background-color: #1F203F;
+}
+
 .learn-driving-header {
   text-align: center;
 }
@@ -34,14 +39,14 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end; 
-  height: 100%; 
+
 }
 
 
 .teacherPhoto {
   width: 552px;
   height: 597px;
-  margin-bottom: 20px; 
+  margin-bottom: 76px; 
 }
 
 
@@ -115,6 +120,11 @@ line-height: 30px;
    
   }
 
+  .containerData {
+ display: block;
+    background-color: #1F203F;
+  }
+
   .info-item {
     width: auto;
     height: auto;
@@ -143,13 +153,25 @@ line-height: 30px;
     flex-direction: column;
   } */
 
-  .learn-driving-instructor img {
+  .learn-driving-instructor{
     order: 2;
     width: 100%;
     height: auto;
     margin-top: 20px;
-    display: none;
+    display: contents;
   }
+  .learn-driving-instructor img {
+    width: 85%;
+    height: auto;
+
+  }
+
+  .learn-driving-content {
+   
+    height: 700px;
+  
+  }
+
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -175,6 +197,23 @@ line-height: 30px;
     width: 352px;
     height: 397px;
     margin-bottom: 20px; 
+  }
+  .learn-driving-instructor{
+    order: 2;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: none;
+  }
+  
+}
+
+
+@media (min-width: 769px) and (max-width: 1151px) {
+ 
+  .learn-driving-instructor img{
+   width: 100%;
+   height: auto;
   }
   
 }

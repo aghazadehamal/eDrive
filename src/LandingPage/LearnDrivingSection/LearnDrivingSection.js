@@ -4,7 +4,7 @@ import "./LearnDrivingSection.css";
 const LearnDrivingSection = () => {
   return (
     
-   <div style={{backgroundColor: "#1F203F"}}>
+   <div className="containerData" >
      <div id="mentor" className="learn-driving-content">
       <div className="learn-driving-two">
         <div className="learn-driving-three">
@@ -46,10 +46,11 @@ const LearnDrivingSection = () => {
         </div>
       </div>
 
-      <div className="learn-driving-instructor">
+     
+    </div>
+    <div className="learn-driving-instructor">
         <img className="teacherPhoto" src="/Mentor.svg" alt="Eğitmen" />
       </div>
-    </div>
    </div>
   );
 };

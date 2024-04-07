@@ -9,6 +9,7 @@
 .containerData {
   display: flex;
   background-color: #1F203F;
+  justify-content: center;
 }
 
 .learn-driving-header {

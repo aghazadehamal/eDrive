@@ -5,6 +5,7 @@ import LoginFormAdmin from "../../components/LoginFormAdmin";
 import { SiScrollreveal } from "react-icons/si";
 import { useState } from "react";
 import NavNavBar from '../NavNavBar';
+import { CSSTransition } from 'react-transition-group';
 
 function Navbar() {
   const [showAssideLeft, setShowAssideLeft] = useState(false);
@@ -90,7 +91,14 @@ function Navbar() {
       </div>
      
     </div>
-    {showAssideLeft && <NavNavBar className="w-1/4" />}
+    <CSSTransition
+        in={showAssideLeft}
+        timeout={300}
+        classNames="navBar"
+        unmountOnExit
+      >
+        <NavNavBar className="w-1/4" />
+      </CSSTransition>
     </>
   );
 }

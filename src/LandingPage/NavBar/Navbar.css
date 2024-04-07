@@ -66,6 +66,28 @@
   background-color: #3c951b;
 }
 
+/* NavNavBar animasyonu için başlangıç ve bitiş stilleri */
+.navBar-enter {
+  transform: translateY(-100%);
+}
+
+.navBar-enter-active {
+  transform: translateY(0);
+  transition: transform 300ms ease-in-out;
+}
+
+.navBar-exit {
+  transform: translateY(0);
+}
+
+.navBar-exit-active {
+  transform: translateY(-100%);
+  transition: transform 300ms ease-in-out;
+}
+
+
+
+
 
 
 @media (max-width: 768px) {
@@ -80,6 +102,13 @@
   .customNavnav {
     font-size: 12px;
     margin-top: 17px;
+    display: grid;
+    text-align: left;
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 250px;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
   }
 
  

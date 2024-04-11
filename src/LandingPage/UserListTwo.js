@@ -100,7 +100,7 @@ function UserListTwo() {
     <Link to="/">
         <img src="/edurive.svg" alt="Edurive Logo" className="login-logo" />
       </Link>
-      <h2 style={{ marginTop: "30px" }}>İstifadəçi siyahısı</h2>
+      <h2 style={{ marginTop: "30px", fontWeight: "400" }}>İstifadəçi siyahısı</h2>
       <input
         type="text"
         placeholder="İstifadəçi axtar..."

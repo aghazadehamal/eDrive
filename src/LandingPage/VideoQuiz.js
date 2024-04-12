@@ -46,12 +46,20 @@ function VideoQuiz() {
         </Link>
       {video ? (
         <div style={{marginTop: "50px"}} >
+          <video 
+            className='quizVideo' 
+            style={{borderRadius: "22px"}} 
+            src={video.url} 
+            controls
+            controlsList="nodownload"  
+            onContextMenu={(e) => e.preventDefault()} 
          
-          <video className='quizVideo' style={{borderRadius: "22px"}} src={video.url} controls />
+          >
+            Your browser does not support the video tag.
+          </video>
           <p>{video.requiresPaid ? 'This content requires payment.' : 'This content is free.'}</p>
         </div>
       ) : (
-      
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}>
           <Puff color="#50bb27" height={100} width={100} />
         </div>

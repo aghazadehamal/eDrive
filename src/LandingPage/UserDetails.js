@@ -50,7 +50,7 @@ const phoneNumberRef = useRef(null);
     }
 
     const userId = localStorage.getItem('userId');
-    const url = `https://edurive.onrender.com/v1/user/${userId}`;
+    const url = `http://edurive.az:8087/v1/user/${userId}`;
   
     
     try {
@@ -81,7 +81,7 @@ const phoneNumberRef = useRef(null);
         setIsLoading(true);
   
         const userId = localStorage.getItem('userId');
-        const userLessonsResponse = await axios.get(`https://edurive.onrender.com/v1/user/${userId}`);
+        const userLessonsResponse = await axios.get(`http://edurive.az:8087/v1/user/${userId}`);
         setUserData(userLessonsResponse.data)
 
       } catch (error) {

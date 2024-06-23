@@ -15,7 +15,7 @@ function Videos() {
   ];
 
   useEffect(() => {
-    fetch("https://edurive.onrender.com/v1/lesson/")
+    fetch("http://edurive.az:8087/v1/lesson/")
       .then((response) => response.json())
       .then((data) => {
         const videos = [];

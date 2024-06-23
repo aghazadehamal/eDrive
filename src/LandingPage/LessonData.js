@@ -41,11 +41,11 @@ const LessonData = () => {
     const fetchLessonData = async () => {
       setIsLoading(true);
       try {
-        const lessonsResponse = await axios.get("https://edurive.onrender.com/v1/lesson/");
+        const lessonsResponse = await axios.get("http://edurive.az:8087/v1/lesson/");
         const lessonsData = lessonsResponse.data;
   
         const userId = localStorage.getItem('userId');
-        const userLessonsResponse = await axios.get(`https://edurive.onrender.com/v1/user/${userId}`);
+        const userLessonsResponse = await axios.get(`http://edurive.az:8087/v1/user/${userId}`);
         const userPaidStatus = userLessonsResponse.data.paid;
   
         setLessons(lessonsData)
@@ -227,7 +227,7 @@ useEffect(() => {
       // setIsLoading(true);
 
       const userId = localStorage.getItem('userId');
-      const userLessonsResponse = await axios.get(`https://edurive.onrender.com/v1/user/${userId}`);
+      const userLessonsResponse = await axios.get(`http://edurive.az:8087/v1/user/${userId}`);
       setUserData(userLessonsResponse.data)
 
     } catch (error) {

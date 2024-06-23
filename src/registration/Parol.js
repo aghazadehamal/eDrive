@@ -23,7 +23,7 @@ function Parol() {
     setIsLoading(true); 
     try {
       const response = await axios.put(
-        `https://edurive.onrender.com/auth/forgot-password?email=${formData.email}`,
+        `http://edurive.az:8087/auth/forgot-password?email=${formData.email}`,
       );
 
       setIsModalVisible(true); 

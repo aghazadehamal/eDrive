@@ -9,7 +9,7 @@ function VideoQuiz() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://edurive.onrender.com/v1/lesson/');
+        const response = await fetch('http://edurive.az:8087/v1/lesson/');
         if (!response.ok) {
           throw new Error('Data could not be fetched!');
         } else {

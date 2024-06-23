@@ -48,7 +48,7 @@ function RegistrationForm() {
     try {
     
       const response = await axios.post(
-        "https://edurive.onrender.com/auth/registration",
+        "http://edurive.az:8087/auth/registration",
         formData
       );
       console.log(response.data);
@@ -87,7 +87,7 @@ const sendRequestEveryTenSecondsForThreeMinutes = () => {
     }
 
     try {
-      const response = await axios.get(`https://edurive.onrender.com/v1/verify/activated?gmail=${formData.gmail}`);
+      const response = await axios.get(`http://edurive.az:8087/v1/verify/activated?gmail=${formData.gmail}`);
       if(response.data){
         clearInterval(intervalId); 
         navigate('/lessonData');

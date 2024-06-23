@@ -31,7 +31,7 @@ function LoginForm() {
     setIsLoading(true); 
     try {
       const response = await axios.post(
-        "https://edurive.onrender.com/auth/login",
+        "http://edurive.az:8087/auth/login",
         formData
       );
       if (response.data.tokenResponse.accessToken) {

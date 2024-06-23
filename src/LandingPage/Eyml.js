@@ -7,7 +7,7 @@ function Eyml() {
 
   useEffect(() => {
     axios
-      .get("https://edurive.onrender.com/v1/subject/lesson/")
+      .get("http://edurive.az:8087/v1/subject/lesson/")
       .then((response) => {
         setData(response.data);
       })

@@ -13,26 +13,38 @@ function ParolTwo() {
 
   const [isLoading, setIsLoading] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false); 
-
+  const [error, setError] = useState("");
 
   const params= useLocation();
   const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+
+    if (e.target.name === "newPassword") {
+      if (e.target.value.length < 8 || e.target.value.length > 20) {
+        setError("Şifrə ən az 8 simvol uzunluğunda olmalıdır.");
+      } else {
+        setError("");
+      }
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true); 
 
-    
+    if (formData.newPassword.length < 8 || formData.newPassword.length > 20) {
+      alert("Şifrə ən az 8 və ən çox 20 simvol uzunluğunda olmalıdır.");
+      setIsLoading(false);
+      return;
+    }
 
     if (formData.newPassword !== formData.confirmPassword) {
       alert("Daxil edilən şifrələr fərqlidir.");
+      setIsLoading(false);
       return; 
     }
-
 
     try {
       const response = await axios.put(
@@ -41,18 +53,14 @@ function ParolTwo() {
 
       setIsModalVisible(true); 
 
-      
       setTimeout(() => {
         navigate("/LoginForm");
       }, 3000);
 
-     
     } catch (error) {
       console.error("An error occurred during login:", error);
       alert("Bir xəta baş verdi. Zəhmət olmasa, yenidən cəhd edin.");
-    }
-
-    finally {
+    } finally {
       setIsLoading(false); 
     }
   };
@@ -75,8 +83,11 @@ function ParolTwo() {
           value={formData.newPassword}
           onChange={handleChange}
           placeholder="Şifrənizi əlavə edin"
+          minLength="8"
+          maxLength="20"
           required
         />
+        {error && <p style={{fontSize: "12px", color: "red"}} >{error}</p>}
         <p>Şifrənizi təsdiq edin</p>
         <input
           type="password"
@@ -87,9 +98,9 @@ function ParolTwo() {
           required
         />
 
-<button type="submit" disabled={isLoading}>
-            {isLoading ? <div className="loader"></div> : 'Təsdiq et'}
-          </button>
+        <button type="submit" disabled={isLoading}>
+          {isLoading ? <div className="loader"></div> : 'Təsdiq et'}
+        </button>
       </form>
       {isModalVisible && <PasswordModalTwo/>} 
     </div>

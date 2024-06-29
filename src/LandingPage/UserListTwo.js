@@ -17,9 +17,8 @@ function UserListTwo() {
     ])
     .then(([lessonData, userData]) => {
       setLessons(lessonData);
-      const filteredUsers = userData.filter(user => user.id > 28);
       const sortedUsers = filteredUsers.sort((a, b) => b.id - a.id); 
-      setUsers(sortedUsers); 
+      setUsers(userData); 
     })
     
     .catch((error) => {

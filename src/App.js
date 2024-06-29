@@ -63,14 +63,14 @@ function App() {
             />
             <Route path="/UserListTwo" element={<ProtectedRoute component={UserListTwo} />}/>
 
-            <Route path="/Parol" element={<ProtectedRoute component={Parol} />}/>
-            <Route path="/ChangePassword" element={<ProtectedRoute component={ParolTwo} />} />
+            <Route path="/Parol" element={<Parol/>}/>
+            <Route path="/ChangePassword" element={<ParolTwo/>} />
             <Route path="/VideoQuiz" element={<ProtectedRoute component={VideoQuiz} />} />
             <Route path="/firstPageTwo" element={<FirstPageTwo />} />
             <Route path="/userDetails" element={<ProtectedRoute component={UserDetails} />} />
             <Route path="/verifyModal" element={<VerifyModal />} />
-            <Route path="/passwordModalTwo" element={<ProtectedRoute component={PasswordModalTwo} />} />
-            <Route path="/passwordModal" element={<ProtectedRoute component={PasswordModal} />} />
+            <Route path="/passwordModalTwo" element={<PasswordModalTwo />} />
+            <Route path="/passwordModal" element={<PasswordModal />} />
           </Routes>
         </div>
       </Router>

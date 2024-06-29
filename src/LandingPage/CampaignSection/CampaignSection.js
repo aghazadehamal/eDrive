@@ -14,8 +14,9 @@ const CampaignSection = () => {
 
       <p className="uniqueCampaignSectionpTwo">
 
-      DYP sürücülük imtahanlarına Edurive ilə hazırlaş. Ayın sonuna qədər kursumuzu <span style={{ color: "#50BB27" }}>₼59-a yox</span> ,{" "}
-        <span style={{ color: "#50BB27" }}>₼39-a</span> alın. Öz potensialınızı maksimuma çıxarmaq üçün bu fürsəti qaçırmayın.
+      Bir dəfə ödə, istədiyin vaxt hazırlaş.
+ Yalnız 1 həftə üçün keçərli endirimlə <span style={{ color: "#50BB27" }}>₼59</span> əvəzinə{" "}
+        <span style={{ color: "#50BB27" }}>₼39</span> ödəmək şansını qaçırma!
       </p>
 
       <div >

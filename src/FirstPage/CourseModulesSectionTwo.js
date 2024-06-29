@@ -60,22 +60,9 @@ const CourseModulesSectionTwo = () => {
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
-              <span>5 video</span>
+              <span>6 video</span>
             </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                marginLeft: "15px",
-              }}
-            >
-              <img
-                src={`${process.env.PUBLIC_URL}/test.svg`}
-                alt="Clock Icon"
-                style={{ marginRight: "8px" }}
-              />
-              <span>24 test</span>
-            </div>
+          
           </div>
           <p>
           Sürücülər, sürücü olmaq istəyən şəxslər və yol hərəkətinin digər iştirakçıları, yol
@@ -108,22 +95,9 @@ sürücülük vəsiqəsini almağa hazırlaşan şəxslər üçün bu vacibdir.
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
-              <span>5 video</span>
+              <span>6 video</span>
             </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                marginLeft: "15px",
-              }}
-            >
-              <img
-                src={`${process.env.PUBLIC_URL}/test.svg`}
-                alt="Clock Icon"
-                style={{ marginRight: "8px" }}
-              />
-              <span>24 test</span>
-            </div>
+          
           </div>
           <p>
           Sürücülük vəsiqəsi - hər hansı şəxsin nəqliyyat vasitələrini idarə etmək
@@ -156,22 +130,9 @@ Bir qayda olaraq, hər hansı şəxsin nəql
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
-              <span>5 video</span>
+              <span>8 video</span>
             </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                marginLeft: "15px",
-              }}
-            >
-              <img
-                src={`${process.env.PUBLIC_URL}/test.svg`}
-                alt="Clock Icon"
-                style={{ marginRight: "8px" }}
-              />
-              <span>24 test</span>
-            </div>
+          
           </div>
           <p>
           Səki ilə, piyada zolağı ilə, yol çiyinləri ilə, bunlar olmadıqda isə velosipedçilərin hərəkətini çətinləşdirməmək şərti ilə velosiped yolu ilə hərəkət etməli və ya ayırıcı zolağı olan yollarda hərəkət hissəsinin xarici kənarı ilə getməlidir (iri əşyalar daşıyan və ya aparan piyadaların, habelə mühərriksiz əlil arabalarında gedən şəxslərin səki və ya yol qırağı ilə hərəkəti başqa piyadalar üçün maneə yaratdıqda, onlar yolun hərəkət hissəsinin kənarı ilə gedə bilərlər);
@@ -199,22 +160,9 @@ Bir qayda olaraq, hər hansı şəxsin nəql
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
-              <span>5 video</span>
+              <span>9 video</span>
             </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                marginLeft: "15px",
-              }}
-            >
-              <img
-                src={`${process.env.PUBLIC_URL}/test.svg`}
-                alt="Clock Icon"
-                style={{ marginRight: "8px" }}
-              />
-              <span>24 test</span>
-            </div>
+          
           </div>
           <p>
           Nəqliyyat vasitəsinin onun üçün xüsusi ayrılmış müvafiq qaydada işarələnmiş yerdə durması
@@ -246,22 +194,9 @@ nəqliyyatın fasiləsiz hərəkətinin təmin olunmasıdır.
                 alt="Clock Icon"
                 style={{ marginRight: "8px" }}
               />
-              <span>5 video</span>
+              <span>7 video</span>
             </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                marginLeft: "15px",
-              }}
-            >
-              <img
-                src={`${process.env.PUBLIC_URL}/test.svg`}
-                alt="Clock Icon"
-                style={{ marginRight: "8px" }}
-              />
-              <span>24 test</span>
-            </div>
+          
           </div>
           <p>
           Bundan başqa şlaqbaumu özbaşına açmaq, qeyri-nəqliyyat vəziyyətində olan kənd təsərrüfatı,

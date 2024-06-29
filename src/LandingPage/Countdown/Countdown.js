@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./Countdown.css";
 
-const Countdown = ({ targetDate }) => {
+const Countdown = () => {
+  // Current date and time
+  const currentDate = new Date();
+  // Target date set to 7 days from current date
+  const targetDate = new Date(currentDate.getTime() + 7 * 24 * 60 * 60 * 1000);
+
   const calculateTimeLeft = () => {
-    const difference = +new Date(targetDate) - +new Date();
+    const difference = +targetDate - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {
@@ -37,9 +42,7 @@ const Countdown = ({ targetDate }) => {
     }
 
     timeComponents.push(
-     
       <div className="countdown-component" key={interval}>
-      
         <span className="time">{timeLeft[interval]}</span>
         <span className="time-label">{interval}</span>
       </div>

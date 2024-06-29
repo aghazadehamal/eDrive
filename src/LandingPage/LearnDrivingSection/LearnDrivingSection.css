@@ -21,8 +21,8 @@
   justify-content: center;
   /* align-items: center; */
   padding: 20px;
-  margin-top: 90px;
-  height: 737px;
+ 
+  
   background-color: #1F203F;
 }
 
@@ -45,9 +45,9 @@
 
 
 .teacherPhoto {
-  width: 552px;
-  height: 597px;
-  margin-bottom: 76px; 
+  width: 352px;
+  height: 397px;
+  margin-bottom: 16px; 
 }
 
 
@@ -169,7 +169,7 @@ line-height: 30px;
 
   .learn-driving-content {
    
-    height: 700px;
+   
   
   }
 
@@ -212,9 +212,6 @@ line-height: 30px;
 
 @media (min-width: 769px) and (max-width: 1151px) {
  
-  .learn-driving-instructor img{
-   width: 100%;
-   height: auto;
-  }
+ 
   
 }

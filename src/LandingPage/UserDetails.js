@@ -34,7 +34,7 @@ const phoneNumberRef = useRef(null);
    
 
     if (userData.password.length < 8 || userData.password.length > 20) {
-      alert("Şifre en az 8 ve en fazla 20 simvol uzunluğunda olmalıdır.");
+      alert("Şifrə ən az 8 və ən çox 20 simvol uzunluğunda olmalıdır.");
       return;
     }
 

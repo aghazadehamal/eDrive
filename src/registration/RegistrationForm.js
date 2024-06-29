@@ -18,18 +18,27 @@ function RegistrationForm() {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  // const [error, setError] = useState("");
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+
+    if (e.target.name === "password") {
+      if (e.target.value.length < 8 || e.target.value.length > 20) {
+        setError("Şifrə ən az 8 simvol uzunluğunda olmalıdır.");
+      } else {
+        setError("");
+      }
+    }
   };
+
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (formData.password.length < 8 || formData.password.length > 20) {
-      alert("Şifre en az 8 ve en fazla 20 simvol uzunluğunda olmalıdır.");
+      alert("Şifrə ən az 8 və ən çox 20 simvol uzunluğunda olmalıdır.");
       return;
     }
 
@@ -46,7 +55,6 @@ function RegistrationForm() {
 
     setIsLoading(true);
     try {
-    
       const response = await axios.post(
         "http://edurive.az:8087/auth/registration",
         formData
@@ -56,10 +64,8 @@ function RegistrationForm() {
       setIsLoading(false);
       localStorage.setItem("userId", response.data.id);
       localStorage.setItem("userToken", response.data.id);
-
   
       sendRequestEveryTenSecondsForThreeMinutes()
-
     } catch (error) {
       setIsLoading(false);
 
@@ -73,35 +79,35 @@ function RegistrationForm() {
         );
       }
     }
-};
+  };
 
-const sendRequestEveryTenSecondsForThreeMinutes = () => {
-  let count = 0; 
-  const maxRequests = 18; 
+  const sendRequestEveryTenSecondsForThreeMinutes = () => {
+    let count = 0; 
+    const maxRequests = 18; 
 
-  const intervalId = setInterval(async () => {
-    if (count >= maxRequests) {
-      clearInterval(intervalId); 
-      console.log("Tamamlandı: Toplam 3 dakika boyunca her 10 saniyede bir istek yapıldı.");
-      return;
-    }
-
-    try {
-      const response = await axios.get(`http://edurive.az:8087/v1/verify/activated?gmail=${formData.gmail}`);
-      if(response.data){
+    const intervalId = setInterval(async () => {
+      if (count >= maxRequests) {
         clearInterval(intervalId); 
-        navigate('/lessonData');
-        return; 
+        console.log("Tamamlandı: Toplam 3 dakika boyunca her 10 saniyede bir istek yapıldı.");
+        return;
       }
-      
-    } catch (error) {
-      console.error('Istek hatası:', error);
-    
-    }
 
-    count++; 
-  }, 10000); 
-};
+      try {
+        const response = await axios.get(`http://edurive.az:8087/v1/verify/activated?gmail=${formData.gmail}`);
+        if(response.data){
+          clearInterval(intervalId); 
+          navigate('/lessonData');
+          return; 
+        }
+        
+      } catch (error) {
+        console.error('Istek hatası:', error);
+      
+      }
+
+      count++; 
+    }, 10000); 
+  };
 
   return (
     <div className="registration" style={{ textAlign: "center" }}>
@@ -157,8 +163,11 @@ const sendRequestEveryTenSecondsForThreeMinutes = () => {
               value={formData.password}
               onChange={handleChange}
               placeholder="Şifrənizi əlavə edin"
+              minLength="8"
+              maxLength="20"
               required
             />
+            {error && <p style={{color: "red"}} className="error">{error}</p>}
           </div>
 
           <div>
@@ -173,31 +182,31 @@ const sendRequestEveryTenSecondsForThreeMinutes = () => {
             />
           </div>
           <div>
-  <p>Telefon nömrə</p>
-  <div className="phone-container">
-    <div className="phone-prefix">(+994)</div>
-    <input
-      className="phone-input"
-      type="text"
-      name="phoneNumber"
-      value={formData.phoneNumber}
-      onChange={handleChange}
-      placeholder="997660042"
-      required
-    />
-  </div>
-</div>
+            <p>Telefon nömrə</p>
+            <div className="phone-container">
+              <div className="phone-prefix">(+994)</div>
+              <input
+                className="phone-input"
+                type="text"
+                name="phoneNumber"
+                value={formData.phoneNumber}
+                onChange={handleChange}
+                placeholder="997660042"
+                required
+              />
+            </div>
+          </div>
 
           <div>
-          <button type="submit" disabled={isLoading} >
-    {isLoading ? (
-      <div className="loader"></div> 
-    ) : (
-      'Təsdiq et' 
-    )}
-  </button>
+            <button type="submit" disabled={isLoading}>
+              {isLoading ? (
+                <div className="loader"></div>
+              ) : (
+                'Təsdiq et'
+              )}
+            </button>
 
-            <div className=" account-check">
+            <div className="account-check">
               <span>Hesabınız var?</span>
               <Link className="login-link" to="/loginForm">
                 Daxil olun
@@ -208,24 +217,25 @@ const sendRequestEveryTenSecondsForThreeMinutes = () => {
           {/* {error && <p className="error">{error}</p>} */}
         </form>
         {isSubmitted && (
-        <div className="modal-overlay" >
-        <div className="modal-content">
-         <button
-  onClick={() => setIsSubmitted(false)}
-  className="close-button"
->
-  X
-</button>
+          <div className="modal-overlay">
+            <div className="modal-content">
+              <button
+                onClick={() => setIsSubmitted(false)}
+                className="close-button"
+              >
+                X
+              </button>
 
-          <div><img src={process.env.PUBLIC_URL + '/success.svg'} alt="Success"/></div>
-          <span className="modal-title">Müraciətiniz qeydə alındı</span>
-          <p className="modal-message">
-            Mailinizə giriş edib təsdiq etdiktən sonra saytın free versiyasına yönləndiriləcəksiniz.
-          </p>
-          <AutoStartCountdown/>
-        </div>
-      </div>
-      
+              <div>
+                <img src={process.env.PUBLIC_URL + '/success.svg'} alt="Success"/>
+              </div>
+              <span className="modal-title">Müraciətiniz qeydə alındı</span>
+              <p className="modal-message">
+                Mailinizə giriş edib təsdiq etdiktən sonra saytın free versiyasına yönləndiriləcəksiniz.
+              </p>
+              <AutoStartCountdown />
+            </div>
+          </div>
         )}
       </div>
     </div>

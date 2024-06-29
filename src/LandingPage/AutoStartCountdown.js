@@ -16,7 +16,7 @@ function AutoStartCountdown() {
 
   return (
     <div>
-      <button className="modal-button" disabled>
+      <button className="modal-buttonAuto" disabled>
         {timeLeft > 0 
           ? `${Math.floor(timeLeft / 60)}:${('0' + (timeLeft % 60)).slice(-2)}` 
           : "Yenidən cəhd edin"

@@ -14,6 +14,12 @@ function Videos() {
     "esasanlayislar.jpeg",
   ];
 
+  const descriptions = [
+    "Hərəkət hissəsi, yolayırıcılar",
+    "Yolayırıcının növləri",
+    "Nəqliyyat vasitələri",
+  ];
+
   useEffect(() => {
     fetch("http://edurive.az:8087/v1/lesson/")
       .then((response) => response.json())
@@ -26,7 +32,7 @@ function Videos() {
             if (subject.videoResponse && videoCount < 3) {
               videos.push({
                 url: subject.videoResponse.url,
-                description: subject.videoResponse.title,
+                description: descriptions[videoCount], // Burada descriptions array-indən faydalanırıq
                 thumbnail: thumbnails[videoCount], 
                 duration: durations[videoCount],
               });
@@ -76,6 +82,7 @@ function Videos() {
           duration={video.duration}
           onVideoSelect={openModal}
           isSelected={selectedVideoUrl === video.url}
+          description={video.description} // Burada description propunu göndəririk
         />
       ))}
     </div>

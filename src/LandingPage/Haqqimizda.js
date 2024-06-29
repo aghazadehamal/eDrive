@@ -25,9 +25,9 @@ const Haqqimizda = () => {
               Kursumuz haqqında
             </p>
             <span style={{ color: "white" }}>
-              Biz <span style={{ color: "#50BB27" }}> sürücülük </span>{" "}
-              imtahanlarından keçmək üçün sizə təlim keçəcək{" "}
-              <span style={{ color: "#50BB27" }}> online </span> sürücülük
+              Biz sizi <span style={{ color: "#50BB27" }}> sürücülük </span>{" "}
+              imtahanında uğurlu nəticə almağınız üçün hazırlayan{" "}
+              <span style={{ color: "#50BB27" }}> online </span> təhsil
               platformuyuq
             </span>
             <p style={{ color: "white", marginTop: "20px" }}>
@@ -47,7 +47,7 @@ const Haqqimizda = () => {
                   alt="haqqtesticon"
                 />
               }
-              text="Testlərlə praktika"
+              text="Asan izah"
             />
 
             <InfoItem

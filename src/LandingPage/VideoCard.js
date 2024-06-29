@@ -1,7 +1,7 @@
 import React from "react";
 import "./VideoCard.css";
 
-const VideoCard = ({ url, thumbnail, duration, onVideoSelect, isSelected }) => {
+const VideoCard = ({ url, thumbnail, duration, onVideoSelect, isSelected, description }) => {
   return (
     <div>
       <div className="uniqueVideoCard" onClick={() => onVideoSelect(url)}>
@@ -36,7 +36,7 @@ const VideoCard = ({ url, thumbnail, duration, onVideoSelect, isSelected }) => {
           </video>
         )}
       </div>
-      <div className="loginVideoText">Giriş videosu</div>
+      <div className="loginVideoText">{description}</div> {/* Burada description propunu istifadə edirik */}
     </div>
   );
 };

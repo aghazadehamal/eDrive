@@ -20,18 +20,7 @@ const LearnDrivingSection = () => {
         </div>
 
         <div className="learn-driving-info">
-         <InfoItem
-  Icon={<img src={process.env.PUBLIC_URL + "/mentoroneicon.svg"} alt="Clock Icon"/>}
-  text="Testlər"
-  textt="Hər bölüm sonu instruktor tərəfindən hazırlanmış testlər sizi qarşılayır" 
-/>
-
-
-         <InfoItem
-  Icon={<img src={process.env.PUBLIC_URL + "/mentortwoicon.svg"} alt="Clock Icon"/>}
-  text="Testlər üzərində izahlar"
-  textt="Testi tamamladıqdan sonra instruktor tərəfində testlər izah olunur" 
-/>
+      
 
 
          <InfoItem
@@ -49,7 +38,7 @@ const LearnDrivingSection = () => {
      
     </div>
     <div className="learn-driving-instructor">
-        <img className="teacherPhoto" src="/Mentor.svg" alt="Eğitmen" />
+        <img className="teacherPhoto" src="/oghlan.png" alt="Eğitmen" />
       </div>
    </div>
   );

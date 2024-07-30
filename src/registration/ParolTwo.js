@@ -48,7 +48,7 @@ function ParolTwo() {
 
     try {
       const response = await axios.put(
-        `http://edurive.az:8087/auth/ChangePassword${params?.search}&newPassword=${formData.newPassword}`
+        `https://edurive.az:8087/auth/ChangePassword${params?.search}&newPassword=${formData.newPassword}`
       );
 
       setIsModalVisible(true); 

@@ -21,7 +21,7 @@ function Videos() {
   ];
 
   useEffect(() => {
-    fetch("http://edurive.az:8087/v1/lesson/")
+    fetch("https://edurive.az:8087/v1/lesson/")
       .then((response) => response.json())
       .then((data) => {
         const videos = [];

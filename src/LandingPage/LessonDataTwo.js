@@ -27,7 +27,7 @@ const LessonData = () => {
     const fetchLessonData = async () => {
       try {
       
-        const response = await axios.get("http://edurive.az:8087/v1/lesson/");
+        const response = await axios.get("https://edurive.az:8087/v1/lesson/");
         const lessonsData = response.data;
 
        
@@ -88,7 +88,7 @@ const LessonData = () => {
     const fetchLessonData = async () => {
       try {
         const response = await axios.get(
-          "http://edurive.az:8087/v1/lesson/"
+          "https://edurive.az:8087/v1/lesson/"
         );
         const lessonsData = response.data;
         setLessons(lessonsData);

@@ -12,8 +12,8 @@ function UserListTwo() {
   useEffect(() => {
     setIsLoading(true); 
     Promise.all([
-      fetch("http://edurive.az:8087/v1/lesson/").then((response) => response.json()),
-      fetch("http://edurive.az:8087/v1/user/").then((response) => response.json())
+      fetch("https://edurive.az:8087/v1/lesson/").then((response) => response.json()),
+      fetch("https://edurive.az:8087/v1/user/").then((response) => response.json())
     ])
     .then(([lessonData, userData]) => {
       setLessons(lessonData);
@@ -37,7 +37,7 @@ function UserListTwo() {
   const giveAccessToUser = async (userId) => { 
     
     try {
-      const response = await fetch(`http://edurive.az:8087/v1/access/${userId}`, {
+      const response = await fetch(`https://edurive.az:8087/v1/access/${userId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -61,7 +61,7 @@ function UserListTwo() {
 
   const revokeAccessFromUser = async (userId) => {
     try {
-      const response = await fetch(`http://edurive.az:8087/v1/access/${userId}`, {
+      const response = await fetch(`https://edurive.az:8087/v1/access/${userId}`, {
         method: "PUT", 
         headers: {
           "Content-Type": "application/json",

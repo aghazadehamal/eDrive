@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./Countdown.css";
 
-const Countdown = () => {
-  // Current date and time
-  const currentDate = new Date();
-  // Target date set to 7 days from current date
-  const targetDate = new Date(currentDate.getTime() + 7 * 24 * 60 * 60 * 1000);
-
+const Countdown = ({ targetDate }) => {
   const calculateTimeLeft = () => {
-    const difference = +targetDate - +new Date();
+    const difference = +new Date(targetDate) - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {
@@ -26,13 +21,13 @@ const Countdown = () => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    // Cleanup timeout
-    return () => clearTimeout(timer);
-  });
+    // Cleanup interval
+    return () => clearInterval(timer);
+  }, [targetDate]);
 
   const timeComponents = [];
 
